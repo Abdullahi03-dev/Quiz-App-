@@ -1,0 +1,482 @@
+[
+  {
+    "question": "What is the result of `typeof 'JavaScript'`?",
+    "options": [
+      "'string'",
+      "'object'",
+      "'undefined'",
+      "'number'"
+    ],
+    "correctAnswer": [
+      "'string'"
+    ]
+  },
+  {
+    "question": "What does `console.log(2 + '2')` output?",
+    "options": [
+      "'4'",
+      "'22'",
+      "4",
+      "undefined"
+    ],
+    "correctAnswer": [
+      "'22'"
+    ]
+  },
+  {
+    "question": "Which keyword is used to declare a variable in JavaScript?",
+    "options": [
+      "var",
+      "let",
+      "const",
+      "All of the above"
+    ],
+    "correctAnswer": [
+      "All of the above"
+    ]
+  },
+  {
+    "question": "What is the output of `10 == '10'`?",
+    "options": [
+      "true",
+      "false",
+      "NaN",
+      "undefined"
+    ],
+    "correctAnswer": [
+      "true"
+    ]
+  },
+  {
+    "question": "What is the output of `10 === '10'`?",
+    "options": [
+      "true",
+      "false",
+      "undefined",
+      "null"
+    ],
+    "correctAnswer": [
+      "false"
+    ]
+  },
+  {
+    "question": "What value is returned by `Boolean(0)`?",
+    "options": [
+      "true",
+      "false",
+      "0",
+      "undefined"
+    ],
+    "correctAnswer": [
+      "false"
+    ]
+  },
+  {
+    "question": "What is the result of `typeof null`?",
+    "options": [
+      "'null'",
+      "'object'",
+      "'undefined'",
+      "'boolean'"
+    ],
+    "correctAnswer": [
+      "'object'"
+    ]
+  },
+  {
+    "question": "Which method adds an element to the end of an array?",
+    "options": [
+      "push()",
+      "pop()",
+      "shift()",
+      "unshift()"
+    ],
+    "correctAnswer": [
+      "push()"
+    ]
+  },
+  {
+    "question": "How do you write a comment in JavaScript?",
+    "options": [
+      "// comment",
+      "# comment",
+      "<!-- comment -->",
+      "' comment"
+    ],
+    "correctAnswer": [
+      "// comment"
+    ]
+  },
+  {
+    "question": "What is the result of `typeof undefined`?",
+    "options": [
+      "'undefined'",
+      "'object'",
+      "'null'",
+      "'string'"
+    ],
+    "correctAnswer": [
+      "'undefined'"
+    ]
+  },
+  {
+    "question": "Which operator is used for exponentiation in JavaScript?",
+    "options": [
+      "**",
+      "^",
+      "exp",
+      "^^"
+    ],
+    "correctAnswer": [
+      "**"
+    ]
+  },
+  {
+    "question": "What is the result of `'5' - 2`?",
+    "options": [
+      "3",
+      "'3'",
+      "'52'",
+      "NaN"
+    ],
+    "correctAnswer": [
+      "3"
+    ]
+  },
+  {
+    "question": "What does `NaN` stand for?",
+    "options": [
+      "Not a Number",
+      "No Any Number",
+      "New and Null",
+      "Not and Null"
+    ],
+    "correctAnswer": [
+      "Not a Number"
+    ]
+  },
+  {
+    "question": "What is the result of `parseInt('123abc')`?",
+    "options": [
+      "123",
+      "'123abc'",
+      "NaN",
+      "0"
+    ],
+    "correctAnswer": [
+      "123"
+    ]
+  },
+  {
+    "question": "How do you create a function in JavaScript?",
+    "options": [
+      "function myFunc() {}",
+      "def myFunc() {}",
+      "create myFunc() {}",
+      "new function myFunc()"
+    ],
+    "correctAnswer": [
+      "function myFunc() {}"
+    ]
+  },
+  {
+    "question": "Which method converts a JSON string into a JavaScript object?",
+    "options": [
+      "JSON.parse()",
+      "JSON.stringify()",
+      "JSON.convert()",
+      "JSON.toObject()"
+    ],
+    "correctAnswer": [
+      "JSON.parse()"
+    ]
+  },
+  {
+    "question": "Which symbol is used for single-line comments?",
+    "options": [
+      "//",
+      "/*",
+      "#",
+      "<!--"
+    ],
+    "correctAnswer": [
+      "//"
+    ]
+  },
+  {
+    "question": "What does `typeof []` return?",
+    "options": [
+      "'object'",
+      "'array'",
+      "'list'",
+      "'undefined'"
+    ],
+    "correctAnswer": [
+      "'object'"
+    ]
+  },
+  {
+    "question": "What will `[] == false` return?",
+    "options": [
+      "true",
+      "false",
+      "undefined",
+      "NaN"
+    ],
+    "correctAnswer": [
+      "true"
+    ]
+  },
+  {
+    "question": "What is the output of `typeof NaN`?",
+    "options": [
+      "'number'",
+      "'NaN'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correctAnswer": [
+      "'number'"
+    ]
+  },
+  {
+    "question": "What does `Array.isArray([])` return?",
+    "options": [
+      "true",
+      "false",
+      "undefined",
+      "null"
+    ],
+    "correctAnswer": [
+      "true"
+    ]
+  },
+  {
+    "question": "How do you round a number to the nearest integer?",
+    "options": [
+      "Math.round()",
+      "Math.floor()",
+      "Math.ceil()",
+      "Math.trim()"
+    ],
+    "correctAnswer": [
+      "Math.round()"
+    ]
+  },
+  {
+    "question": "What will `typeof function() {}` return?",
+    "options": [
+      "'function'",
+      "'object'",
+      "'undefined'",
+      "'string'"
+    ],
+    "correctAnswer": [
+      "'function'"
+    ]
+  },
+  {
+    "question": "Which method joins array elements into a string?",
+    "options": [
+      "join()",
+      "concat()",
+      "combine()",
+      "merge()"
+    ],
+    "correctAnswer": [
+      "join()"
+    ]
+  },
+  {
+    "question": "Which keyword is used to define a constant in JavaScript?",
+    "options": [
+      "const",
+      "var",
+      "let",
+      "static"
+    ],
+    "correctAnswer": [
+      "const"
+    ]
+  },
+  {
+    "question": "Which loop is guaranteed to run at least once?",
+    "options": [
+      "do...while",
+      "for",
+      "while",
+      "forEach"
+    ],
+    "correctAnswer": [
+      "do...while"
+    ]
+  },
+  {
+    "question": "Which method removes the last item from an array?",
+    "options": [
+      "pop()",
+      "push()",
+      "shift()",
+      "splice()"
+    ],
+    "correctAnswer": [
+      "pop()"
+    ]
+  },
+  {
+    "question": "Which event occurs when the user clicks on an HTML element?",
+    "options": [
+      "onclick",
+      "onhover",
+      "onpress",
+      "onchange"
+    ],
+    "correctAnswer": [
+      "onclick"
+    ]
+  },
+  {
+    "question": "What keyword stops a loop from continuing?",
+    "options": [
+      "break",
+      "exit",
+      "stop",
+      "halt"
+    ],
+    "correctAnswer": [
+      "break"
+    ]
+  },
+  {
+    "question": "How do you declare an object in JavaScript?",
+    "options": [
+      "let obj = {}",
+      "let obj = []",
+      "let obj = ()",
+      "let obj = ''"
+    ],
+    "correctAnswer": [
+      "let obj = {}"
+    ]
+  },
+  {
+    "question": "Which function converts a number to a string?",
+    "options": [
+      "toString()",
+      "Stringify()",
+      "parseInt()",
+      "parseFloat()"
+    ],
+    "correctAnswer": [
+      "toString()"
+    ]
+  },
+  {
+    "question": "How do you create an array in JavaScript?",
+    "options": [
+      "let arr = []",
+      "let arr = {}",
+      "let arr = ''",
+      "let arr = ()"
+    ],
+    "correctAnswer": [
+      "let arr = []"
+    ]
+  },
+  {
+    "question": "Which method is used to remove the first item from an array?",
+    "options": [
+      "shift()",
+      "pop()",
+      "unshift()",
+      "slice()"
+    ],
+    "correctAnswer": [
+      "shift()"
+    ]
+  },
+  {
+    "question": "How can you convert a string to a number?",
+    "options": [
+      "Number()",
+      "String()",
+      "Boolean()",
+      "Array()"
+    ],
+    "correctAnswer": [
+      "Number()"
+    ]
+  },
+  {
+    "question": "Which symbol is used for strict equality comparison?",
+    "options": [
+      "===",
+      "==",
+      "=",
+      "!=="
+    ],
+    "correctAnswer": [
+      "==="
+    ]
+  },
+  {
+    "question": "What is the output of `'10' * 2`?",
+    "options": [
+      "20",
+      "'20'",
+      "'102'",
+      "NaN"
+    ],
+    "correctAnswer": [
+      "20"
+    ]
+  },
+  {
+    "question": "Which value is falsy in JavaScript?",
+    "options": [
+      "0",
+      "''",
+      "null",
+      "All of the above"
+    ],
+    "correctAnswer": [
+      "All of the above"
+    ]
+  },
+  {
+    "question": "What is the correct syntax for an arrow function?",
+    "options": [
+      "() => {}",
+      "function() {}",
+      "=> () {}",
+      "function => {}"
+    ],
+    "correctAnswer": [
+      "() => {}"
+    ]
+  },
+  {
+    "question": "Which operator is used to assign a value to a variable?",
+    "options": [
+      "=",
+      "==",
+      "===",
+      "!="
+    ],
+    "correctAnswer": [
+      "="
+    ]
+  },
+  {
+    "question": "What is the output of `Boolean('')`?",
+    "options": [
+      "false",
+      "true",
+      "undefined",
+      "null"
+    ],
+    "correctAnswer": [
+      "false"
+    ]
+  }
+]

@@ -1,0 +1,710 @@
+[
+  {
+    "question": "What is the keyword used to declare a variable in Go?",
+    "options": [
+      "var",
+      "let",
+      "define",
+      "val"
+    ],
+    "correctAnswer": [
+      "var"
+    ]
+  },
+  {
+    "question": "What is the output type of the `len()` function in Go?",
+    "options": [
+      "int",
+      "float64",
+      "string",
+      "bool"
+    ],
+    "correctAnswer": [
+      "int"
+    ]
+  },
+  {
+    "question": "Which keyword is used to define a constant in Go?",
+    "options": [
+      "const",
+      "let",
+      "static",
+      "final"
+    ],
+    "correctAnswer": [
+      "const"
+    ]
+  },
+  {
+    "question": "What is the default value of an uninitialized int variable in Go?",
+    "options": [
+      "0",
+      "nil",
+      "undefined",
+      "1"
+    ],
+    "correctAnswer": [
+      "0"
+    ]
+  },
+  {
+    "question": "Which package is used to format and print output in Go?",
+    "options": [
+      "fmt",
+      "print",
+      "os",
+      "strings"
+    ],
+    "correctAnswer": [
+      "fmt"
+    ]
+  },
+  {
+    "question": "What is the entry point of a Go program?",
+    "options": [
+      "main()",
+      "start()",
+      "init()",
+      "run()"
+    ],
+    "correctAnswer": [
+      "main()"
+    ]
+  },
+  {
+    "question": "Which symbol is used for short variable declaration in Go?",
+    "options": [
+      ":=",
+      "=",
+      "==",
+      "::"
+    ],
+    "correctAnswer": [
+      ":="
+    ]
+  },
+  {
+    "question": "Which keyword is used to create a new function in Go?",
+    "options": [
+      "func",
+      "def",
+      "function",
+      "fn"
+    ],
+    "correctAnswer": [
+      "func"
+    ]
+  },
+  {
+    "question": "How do you import a package in Go?",
+    "options": [
+      "import \"package\"",
+      "#include",
+      "use package",
+      "require(package)"
+    ],
+    "correctAnswer": [
+      "import \"package\""
+    ]
+  },
+  {
+    "question": "Which data type is used to represent true or false in Go?",
+    "options": [
+      "bool",
+      "boolean",
+      "bit",
+      "binary"
+    ],
+    "correctAnswer": [
+      "bool"
+    ]
+  },
+  {
+    "question": "What does `:=` do in Go?",
+    "options": [
+      "Declare and initialize variable",
+      "Only declare",
+      "Only initialize",
+      "Compare values"
+    ],
+    "correctAnswer": [
+      "Declare and initialize variable"
+    ]
+  },
+  {
+    "question": "Which keyword is used to create a loop in Go?",
+    "options": [
+      "for",
+      "while",
+      "loop",
+      "repeat"
+    ],
+    "correctAnswer": [
+      "for"
+    ]
+  },
+  {
+    "question": "What is the zero value of a string in Go?",
+    "options": [
+      "\"\"",
+      "nil",
+      "0",
+      "undefined"
+    ],
+    "correctAnswer": [
+      "\"\""
+    ]
+  },
+  {
+    "question": "Which function is used to print output in Go?",
+    "options": [
+      "fmt.Println()",
+      "print()",
+      "console.log()",
+      "printf()"
+    ],
+    "correctAnswer": [
+      "fmt.Println()"
+    ]
+  },
+  {
+    "question": "Which type is used to represent decimal numbers in Go?",
+    "options": [
+      "float64",
+      "int",
+      "string",
+      "char"
+    ],
+    "correctAnswer": [
+      "float64"
+    ]
+  },
+  {
+    "question": "Which keyword is used to exit a loop early in Go?",
+    "options": [
+      "break",
+      "exit",
+      "stop",
+      "end"
+    ],
+    "correctAnswer": [
+      "break"
+    ]
+  },
+  {
+    "question": "What is a slice in Go?",
+    "options": [
+      "A dynamic array",
+      "A function",
+      "A struct",
+      "A pointer"
+    ],
+    "correctAnswer": [
+      "A dynamic array"
+    ]
+  },
+  {
+    "question": "Which symbol is used for comments in Go?",
+    "options": [
+      "//",
+      "#",
+      "<!-- -->",
+      "--"
+    ],
+    "correctAnswer": [
+      "//"
+    ]
+  },
+  {
+    "question": "Which keyword is used to define a structure in Go?",
+    "options": [
+      "struct",
+      "class",
+      "object",
+      "record"
+    ],
+    "correctAnswer": [
+      "struct"
+    ]
+  },
+  {
+    "question": "What is the return type of `len([]int{1, 2, 3})`?",
+    "options": [
+      "int",
+      "string",
+      "float",
+      "bool"
+    ],
+    "correctAnswer": [
+      "int"
+    ]
+  },
+  {
+    "question": "What is a pointer in Go?",
+    "options": [
+      "A variable that stores a memory address",
+      "A loop",
+      "A function",
+      "An integer"
+    ],
+    "correctAnswer": [
+      "A variable that stores a memory address"
+    ]
+  },
+  {
+    "question": "Which keyword is used to return a value from a function?",
+    "options": [
+      "return",
+      "yield",
+      "exit",
+      "break"
+    ],
+    "correctAnswer": [
+      "return"
+    ]
+  },
+  {
+    "question": "What is the keyword for conditional execution in Go?",
+    "options": [
+      "if",
+      "when",
+      "cond",
+      "case"
+    ],
+    "correctAnswer": [
+      "if"
+    ]
+  },
+  {
+    "question": "How do you declare an array of 3 integers in Go?",
+    "options": [
+      "[3]int",
+      "int[3]",
+      "[]int{3}",
+      "int{3}"
+    ],
+    "correctAnswer": [
+      "[3]int"
+    ]
+  },
+  {
+    "question": "Which symbol is used to get the address of a variable in Go?",
+    "options": [
+      "&",
+      "*",
+      "@",
+      "%"
+    ],
+    "correctAnswer": [
+      "&"
+    ]
+  },
+  {
+    "question": "Which keyword is used to create a new goroutine?",
+    "options": [
+      "go",
+      "thread",
+      "start",
+      "launch"
+    ],
+    "correctAnswer": [
+      "go"
+    ]
+  },
+  {
+    "question": "What does the `range` keyword do in Go?",
+    "options": [
+      "Iterates over elements",
+      "Creates an array",
+      "Defines a function",
+      "Declares a variable"
+    ],
+    "correctAnswer": [
+      "Iterates over elements"
+    ]
+  },
+  {
+    "question": "Which keyword is used to handle errors in Go?",
+    "options": [
+      "error",
+      "catch",
+      "try",
+      "except"
+    ],
+    "correctAnswer": [
+      "error"
+    ]
+  },
+  {
+    "question": "Which function stops the execution of a Go program immediately?",
+    "options": [
+      "os.Exit()",
+      "break",
+      "return",
+      "end"
+    ],
+    "correctAnswer": [
+      "os.Exit()"
+    ]
+  },
+  {
+    "question": "Which built-in function appends elements to a slice?",
+    "options": [
+      "append()",
+      "push()",
+      "add()",
+      "join()"
+    ],
+    "correctAnswer": [
+      "append()"
+    ]
+  },
+  {
+    "question": "What does `make()` do in Go?",
+    "options": [
+      "Creates slices, maps, and channels",
+      "Defines a function",
+      "Allocates integers",
+      "Opens files"
+    ],
+    "correctAnswer": [
+      "Creates slices, maps, and channels"
+    ]
+  },
+  {
+    "question": "Which function converts a string to an integer in Go?",
+    "options": [
+      "strconv.Atoi()",
+      "int.Parse()",
+      "stringToInt()",
+      "parseInt()"
+    ],
+    "correctAnswer": [
+      "strconv.Atoi()"
+    ]
+  },
+  {
+    "question": "Which function is used to convert an integer to a string?",
+    "options": [
+      "strconv.Itoa()",
+      "int.ToString()",
+      "parseString()",
+      "fmt.ToString()"
+    ],
+    "correctAnswer": [
+      "strconv.Itoa()"
+    ]
+  },
+  {
+    "question": "What is the purpose of `defer` in Go?",
+    "options": [
+      "Delays function execution until surrounding function returns",
+      "Defines a function",
+      "Creates delay",
+      "Exits loop"
+    ],
+    "correctAnswer": [
+      "Delays function execution until surrounding function returns"
+    ]
+  },
+  {
+    "question": "Which symbol is used to dereference a pointer in Go?",
+    "options": [
+      "*",
+      "&",
+      "$",
+      "@"
+    ],
+    "correctAnswer": [
+      "*"
+    ]
+  },
+  {
+    "question": "Which package is used for string manipulation in Go?",
+    "options": [
+      "strings",
+      "text",
+      "str",
+      "manipulate"
+    ],
+    "correctAnswer": [
+      "strings"
+    ]
+  },
+  {
+    "question": "How do you check the type of a variable at runtime?",
+    "options": [
+      "type assertion",
+      "typeof",
+      "typecheck",
+      "checktype"
+    ],
+    "correctAnswer": [
+      "type assertion"
+    ]
+  },
+  {
+    "question": "What is the zero value of a bool in Go?",
+    "options": [
+      "false",
+      "true",
+      "nil",
+      "0"
+    ],
+    "correctAnswer": [
+      "false"
+    ]
+  },
+  {
+    "question": "What keyword is used to import multiple packages?",
+    "options": [
+      "import (...) ",
+      "include",
+      "package",
+      "modules"
+    ],
+    "correctAnswer": [
+      "import (...) "
+    ]
+  },
+  {
+    "question": "What does the `cap()` function return in Go?",
+    "options": [
+      "Capacity of a slice",
+      "Count of elements",
+      "Length of a string",
+      "Maximum value"
+    ],
+    "correctAnswer": [
+      "Capacity of a slice"
+    ]
+  },
+  {
+    "question": "Which function is used to read input from the user in Go?",
+    "options": [
+      "fmt.Scan()",
+      "input()",
+      "read()",
+      "console.read()"
+    ],
+    "correctAnswer": [
+      "fmt.Scan()"
+    ]
+  },
+  {
+    "question": "How do you define a map in Go?",
+    "options": [
+      "map[string]int{}",
+      "dict{}",
+      "map{}",
+      "hashmap{}"
+    ],
+    "correctAnswer": [
+      "map[string]int{}"
+    ]
+  },
+  {
+    "question": "What is the type of `nil` in Go?",
+    "options": [
+      "No specific type",
+      "int",
+      "bool",
+      "string"
+    ],
+    "correctAnswer": [
+      "No specific type"
+    ]
+  },
+  {
+    "question": "Which function can be used to pause execution for a time duration?",
+    "options": [
+      "time.Sleep()",
+      "pause()",
+      "delay()",
+      "wait()"
+    ],
+    "correctAnswer": [
+      "time.Sleep()"
+    ]
+  },
+  {
+    "question": "What is the default value of a bool in Go?",
+    "options": [
+      "false",
+      "true",
+      "nil",
+      "undefined"
+    ],
+    "correctAnswer": [
+      "false"
+    ]
+  },
+  {
+    "question": "How do you declare a constant Pi in Go?",
+    "options": [
+      "const Pi = 3.14",
+      "define Pi = 3.14",
+      "Pi := 3.14",
+      "final Pi = 3.14"
+    ],
+    "correctAnswer": [
+      "const Pi = 3.14"
+    ]
+  },
+  {
+    "question": "What is the keyword for creating an interface in Go?",
+    "options": [
+      "interface",
+      "implements",
+      "protocol",
+      "object"
+    ],
+    "correctAnswer": [
+      "interface"
+    ]
+  },
+  {
+    "question": "Which operator is used for logical AND in Go?",
+    "options": [
+      "&&",
+      "and",
+      "&",
+      "&&&"
+    ],
+    "correctAnswer": [
+      "&&"
+    ]
+  },
+  {
+    "question": "What keyword defines an exported function or variable?",
+    "options": [
+      "Starts with uppercase letter",
+      "export",
+      "public",
+      "external"
+    ],
+    "correctAnswer": [
+      "Starts with uppercase letter"
+    ]
+  },
+  {
+    "question": "What does the `panic()` function do?",
+    "options": [
+      "Stops program with a run-time error",
+      "Logs info",
+      "Restarts program",
+      "Skips execution"
+    ],
+    "correctAnswer": [
+      "Stops program with a run-time error"
+    ]
+  },
+  {
+    "question": "Which function is used to recover from a panic in Go?",
+    "options": [
+      "recover()",
+      "catch()",
+      "handle()",
+      "restore()"
+    ],
+    "correctAnswer": [
+      "recover()"
+    ]
+  },
+  {
+    "question": "How do you concatenate strings in Go?",
+    "options": [
+      "Using + operator",
+      "Using & operator",
+      "Using join()",
+      "Using concat()"
+    ],
+    "correctAnswer": [
+      "Using + operator"
+    ]
+  },
+  {
+    "question": "Which Go data type can hold multiple types of values?",
+    "options": [
+      "interface{}",
+      "any{}",
+      "union{}",
+      "variant{}"
+    ],
+    "correctAnswer": [
+      "interface{}"
+    ]
+  },
+  {
+    "question": "Which keyword is used to check a value in multiple cases?",
+    "options": [
+      "switch",
+      "if-else",
+      "caseof",
+      "match"
+    ],
+    "correctAnswer": [
+      "switch"
+    ]
+  },
+  {
+    "question": "How do you define a method on a struct?",
+    "options": [
+      "func (s Struct) MethodName() {}",
+      "def s.MethodName() {}",
+      "method Struct.MethodName {}",
+      "struct.method()"
+    ],
+    "correctAnswer": [
+      "func (s Struct) MethodName() {}"
+    ]
+  },
+  {
+    "question": "What is a channel used for in Go?",
+    "options": [
+      "Communication between goroutines",
+      "Data storage",
+      "Math operations",
+      "String manipulation"
+    ],
+    "correctAnswer": [
+      "Communication between goroutines"
+    ]
+  },
+  {
+    "question": "What is the use of the `select` statement in Go?",
+    "options": [
+      "Waits on multiple channel operations",
+      "Switches goroutines",
+      "Selects a function",
+      "Chooses a variable"
+    ],
+    "correctAnswer": [
+      "Waits on multiple channel operations"
+    ]
+  },
+  {
+    "question": "How do you close a channel in Go?",
+    "options": [
+      "close(channel)",
+      "channel.close()",
+      "shutdown(channel)",
+      "stop(channel)"
+    ],
+    "correctAnswer": [
+      "close(channel)"
+    ]
+  },
+  {
+    "question": "Which function is used to create a new channel in Go?",
+    "options": [
+      "make(chan type)",
+      "new(channel)",
+      "create(chan type)",
+      "chan.new()"
+    ],
+    "correctAnswer": [
+      "make(chan type)"
+    ]
+  }
+]

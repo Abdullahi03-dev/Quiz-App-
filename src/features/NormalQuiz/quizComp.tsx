@@ -242,7 +242,7 @@ const quizComp = () => {
 
   return (
     <>
-    <section className="bg-[#0f1218] h-[100vh]">
+    <section className="bg-[#0f1218] min-h-screen">
     <nav className="flex items-center justify-between pt-6 px-4">
       <span className="flex items-center">
       <h1 className="text-white font-bold text-2xl">{questionNumber}/</h1>

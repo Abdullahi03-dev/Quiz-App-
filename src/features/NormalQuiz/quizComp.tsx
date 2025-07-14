@@ -2,6 +2,7 @@ import { db, collection, query, where, getDocs, doc,updateDoc ,increment} from "
 import { ArrowLeft,ArrowRight } from "lucide-react"
 import { useEffect,useState } from "react"
 import { useNavigate } from "react-router-dom";
+import NotFound from "../../components/notFound";
 interface QuestionProps{
   question:string;
   options:string[];

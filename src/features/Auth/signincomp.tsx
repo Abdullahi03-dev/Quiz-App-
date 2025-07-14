@@ -40,8 +40,8 @@ const signincomp = () => {
         setForm({...form,[e.target.name]:e.target.value})
     }
      const submit=(e:React.FormEvent)=>{
-        if(form.cpassword!==form.password){
-            toast.error('Password Do Not Match')
+        if(!form.name||!form.password){
+            toast.error('Fill In The Inputs')
             return
         }
         e.preventDefault()
@@ -124,7 +124,7 @@ const signincomp = () => {
               disabled={loading}
               className="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white border-0 py-6"
             >
-              {googleLoading?'Processing..':'Login'}
+              {loading?'Processing..':'Login'}
             </Button>
           </form>
 

@@ -42,8 +42,13 @@ const Leaderboard = () => {
   }))
   .sort((a, b) => b.totalScore - a.totalScore);
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#121212] text-gray-200 px-4 py-10">
-      <div className="w-full max-w-6xl bg-[#1e1e1e] rounded-2xl shadow-xl shadow-green-500/10 p-8">
+    <div className="min-h-screen flex items-center justify-center bg-slate-950  text-gray-200 px-4 py-10">
+      <div className='absolute top-20 left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl'></div>
+      <div className='absolute bottom-20 right-20  w-96 h-96 bg-purple-500/10 rounded-full blur-3xl'></div>
+      <div className="w-full max-w-6xl bg-900/80 rounded-2xl border p-8">
+
+
+
         <h1 className="text-3xl font-bold text-green-400 text-center mb-8">
           Quiz Leaderboard
         </h1>

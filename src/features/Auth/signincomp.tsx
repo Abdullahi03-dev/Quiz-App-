@@ -1,30 +1,18 @@
-import {motion} from 'framer-motion'
-import { Link } from "react-router-dom"
+
 import useSignIn from '../../hooks/useSignIn'
+import { Button } from "../../components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card";
+import { Input } from "../../components/ui/input";
+import { Label } from "../../components/ui/label";
+import { Separator } from "../../components/ui/separator";
+import { Brain, Mail, Lock, ArrowLeft, Eye, EyeOff} from "lucide-react";
+import { Link } from "react-router-dom"
+import {FcGoogle} from 'react-icons/fc'
 import { useState } from 'react'
 import toast from 'react-hot-toast'
-const containerVariants={
-    hidden:{opacity:0,y:50},
-    visible:{opacity:1,y:0},
-    transition:{
-        duration:5,
-        delay:40,
-        ease:[0.5,0.71,1,1.5]
-    }
-}
-
-const inputsVariants={
-    hidden:{opacity:0,x:-90},
-    visible:{opacity:1,x:0},
-    transition:{duration:0.5},
-}
-const buttonVariants={
-    hidden:{scale:1.05,transition:{
-        duration:0.2
-    }},
-}
 const signincomp = () => {
-  const {handleSignIn,loading}=useSignIn()
+    const [showPassword, setShowPassword] = useState(false);
+  const {handleSignIn,signupwithGoogle}=useSignIn()
    
     const [form,setForm]=useState({
         name:"",
@@ -45,47 +33,113 @@ const signincomp = () => {
         handleSignIn(form.email,form.name,form.password)
     }
   return (
-   <>
-   <section className="bg-[#0f1218] h-[100vh] flex items-center justify-center">
-    <motion.div initial='hidden'animate='visible' variants={containerVariants} className="shadow-[0_4px_20px_rgba(0,255,128,0.2)] w-[320px] bg-black pb-5.5  px-14 rounded-[7px]  md:w-[365px]">
-<span className="flex flex-col items-center pt-8 md:pb-2.5">
-    <h1 className="text-center text-white font-semibold text-[23px] font-dmsans">Log In</h1>
-    <p className="text-center text-[#f5f5f5cb] text-[14px] font-light font-dmsans">Login to your account</p>
-</span>
-<form onSubmit={submit}>
+    <div className="min-h-screen bg-slate-950 text-white flex items-center justify-center p-6">
+    <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-purple-500/5"></div>
+    <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
+    <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+    
+    <div className="relative w-full max-w-md">
+      <Link 
+        to="/" 
+        className="inline-flex items-center text-gray-400 hover:text-white mb-8 group transition-colors"
+      >
+        <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+        Back to Home
+      </Link>
 
-<div className="flex flex-col items-center">
-    {/* <div className="flex flex-col items-center pt-7 mb-4 md:mb-3 md:pt-1">
-        <label className="text-left text-white font-light inline-block self-start -ml-1.5">Username</label>
-        <motion.input type="text" placeholder="quizmaster" name='name' value={form.name} onChange={handleChange} required  initial='hidden' animate='visible' variants={inputsVariants} className="text-[15px] font-dmsans bg-[#1e1f20] w-[245px] p-[4px] rounded-[9px] pl-[10px] py-[6px] text-[#f5f5f5cb] border-[1px] border-[#00ff7f] mt-2.5 focus:border-[#00ff7f] focus:outline-none md:w-[285px] md:py-[4.5px]"/>
-    </div> */}
-
-    <div className="flex flex-col items-center mb-4 md:mb-3">
-        <label className="text-left text-white font-light inline-block self-start -ml-1.5">Email</label>
-        <motion.input type="text" placeholder="yourexample@gmail.com" name='email' value={form.email} onChange={handleChange} required initial='hidden' animate='visible' variants={inputsVariants} className="text-[15px] font-dmsans bg-[#1e1f20] w-[245px] p-[4px] rounded-[9px] pl-[10px] py-[6px] text-[#f5f5f5cb] border-[1px] border-[#00ff7f] mt-2.5 focus:border-[#00ff7f] focus:outline-none md:w-[285px] md:py-[4.5px]"/>
-    </div>
-
-    <div className="flex flex-col items-center mb-4 md:mb-3">
-        <label className="text-left text-white font-light inline-block self-start -ml-1.5">Password</label>
-        <motion.input type="password" initial='hidden' animate='visible' name='password' value={form.password} onChange={handleChange} required variants={inputsVariants} className="text-[15px] font-dmsans bg-[#1e1f20] w-[245px] p-[4px] rounded-[9px] pl-[10px] py-[6px] text-[#f5f5f5cb] border-[1px] border-[#00ff7f] mt-2.5 focus:border-[#00ff7f] focus:outline-none md:w-[285px] md:py-[4px]"/>
-    </div>
-
-    <div className="flex flex-col items-center mb-4 md:mb-3">
-        <label className="text-left text-white font-light inline-block self-start -ml-1.5">Confirm Password</label>
-        <motion.input type="password" initial='hidden' animate='visible' name='cpassword' value={form.cpassword} onChange={handleChange} required variants={inputsVariants} className="text-[15px] font-dmsans bg-[#1e1f20] w-[245px] p-[4px] rounded-[9px] pl-[10px] py-[6px] text-[#f5f5f5cb] border-[1px] border-[#00ff7f] mt-2.5 focus:border-[#00ff7f] focus:outline-none md:w-[285px] md:py-[4px]"/>
-    </div>
-
-    <span>
-        <motion.button whileHover='hover' variants={buttonVariants} className="bg-[#00ff7f] w-[245px] border-none py-[10px] text-center rounded-xl mt-[12px] font-semibold cursor-pointer text-[15px] md:py-[7px] md:w-[285px] md:mt-[8px]" disabled={loading}>{loading ? "Loging..." : "Login"}</motion.button>
+      <Card className="bg-slate-900/80 border-slate-800 backdrop-blur-sm">
+        <CardHeader className="text-center">
+          <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <Brain className="w-8 h-8 text-white" />
+          </div>
+          <CardTitle className="text-2xl font-bold text-white">Join AbdullThon</CardTitle>
+          <CardDescription className="text-gray-400">
+            Create your account and start your quiz journey
+          </CardDescription>
+        </CardHeader>
         
-        <h5 className="text-[#4a4a4c] text-center block mt-3 self-center md:text-[13px] md:self-center">Don't have an account? <Link to={'/signup'} className="inline-block text-[#00ff7f] underline font-light" >Sign up</Link></h5>
-    </span>
-</div>
-</form>
-    </motion.div>
-        </section>
-   </>
-  )
+        <CardContent className="space-y-6">
+          <form onSubmit={submit} className="space-y-4">
+            
+
+            <div className="space-y-2">
+              <Label htmlFor="email" className="text-white">Email</Label>
+              <div className="relative">
+                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-4 h-4" />
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="Enter your email"
+                  value={form.email}
+                  onChange={handleChange}
+                  className="pl-10 bg-slate-800 border-slate-700 text-white placeholder:text-gray-500 focus:border-emerald-500"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="password" className="text-white">Password</Label>
+              <div className="relative">
+                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-4 h-4" />
+                <Input
+                  id="password"
+                  name="password"
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Password"
+                  value={form.password}
+                  onChange={handleChange}
+                  className="pl-10 pr-10 bg-slate-800 border-slate-700 text-white placeholder:text-gray-500 focus:border-emerald-500"
+                  required
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-300"
+                >
+                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
+            </div>
+
+
+            <Button 
+              type="submit" 
+              className="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white border-0 py-6"
+            >
+              Login
+            </Button>
+          </form>
+
+          <div className="relative">
+            <Separator className="bg-slate-700" />
+            <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-slate-900 px-4 text-gray-400 text-sm">
+              or
+            </span>
+          </div>
+
+          <Button 
+          onClick={signupwithGoogle}
+            variant="outline" 
+            className="w-full border-slate-700 text-white bg-slate-800 hover:bg-slate-800 py-6"
+          >
+            <FcGoogle className='w-4 h-4 mr-3'/>
+            Continue with Google
+          </Button>
+
+          <p className="text-center text-gray-400">
+            Don't have an account?{" "}
+            <Link to="/signup" className="text-emerald-400 hover:text-emerald-300 underline">
+              Sign Up
+            </Link>
+          </p>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+);
+  
 }
 
 export default signincomp

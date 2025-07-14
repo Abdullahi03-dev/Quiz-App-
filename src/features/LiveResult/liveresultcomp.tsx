@@ -128,15 +128,18 @@ console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
   /* ---------- UI --------- */
   return (
     <>
-      <div className="min-h-screen flex items-center justify-center bg-[#121212] text-gray-200 px-4 py-10 pb-10">
-        <div className="w-full max-w-4xl bg-[#1e1e1e] rounded-2xl shadow-xl shadow-green-500/10 p-8 mb-10">
+      <div className="min-h-screen flex items-center justify-center bg-slate-950 text-gray-200 px-4 py-10 pb-10">
+      <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-purple-500/5"></div>
+      <div className="absolute top-20 left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="w-full max-w-4xl bg-slate-900/80 border-slate-800 backdrop-blur-sm rounded-2xl p-8 mb-10 ">
           <h1 className="text-3xl font-bold text-green-400 text-center mb-8">
             Multiplayer Quiz Result
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {/* Player 1 */}
-            <div className="bg-[#2a2a2a] p-6 rounded-xl border border-gray-700">
+            <div className="bg-slate-900/80 border-slate-800 backdrop-blur-sm p-6 rounded-xl border  ">
               <h3 className="text-green-400 text-xl font-semibold mb-2">
                 Player 1: {data.userOneName}
               </h3>
@@ -156,7 +159,7 @@ console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
             </div>
 
             {/* Player 2 */}
-            <div className="bg-[#2a2a2a] p-6 rounded-xl border border-gray-700">
+            <div className="p-6 rounded-xl border bg-slate-900/80 border-slate-800 backdrop-blur-sm">
               <h3 className="text-green-400 text-xl font-semibold mb-2">
                 Player 2: {data.userTwoName}
               </h3>
@@ -176,17 +179,22 @@ console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
             </div>
           </div>
 
-          <div className="bg-green-500/10 border border-green-400 text-green-300 font-semibold text-center py-4 px-6 rounded-xl text-lg">
+          <div className="bg-green-400/10 border border-green-400 text-green-300 font-semibold text-center py-4 px-6 rounded-xl text-lg">
             🏆{first}
           </div>
 
-          <Button
-            type="button"
+          {/* <Button
             className="mt-4 mx-auto cursor-pointer"
-            onClick={() => navigate("/categories")}
           >
-            Back Dashboard
-          </Button>
+            
+          </Button> */}
+          <Button size="lg" variant="outline" className="border-slate-700 bg-slate-700 text-white hover:bg-slate-800 mt-4"
+            type="button"
+            onClick={() => navigate("/categories")}
+
+          >
+              Back Dashboard
+            </Button>
         </div>
       </div>
 

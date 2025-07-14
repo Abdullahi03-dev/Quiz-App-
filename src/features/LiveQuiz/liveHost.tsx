@@ -206,12 +206,15 @@ const formatTime = (secs:number) => {
       fetch(`${filename}`)
       .then((response)=>response.json() as Promise<QuestionProps[]>)
       .then((data)=>{
-        setData(data)
-        let randomIndex=Math.floor(Math.random()*data.length)
-        if(randomIndex>=20){
-          randomIndex=19
-          setQuestionIndex(randomIndex)
+        const shuffled=[...data];
+        for (let i = shuffled.length-1; i > 0; i--) {
+          
+          const j=Math.floor(Math.random()*(i+1));
+          [shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]]
         }
+        const selectedQues=shuffled.slice(0,parseInt(questonsLenghtSaved))
+        setData(selectedQues)
+        setQuestionIndex(0)
       })
       .catch((err)=>{
           console.log(err)
@@ -299,7 +302,7 @@ const formatTime = (secs:number) => {
 
   return (
     <>
-    <section className="bg-[#0f1218] h-[100vh]">
+    <section className="bg-slate-950 h-[130vh]">
     <nav className="flex items-center justify-between pt-6 px-4">
       <span className="flex items-center">
       <h1 className="text-white font-bold text-2xl">{questionNumber}/</h1>
@@ -324,7 +327,8 @@ const formatTime = (secs:number) => {
     <div className="flex flex-col   justify-center gap-y-5 md:grid md:grid-cols-2 md:gap-x-[8rem] md:gap-y-[2rem] md:pt-6 md:place-items-center md:justify-center">
       {currentQUes.options.map((val,index)=>(
 
-<span key={index} onClick={()=>checkAnswer(val,questionNumber)} className={`cursor-pointer border border-[#ffffff59] py-4 text-white pl-5 rounded-[13px] bg-gradient-to-br from-[#a1f2c] to-[#131720]/90 md:w-[310px] ${selected[questionNumber]===val?'shadow-[0_4px_10px_rgba(0,255,128,0.2)] border-3 border-[#00ff80c4]':''} `}>{val}</span>
+<span key={index} onClick={()=>checkAnswer(val,questionNumber)} className={`cursor-pointer border border-[#ffffff59] py-4 text-white pl-5 rounded-[13px] bg-gradient-to-br from-[#a1f2c] to-[#131720]/90 md:w-[310px] ${selected[questionNumber]===val?'shadow-[0_4px_10px_rgba(0,255,128,0.2)] border-3 border-green-700':''} `}>{val}</span>
+
 
       ))}
 

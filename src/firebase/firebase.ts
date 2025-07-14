@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, User} from "firebase/auth";
-import { getFirestore, collection, query, where, getDocs, doc, setDoc,updateDoc,increment ,addDoc,onSnapshot,Unsubscribe,DocumentData} from "firebase/firestore";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, User,signInWithPopup} from "firebase/auth";
+import { getFirestore, collection, query, where, getDocs, doc, setDoc,updateDoc,increment ,addDoc,onSnapshot,Unsubscribe,DocumentData,getDoc} from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBt7srtISPx0BfQtN8WGs5UiXO8D68_5Ns",
@@ -10,12 +10,12 @@ const firebaseConfig = {
     messagingSenderId: "163832744176",
     appId: "1:163832744176:web:7786d9ba0a46687caa9a35",
     measurementId: "G-FN4QXHQ1TL"
-  };
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-export { auth, db, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, collection, query, where, getDocs, doc, setDoc,updateDoc,increment ,addDoc,onSnapshot};
+export { auth, db, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, collection, query, where, getDocs, doc, setDoc,updateDoc,increment ,addDoc,onSnapshot,signInWithPopup,getDoc};
 export type {User,Unsubscribe,DocumentData}

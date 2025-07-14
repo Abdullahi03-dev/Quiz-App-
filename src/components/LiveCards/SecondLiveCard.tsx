@@ -104,7 +104,7 @@ const updateScore=async(generatedRoomCode:number)=> {
     <>
     <Dialog>
 <DialogTrigger asChild>
-        <motion.div initial='hidden'animate='visible' variants={cardVariants}  className={`mb-6.5 py-7 w-[335px] flex flex-col items-start justify-center md:w-[450px] md:h-[240px] bg-gradient-to-br from-[#a1f2c] to-black/70 rounded-[6px] md:px-3.5 cursor-pointer `} >
+        <motion.div initial='hidden'animate='visible' variants={cardVariants}  className={`mb-6.5 py-7 w-[335px] flex flex-col items-start justify-center md:w-[450px] md:h-[240px] bg-gradient-to-br from-[#a1f2c] to-black/70 z-50 rounded-[6px] md:px-3.5 cursor-pointer `} >
 
 <span className='px-[13px]'>
 <h2 className='text-[23px] pb-1 text-white font-semibold md:text-[24px] pt-3 text-center font-dmsans'>Search For Room</h2>

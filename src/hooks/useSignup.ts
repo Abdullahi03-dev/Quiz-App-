@@ -1,11 +1,13 @@
-import { auth, db, createUserWithEmailAndPassword, collection, query, where, getDocs, doc, setDoc } from "../firebase/firebase";
+import { auth, db, createUserWithEmailAndPassword, collection, query, where, getDocs,getDoc, doc, setDoc } from "../firebase/firebase";
 import {useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 // import { useUser } from "../context/UsernameContext";
 import toast from 'react-hot-toast'
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 const useSignup = () => {
     const navigate=useNavigate()
+    const provider=new GoogleAuthProvider()
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -75,7 +77,32 @@ const directPath=()=>[
     setLoading(false);
   }
 
-  return {signup,loading}
+  const signupwithGoogle = async () => {
+    setError("");
+    setLoading(true);
+const result=await signInWithPopup(auth,provider)
+const user=result.user;  
+    const userDoc=doc(db,'users',user.uid)
+    const docSnap=await getDoc(userDoc);
+    if(!docSnap.exists()){
+      await setDoc(userDoc, {
+        name: user.displayName,
+        email: user.email,
+        userId: user.uid,
+        scores: {
+          JavaScript:0,
+          Golang:0,
+          Python: 0,
+        }
+      });
+    }
+
+
+
+
+}
+
+  return {signup,signupwithGoogle,loading}
 }
 
 export default useSignup

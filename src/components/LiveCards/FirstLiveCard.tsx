@@ -180,7 +180,7 @@ const handleClick=()=>{
 <h2 className='text-[23px] pb-1 text-white font-semibold md:text-[24px] pt-3 text-center font-dmsans'>Create A Room</h2>
 <p className='text-[#f5f5f5cb] text-center text-[15px] font-medium font-dmsans'>Create a quiz room and get a unique code.Share this code with friends to join your quiz.Get ready to compete and have fun!</p>
 
-<button className="text-black font-bold mt-4 bg-[#00ff7f] w-[300px] h-10 rounded-lg block mx-auto cursor-pointer">Create Room</button>
+<button className="text-black font-bold mt-4 bg-[#00ff7f] w-[300px] h-10 rounded-lg block mx-auto cursor-pointer z-50">Create Room</button>
 </span>
 
         </motion.div>

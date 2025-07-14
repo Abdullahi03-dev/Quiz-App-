@@ -5,6 +5,7 @@ import {LiveSettings} from './context/liveSettings.tsx'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 import './index.css'
 import ProtectedLayout from './components/protected.tsx'
+import NotFound from './components/notFound.tsx'
 import Index from "./pages"
 import Signup from './pages/signup'
 import Signin from './pages/signin'
@@ -48,6 +49,7 @@ const AppRoutes=()=>{
         <Route element={<Liveoquiz/>} path='liveoquiz'/>
         <Route element={<Livetquiz/>} path='livetquiz'/>
         <Route element={<LiveResult/>} path='liveresult'/>
+        <Route element={<NotFound/>} path='404'/>
         </Route>
         
       </Routes>

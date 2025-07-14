@@ -18,13 +18,14 @@ const useSignIn = () => {
   ]
 
          // Function to handle sign-up
-    const handleSignIn = async (email:string,name:string,password:string) => {
+    const handleSignIn = async (email:string,password:string) => {
       setError("");
       setLoading(true);
       try {
 // Create user with email and password in Firebase Auth
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       userCredential.user;
+      let name=email.split("@")[0].toLowerCase();
       localStorage.setItem('username',name)
       // setUsername(name)
       console.log("User signed up successfully!");

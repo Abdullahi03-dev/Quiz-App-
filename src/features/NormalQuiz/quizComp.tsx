@@ -2,6 +2,7 @@ import { db, collection, query, where, getDocs, doc,updateDoc ,increment} from "
 import { ArrowLeft,ArrowRight } from "lucide-react"
 import { useEffect,useState } from "react"
 import { useNavigate } from "react-router-dom";
+import Loader from "../../components/loader";
 // import NotFound from "../../components/notFound";
 interface QuestionProps{
   question:string;
@@ -163,7 +164,8 @@ const quizComp = () => {
 
     ///ERROR CHECKING
     if(!data.length||questionIndex===null){
-      navigate('/404')
+      return <Loader/>
+      // navigate('/404')
     }
     const currentQUes=data[questionIndex]
   

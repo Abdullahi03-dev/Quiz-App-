@@ -55,7 +55,7 @@ const Leaderboard = () => {
 {loading?(<p>Loading....</p>):(
 
 
-<div className="overflow-x-auto">
+<div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent scrollbar-smooth snap-x snap-mandatory px-2">
           <table className="w-full text-left border-separate border-spacing-y-4">
             <thead>
               <tr className="text-green-400 text-sm md:text-base">
@@ -67,7 +67,7 @@ const Leaderboard = () => {
             </thead>
             <tbody>
               {sortedData.map((player:any, index:number) => (
-                <tr key={index} className="bg-[#2a2a2a] rounded-lg text-sm md:text-base">
+                <tr key={index} className="bg-slate-900/80 rounded-lg text-sm md:text-base">
                   <td className="py-3 px-4 font-bold text-green-300">
                     {index + 1 === 1
                       ? '🥇 1st'

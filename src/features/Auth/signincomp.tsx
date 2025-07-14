@@ -30,22 +30,20 @@ const signincomp = () => {
     }
    }
     const [form,setForm]=useState({
-        name:"",
         email:"",
         password:"",
-        cpassword:'',
     })
 
     const handleChange=(e:React.ChangeEvent<HTMLInputElement>)=>{
         setForm({...form,[e.target.name]:e.target.value})
     }
      const submit=(e:React.FormEvent)=>{
-        if(!form.name||!form.password){
+        if(!form.email||!form.password){
             toast.error('Fill In The Inputs')
             return
         }
         e.preventDefault()
-        handleSignIn(form.email,form.name,form.password)
+        handleSignIn(form.email,form.password)
     }
   return (
     <div className="min-h-screen bg-slate-950 text-white flex items-center justify-center p-6">

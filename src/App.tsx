@@ -23,10 +23,10 @@ import { useAuth } from './context/AuthProvider.tsx'
 import Loader from './components/loader.tsx'
 
 const AppRoutes=()=>{
-  const {loading}=useAuth()
-  if(loading){
-    return <div>Loading........</div>
-  }
+  // const {loading}=useAuth()
+  // if(loading){
+  //   // return <div>Loading........</div>
+  // }
 
   return(
 

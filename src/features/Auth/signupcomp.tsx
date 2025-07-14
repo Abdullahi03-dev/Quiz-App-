@@ -10,6 +10,7 @@ import {FcGoogle} from 'react-icons/fc'
 import { Link } from "react-router-dom"
 import { useState } from 'react'
 import useSignup from '../../hooks/useSignup'
+import useGoogleAuth from "../../hooks/useGoogleAuth";
 import toast from 'react-hot-toast'
 
 // const containerVariants={
@@ -37,14 +38,29 @@ import toast from 'react-hot-toast'
 const signupcomp = () => {
     const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-    const {signup,signupwithGoogle}=useSignup()
-    
+    const {signup,loading}=useSignup()
+    const { googleAuth, googleLoading } = useGoogleAuth();
     const [form,setForm]=useState({
-        name:"",
+      Username:"",
         email:"",
         password:"",
         cpassword:'',
     })
+
+
+    const handleGoogleSignup = async () => {
+      try {
+        const response = await googleAuth();
+   
+        if (response) {
+         if (response.type === "error") throw new Error(response.message);
+   
+         toast.success(response.message);
+        }
+      } catch (err: any) {
+        toast.error(err.message);
+      }
+     }
 
     const handleChange=(e:React.ChangeEvent<HTMLInputElement>)=>{
         setForm({...form,[e.target.name]:e.target.value})
@@ -57,7 +73,7 @@ const signupcomp = () => {
             return
         }
         e.preventDefault()
-        signup(form.name,form.email,form.password)
+        signup(form.Username,form.email,form.password)
     }
     return (
         <div className="min-h-screen bg-slate-950 text-white flex items-center justify-center p-6">
@@ -93,10 +109,10 @@ const signupcomp = () => {
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-4 h-4" />
                       <Input
                         id="username"
-                        name="username"
+                        name="Username"
                         type="text"
                         placeholder="Choose a username"
-                        value={form.name}
+                        value={form.Username}
                         onChange={handleChange}
                         className="pl-10 bg-slate-800 border-slate-700 text-white placeholder:text-gray-500 focus:border-emerald-500"
                         required
@@ -151,7 +167,7 @@ const signupcomp = () => {
                       <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-4 h-4" />
                       <Input
                         id="confirmPassword"
-                        name="confirmPassword"
+                        name="cpassword"
                         type={showConfirmPassword ? "text" : "password"}
                         placeholder="Confirm your password"
                         value={form.cpassword}
@@ -170,10 +186,11 @@ const signupcomp = () => {
                   </div>
     
                   <Button 
+                  disabled={loading}
                     type="submit" 
                     className="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white border-0 py-6"
                   >
-                    Create Account
+                    {googleLoading?'Processing..':'Sign Up'}
                   </Button>
                 </form>
     
@@ -185,12 +202,14 @@ const signupcomp = () => {
                 </div>
     
                 <Button 
-                onClick={signupwithGoogle}
+                onClick={handleGoogleSignup}
+                disabled={googleLoading}
                   variant="outline" 
                   className="w-full border-slate-700 text-white bg-slate-800 hover:bg-slate-800 py-6"
                 >
+                
                   <FcGoogle className='w-4 h-4 mr-3'/>
-                  Continue with Google
+                  {googleLoading?'Processing..':'Continue with Google'}
                 </Button>
     
                 <p className="text-center text-gray-400">

@@ -10,10 +10,25 @@ import { Link } from "react-router-dom"
 import {FcGoogle} from 'react-icons/fc'
 import { useState } from 'react'
 import toast from 'react-hot-toast'
+import useGoogleAuth from "../../hooks/useGoogleAuth";
+
 const signincomp = () => {
     const [showPassword, setShowPassword] = useState(false);
-  const {handleSignIn,signupwithGoogle}=useSignIn()
-   
+    const { googleAuth, googleLoading } = useGoogleAuth();
+  const {handleSignIn,loading}=useSignIn()
+  const handleGoogleSignup = async () => {
+    try {
+      const response = await googleAuth();
+ 
+      if (response) {
+       if (response.type === "error") throw new Error(response.message);
+ 
+       toast.success(response.message);
+      }
+    } catch (err: any) {
+      toast.error(err.message);
+    }
+   }
     const [form,setForm]=useState({
         name:"",
         email:"",
@@ -106,9 +121,10 @@ const signincomp = () => {
 
             <Button 
               type="submit" 
+              disabled={loading}
               className="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white border-0 py-6"
             >
-              Login
+              {googleLoading?'Processing..':'Login'}
             </Button>
           </form>
 
@@ -120,12 +136,13 @@ const signincomp = () => {
           </div>
 
           <Button 
-          onClick={signupwithGoogle}
+          onClick={handleGoogleSignup}
             variant="outline" 
+            disabled={googleLoading}
             className="w-full border-slate-700 text-white bg-slate-800 hover:bg-slate-800 py-6"
           >
             <FcGoogle className='w-4 h-4 mr-3'/>
-            Continue with Google
+            {googleLoading?'Processing..':'Continue with Google'}
           </Button>
 
           <p className="text-center text-gray-400">

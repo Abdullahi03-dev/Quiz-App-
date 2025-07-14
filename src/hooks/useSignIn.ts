@@ -4,11 +4,9 @@ import toast from 'react-hot-toast'
 // import { useUser } from "../context/UsernameContext";
 import {useNavigate } from 'react-router-dom';
 
-import { auth,signInWithEmailAndPassword,signInWithPopup,doc,setDoc,getDoc,db} from "../firebase/firebase";
-import { GoogleAuthProvider } from "firebase/auth";
+import { auth,signInWithEmailAndPassword} from "../firebase/firebase";
 
 const useSignIn = () => {
-  const provider=new GoogleAuthProvider()
     const navigate=useNavigate()
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
@@ -44,32 +42,9 @@ const useSignIn = () => {
   
     };
 
-    const signupwithGoogle = async () => {
-      setError("");
-      setLoading(true);
-  const result=await signInWithPopup(auth,provider)
-  const user=result.user;  
-      const userDoc=doc(db,'users',user.uid)
-      const docSnap=await getDoc(userDoc);
-      if(!docSnap.exists()){
-        await setDoc(userDoc, {
-          name: user.displayName,
-          email: user.email,
-          userId: user.uid,
-          scores: {
-            JavaScript:0,
-            Golang:0,
-            Python: 0,
-          }
-        });
-      }
-  
-  
-  
-  
-  }
+    
 
-return {loading,error,handleSignIn,signupwithGoogle}
+return {loading,error,handleSignIn}
 }
 
 export default useSignIn

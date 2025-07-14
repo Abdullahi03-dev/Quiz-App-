@@ -188,7 +188,7 @@ console.log(leaderboardData)
       case 1: return <Crown className="w-5 h-5 text-yellow-400" />;
       case 2: return <Medal className="w-5 h-5 text-gray-300" />;
       case 3: return <Medal className="w-5 h-5 text-orange-400" />;
-      default: return <span className="w-5 h-5 flex items-center justify-center text-gray-400 font-bold text-sm">#{rank}</span>;
+      default: return <span className="w-5 h-5 flex items-center justify-center text-gray-400 font-bold text-sm">#{rank+3}</span>;
     }
   };
 
@@ -261,22 +261,22 @@ const getLevel = (score: number) => {
             <Card 
               key={index}
               className={`bg-slate-900/80 border backdrop-blur-sm ${
-                index === 1 ? 'border-yellow-500/50 order-2 md:order-1 scale-105' :
-                index == 2 ? 'border-gray-300/50 order-1 md:order-0' :
+                index+1 === 1 ? 'border-yellow-500/50 order-2 md:order-1 scale-105' :
+                index+1 == 2 ? 'border-gray-300/50 order-1 md:order-0' :
                 'border-orange-400/50 order-3 md:order-2'
               }`}
             >
               <CardHeader className="text-center">
                 <div className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 ${
-                  index === 1 ? 'bg-gradient-to-br from-yellow-400 to-orange-500' :
-                  index=== 2 ? 'bg-gradient-to-br from-gray-300 to-gray-500' :
+                  index+1 === 1 ? 'bg-gradient-to-br from-yellow-400 to-orange-500' :
+                  index+1 === 2 ? 'bg-gradient-to-br from-gray-300 to-gray-500' :
                   'bg-gradient-to-br from-orange-400 to-red-500'
                 }`}>
-                  {getRankIcon(index)}
+                  {getRankIcon(index+1)}
                 </div>
                 <CardTitle className="text-white text-lg">{player.name}</CardTitle>
                 <div className="flex items-center justify-center gap-1">
-                  <span className="text-sm">{'Nigeria'}</span>
+                  {/* <span className="text-sm">{'Nigeria'}</span> */}
                   <Badge variant="outline" className={getLevelColor(getLevel(getTotalScore(player.scores)))}>
                     {getLevel(getTotalScore(player.scores))}
                   </Badge>
@@ -337,7 +337,7 @@ const getLevel = (score: number) => {
                   >
                     <TableCell className="font-medium">
                       <div className="flex items-center gap-2">
-                        {getRankIcon(index)}
+                        {getRankIcon(index+1)}
                       </div>
                     </TableCell>
                     
@@ -375,10 +375,6 @@ const getLevel = (score: number) => {
                       <Badge variant="outline" className={getLevelColor(getLevel(getTotalScore(player.scores)))}>
                       {getLevel(getTotalScore(player.scores))}
                       </Badge>
-                    </TableCell>
-                    
-                    <TableCell className="text-center">
-                      <span className="text-2xl">{'Nig'}</span>
                     </TableCell>
                   </TableRow>
                 ))}

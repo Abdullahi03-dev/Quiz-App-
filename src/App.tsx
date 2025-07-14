@@ -19,7 +19,7 @@ import Liveoquiz from './pages/LiveQuiz/liveoquiz.tsx'
 import Livetquiz from './pages/LiveQuiz/livetquiz.tsx'
 import WaitingRoom from './pages/waitingRoom.tsx'
 import LiveResult from './pages/LiveResult.tsx'
-import { useAuth } from './context/AuthProvider.tsx'
+// import { useAuth } from './context/AuthProvider.tsx'
 import Loader from './components/loader.tsx'
 
 const AppRoutes=()=>{

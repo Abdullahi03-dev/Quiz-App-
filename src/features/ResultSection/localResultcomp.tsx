@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import {  useNavigate } from 'react-router-dom';
 // import Footer from "../../components/footer";
+import { calculateFinalScore,Difficulty } from "../../utils/calculateScore";
+
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
 import { Progress } from "../..//components/ui/progress";
@@ -38,7 +40,7 @@ useEffect(()=>{
         setCategory(saveData.languageChoosed)
         setScore(parseInt(scoreSaved))
         setDifficultyLevel(saveData.difficultyLevel)
-        setQuestonsLenght(saveData.questonsLenght)
+        setQuestonsLenght(saveData.questonsLenghtSaved)
     }else{
       alert('error')
     }
@@ -99,10 +101,14 @@ useEffect(()=>{
           <Card className="bg-slate-900/80 border-slate-800 backdrop-blur-sm">
             <CardHeader className="text-center">
               <div className="w-20 h-20 bg-gradient-to-br from-emerald-400 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">{((score)*100)}%</span>
+                <span className="text-2xl font-bold text-white">{(score/Number(questonsLenght))*100}%</span>
               </div>
               <CardTitle className={`text-3xl font-bold ${getScoreColor()}`}>
-                {score*10} Points
+              {calculateFinalScore(
+              score,
+             Number(questonsLenght),
+             difficultyLevel as Difficulty
+            )} Points
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -115,10 +121,10 @@ useEffect(()=>{
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400">Accuracy</span>
-                  <span className="text-white font-medium">{score*100}%</span>
+                  <span className="text-white font-medium">{(score/Number(questonsLenght))*100}%</span>
                 </div>
                 <Progress 
-                  value={score*100} 
+                  value={(score/Number(questonsLenght))*100}
                   className="h-3 bg-slate-800"
                 />
               </div>

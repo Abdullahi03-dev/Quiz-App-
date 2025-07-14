@@ -108,14 +108,14 @@ const Index = () => {
             battle friends, and climb the global leaderboards in real-time multiplayer quizzes.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16 items-center">
             <Link to="/signup">
-              <Button size="lg" className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white border-0 px-8 py-4 text-lg group">
+              <Button size="lg" className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white border-0 px-3 py-4 text-lg  w-[250px]">
                 Start Playing Now
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Button size="lg" variant="outline" className="border-slate-700 bg-slate-700 text-white hover:bg-slate-800 px-8 py-4 text-lg">
+            <Button size="lg" variant="outline" className="border-slate-700 bg-slate-700 text-white hover:bg-slate-800 px-3 py-4 text-lg w-[200px] ">
               Watch Demo
             </Button>
           </div>
@@ -134,7 +134,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="px-6 py-20 relative">
         <div className="max-w-7xl mx-auto">
@@ -173,7 +172,9 @@ const Index = () => {
                     variant="ghost" 
                     className="text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10 p-0 group/btn"
                   >
+                    <Link to='categories'>
                     Learn More 
+                    </Link>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
                 </CardContent>

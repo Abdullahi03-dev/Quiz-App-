@@ -3,6 +3,7 @@ import { ArrowLeft,ArrowRight } from "lucide-react"
 import { useEffect,useState } from "react"
 import { useNavigate } from "react-router-dom";
 import Loader from "../../components/loader";
+import { calculateFinalScore } from "../../utils/calculateScore";
 // import NotFound from "../../components/notFound";
 interface QuestionProps{
   question:string;
@@ -39,6 +40,8 @@ const quizComp = () => {
     }
   },[])
 
+  
+
   ///CHECKING IF NAME EXIST IN FIREBASE FIRST
       const checkIfNameExists = async (name: string): Promise<boolean> => {
         const usersRef = collection(db, "users");
@@ -57,7 +60,11 @@ const quizComp = () => {
         querySanpshot.forEach(async(document)=>{
           const docRef=doc(db,'users',document.id);
           await updateDoc(docRef,{
-            [`scores.${saveData.languageChoosed}`]:increment(scoreToBeSave/2),
+            [`scores.${saveData.languageChoosed}`]:increment((calculateFinalScore(
+              scoreToBeSave,
+              saveData.questonsLenghtSaved,
+              saveData.difficultyLevel
+            ))/2),
           })
 
         })}
@@ -248,18 +255,18 @@ const quizComp = () => {
 
   return (
     <>
-    <section className="bg-slate-950 h-[130vh]">
+    <section className="bg-slate-950 min-h-screen pb-2.5">
     {/* <div className='absolute inset-0 bg-gradient-to-br from emerald-500/5 via transparent to-purple-500/5'></div>
       <div className='absolute top-20 left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl'></div>
       <div className='absolute bottom-20 right-20  w-96 h-96 bg-purple-500/10 rounded-full blur-3xl'></div> */}
-    <nav className="flex items-center justify-between pt-6 px-4">
+    <nav className="flex items-center justify-between pt-6 px-4 pb-12">
       <span className="flex items-center">
       <h1 className="text-white font-bold text-2xl">{questionNumber}/</h1>
 <h1 className="text-[#00ff7f] font-bold text-2xl">{questionlenght}</h1>
       </span>
         {/* <Clock className="text-[#00ff7f]"/> */}
       </nav>
-    <main className="w-[80%] transform absolute top-[25%] left-[50%] -translate-x-[50%] md:w-[40%] md:pt-9 ">
+    <main className="w-[80%] mt-[8%] mx-auto md:w-[40%] md:pt-9 md:mt-[4%]">
       
     <h1 className="text-center text-white pb-8 text-[24px] font-medium">{currentQUes.question}</h1>
     <div className="flex flex-col   justify-center gap-y-5 md:grid md:grid-cols-2 md:gap-x-[8rem] md:gap-y-[2rem] md:pt-6 md:place-items-center md:justify-center">

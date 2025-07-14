@@ -298,7 +298,7 @@ const formatTime = (secs:number) => {
 
   return (
     <>
-    <section className="bg-slate-950 h-[130vh]">
+    <section className="bg-slate-950 min-h-screen pb-2.5">
     <nav className="flex items-center justify-between pt-6 px-4">
       <span className="flex items-center">
       <h1 className="text-white font-bold text-2xl">{questionNumber}/</h1>
@@ -316,7 +316,7 @@ const formatTime = (secs:number) => {
       }
       </span>
       </nav>
-    <main className="w-[80%] transform absolute top-[25%] left-[50%] -translate-x-[50%] md:w-[40%] md:pt-9 ">
+    <main className="w-[80%] mt-[8%] mx-auto md:w-[40%] md:pt-9 md:mt-[4%]">
       
     <h1 className="text-center text-white pb-8 text-[24px] font-medium">{currentQUes.question}</h1>
     <div className="flex flex-col   justify-center gap-y-5 md:grid md:grid-cols-2 md:gap-x-[8rem] md:gap-y-[2rem] md:pt-6 md:place-items-center md:justify-center">

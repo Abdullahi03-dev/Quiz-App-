@@ -69,7 +69,7 @@ const cards = () => {
         const isSecondItem=index===cardsObj.length-2
 
 return(
-<motion.div onClick={()=>navigate(`${isSecondItem?'/livesettings':char.path}`)} initial='hidden'animate='visible' variants={cardVariants} key={index} className={`mb-6.5 py-7 w-[335px] flex flex-col items-start justify-center md:w-[450px] md:h-[240px]  bg-gradient-to-br from-[#a1f2c] to-black/80 rounded-[6px] md:px-3.5 cursor-pointer ${isLastItem?"col-span-4" :""}`} >
+<motion.div onClick={()=>navigate(`${isSecondItem?'/livesettings':char.path}`)} initial='hidden'animate='visible' variants={cardVariants} key={index} className={`z-50 mb-6.5 py-7 w-[335px] flex flex-col items-start justify-center md:w-[450px] md:h-[240px]  bg-gradient-to-br from-[#a1f2c] to-black/80 rounded-[6px] md:px-3.5 cursor-pointer ${isLastItem?"col-span-4" :""}`} >
 
 <span className='mx-[13px] pt-[8px] bg-[#22c55e] w-[60px] rounded-[5px] py-[5px]'>
     <ImageComponent src={char.image} alt='heading' width='35px' height='25px'  className='block mx-auto'/>

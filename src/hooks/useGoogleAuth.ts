@@ -14,14 +14,21 @@ import {
   query,
   where,
 } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 
 const useGoogleAuth = () => {
     const [googleLoading, setGoogleLoading] = useState<boolean>(false);
-  
+    const navigate=useNavigate()
+    const directPath=()=>{
+      setTimeout(()=>{
+              navigate('/categories')
+          },3000)
+      }
     const googleAuth = async (): Promise<{ type: string; message: string } | null> => {
       setGoogleLoading(true);
       const provider = new GoogleAuthProvider();
+      
   
       try {
         const result = await signInWithPopup(auth, provider);
@@ -48,9 +55,11 @@ const useGoogleAuth = () => {
               Python: 0,
             }
           });
+          directPath()
   
           return { type: "success", message: "Sign up successful." };
         } else {
+          directPath()
           return { type: "success", message: "Welcome back, Chapter Chaser!" };
         }
       } catch (err: any) {

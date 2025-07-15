@@ -37,7 +37,7 @@ import toast from 'react-hot-toast'
 // }
 const signupcomp = () => {
     const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const {signup,loading}=useSignup()
     const { googleAuth, googleLoading } = useGoogleAuth();
     const [form,setForm]=useState({

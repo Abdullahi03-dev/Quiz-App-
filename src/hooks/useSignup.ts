@@ -17,11 +17,13 @@ const useSignup = () => {
         const querySnapshot = await getDocs(q);
         return !querySnapshot.empty; // Returns true if name exists
       };
-const directPath=()=>[
-    setTimeout(()=>{
+const directPath=()=>{
+setTimeout(()=>{
         navigate('/categories')
     },2000)
-]
+}
+    
+
        // Function to handle sign-up
   const signup = async (Username:string,email:string,password:any) => {
     setError("");

@@ -59,12 +59,13 @@ const quizComp = () => {
         }
         querySanpshot.forEach(async(document)=>{
           const docRef=doc(db,'users',document.id);
+          const finalScore=calculateFinalScore(
+            scoreToBeSave,
+            saveData.questonsLenghtSaved,
+            saveData.difficultyLevel
+          )
           await updateDoc(docRef,{
-            [`scores.${saveData.languageChoosed}`]:increment((calculateFinalScore(
-              scoreToBeSave,
-              saveData.questonsLenghtSaved,
-              saveData.difficultyLevel
-            ))/2),
+            [`scores.${saveData.languageChoosed}`]:increment((finalScore)/2),
           })
 
         })}

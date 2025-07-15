@@ -11,11 +11,11 @@ const useSignIn = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
   
-    const directPath=()=>[
+    const directPath=()=>{
       setTimeout(()=>{
-          navigate('/categories')
-      },2000)
-  ]
+              navigate('/categories')
+          },2000)
+      }
 
          // Function to handle sign-up
     const handleSignIn = async (email:string,password:string) => {

@@ -236,7 +236,7 @@ const getLevel = (score: number) => {
               size="icon"
               className="border-slate-700 bg-slate-800 text-white hover:bg-slate-800"
             >
-              <Link to="/">
+              <Link to="/categories">
                 <ArrowLeft className="w-4 h-4 bg-slate-800" />
               </Link>
             </Button>
@@ -398,7 +398,7 @@ const getLevel = (score: number) => {
                 >
                   <Link to="/categories">
                     <Trophy className="w-4 h-4 mr-2" />
-                    Start Quiz
+                    Take Quiz
                   </Link>
                 </Button>
                 
@@ -409,7 +409,7 @@ const getLevel = (score: number) => {
                 >
                   <Link to="/livesettings">
                     <Users className="w-4 h-4 mr-2" />
-                    Multiplayer
+                   Play Multiplayer
                   </Link>
                 </Button>
               </div>

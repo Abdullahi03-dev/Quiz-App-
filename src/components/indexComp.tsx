@@ -1,12 +1,11 @@
 
 
-import { useState } from "react";
+import {  useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import { Brain, Zap, Trophy, Users, Gamepad2, Crown, ArrowRight, Sparkles, Target, Globe } from "lucide-react";
-
 const Index = () => {
   const [hoveredFeature, setHoveredFeature] = useState<number | null>(null);
 
@@ -42,11 +41,11 @@ const Index = () => {
   ];
 
 
-  // const {user}=useAuth()
+//   const {user}=useAuth()
 
 
 
-  // const navigate=useNavigate()
+//   const navigate=useNavigate()
 //   useEffect(()=>{
 // if(!user){
 //   return
@@ -54,6 +53,8 @@ const Index = () => {
 //     navigate('/categories')
 // }
 //   },[])
+
+
 
   return (
     <div className="min-h-screen bg-slate-950  text-white overflow-hidden">
@@ -98,20 +99,20 @@ const Index = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Challenge Your
             <span className="block bg-gradient-to-r from-emerald-400 via-green-400 to-teal-400 bg-clip-text text-transparent">
-              Mind & Compete
+              Brain & Compete
             </span>
             Globally
           </h1>
           
           <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Join millions of players in the most addictive quiz platform. Test your knowledge, 
+            Join millions of players in the most addictive quiz platform. Test your coding knowledge, 
             battle friends, and climb the global leaderboards in real-time multiplayer quizzes.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16 items-center">
-            <Link to="/signup">
+            <Link to="/categories">
               <Button size="lg" className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white border-0 px-3 py-4 text-lg  w-[250px]">
-                Start Playing Now
+                Explore Categories
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>

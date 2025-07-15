@@ -206,9 +206,21 @@ useEffect(()=>{
             variant="outline" 
             className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white px-8 py-6 text-lg"
           >
-            <Link to="/">
+            <Link to="/categories">
               <Home className="w-5 h-5 mr-2" />
-              Back to Home
+              Back to Quiz Categories
+            </Link>
+          </Button>
+
+
+          <Button 
+            asChild
+            variant="outline" 
+            className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white px-8 py-6 text-lg"
+          >
+            <Link to="/leaderboard">
+              <Home className="w-5 h-5 mr-2" />
+              View Leaderboard
             </Link>
           </Button>
         </div>

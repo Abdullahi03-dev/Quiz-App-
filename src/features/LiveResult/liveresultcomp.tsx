@@ -153,7 +153,7 @@ console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
                 Score:{" "}
                 {data.userOneOnline
                   ? "WAITING FOR PLAYER 1 TO FINISH...."
-                  : `${data.userOneScore}}`}
+                  : `${data.userOneScore}`}
               </p>
             </div>
 
@@ -173,7 +173,7 @@ console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
                 Score:{" "}
                 {data.userTwoOnline
                   ? "WAITING FOR PLAYER2 TO FINISH...."
-                  : `${data.userTwoScore}}`}
+                  : `${data.userTwoScore}`}
               </p>
             </div>
           </div>

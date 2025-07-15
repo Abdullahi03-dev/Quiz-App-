@@ -16,6 +16,7 @@ import {
   import { Button } from "../ui/button"
 import { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
+import { serverTimestamp } from 'firebase/firestore';
   const QuestionsList = [
     {
       value: "10",
@@ -165,6 +166,7 @@ const updateScore=async(generatedRoomCode:number)=> {
           languageChoosed:selectedLanguage,
           time:selectedTime,
           quizHasStarted:false,
+          createdAt: serverTimestamp(),
   })
       toast.success('Goodluck')
       localStorage.setItem('Roomcode',`${generatedRoomCode}`)

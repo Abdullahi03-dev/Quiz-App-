@@ -65,7 +65,7 @@ const quizComp = () => {
             saveData.difficultyLevel
           )
           await updateDoc(docRef,{
-            [`scores.${saveData.languageChoosed}`]:increment((finalScore)/2),
+            [`scores.${saveData.languageChoosed}`]:increment((finalScore)),
           })
 
         })}

@@ -285,13 +285,13 @@ const getLevel = (score: number) => {
               
               <CardContent className="text-center space-y-3">
                 <div>
-                  <div className="text-2xl font-bold text-white">{getTotalScore(player.scores)}</div>
+                  <p className="text-2xl font-bold text-white">{getTotalScore(player.scores)}</p>
                   <p className="text-gray-400 text-sm">Total Score</p>
                 </div>
                 
                 <div className="space-y-2">
                   <div className="grid grid-cols-2 gap-2 text-xs">
-                    {Object.entries(player.scores).slice(0, 4).map(([lang, score]) => (
+                    {Object.entries(player.scores).slice(0, 5).map(([lang, score]) => (
                       <div key={lang} className="bg-slate-800/50 rounded px-2 py-1">
                         <div className="text-emerald-400 font-semibold">{score}</div>
                         <div className="text-gray-400 capitalize">{lang}</div>
@@ -362,7 +362,7 @@ const getLevel = (score: number) => {
                     
                     <TableCell>
                       <div className="flex flex-wrap gap-1 max-w-xs">
-                        {Object.entries(player.scores).slice(0, 4).map(([lang, score]) => (
+                        {Object.entries(player.scores).slice(0, 5).map(([lang, score]) => (
                       <div key={lang} className="bg-slate-800/50 rounded px-2 py-1">
                         <div className="text-emerald-400 font-semibold">{score}</div>
                         <div className="text-gray-400 capitalize">{lang}</div>

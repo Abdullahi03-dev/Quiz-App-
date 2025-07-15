@@ -193,9 +193,7 @@ console.log(leaderboardData)
   };
 
   const getTotalScore=(score:Record<string,number>)=>{
-    return Object.values(score).reduce((a:any,b:any)=>{
-        a+b
-    },0)
+    return Object.values(score).reduce((a, b) => a + b, 0)
   }
 const getLevel = (score: number) => {
     if(score>=2400) return 'GrandMaster';

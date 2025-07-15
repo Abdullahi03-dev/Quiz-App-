@@ -40,7 +40,7 @@ console.log(doc)
           setTimeout(()=>{
             navigate('/liveoquiz')
           },1000)
-          alert('success')
+          // alert('success')
         }else{
           console.log(data)
           console.log(secondUser)

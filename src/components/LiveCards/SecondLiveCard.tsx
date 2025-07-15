@@ -29,6 +29,7 @@ const SecondLiveCard = () => {
   const navigate=useNavigate()
   const [username,setusername]=useState<string>('')
   const [value,setValue]=useState('')
+  const [loading,setLoading]=useState(false)
   const handleChange=(e:React.ChangeEvent<HTMLInputElement>)=>{
     setValue(e.target.value)
   }
@@ -96,6 +97,7 @@ const updateScore=async(generatedRoomCode:number)=> {
     if(value!=='')
     {
       console.log(value)
+      setLoading(true)
     updateScore(parseInt(value))
     }
     
@@ -136,8 +138,9 @@ const updateScore=async(generatedRoomCode:number)=> {
         </div>
         <DialogFooter className="sm:justify-start">
           <DialogClose asChild>
-            <Button type="button" onClick={handleClick}>
-              Search
+            <Button type="button" disabled={loading} onClick={handleClick}>
+
+              {loading?'Searching...' : 'Search'}
             </Button>
           </DialogClose>
         </DialogFooter>

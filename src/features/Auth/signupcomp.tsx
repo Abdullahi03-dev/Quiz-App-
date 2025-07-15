@@ -190,7 +190,7 @@ const signupcomp = () => {
                     type="submit" 
                     className="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white border-0 py-6"
                   >
-                    {googleLoading?'Processing..':'Sign Up'}
+                    {loading?'Processing..':'Sign Up'}
                   </Button>
                 </form>
     

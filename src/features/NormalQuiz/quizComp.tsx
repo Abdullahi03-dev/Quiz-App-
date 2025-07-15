@@ -260,14 +260,14 @@ const quizComp = () => {
     {/* <div className='absolute inset-0 bg-gradient-to-br from emerald-500/5 via transparent to-purple-500/5'></div>
       <div className='absolute top-20 left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl'></div>
       <div className='absolute bottom-20 right-20  w-96 h-96 bg-purple-500/10 rounded-full blur-3xl'></div> */}
-    <nav className="flex items-center justify-between pt-6 px-4 pb-12">
+    <nav className="flex items-center justify-between pt-6 px-4 pb-25 md:pb-12">
       <span className="flex items-center">
       <h1 className="text-white font-bold text-2xl">{questionNumber}/</h1>
 <h1 className="text-[#00ff7f] font-bold text-2xl">{questionlenght}</h1>
       </span>
         {/* <Clock className="text-[#00ff7f]"/> */}
       </nav>
-    <main className="w-[80%] mt-[8%] mx-auto md:w-[40%] md:pt-9 md:mt-[4%]">
+    <main className="w-[80%] mx-auto md:w-[40%] md:pt-9 md:mt-[4%]">
       
     <h1 className="text-center text-white pb-8 text-[24px] font-medium">{currentQUes.question}</h1>
     <div className="flex flex-col   justify-center gap-y-5 md:grid md:grid-cols-2 md:gap-x-[8rem] md:gap-y-[2rem] md:pt-6 md:place-items-center md:justify-center">

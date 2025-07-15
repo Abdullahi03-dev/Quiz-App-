@@ -4,7 +4,7 @@ import {UsernameContext} from './context/UsernameContext.tsx'
 import {LiveSettings} from './context/liveSettings.tsx'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 import './index.css'
-// import ProtectedLayout from './components/protected.tsx'
+import ProtectedLayout from './components/protected.tsx'
 import NotFound from './components/notFound.tsx'
 import Index from "./pages"
 import Signup from './pages/signup'
@@ -36,7 +36,7 @@ const AppRoutes=()=>{
         <Route element={<Signup/>} path='signup'/>
         <Route element={<Signin/>} path='signin'/>
         {/* PROTECTED LAYOUT */}
-        {/* <Route element={<ProtectedLayout/>}> */}
+        <Route element={<ProtectedLayout/>}>
           <Route element={<Categories/>} path='categories'/>
         <Route element={<Settings/>} path='settings'/>
         <Route element={<Quiz/>} path='quiz'/>
@@ -50,7 +50,7 @@ const AppRoutes=()=>{
         <Route element={<Livetquiz/>} path='livetquiz'/>
         <Route element={<LiveResult/>} path='liveresult'/>
         <Route element={<NotFound/>} path='404'/>
-        {/* </Route> */}
+        </Route>
         
       </Routes>
     

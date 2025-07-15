@@ -28,6 +28,18 @@ import toast from 'react-hot-toast'
     {
       value: "25",
       label: "25 Questions",
+    },
+    {
+      value: "30",
+      label: "25 Questions",
+    },
+    {
+      value: "35",
+      label: "25 Questions",
+    },
+    {
+      value: "40",
+      label: "25 Questions",
     }
   ]
 
@@ -43,7 +55,13 @@ import toast from 'react-hot-toast'
     {
       value: "golang",
       label: "Golang",
-    }
+    },{
+      value: "react",
+      label: "React",
+    },{
+      value: "java",
+      label: "Java",
+    },
   ]
   const time = [
     {

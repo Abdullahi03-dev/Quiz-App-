@@ -1,0 +1,842 @@
+[
+    {
+        "question": "What is the output of print(2 ** 3)? (1)",
+        "options": [
+            "5",
+            "6",
+            "8",
+            "9"
+        ],
+        "correctAnswer": [
+            "8"
+        ]
+    },
+    {
+        "question": "Which of these is a Python tuple? (1)",
+        "options": [
+            "[1, 2, 3]",
+            "{1, 2, 3}",
+            "(1, 2, 3)",
+            "<1, 2, 3>"
+        ],
+        "correctAnswer": [
+            "(1, 2, 3)"
+        ]
+    },
+    {
+        "question": "How do you start a comment in Python? (1)",
+        "options": [
+            "// comment",
+            "# comment",
+            "/* comment */",
+            "-- comment"
+        ],
+        "correctAnswer": [
+            "# comment"
+        ]
+    },
+    {
+        "question": "Which of these is a correct function definition in Python? (1)",
+        "options": [
+            "function myFunc():",
+            "def myFunc[]:",
+            "def myFunc():",
+            "func myFunc():"
+        ],
+        "correctAnswer": [
+            "def myFunc():"
+        ]
+    },
+    {
+        "question": "What is the output of print(type([]))? (1)",
+        "options": [
+            "<class 'list'>",
+            "<type 'list'>",
+            "list",
+            "type list"
+        ],
+        "correctAnswer": [
+            "<class 'list'>"
+        ]
+    },
+    {
+        "question": "What is used to handle exceptions in Python? (1)",
+        "options": [
+            "if-else",
+            "try-except",
+            "switch-case",
+            "for-while"
+        ],
+        "correctAnswer": [
+            "try-except"
+        ]
+    },
+    {
+        "question": "What is the correct way to import a module in Python? (1)",
+        "options": [
+            "import math",
+            "#import math",
+            "include math",
+            "load math"
+        ],
+        "correctAnswer": [
+            "import math"
+        ]
+    },
+    {
+        "question": "What will len('Hello') return? (1)",
+        "options": [
+            "4",
+            "5",
+            "6",
+            "Error"
+        ],
+        "correctAnswer": [
+            "5"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create a class in Python? (1)",
+        "options": [
+            "function",
+            "class",
+            "object",
+            "define"
+        ],
+        "correctAnswer": [
+            "class"
+        ]
+    },
+    {
+        "question": "What is the result of 10 // 3 in Python? (1)",
+        "options": [
+            "3.33",
+            "3",
+            "3.0",
+            "4"
+        ],
+        "correctAnswer": [
+            "3"
+        ]
+    },
+    {
+        "question": "What is the output of print(2 ** 3)? (2)",
+        "options": [
+            "5",
+            "6",
+            "8",
+            "9"
+        ],
+        "correctAnswer": [
+            "8"
+        ]
+    },
+    {
+        "question": "Which of these is a Python tuple? (2)",
+        "options": [
+            "[1, 2, 3]",
+            "{1, 2, 3}",
+            "(1, 2, 3)",
+            "<1, 2, 3>"
+        ],
+        "correctAnswer": [
+            "(1, 2, 3)"
+        ]
+    },
+    {
+        "question": "How do you start a comment in Python? (2)",
+        "options": [
+            "// comment",
+            "# comment",
+            "/* comment */",
+            "-- comment"
+        ],
+        "correctAnswer": [
+            "# comment"
+        ]
+    },
+    {
+        "question": "Which of these is a correct function definition in Python? (2)",
+        "options": [
+            "function myFunc():",
+            "def myFunc[]:",
+            "def myFunc():",
+            "func myFunc():"
+        ],
+        "correctAnswer": [
+            "def myFunc():"
+        ]
+    },
+    {
+        "question": "What is the output of print(type([]))? (2)",
+        "options": [
+            "<class 'list'>",
+            "<type 'list'>",
+            "list",
+            "type list"
+        ],
+        "correctAnswer": [
+            "<class 'list'>"
+        ]
+    },
+    {
+        "question": "What is used to handle exceptions in Python? (2)",
+        "options": [
+            "if-else",
+            "try-except",
+            "switch-case",
+            "for-while"
+        ],
+        "correctAnswer": [
+            "try-except"
+        ]
+    },
+    {
+        "question": "What is the correct way to import a module in Python? (2)",
+        "options": [
+            "import math",
+            "#import math",
+            "include math",
+            "load math"
+        ],
+        "correctAnswer": [
+            "import math"
+        ]
+    },
+    {
+        "question": "What will len('Hello') return? (2)",
+        "options": [
+            "4",
+            "5",
+            "6",
+            "Error"
+        ],
+        "correctAnswer": [
+            "5"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create a class in Python? (2)",
+        "options": [
+            "function",
+            "class",
+            "object",
+            "define"
+        ],
+        "correctAnswer": [
+            "class"
+        ]
+    },
+    {
+        "question": "What is the result of 10 // 3 in Python? (2)",
+        "options": [
+            "3.33",
+            "3",
+            "3.0",
+            "4"
+        ],
+        "correctAnswer": [
+            "3"
+        ]
+    },
+    {
+        "question": "What is the output of print(2 ** 3)? (3)",
+        "options": [
+            "5",
+            "6",
+            "8",
+            "9"
+        ],
+        "correctAnswer": [
+            "8"
+        ]
+    },
+    {
+        "question": "Which of these is a Python tuple? (3)",
+        "options": [
+            "[1, 2, 3]",
+            "{1, 2, 3}",
+            "(1, 2, 3)",
+            "<1, 2, 3>"
+        ],
+        "correctAnswer": [
+            "(1, 2, 3)"
+        ]
+    },
+    {
+        "question": "How do you start a comment in Python? (3)",
+        "options": [
+            "// comment",
+            "# comment",
+            "/* comment */",
+            "-- comment"
+        ],
+        "correctAnswer": [
+            "# comment"
+        ]
+    },
+    {
+        "question": "Which of these is a correct function definition in Python? (3)",
+        "options": [
+            "function myFunc():",
+            "def myFunc[]:",
+            "def myFunc():",
+            "func myFunc():"
+        ],
+        "correctAnswer": [
+            "def myFunc():"
+        ]
+    },
+    {
+        "question": "What is the output of print(type([]))? (3)",
+        "options": [
+            "<class 'list'>",
+            "<type 'list'>",
+            "list",
+            "type list"
+        ],
+        "correctAnswer": [
+            "<class 'list'>"
+        ]
+    },
+    {
+        "question": "What is used to handle exceptions in Python? (3)",
+        "options": [
+            "if-else",
+            "try-except",
+            "switch-case",
+            "for-while"
+        ],
+        "correctAnswer": [
+            "try-except"
+        ]
+    },
+    {
+        "question": "What is the correct way to import a module in Python? (3)",
+        "options": [
+            "import math",
+            "#import math",
+            "include math",
+            "load math"
+        ],
+        "correctAnswer": [
+            "import math"
+        ]
+    },
+    {
+        "question": "What will len('Hello') return? (3)",
+        "options": [
+            "4",
+            "5",
+            "6",
+            "Error"
+        ],
+        "correctAnswer": [
+            "5"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create a class in Python? (3)",
+        "options": [
+            "function",
+            "class",
+            "object",
+            "define"
+        ],
+        "correctAnswer": [
+            "class"
+        ]
+    },
+    {
+        "question": "What is the result of 10 // 3 in Python? (3)",
+        "options": [
+            "3.33",
+            "3",
+            "3.0",
+            "4"
+        ],
+        "correctAnswer": [
+            "3"
+        ]
+    },
+    {
+        "question": "What is the output of print(2 ** 3)? (4)",
+        "options": [
+            "5",
+            "6",
+            "8",
+            "9"
+        ],
+        "correctAnswer": [
+            "8"
+        ]
+    },
+    {
+        "question": "Which of these is a Python tuple? (4)",
+        "options": [
+            "[1, 2, 3]",
+            "{1, 2, 3}",
+            "(1, 2, 3)",
+            "<1, 2, 3>"
+        ],
+        "correctAnswer": [
+            "(1, 2, 3)"
+        ]
+    },
+    {
+        "question": "How do you start a comment in Python? (4)",
+        "options": [
+            "// comment",
+            "# comment",
+            "/* comment */",
+            "-- comment"
+        ],
+        "correctAnswer": [
+            "# comment"
+        ]
+    },
+    {
+        "question": "Which of these is a correct function definition in Python? (4)",
+        "options": [
+            "function myFunc():",
+            "def myFunc[]:",
+            "def myFunc():",
+            "func myFunc():"
+        ],
+        "correctAnswer": [
+            "def myFunc():"
+        ]
+    },
+    {
+        "question": "What is the output of print(type([]))? (4)",
+        "options": [
+            "<class 'list'>",
+            "<type 'list'>",
+            "list",
+            "type list"
+        ],
+        "correctAnswer": [
+            "<class 'list'>"
+        ]
+    },
+    {
+        "question": "What is used to handle exceptions in Python? (4)",
+        "options": [
+            "if-else",
+            "try-except",
+            "switch-case",
+            "for-while"
+        ],
+        "correctAnswer": [
+            "try-except"
+        ]
+    },
+    {
+        "question": "What is the correct way to import a module in Python? (4)",
+        "options": [
+            "import math",
+            "#import math",
+            "include math",
+            "load math"
+        ],
+        "correctAnswer": [
+            "import math"
+        ]
+    },
+    {
+        "question": "What will len('Hello') return? (4)",
+        "options": [
+            "4",
+            "5",
+            "6",
+            "Error"
+        ],
+        "correctAnswer": [
+            "5"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create a class in Python? (4)",
+        "options": [
+            "function",
+            "class",
+            "object",
+            "define"
+        ],
+        "correctAnswer": [
+            "class"
+        ]
+    },
+    {
+        "question": "What is the result of 10 // 3 in Python? (4)",
+        "options": [
+            "3.33",
+            "3",
+            "3.0",
+            "4"
+        ],
+        "correctAnswer": [
+            "3"
+        ]
+    },
+    {
+        "question": "What is the output of print(2 ** 3)? (5)",
+        "options": [
+            "5",
+            "6",
+            "8",
+            "9"
+        ],
+        "correctAnswer": [
+            "8"
+        ]
+    },
+    {
+        "question": "Which of these is a Python tuple? (5)",
+        "options": [
+            "[1, 2, 3]",
+            "{1, 2, 3}",
+            "(1, 2, 3)",
+            "<1, 2, 3>"
+        ],
+        "correctAnswer": [
+            "(1, 2, 3)"
+        ]
+    },
+    {
+        "question": "How do you start a comment in Python? (5)",
+        "options": [
+            "// comment",
+            "# comment",
+            "/* comment */",
+            "-- comment"
+        ],
+        "correctAnswer": [
+            "# comment"
+        ]
+    },
+    {
+        "question": "Which of these is a correct function definition in Python? (5)",
+        "options": [
+            "function myFunc():",
+            "def myFunc[]:",
+            "def myFunc():",
+            "func myFunc():"
+        ],
+        "correctAnswer": [
+            "def myFunc():"
+        ]
+    },
+    {
+        "question": "What is the output of print(type([]))? (5)",
+        "options": [
+            "<class 'list'>",
+            "<type 'list'>",
+            "list",
+            "type list"
+        ],
+        "correctAnswer": [
+            "<class 'list'>"
+        ]
+    },
+    {
+        "question": "What is used to handle exceptions in Python? (5)",
+        "options": [
+            "if-else",
+            "try-except",
+            "switch-case",
+            "for-while"
+        ],
+        "correctAnswer": [
+            "try-except"
+        ]
+    },
+    {
+        "question": "What is the correct way to import a module in Python? (5)",
+        "options": [
+            "import math",
+            "#import math",
+            "include math",
+            "load math"
+        ],
+        "correctAnswer": [
+            "import math"
+        ]
+    },
+    {
+        "question": "What will len('Hello') return? (5)",
+        "options": [
+            "4",
+            "5",
+            "6",
+            "Error"
+        ],
+        "correctAnswer": [
+            "5"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create a class in Python? (5)",
+        "options": [
+            "function",
+            "class",
+            "object",
+            "define"
+        ],
+        "correctAnswer": [
+            "class"
+        ]
+    },
+    {
+        "question": "What is the result of 10 // 3 in Python? (5)",
+        "options": [
+            "3.33",
+            "3",
+            "3.0",
+            "4"
+        ],
+        "correctAnswer": [
+            "3"
+        ]
+    },
+    {
+        "question": "What is the output of print(2 ** 3)? (6)",
+        "options": [
+            "5",
+            "6",
+            "8",
+            "9"
+        ],
+        "correctAnswer": [
+            "8"
+        ]
+    },
+    {
+        "question": "Which of these is a Python tuple? (6)",
+        "options": [
+            "[1, 2, 3]",
+            "{1, 2, 3}",
+            "(1, 2, 3)",
+            "<1, 2, 3>"
+        ],
+        "correctAnswer": [
+            "(1, 2, 3)"
+        ]
+    },
+    {
+        "question": "How do you start a comment in Python? (6)",
+        "options": [
+            "// comment",
+            "# comment",
+            "/* comment */",
+            "-- comment"
+        ],
+        "correctAnswer": [
+            "# comment"
+        ]
+    },
+    {
+        "question": "Which of these is a correct function definition in Python? (6)",
+        "options": [
+            "function myFunc():",
+            "def myFunc[]:",
+            "def myFunc():",
+            "func myFunc():"
+        ],
+        "correctAnswer": [
+            "def myFunc():"
+        ]
+    },
+    {
+        "question": "What is the output of print(type([]))? (6)",
+        "options": [
+            "<class 'list'>",
+            "<type 'list'>",
+            "list",
+            "type list"
+        ],
+        "correctAnswer": [
+            "<class 'list'>"
+        ]
+    },
+    {
+        "question": "What is used to handle exceptions in Python? (6)",
+        "options": [
+            "if-else",
+            "try-except",
+            "switch-case",
+            "for-while"
+        ],
+        "correctAnswer": [
+            "try-except"
+        ]
+    },
+    {
+        "question": "What is the correct way to import a module in Python? (6)",
+        "options": [
+            "import math",
+            "#import math",
+            "include math",
+            "load math"
+        ],
+        "correctAnswer": [
+            "import math"
+        ]
+    },
+    {
+        "question": "What will len('Hello') return? (6)",
+        "options": [
+            "4",
+            "5",
+            "6",
+            "Error"
+        ],
+        "correctAnswer": [
+            "5"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create a class in Python? (6)",
+        "options": [
+            "function",
+            "class",
+            "object",
+            "define"
+        ],
+        "correctAnswer": [
+            "class"
+        ]
+    },
+    {
+        "question": "What is the result of 10 // 3 in Python? (6)",
+        "options": [
+            "3.33",
+            "3",
+            "3.0",
+            "4"
+        ],
+        "correctAnswer": [
+            "3"
+        ]
+    },
+    {
+        "question": "What is the output of print(2 ** 3)? (7)",
+        "options": [
+            "5",
+            "6",
+            "8",
+            "9"
+        ],
+        "correctAnswer": [
+            "8"
+        ]
+    },
+    {
+        "question": "Which of these is a Python tuple? (7)",
+        "options": [
+            "[1, 2, 3]",
+            "{1, 2, 3}",
+            "(1, 2, 3)",
+            "<1, 2, 3>"
+        ],
+        "correctAnswer": [
+            "(1, 2, 3)"
+        ]
+    },
+    {
+        "question": "How do you start a comment in Python? (7)",
+        "options": [
+            "// comment",
+            "# comment",
+            "/* comment */",
+            "-- comment"
+        ],
+        "correctAnswer": [
+            "# comment"
+        ]
+    },
+    {
+        "question": "Which of these is a correct function definition in Python? (7)",
+        "options": [
+            "function myFunc():",
+            "def myFunc[]:",
+            "def myFunc():",
+            "func myFunc():"
+        ],
+        "correctAnswer": [
+            "def myFunc():"
+        ]
+    },
+    {
+        "question": "What is the output of print(type([]))? (7)",
+        "options": [
+            "<class 'list'>",
+            "<type 'list'>",
+            "list",
+            "type list"
+        ],
+        "correctAnswer": [
+            "<class 'list'>"
+        ]
+    },
+    {
+        "question": "What is used to handle exceptions in Python? (7)",
+        "options": [
+            "if-else",
+            "try-except",
+            "switch-case",
+            "for-while"
+        ],
+        "correctAnswer": [
+            "try-except"
+        ]
+    },
+    {
+        "question": "What is the correct way to import a module in Python? (7)",
+        "options": [
+            "import math",
+            "#import math",
+            "include math",
+            "load math"
+        ],
+        "correctAnswer": [
+            "import math"
+        ]
+    },
+    {
+        "question": "What will len('Hello') return? (7)",
+        "options": [
+            "4",
+            "5",
+            "6",
+            "Error"
+        ],
+        "correctAnswer": [
+            "5"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create a class in Python? (7)",
+        "options": [
+            "function",
+            "class",
+            "object",
+            "define"
+        ],
+        "correctAnswer": [
+            "class"
+        ]
+    },
+    {
+        "question": "What is the result of 10 // 3 in Python? (7)",
+        "options": [
+            "3.33",
+            "3",
+            "3.0",
+            "4"
+        ],
+        "correctAnswer": [
+            "3"
+        ]
+    }
+]

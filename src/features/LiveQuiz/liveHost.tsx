@@ -67,7 +67,7 @@ const livehost = () => {
           const docRef=doc(db,'Rooms',document.id);
             console.log(document.id,document.data())
           await updateDoc(docRef,{
-            userOneScore:increment(scoreToBeSave/2),
+            userOneScore:increment(scoreToBeSave),
             userOneOnline:false,
           })
 

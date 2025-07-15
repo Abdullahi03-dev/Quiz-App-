@@ -53,6 +53,8 @@ const useGoogleAuth = () => {
               JavaScript:0,
               Golang:0,
               Python: 0,
+              java:0,
+              react:0
             }
           });
           localStorage.setItem('username',username)

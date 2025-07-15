@@ -1,0 +1,842 @@
+[
+    {
+        "question": "What is JSX?",
+        "options": [
+            "A JavaScript function",
+            "A way to write HTML in React",
+            "A CSS framework",
+            "A type of database"
+        ],
+        "correctAnswer": [
+            "A way to write HTML in React"
+        ]
+    },
+    {
+        "question": "What is the purpose of useState in React?",
+        "options": [
+            "To manage routing",
+            "To create components",
+            "To manage state in functional components",
+            "To fetch data"
+        ],
+        "correctAnswer": [
+            "To manage state in functional components"
+        ]
+    },
+    {
+        "question": "Which method is used to render a React element?",
+        "options": [
+            "ReactDOM.start()",
+            "React.render()",
+            "ReactDOM.render()",
+            "render.React()"
+        ],
+        "correctAnswer": [
+            "ReactDOM.render()"
+        ]
+    },
+    {
+        "question": "Which hook is used for side effects in React?",
+        "options": [
+            "useState",
+            "useEffect",
+            "useMemo",
+            "useContext"
+        ],
+        "correctAnswer": [
+            "useEffect"
+        ]
+    },
+    {
+        "question": "What is the default port for React development server?",
+        "options": [
+            "3000",
+            "8000",
+            "5000",
+            "8080"
+        ],
+        "correctAnswer": [
+            "3000"
+        ]
+    },
+    {
+        "question": "How do you pass data from parent to child component in React?",
+        "options": [
+            "Using Redux",
+            "Using props",
+            "Using context",
+            "Using hooks"
+        ],
+        "correctAnswer": [
+            "Using props"
+        ]
+    },
+    {
+        "question": "What is a React Fragment?",
+        "options": [
+            "A component for conditional rendering",
+            "A way to avoid adding extra nodes to the DOM",
+            "A built-in router",
+            "A method for event handling"
+        ],
+        "correctAnswer": [
+            "A way to avoid adding extra nodes to the DOM"
+        ]
+    },
+    {
+        "question": "What does useEffect return?",
+        "options": [
+            "Nothing",
+            "A function to run after render",
+            "A cleanup function",
+            "A component"
+        ],
+        "correctAnswer": [
+            "A cleanup function"
+        ]
+    },
+    {
+        "question": "What is the virtual DOM?",
+        "options": [
+            "A copy of the real DOM in memory",
+            "A server-side DOM",
+            "A browser plugin",
+            "A debugging tool"
+        ],
+        "correctAnswer": [
+            "A copy of the real DOM in memory"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create a functional component in React?",
+        "options": [
+            "function",
+            "component",
+            "render",
+            "def"
+        ],
+        "correctAnswer": [
+            "function"
+        ]
+    },
+    {
+        "question": "What is JSX?",
+        "options": [
+            "A JavaScript function",
+            "A way to write HTML in React",
+            "A CSS framework",
+            "A type of database"
+        ],
+        "correctAnswer": [
+            "A way to write HTML in React"
+        ]
+    },
+    {
+        "question": "What is the purpose of useState in React? ",
+        "options": [
+            "To manage routing",
+            "To create components",
+            "To manage state in functional components",
+            "To fetch data"
+        ],
+        "correctAnswer": [
+            "To manage state in functional components"
+        ]
+    },
+    {
+        "question": "Which method is used to render a React element? ",
+        "options": [
+            "ReactDOM.start()",
+            "React.render()",
+            "ReactDOM.render()",
+            "render.React()"
+        ],
+        "correctAnswer": [
+            "ReactDOM.render()"
+        ]
+    },
+    {
+        "question": "Which hook is used for side effects in React? ",
+        "options": [
+            "useState",
+            "useEffect",
+            "useMemo",
+            "useContext"
+        ],
+        "correctAnswer": [
+            "useEffect"
+        ]
+    },
+    {
+        "question": "What is the default port for React development server?",
+        "options": [
+            "3000",
+            "8000",
+            "5000",
+            "8080"
+        ],
+        "correctAnswer": [
+            "3000"
+        ]
+    },
+    {
+        "question": "How do you pass data from parent to child component in React?",
+        "options": [
+            "Using Redux",
+            "Using props",
+            "Using context",
+            "Using hooks"
+        ],
+        "correctAnswer": [
+            "Using props"
+        ]
+    },
+    {
+        "question": "What is a React Fragment?",
+        "options": [
+            "A component for conditional rendering",
+            "A way to avoid adding extra nodes to the DOM",
+            "A built-in router",
+            "A method for event handling"
+        ],
+        "correctAnswer": [
+            "A way to avoid adding extra nodes to the DOM"
+        ]
+    },
+    {
+        "question": "What does useEffect return?",
+        "options": [
+            "Nothing",
+            "A function to run after render",
+            "A cleanup function",
+            "A component"
+        ],
+        "correctAnswer": [
+            "A cleanup function"
+        ]
+    },
+    {
+        "question": "What is the virtual DOM?",
+        "options": [
+            "A copy of the real DOM in memory",
+            "A server-side DOM",
+            "A browser plugin",
+            "A debugging tool"
+        ],
+        "correctAnswer": [
+            "A copy of the real DOM in memory"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create a functional component in React?",
+        "options": [
+            "function",
+            "component",
+            "render",
+            "def"
+        ],
+        "correctAnswer": [
+            "function"
+        ]
+    },
+    {
+        "question": "What is JSX?",
+        "options": [
+            "A JavaScript function",
+            "A way to write HTML in React",
+            "A CSS framework",
+            "A type of database"
+        ],
+        "correctAnswer": [
+            "A way to write HTML in React"
+        ]
+    },
+    {
+        "question": "What is the purpose of useState in React?",
+        "options": [
+            "To manage routing",
+            "To create components",
+            "To manage state in functional components",
+            "To fetch data"
+        ],
+        "correctAnswer": [
+            "To manage state in functional components"
+        ]
+    },
+    {
+        "question": "Which method is used to render a React element?",
+        "options": [
+            "ReactDOM.start()",
+            "React.render()",
+            "ReactDOM.render()",
+            "render.React()"
+        ],
+        "correctAnswer": [
+            "ReactDOM.render()"
+        ]
+    },
+    {
+        "question": "Which hook is used for side effects in React?",
+        "options": [
+            "useState",
+            "useEffect",
+            "useMemo",
+            "useContext"
+        ],
+        "correctAnswer": [
+            "useEffect"
+        ]
+    },
+    {
+        "question": "What is the default port for React development server?",
+        "options": [
+            "3000",
+            "8000",
+            "5000",
+            "8080"
+        ],
+        "correctAnswer": [
+            "3000"
+        ]
+    },
+    {
+        "question": "How do you pass data from parent to child component in React?",
+        "options": [
+            "Using Redux",
+            "Using props",
+            "Using context",
+            "Using hooks"
+        ],
+        "correctAnswer": [
+            "Using props"
+        ]
+    },
+    {
+        "question": "What is a React Fragment?",
+        "options": [
+            "A component for conditional rendering",
+            "A way to avoid adding extra nodes to the DOM",
+            "A built-in router",
+            "A method for event handling"
+        ],
+        "correctAnswer": [
+            "A way to avoid adding extra nodes to the DOM"
+        ]
+    },
+    {
+        "question": "What does useEffect return?",
+        "options": [
+            "Nothing",
+            "A function to run after render",
+            "A cleanup function",
+            "A component"
+        ],
+        "correctAnswer": [
+            "A cleanup function"
+        ]
+    },
+    {
+        "question": "What is the virtual DOM?",
+        "options": [
+            "A copy of the real DOM in memory",
+            "A server-side DOM",
+            "A browser plugin",
+            "A debugging tool"
+        ],
+        "correctAnswer": [
+            "A copy of the real DOM in memory"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create a functional component in React?",
+        "options": [
+            "function",
+            "component",
+            "render",
+            "def"
+        ],
+        "correctAnswer": [
+            "function"
+        ]
+    },
+    {
+        "question": "What is JSX? ",
+        "options": [
+            "A JavaScript function",
+            "A way to write HTML in React",
+            "A CSS framework",
+            "A type of database"
+        ],
+        "correctAnswer": [
+            "A way to write HTML in React"
+        ]
+    },
+    {
+        "question": "What is the purpose of useState in React? ",
+        "options": [
+            "To manage routing",
+            "To create components",
+            "To manage state in functional components",
+            "To fetch data"
+        ],
+        "correctAnswer": [
+            "To manage state in functional components"
+        ]
+    },
+    {
+        "question": "Which method is used to render a React element? ",
+        "options": [
+            "ReactDOM.start()",
+            "React.render()",
+            "ReactDOM.render()",
+            "render.React()"
+        ],
+        "correctAnswer": [
+            "ReactDOM.render()"
+        ]
+    },
+    {
+        "question": "Which hook is used for side effects in React? ",
+        "options": [
+            "useState",
+            "useEffect",
+            "useMemo",
+            "useContext"
+        ],
+        "correctAnswer": [
+            "useEffect"
+        ]
+    },
+    {
+        "question": "What is the default port for React development server? ",
+        "options": [
+            "3000",
+            "8000",
+            "5000",
+            "8080"
+        ],
+        "correctAnswer": [
+            "3000"
+        ]
+    },
+    {
+        "question": "How do you pass data from parent to child component in React? ",
+        "options": [
+            "Using Redux",
+            "Using props",
+            "Using context",
+            "Using hooks"
+        ],
+        "correctAnswer": [
+            "Using props"
+        ]
+    },
+    {
+        "question": "What is a React Fragment? ",
+        "options": [
+            "A component for conditional rendering",
+            "A way to avoid adding extra nodes to the DOM",
+            "A built-in router",
+            "A method for event handling"
+        ],
+        "correctAnswer": [
+            "A way to avoid adding extra nodes to the DOM"
+        ]
+    },
+    {
+        "question": "What does useEffect return? ",
+        "options": [
+            "Nothing",
+            "A function to run after render",
+            "A cleanup function",
+            "A component"
+        ],
+        "correctAnswer": [
+            "A cleanup function"
+        ]
+    },
+    {
+        "question": "What is the virtual DOM? ",
+        "options": [
+            "A copy of the real DOM in memory",
+            "A server-side DOM",
+            "A browser plugin",
+            "A debugging tool"
+        ],
+        "correctAnswer": [
+            "A copy of the real DOM in memory"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create a functional component in React? ",
+        "options": [
+            "function",
+            "component",
+            "render",
+            "def"
+        ],
+        "correctAnswer": [
+            "function"
+        ]
+    },
+    {
+        "question": "What is JSX?",
+        "options": [
+            "A JavaScript function",
+            "A way to write HTML in React",
+            "A CSS framework",
+            "A type of database"
+        ],
+        "correctAnswer": [
+            "A way to write HTML in React"
+        ]
+    },
+    {
+        "question": "What is the purpose of useState in React?",
+        "options": [
+            "To manage routing",
+            "To create components",
+            "To manage state in functional components",
+            "To fetch data"
+        ],
+        "correctAnswer": [
+            "To manage state in functional components"
+        ]
+    },
+    {
+        "question": "Which method is used to render a React element?",
+        "options": [
+            "ReactDOM.start()",
+            "React.render()",
+            "ReactDOM.render()",
+            "render.React()"
+        ],
+        "correctAnswer": [
+            "ReactDOM.render()"
+        ]
+    },
+    {
+        "question": "Which hook is used for side effects in React?",
+        "options": [
+            "useState",
+            "useEffect",
+            "useMemo",
+            "useContext"
+        ],
+        "correctAnswer": [
+            "useEffect"
+        ]
+    },
+    {
+        "question": "What is the default port for React development server?",
+        "options": [
+            "3000",
+            "8000",
+            "5000",
+            "8080"
+        ],
+        "correctAnswer": [
+            "3000"
+        ]
+    },
+    {
+        "question": "How do you pass data from parent to child component in React?",
+        "options": [
+            "Using Redux",
+            "Using props",
+            "Using context",
+            "Using hooks"
+        ],
+        "correctAnswer": [
+            "Using props"
+        ]
+    },
+    {
+        "question": "What is a React Fragment?",
+        "options": [
+            "A component for conditional rendering",
+            "A way to avoid adding extra nodes to the DOM",
+            "A built-in router",
+            "A method for event handling"
+        ],
+        "correctAnswer": [
+            "A way to avoid adding extra nodes to the DOM"
+        ]
+    },
+    {
+        "question": "What does useEffect return?",
+        "options": [
+            "Nothing",
+            "A function to run after render",
+            "A cleanup function",
+            "A component"
+        ],
+        "correctAnswer": [
+            "A cleanup function"
+        ]
+    },
+    {
+        "question": "What is the virtual DOM?",
+        "options": [
+            "A copy of the real DOM in memory",
+            "A server-side DOM",
+            "A browser plugin",
+            "A debugging tool"
+        ],
+        "correctAnswer": [
+            "A copy of the real DOM in memory"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create a functional component in React?",
+        "options": [
+            "function",
+            "component",
+            "render",
+            "def"
+        ],
+        "correctAnswer": [
+            "function"
+        ]
+    },
+    {
+        "question": "What is JSX? ",
+        "options": [
+            "A JavaScript function",
+            "A way to write HTML in React",
+            "A CSS framework",
+            "A type of database"
+        ],
+        "correctAnswer": [
+            "A way to write HTML in React"
+        ]
+    },
+    {
+        "question": "What is the purpose of useState in React? ",
+        "options": [
+            "To manage routing",
+            "To create components",
+            "To manage state in functional components",
+            "To fetch data"
+        ],
+        "correctAnswer": [
+            "To manage state in functional components"
+        ]
+    },
+    {
+        "question": "Which method is used to render a React element? ",
+        "options": [
+            "ReactDOM.start()",
+            "React.render()",
+            "ReactDOM.render()",
+            "render.React()"
+        ],
+        "correctAnswer": [
+            "ReactDOM.render()"
+        ]
+    },
+    {
+        "question": "Which hook is used for side effects in React? ",
+        "options": [
+            "useState",
+            "useEffect",
+            "useMemo",
+            "useContext"
+        ],
+        "correctAnswer": [
+            "useEffect"
+        ]
+    },
+    {
+        "question": "What is the default port for React development server? ",
+        "options": [
+            "3000",
+            "8000",
+            "5000",
+            "8080"
+        ],
+        "correctAnswer": [
+            "3000"
+        ]
+    },
+    {
+        "question": "How do you pass data from parent to child component in React? ",
+        "options": [
+            "Using Redux",
+            "Using props",
+            "Using context",
+            "Using hooks"
+        ],
+        "correctAnswer": [
+            "Using props"
+        ]
+    },
+    {
+        "question": "What is a React Fragment? ",
+        "options": [
+            "A component for conditional rendering",
+            "A way to avoid adding extra nodes to the DOM",
+            "A built-in router",
+            "A method for event handling"
+        ],
+        "correctAnswer": [
+            "A way to avoid adding extra nodes to the DOM"
+        ]
+    },
+    {
+        "question": "What does useEffect return? ",
+        "options": [
+            "Nothing",
+            "A function to run after render",
+            "A cleanup function",
+            "A component"
+        ],
+        "correctAnswer": [
+            "A cleanup function"
+        ]
+    },
+    {
+        "question": "What is the virtual DOM? ",
+        "options": [
+            "A copy of the real DOM in memory",
+            "A server-side DOM",
+            "A browser plugin",
+            "A debugging tool"
+        ],
+        "correctAnswer": [
+            "A copy of the real DOM in memory"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create a functional component in React? ",
+        "options": [
+            "function",
+            "component",
+            "render",
+            "def"
+        ],
+        "correctAnswer": [
+            "function"
+        ]
+    },
+    {
+        "question": "What is JSX?",
+        "options": [
+            "A JavaScript function",
+            "A way to write HTML in React",
+            "A CSS framework",
+            "A type of database"
+        ],
+        "correctAnswer": [
+            "A way to write HTML in React"
+        ]
+    },
+    {
+        "question": "What is the purpose of useState in React?",
+        "options": [
+            "To manage routing",
+            "To create components",
+            "To manage state in functional components",
+            "To fetch data"
+        ],
+        "correctAnswer": [
+            "To manage state in functional components"
+        ]
+    },
+    {
+        "question": "Which method is used to render a React element?",
+        "options": [
+            "ReactDOM.start()",
+            "React.render()",
+            "ReactDOM.render()",
+            "render.React()"
+        ],
+        "correctAnswer": [
+            "ReactDOM.render()"
+        ]
+    },
+    {
+        "question": "Which hook is used for side effects in React?",
+        "options": [
+            "useState",
+            "useEffect",
+            "useMemo",
+            "useContext"
+        ],
+        "correctAnswer": [
+            "useEffect"
+        ]
+    },
+    {
+        "question": "What is the default port for React development server?",
+        "options": [
+            "3000",
+            "8000",
+            "5000",
+            "8080"
+        ],
+        "correctAnswer": [
+            "3000"
+        ]
+    },
+    {
+        "question": "How do you pass data from parent to child component in React?",
+        "options": [
+            "Using Redux",
+            "Using props",
+            "Using context",
+            "Using hooks"
+        ],
+        "correctAnswer": [
+            "Using props"
+        ]
+    },
+    {
+        "question": "What is a React Fragment?",
+        "options": [
+            "A component for conditional rendering",
+            "A way to avoid adding extra nodes to the DOM",
+            "A built-in router",
+            "A method for event handling"
+        ],
+        "correctAnswer": [
+            "A way to avoid adding extra nodes to the DOM"
+        ]
+    },
+    {
+        "question": "What does useEffect return?",
+        "options": [
+            "Nothing",
+            "A function to run after render",
+            "A cleanup function",
+            "A component"
+        ],
+        "correctAnswer": [
+            "A cleanup function"
+        ]
+    },
+    {
+        "question": "What is the virtual DOM?",
+        "options": [
+            "A copy of the real DOM in memory",
+            "A server-side DOM",
+            "A browser plugin",
+            "A debugging tool"
+        ],
+        "correctAnswer": [
+            "A copy of the real DOM in memory"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create a functional component in React?",
+        "options": [
+            "function",
+            "component",
+            "render",
+            "def"
+        ],
+        "correctAnswer": [
+            "function"
+        ]
+    }
+]

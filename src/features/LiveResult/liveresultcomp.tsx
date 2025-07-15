@@ -57,7 +57,6 @@ console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
         const docData = snap.docs[0].data() as DocumentData;
         console.log('Room data',docData)
 
-        /* one clean state update instead of many */
         setData((prev) => ({
           ...prev,
           /* bring in only the fields you store in Firestore */
@@ -135,7 +134,6 @@ console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
           <h1 className="text-3xl font-bold text-green-400 text-center mb-8">
             Multiplayer Quiz Result
           </h1>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {/* Player 1 */}
             <div className="bg-slate-900/80 border-slate-800 backdrop-blur-sm p-6 rounded-xl border  ">

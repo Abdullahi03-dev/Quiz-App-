@@ -111,7 +111,8 @@ const QuizSettings = () => {
   const programmingLanguages = [
     { value: "javascript", label: "JavaScript", icon: "🟨" },
     { value: "python", label: "Python", icon: "🐍" },
-    // { value: "java", label: "Java", icon: "☕" },
+    { value: "java", label: "Java", icon: "☕" },
+    { value: "react", label: "React", icon: "⚡" },
     // { value: "cpp", label: "C++", icon: "⚡" },
     // { value: "csharp", label: "C#", icon: "💎" },
     // { value: "php", label: "PHP", icon: "🐘" },
@@ -202,7 +203,7 @@ const QuizSettings = () => {
                   onValueChange={(value) => setSettings(prev => ({ ...prev, questionCount: value }))}
                   className="grid grid-cols-3 gap-3"
                 >
-                  {["5", "10", "15", "20", "25", "30"].map((count) => (
+                  {["10", "15", "20", "25", "35", "40"].map((count) => (
                     <div key={count} className="flex items-center space-x-2">
                       <RadioGroupItem 
                         value={count} 

@@ -1,0 +1,842 @@
+[
+    {
+        "question": "Which keyword is used to define a class in Java?",
+        "options": [
+            "define",
+            "class",
+            "struct",
+            "module"
+        ],
+        "correctAnswer": [
+            "class"
+        ]
+    },
+    {
+        "question": "What is the size of an int in Java?",
+        "options": [
+            "4 bytes",
+            "2 bytes",
+            "8 bytes",
+            "Depends on the system"
+        ],
+        "correctAnswer": [
+            "4 bytes"
+        ]
+    },
+    {
+        "question": "Which method is the entry point of a Java program?",
+        "options": [
+            "start()",
+            "main()",
+            "init()",
+            "run()"
+        ],
+        "correctAnswer": [
+            "main()"
+        ]
+    },
+    {
+        "question": "Which of these is not a primitive type in Java?",
+        "options": [
+            "int",
+            "float",
+            "String",
+            "boolean"
+        ],
+        "correctAnswer": [
+            "String"
+        ]
+    },
+    {
+        "question": "What is inheritance in Java?",
+        "options": [
+            "When a class acquires properties of another class",
+            "When variables are initialized",
+            "When a method is called",
+            "When objects are destroyed"
+        ],
+        "correctAnswer": [
+            "When a class acquires properties of another class"
+        ]
+    },
+    {
+        "question": "What is the default value of a boolean in Java?",
+        "options": [
+            "true",
+            "false",
+            "0",
+            "null"
+        ],
+        "correctAnswer": [
+            "false"
+        ]
+    },
+    {
+        "question": "Which of the following is not an access modifier in Java?",
+        "options": [
+            "public",
+            "protected",
+            "private",
+            "global"
+        ],
+        "correctAnswer": [
+            "global"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create an object in Java?",
+        "options": [
+            "class",
+            "object",
+            "new",
+            "create"
+        ],
+        "correctAnswer": [
+            "new"
+        ]
+    },
+    {
+        "question": "What does JVM stand for?",
+        "options": [
+            "Java Virtual Machine",
+            "Java Variable Method",
+            "Java Version Manager",
+            "Java Visual Module"
+        ],
+        "correctAnswer": [
+            "Java Virtual Machine"
+        ]
+    },
+    {
+        "question": "Which exception is thrown when dividing by zero in Java?",
+        "options": [
+            "NullPointerException",
+            "ArithmeticException",
+            "IOException",
+            "NumberFormatException"
+        ],
+        "correctAnswer": [
+            "ArithmeticException"
+        ]
+    },
+    {
+        "question": "Which keyword is used to define a class in Java?",
+        "options": [
+            "define",
+            "class",
+            "struct",
+            "module"
+        ],
+        "correctAnswer": [
+            "class"
+        ]
+    },
+    {
+        "question": "What is the size of an int in Java?",
+        "options": [
+            "4 bytes",
+            "2 bytes",
+            "8 bytes",
+            "Depends on the system"
+        ],
+        "correctAnswer": [
+            "4 bytes"
+        ]
+    },
+    {
+        "question": "Which method is the entry point of a Java program?",
+        "options": [
+            "start()",
+            "main()",
+            "init()",
+            "run()"
+        ],
+        "correctAnswer": [
+            "main()"
+        ]
+    },
+    {
+        "question": "Which of these is not a primitive type in Java?",
+        "options": [
+            "int",
+            "float",
+            "String",
+            "boolean"
+        ],
+        "correctAnswer": [
+            "String"
+        ]
+    },
+    {
+        "question": "What is inheritance in Java?",
+        "options": [
+            "When a class acquires properties of another class",
+            "When variables are initialized",
+            "When a method is called",
+            "When objects are destroyed"
+        ],
+        "correctAnswer": [
+            "When a class acquires properties of another class"
+        ]
+    },
+    {
+        "question": "What is the default value of a boolean in Java?",
+        "options": [
+            "true",
+            "false",
+            "0",
+            "null"
+        ],
+        "correctAnswer": [
+            "false"
+        ]
+    },
+    {
+        "question": "Which of the following is not an access modifier in Java?",
+        "options": [
+            "public",
+            "protected",
+            "private",
+            "global"
+        ],
+        "correctAnswer": [
+            "global"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create an object in Java?",
+        "options": [
+            "class",
+            "object",
+            "new",
+            "create"
+        ],
+        "correctAnswer": [
+            "new"
+        ]
+    },
+    {
+        "question": "What does JVM stand for?",
+        "options": [
+            "Java Virtual Machine",
+            "Java Variable Method",
+            "Java Version Manager",
+            "Java Visual Module"
+        ],
+        "correctAnswer": [
+            "Java Virtual Machine"
+        ]
+    },
+    {
+        "question": "Which exception is thrown when dividing by zero in Java?",
+        "options": [
+            "NullPointerException",
+            "ArithmeticException",
+            "IOException",
+            "NumberFormatException"
+        ],
+        "correctAnswer": [
+            "ArithmeticException"
+        ]
+    },
+    {
+        "question": "Which keyword is used to define a class in Java? (3)",
+        "options": [
+            "define",
+            "class",
+            "struct",
+            "module"
+        ],
+        "correctAnswer": [
+            "class"
+        ]
+    },
+    {
+        "question": "What is the size of an int in Java? (3)",
+        "options": [
+            "4 bytes",
+            "2 bytes",
+            "8 bytes",
+            "Depends on the system"
+        ],
+        "correctAnswer": [
+            "4 bytes"
+        ]
+    },
+    {
+        "question": "Which method is the entry point of a Java program? (3)",
+        "options": [
+            "start()",
+            "main()",
+            "init()",
+            "run()"
+        ],
+        "correctAnswer": [
+            "main()"
+        ]
+    },
+    {
+        "question": "Which of these is not a primitive type in Java? (3)",
+        "options": [
+            "int",
+            "float",
+            "String",
+            "boolean"
+        ],
+        "correctAnswer": [
+            "String"
+        ]
+    },
+    {
+        "question": "What is inheritance in Java? (3)",
+        "options": [
+            "When a class acquires properties of another class",
+            "When variables are initialized",
+            "When a method is called",
+            "When objects are destroyed"
+        ],
+        "correctAnswer": [
+            "When a class acquires properties of another class"
+        ]
+    },
+    {
+        "question": "What is the default value of a boolean in Java? (3)",
+        "options": [
+            "true",
+            "false",
+            "0",
+            "null"
+        ],
+        "correctAnswer": [
+            "false"
+        ]
+    },
+    {
+        "question": "Which of the following is not an access modifier in Java? (3)",
+        "options": [
+            "public",
+            "protected",
+            "private",
+            "global"
+        ],
+        "correctAnswer": [
+            "global"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create an object in Java? (3)",
+        "options": [
+            "class",
+            "object",
+            "new",
+            "create"
+        ],
+        "correctAnswer": [
+            "new"
+        ]
+    },
+    {
+        "question": "What does JVM stand for? (3)",
+        "options": [
+            "Java Virtual Machine",
+            "Java Variable Method",
+            "Java Version Manager",
+            "Java Visual Module"
+        ],
+        "correctAnswer": [
+            "Java Virtual Machine"
+        ]
+    },
+    {
+        "question": "Which exception is thrown when dividing by zero in Java? (3)",
+        "options": [
+            "NullPointerException",
+            "ArithmeticException",
+            "IOException",
+            "NumberFormatException"
+        ],
+        "correctAnswer": [
+            "ArithmeticException"
+        ]
+    },
+    {
+        "question": "Which keyword is used to define a class in Java?",
+        "options": [
+            "define",
+            "class",
+            "struct",
+            "module"
+        ],
+        "correctAnswer": [
+            "class"
+        ]
+    },
+    {
+        "question": "What is the size of an int in Java?",
+        "options": [
+            "4 bytes",
+            "2 bytes",
+            "8 bytes",
+            "Depends on the system"
+        ],
+        "correctAnswer": [
+            "4 bytes"
+        ]
+    },
+    {
+        "question": "Which method is the entry point of a Java program?",
+        "options": [
+            "start()",
+            "main()",
+            "init()",
+            "run()"
+        ],
+        "correctAnswer": [
+            "main()"
+        ]
+    },
+    {
+        "question": "Which of these is not a primitive type in Java?",
+        "options": [
+            "int",
+            "float",
+            "String",
+            "boolean"
+        ],
+        "correctAnswer": [
+            "String"
+        ]
+    },
+    {
+        "question": "What is inheritance in Java?",
+        "options": [
+            "When a class acquires properties of another class",
+            "When variables are initialized",
+            "When a method is called",
+            "When objects are destroyed"
+        ],
+        "correctAnswer": [
+            "When a class acquires properties of another class"
+        ]
+    },
+    {
+        "question": "What is the default value of a boolean in Java?",
+        "options": [
+            "true",
+            "false",
+            "0",
+            "null"
+        ],
+        "correctAnswer": [
+            "false"
+        ]
+    },
+    {
+        "question": "Which of the following is not an access modifier in Java?",
+        "options": [
+            "public",
+            "protected",
+            "private",
+            "global"
+        ],
+        "correctAnswer": [
+            "global"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create an object in Java?",
+        "options": [
+            "class",
+            "object",
+            "new",
+            "create"
+        ],
+        "correctAnswer": [
+            "new"
+        ]
+    },
+    {
+        "question": "What does JVM stand for?",
+        "options": [
+            "Java Virtual Machine",
+            "Java Variable Method",
+            "Java Version Manager",
+            "Java Visual Module"
+        ],
+        "correctAnswer": [
+            "Java Virtual Machine"
+        ]
+    },
+    {
+        "question": "Which exception is thrown when dividing by zero in Java?",
+        "options": [
+            "NullPointerException",
+            "ArithmeticException",
+            "IOException",
+            "NumberFormatException"
+        ],
+        "correctAnswer": [
+            "ArithmeticException"
+        ]
+    },
+    {
+        "question": "Which keyword is used to define a class in Java?",
+        "options": [
+            "define",
+            "class",
+            "struct",
+            "module"
+        ],
+        "correctAnswer": [
+            "class"
+        ]
+    },
+    {
+        "question": "What is the size of an int in Java?",
+        "options": [
+            "4 bytes",
+            "2 bytes",
+            "8 bytes",
+            "Depends on the system"
+        ],
+        "correctAnswer": [
+            "4 bytes"
+        ]
+    },
+    {
+        "question": "Which method is the entry point of a Java program?",
+        "options": [
+            "start()",
+            "main()",
+            "init()",
+            "run()"
+        ],
+        "correctAnswer": [
+            "main()"
+        ]
+    },
+    {
+        "question": "Which of these is not a primitive type in Java?",
+        "options": [
+            "int",
+            "float",
+            "String",
+            "boolean"
+        ],
+        "correctAnswer": [
+            "String"
+        ]
+    },
+    {
+        "question": "What is inheritance in Java?",
+        "options": [
+            "When a class acquires properties of another class",
+            "When variables are initialized",
+            "When a method is called",
+            "When objects are destroyed"
+        ],
+        "correctAnswer": [
+            "When a class acquires properties of another class"
+        ]
+    },
+    {
+        "question": "What is the default value of a boolean in Java?",
+        "options": [
+            "true",
+            "false",
+            "0",
+            "null"
+        ],
+        "correctAnswer": [
+            "false"
+        ]
+    },
+    {
+        "question": "Which of the following is not an access modifier in Java?",
+        "options": [
+            "public",
+            "protected",
+            "private",
+            "global"
+        ],
+        "correctAnswer": [
+            "global"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create an object in Java?",
+        "options": [
+            "class",
+            "object",
+            "new",
+            "create"
+        ],
+        "correctAnswer": [
+            "new"
+        ]
+    },
+    {
+        "question": "What does JVM stand for?",
+        "options": [
+            "Java Virtual Machine",
+            "Java Variable Method",
+            "Java Version Manager",
+            "Java Visual Module"
+        ],
+        "correctAnswer": [
+            "Java Virtual Machine"
+        ]
+    },
+    {
+        "question": "Which exception is thrown when dividing by zero in Java?",
+        "options": [
+            "NullPointerException",
+            "ArithmeticException",
+            "IOException",
+            "NumberFormatException"
+        ],
+        "correctAnswer": [
+            "ArithmeticException"
+        ]
+    },
+    {
+        "question": "Which keyword is used to define a class in Java?",
+        "options": [
+            "define",
+            "class",
+            "struct",
+            "module"
+        ],
+        "correctAnswer": [
+            "class"
+        ]
+    },
+    {
+        "question": "What is the size of an int in Java?",
+        "options": [
+            "4 bytes",
+            "2 bytes",
+            "8 bytes",
+            "Depends on the system"
+        ],
+        "correctAnswer": [
+            "4 bytes"
+        ]
+    },
+    {
+        "question": "Which method is the entry point of a Java program?",
+        "options": [
+            "start()",
+            "main()",
+            "init()",
+            "run()"
+        ],
+        "correctAnswer": [
+            "main()"
+        ]
+    },
+    {
+        "question": "Which of these is not a primitive type in Java?",
+        "options": [
+            "int",
+            "float",
+            "String",
+            "boolean"
+        ],
+        "correctAnswer": [
+            "String"
+        ]
+    },
+    {
+        "question": "What is inheritance in Java?",
+        "options": [
+            "When a class acquires properties of another class",
+            "When variables are initialized",
+            "When a method is called",
+            "When objects are destroyed"
+        ],
+        "correctAnswer": [
+            "When a class acquires properties of another class"
+        ]
+    },
+    {
+        "question": "What is the default value of a boolean in Java?",
+        "options": [
+            "true",
+            "false",
+            "0",
+            "null"
+        ],
+        "correctAnswer": [
+            "false"
+        ]
+    },
+    {
+        "question": "Which of the following is not an access modifier in Java?",
+        "options": [
+            "public",
+            "protected",
+            "private",
+            "global"
+        ],
+        "correctAnswer": [
+            "global"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create an object in Java?",
+        "options": [
+            "class",
+            "object",
+            "new",
+            "create"
+        ],
+        "correctAnswer": [
+            "new"
+        ]
+    },
+    {
+        "question": "What does JVM stand for?",
+        "options": [
+            "Java Virtual Machine",
+            "Java Variable Method",
+            "Java Version Manager",
+            "Java Visual Module"
+        ],
+        "correctAnswer": [
+            "Java Virtual Machine"
+        ]
+    },
+    {
+        "question": "Which exception is thrown when dividing by zero in Java?",
+        "options": [
+            "NullPointerException",
+            "ArithmeticException",
+            "IOException",
+            "NumberFormatException"
+        ],
+        "correctAnswer": [
+            "ArithmeticException"
+        ]
+    },
+    {
+        "question": "Which keyword is used to define a class in Java?",
+        "options": [
+            "define",
+            "class",
+            "struct",
+            "module"
+        ],
+        "correctAnswer": [
+            "class"
+        ]
+    },
+    {
+        "question": "What is the size of an int in Java?",
+        "options": [
+            "4 bytes",
+            "2 bytes",
+            "8 bytes",
+            "Depends on the system"
+        ],
+        "correctAnswer": [
+            "4 bytes"
+        ]
+    },
+    {
+        "question": "Which method is the entry point of a Java program?",
+        "options": [
+            "start()",
+            "main()",
+            "init()",
+            "run()"
+        ],
+        "correctAnswer": [
+            "main()"
+        ]
+    },
+    {
+        "question": "Which of these is not a primitive type in Java?",
+        "options": [
+            "int",
+            "float",
+            "String",
+            "boolean"
+        ],
+        "correctAnswer": [
+            "String"
+        ]
+    },
+    {
+        "question": "What is inheritance in Java?",
+        "options": [
+            "When a class acquires properties of another class",
+            "When variables are initialized",
+            "When a method is called",
+            "When objects are destroyed"
+        ],
+        "correctAnswer": [
+            "When a class acquires properties of another class"
+        ]
+    },
+    {
+        "question": "What is the default value of a boolean in Java?",
+        "options": [
+            "true",
+            "false",
+            "0",
+            "null"
+        ],
+        "correctAnswer": [
+            "false"
+        ]
+    },
+    {
+        "question": "Which of the following is not an access modifier in Java?",
+        "options": [
+            "public",
+            "protected",
+            "private",
+            "global"
+        ],
+        "correctAnswer": [
+            "global"
+        ]
+    },
+    {
+        "question": "Which keyword is used to create an object in Java?",
+        "options": [
+            "class",
+            "object",
+            "new",
+            "create"
+        ],
+        "correctAnswer": [
+            "new"
+        ]
+    },
+    {
+        "question": "What does JVM stand for?",
+        "options": [
+            "Java Virtual Machine",
+            "Java Variable Method",
+            "Java Version Manager",
+            "Java Visual Module"
+        ],
+        "correctAnswer": [
+            "Java Virtual Machine"
+        ]
+    },
+    {
+        "question": "Which exception is thrown when dividing by zero in Java?",
+        "options": [
+            "NullPointerException",
+            "ArithmeticException",
+            "IOException",
+            "NumberFormatException"
+        ],
+        "correctAnswer": [
+            "ArithmeticException"
+        ]
+    }
+]

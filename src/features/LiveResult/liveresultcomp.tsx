@@ -130,8 +130,7 @@ console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
     <>
       <div className="min-h-screen flex items-center justify-center bg-slate-950 text-gray-200 px-4 py-10 pb-10">
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-purple-500/5"></div>
-      <div className="absolute top-20 left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute md:top-20 md:left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
         <div className="w-full max-w-4xl bg-slate-900/80 border-slate-800 backdrop-blur-sm rounded-2xl p-8 mb-10 ">
           <h1 className="text-3xl font-bold text-green-400 text-center mb-8">
             Multiplayer Quiz Result

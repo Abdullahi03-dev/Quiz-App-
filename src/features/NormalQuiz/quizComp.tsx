@@ -36,7 +36,7 @@ const quizComp = () => {
     if(quizStatus!=null){
       return
     }else{
-      navigate(-1)
+      navigate('/categories')
     }
   },[])
 

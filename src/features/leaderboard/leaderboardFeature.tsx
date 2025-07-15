@@ -223,8 +223,8 @@ const getLevel = (score: number) => {
   return (
     <div className="min-h-screen bg-slate-950 text-white p-6">
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-purple-500/5"></div>
-      <div className="absolute top-20 left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute md:top-20 md:left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute md:bottom-20 md:right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
       {loading?'LOADING...':''}
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}

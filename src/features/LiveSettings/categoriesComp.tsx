@@ -17,8 +17,8 @@ const categoriesComp = () => {
   return (
     <>
     <section className=' bg-slate-950 pb-6 min-h-screen'>
-      <div className='absolute top-20 left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl'></div> 
-      <div className='absolute bottom-20 right-20  w-96 h-96 bg-purple-500/10 rounded-full blur-3xl'></div>
+      {/* <div className='absolute top-20 left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl'></div> 
+      <div className='absolute bottom-20 right-20  w-96 h-96 bg-purple-500/10 rounded-full blur-3xl'></div> */}
       {/* <div className='absolute bottom-0 right-5  w-96 h-96 bg-green-900 rounded-full blur-3xl'></div> */}
 
     <div className='flex flex-col items-center pt-[4rem]'>

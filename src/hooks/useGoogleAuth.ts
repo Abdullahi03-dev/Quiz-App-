@@ -55,6 +55,7 @@ const useGoogleAuth = () => {
               Python: 0,
             }
           });
+          localStorage.setItem('username',username)
           directPath()
   
           return { type: "success", message: "Sign up successful." };

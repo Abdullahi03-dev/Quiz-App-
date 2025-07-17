@@ -1,0 +1,417 @@
+  [
+    {
+      "question": "What hook is used to access React context inside functional components?",
+      "options": ["useState", "useEffect", "useContext", "useReducer"],
+      "correctAnswer": ["useContext"]
+    },
+    {
+      "question": "What is the purpose of `useRef` in React?",
+      "options": [
+        "To force component re-renders",
+        "To persist values across renders without re-rendering",
+        "To track routing state",
+        "To connect with Redux"
+      ],
+      "correctAnswer": ["To persist values across renders without re-rendering"]
+    },
+    {
+      "question": "What does lazy loading in React help improve?",
+      "options": [
+        "Rendering speed",
+        "Memory usage",
+        "Initial load performance",
+        "CSS animations"
+      ],
+      "correctAnswer": ["Initial load performance"]
+    },
+    {
+      "question": "What is `React.memo` used for?",
+      "options": [
+        "Creating global state",
+        "Preventing unnecessary re-renders of functional components",
+        "Tracking side effects",
+        "Storing API calls"
+      ],
+      "correctAnswer": ["Preventing unnecessary re-renders of functional components"]
+    },
+    {
+      "question": "What is the return value of `useState`?",
+      "options": [
+        "An object with a value",
+        "A single function",
+        "An array with state and setter",
+        "Nothing"
+      ],
+      "correctAnswer": ["An array with state and setter"]
+    },
+    {
+      "question": "What does the `key` prop help React with?",
+      "options": [
+        "Prop validation",
+        "DOM manipulation",
+        "Efficient list rendering",
+        "State persistence"
+      ],
+      "correctAnswer": ["Efficient list rendering"]
+    },
+    {
+      "question": "What does `useLayoutEffect` run in relation to the DOM?",
+      "options": [
+        "Before the DOM is painted",
+        "After the DOM is painted",
+        "After async updates",
+        "Only after API calls"
+      ],
+      "correctAnswer": ["Before the DOM is painted"]
+    },
+    {
+      "question": "Which hook is used to handle complex state logic?",
+      "options": ["useState", "useMemo", "useCallback", "useReducer"],
+      "correctAnswer": ["useReducer"]
+    },
+    {
+      "question": "What is a custom hook in React?",
+      "options": [
+        "A function using `use` prefix that contains hook logic",
+        "An object of hooks",
+        "A class component wrapper",
+        "A type of reducer"
+      ],
+      "correctAnswer": ["A function using `use` prefix that contains hook logic"]
+    },
+    {
+      "question": "What lifecycle method does `useEffect` replicate?",
+      "options": [
+        "componentDidMount",
+        "componentWillReceiveProps",
+        "shouldComponentUpdate",
+        "render"
+      ],
+      "correctAnswer": ["componentDidMount"]
+    },
+    {
+      "question": "What does `useCallback` return?",
+      "options": [
+        "A memoized component",
+        "A cached function",
+        "A promise",
+        "An object"
+      ],
+      "correctAnswer": ["A cached function"]
+    },
+    {
+      "question": "What causes a re-render in a React component?",
+      "options": [
+        "A change in JSX",
+        "A change in file structure",
+        "A change in props or state",
+        "Using `useRef`"
+      ],
+      "correctAnswer": ["A change in props or state"]
+    },
+    {
+      "question": "Why use `React.Fragment`?",
+      "options": [
+        "To render a single child",
+        "To return multiple elements without extra DOM nodes",
+        "To delay rendering",
+        "To cache elements"
+      ],
+      "correctAnswer": ["To return multiple elements without extra DOM nodes"]
+    },
+    {
+      "question": "How do you pass data from a child to a parent component?",
+      "options": [
+        "With props",
+        "With useContext",
+        "By lifting state via callback props",
+        "With useRef"
+      ],
+      "correctAnswer": ["By lifting state via callback props"]
+    },
+    {
+      "question": "What is the purpose of `useMemo`?",
+      "options": [
+        "To store memoized state updates",
+        "To memorize JSX output",
+        "To memoize expensive calculations",
+        "To avoid re-render of hooks"
+      ],
+      "correctAnswer": ["To memoize expensive calculations"]
+    },
+    {
+      "question": "How can React handle code-splitting?",
+      "options": [
+        "React.useSplit()",
+        "React.lazy and Suspense",
+        "React.chunk()",
+        "React.async()"
+      ],
+      "correctAnswer": ["React.lazy and Suspense"]
+    },
+    {
+      "question": "Which hook runs after every render?",
+      "options": ["useEffect", "useLayoutEffect", "useRef", "useMemo"],
+      "correctAnswer": ["useEffect"]
+    },
+    {
+      "question": "How do you prevent unnecessary re-renders of a component?",
+      "options": [
+        "useLayoutEffect",
+        "React.memo",
+        "useContext",
+        "componentDidCatch"
+      ],
+      "correctAnswer": ["React.memo"]
+    },
+    {
+      "question": "What happens if you update state in a `useEffect` without dependencies?",
+      "options": [
+        "One update only",
+        "An infinite re-render loop",
+        "No update at all",
+        "Async error"
+      ],
+      "correctAnswer": ["An infinite re-render loop"]
+    },
+    {
+      "question": "What can go in a dependency array of `useEffect`?",
+      "options": [
+        "Only state",
+        "Only props",
+        "State, props, and functions",
+        "Only strings"
+      ],
+      "correctAnswer": ["State, props, and functions"]
+    },
+    {
+      "question": "What is React Portals used for?",
+      "options": [
+        "Handling modals and tooltips outside parent DOM",
+        "Nested routing",
+        "Context passing",
+        "High-order components"
+      ],
+      "correctAnswer": ["Handling modals and tooltips outside parent DOM"]
+    },
+    {
+      "question": "What is the main advantage of server-side rendering in React?",
+      "options": [
+        "Faster code compilation",
+        "Improved SEO and faster initial load",
+        "Better routing",
+        "Real-time data sync"
+      ],
+      "correctAnswer": ["Improved SEO and faster initial load"]
+    },
+    {
+      "question": "When should you use `useLayoutEffect` instead of `useEffect`?",
+      "options": [
+        "For async code",
+        "For animations and layout measurement",
+        "When using refs",
+        "For memoizing values"
+      ],
+      "correctAnswer": ["For animations and layout measurement"]
+    },
+    {
+      "question": "Which hook would you use to reference a DOM element directly?",
+      "options": ["useRef", "useEffect", "useMemo", "useId"],
+      "correctAnswer": ["useRef"]
+    },
+    {
+      "question": "What is a higher-order component (HOC)?",
+      "options": [
+        "A React class",
+        "A function that returns another component",
+        "A third-party library",
+        "A lifecycle method"
+      ],
+      "correctAnswer": ["A function that returns another component"]
+    },
+    {
+      "question": "What does the second argument of `useEffect(fn, [])` represent?",
+      "options": [
+        "The cleanup function",
+        "Props value",
+        "Dependency array",
+        "API call data"
+      ],
+      "correctAnswer": ["Dependency array"]
+    },
+    {
+      "question": "What is React's reconciliation algorithm?",
+      "options": [
+        "DOM cleanup engine",
+        "The process React uses to update the DOM efficiently",
+        "CSS rendering strategy",
+        "Ref optimization"
+      ],
+      "correctAnswer": ["The process React uses to update the DOM efficiently"]
+    },
+    {
+      "question": "What is the main reason to use `Suspense` in React?",
+      "options": [
+        "To delay rendering during lazy loading",
+        "To fix state bugs",
+        "To manage timers",
+        "To create suspenseful UI"
+      ],
+      "correctAnswer": ["To delay rendering during lazy loading"]
+    },
+    {
+      "question": "Which package provides the `createSlice` function often used with React?",
+      "options": ["redux", "react-redux", "@reduxjs/toolkit", "zustand"],
+      "correctAnswer": ["@reduxjs/toolkit"]
+    },
+    {
+      "question": "What is the virtual DOM in React?",
+      "options": [
+        "A browser API for JSX",
+        "A snapshot of actual DOM kept in memory",
+        "A shadow root object",
+        "A type of ref"
+      ],
+      "correctAnswer": ["A snapshot of actual DOM kept in memory"]
+    },
+    {
+      "question": "What is the default behavior of `useEffect` if no dependencies are provided?",
+      "options": [
+        "It never runs",
+        "It runs after every render",
+        "It runs only once",
+        "It throws an error"
+      ],
+      "correctAnswer": ["It runs after every render"]
+    },
+    {
+      "question": "Why should keys be unique in a list of elements?",
+      "options": [
+        "To help React optimize re-renders",
+        "To identify parent props",
+        "To maintain memory",
+        "To support routing"
+      ],
+      "correctAnswer": ["To help React optimize re-renders"]
+    },
+    {
+      "question": "What does `useTransition` hook help with?",
+      "options": [
+        "CSS transitions",
+        "Non-blocking UI updates",
+        "Form animation",
+        "React Router animation"
+      ],
+      "correctAnswer": ["Non-blocking UI updates"]
+    },
+    {
+      "question": "How do you create a global state using context?",
+      "options": [
+        "React.memo",
+        "useReducer",
+        "useContext + createContext",
+        "useRef"
+      ],
+      "correctAnswer": ["useContext + createContext"]
+    },
+    {
+      "question": "Which React feature supports concurrent rendering?",
+      "options": [
+        "React 17",
+        "Concurrent Mode",
+        "Strict Mode",
+        "Effect Mode"
+      ],
+      "correctAnswer": ["Concurrent Mode"]
+    },
+    {
+      "question": "What is JSX?",
+      "options": [
+        "A JSON format",
+        "A syntax extension for JavaScript",
+        "A style sheet",
+        "A React method"
+      ],
+      "correctAnswer": ["A syntax extension for JavaScript"]
+    },
+    {
+      "question": "How do you pass props from parent to child?",
+      "options": [
+        "Through useContext",
+        "Using state",
+        "By defining props on child tag",
+        "Through refs"
+      ],
+      "correctAnswer": ["By defining props on child tag"]
+    },
+    {
+      "question": "How can you handle errors in a React component tree?",
+      "options": [
+        "Using useEffect",
+        "Using Error Boundaries",
+        "Using Suspense",
+        "With try/catch"
+      ],
+      "correctAnswer": ["Using Error Boundaries"]
+    },
+    {
+      "question": "What does `useId()` hook provide?",
+      "options": [
+        "A ref ID",
+        "A stable unique ID for accessibility and SSR",
+        "A component index",
+        "An error boundary"
+      ],
+      "correctAnswer": ["A stable unique ID for accessibility and SSR"]
+    },
+    {
+      "question": "Why shouldn't you update state directly in React?",
+      "options": [
+        "It causes infinite loops",
+        "It breaks React’s state tracking and won't trigger re-renders",
+        "It causes JSX errors",
+        "It logs warning"
+      ],
+      "correctAnswer": ["It breaks React’s state tracking and won't trigger re-renders"]
+    },
+    {
+      "question": "What is the use of `React.StrictMode`?",
+      "options": [
+        "Enables automatic memoization",
+        "Highlights potential problems in development",
+        "Restricts class components",
+        "Boosts performance"
+      ],
+      "correctAnswer": ["Highlights potential problems in development"]
+    },
+    {
+      "question": "What’s the difference between `componentWillUnmount` and cleanup in `useEffect`?",
+      "options": [
+        "They're unrelated",
+        "Cleanup in useEffect replaces componentWillUnmount in functional components",
+        "useEffect doesn’t support cleanup",
+        "Only one runs in production"
+      ],
+      "correctAnswer": ["Cleanup in useEffect replaces componentWillUnmount in functional components"]
+    },
+    {
+      "question": "What is hydration in React?",
+      "options": [
+        "Watermarking for JSX",
+        "Binding event listeners to SSR markup",
+        "Async fetching",
+        "Cleaning memory"
+      ],
+      "correctAnswer": ["Binding event listeners to SSR markup"]
+    },
+    {
+      "question": "What does `useImperativeHandle` do?",
+      "options": [
+        "Exposes instance methods to parent via ref",
+        "Shares refs between components",
+        "Creates imperative hooks",
+        "Avoids using useRef"
+      ],
+      "correctAnswer": ["Exposes instance methods to parent via ref"]
+    }
+  ]

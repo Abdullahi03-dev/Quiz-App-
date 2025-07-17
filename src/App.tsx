@@ -19,6 +19,7 @@ import Liveoquiz from './pages/LiveQuiz/liveoquiz.tsx'
 import Livetquiz from './pages/LiveQuiz/livetquiz.tsx'
 import WaitingRoom from './pages/waitingRoom.tsx'
 import LiveResult from './pages/LiveResult.tsx'
+import CheckAnswers from './pages/checkAnswers.tsx'
 // import { useAuth } from './context/AuthProvider.tsx'
 import Loader from './components/loader.tsx'
 
@@ -42,6 +43,7 @@ const AppRoutes=()=>{
         <Route element={<Quiz/>} path='quiz'/>
         <Route element={<Result/>} path='result'/>
         <Route element={<Leaderboard/>} path='leaderboard'/>
+        <Route element={<CheckAnswers/>} path='verifyanswers'/>
         <Route element={<Loader/>} path='loader'/>
         {/* LIVE QUIZ ROUTES */}
         <Route element={<Livesettings/>} path='livesettings'/>
@@ -65,11 +67,13 @@ function App() {
     <AuthProvider>
       <UsernameContext>
         <LiveSettings>
+
+        
           <Router>
       <AppRoutes/>
     </Router>
-        </LiveSettings>
-      </UsernameContext>
+    </LiveSettings>
+    </UsernameContext>
     </AuthProvider>
     </>
   )

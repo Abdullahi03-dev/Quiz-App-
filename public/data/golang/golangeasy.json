@@ -706,5 +706,55 @@
     "correctAnswer": [
       "make(chan type)"
     ]
+  },
+  {
+    "question": "What is the use of `go test`?",
+    "options": ["Runs benchmarks", "Runs unit tests", "Compiles binary", "Installs packages"],
+    "correctAnswer": ["Runs unit tests"]
+  },
+  {
+    "question": "Which function is used to sleep for a duration?",
+    "options": ["time.Wait()", "time.Sleep()", "sleep()", "pause()"],
+    "correctAnswer": ["time.Sleep()"]
+  },
+  {
+    "question": "Which method returns the current time?",
+    "options": ["time.Now()", "now()", "clock.Get()", "current.Time()"],
+    "correctAnswer": ["time.Now()"]
+  },
+  {
+    "question": "Which package is used to manipulate strings?",
+    "options": ["strings", "str", "stringutil", "text"],
+    "correctAnswer": ["strings"]
+  },
+  {
+    "question": "What will `len(nil)` return?",
+    "options": ["0", "panic", "nil", "undefined"],
+    "correctAnswer": ["panic"]
+  },
+  {
+    "question": "What does the `go run` command do?",
+    "options": ["Runs Go code without compiling a binary", "Compiles Go code", "Installs Go packages", "Starts Go services"],
+    "correctAnswer": ["Runs Go code without compiling a binary"]
+  },
+  {
+    "question": "What is the zero value of a function type?",
+    "options": ["nil", "0", "undefined", "false"],
+    "correctAnswer": ["nil"]
+  },
+  {
+    "question": "What is the purpose of `iota` in Go?",
+    "options": ["Generate incremental constants", "Index arrays", "Loop control", "Create random numbers"],
+    "correctAnswer": ["Generate incremental constants"]
+  },
+  {
+    "question": "What does `runtime.NumGoroutine()` return?",
+    "options": ["Number of goroutines running", "Max CPUs used", "RAM used", "Idle goroutines"],
+    "correctAnswer": ["Number of goroutines running"]
+  },
+  {
+    "question": "Which format verb prints Go values with full struct field names?",
+    "options": ["%s", "%d", "%#v", "%v"],
+    "correctAnswer": ["%#v"]
   }
 ]

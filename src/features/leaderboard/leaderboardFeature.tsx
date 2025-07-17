@@ -117,6 +117,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
 import { ArrowLeft, Trophy, Medal, Crown, TrendingUp, Users } from "lucide-react";
 import { db, collection,getDocs} from "../../firebase/firebase";
 import { useEffect, useState } from "react"
+import useUsername from "../../hooks/useUsername";
 interface User{
   name:string;
   email:string;
@@ -130,10 +131,12 @@ interface User{
 }
 //  
 const Leaderboards = () => {
+
   // const [selectedCategory, setSelectedCategory] = useState("overall");
   // const [selectedPeriod, setSelectedPeriod] = useState("all-time");
   const [data,setData]=useState<User[]>([])
     const [loading,setLoading]=useState(true)
+    const {username}=useUsername()
   
   
     useEffect(()=>{
@@ -161,8 +164,8 @@ const Leaderboards = () => {
       totalScore: Object.values(player.scores).reduce((a, b) => a + b, 0)
     }))
     .sort((a, b) => b.totalScore - a.totalScore);
-    const FirstThree=sortedData.slice(0,3)
-    const RestData=sortedData.slice(3)
+    const FirstThree=sortedData.slice(0,3);
+    const RestData=sortedData.slice(3);
 
   // Mock leaderboard data with language-specific scores
   const leaderboardData = [
@@ -257,11 +260,11 @@ const getLevel = (score: number) => {
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {FirstThree.map((player, index) => (
             <Card 
-              key={index}
+              key={index+1}
               className={`bg-slate-900/80 border backdrop-blur-sm ${
-                index+1 === 1 ? 'border-yellow-500/50 order-2 md:order-1 scale-105' :
-                index+1 == 2 ? 'border-gray-300/50 order-1 md:order-0' :
-                'border-orange-400/50 order-3 md:order-2'
+                index+1 === 1 ? 'border-yellow-500/50 order-1 md:order-2 scale-105' :
+                index+1 == 2 ? 'border-gray-300/50 order-2 md:order-1' :
+                'border-orange-400/50 order-3 md:order-3'
               }`}
             >
               <CardHeader className="text-center">
@@ -289,7 +292,7 @@ const getLevel = (score: number) => {
                 
                 <div className="space-y-2">
                   <div className="grid grid-cols-2 gap-2 text-xs">
-                    {Object.entries(player.scores).slice(0, 5).map(([lang, score]) => (
+                    {Object.entries(player.scores).filter(([_, score]) => score !== 0).map(([lang, score]) => (
                       <div key={lang} className="bg-slate-800/50 rounded px-2 py-1">
                         <div className="text-emerald-400 font-semibold">{score}</div>
                         <div className="text-gray-400 capitalize">{lang}</div>
@@ -321,7 +324,6 @@ const getLevel = (score: number) => {
                   <TableHead className="text-gray-300">Total Score</TableHead>
                   <TableHead className="text-gray-300">Language Scores</TableHead>
                   <TableHead className="text-gray-300">Level</TableHead>
-                  <TableHead className="text-gray-300">Country</TableHead>
                 </TableRow>
               </TableHeader>
               
@@ -344,7 +346,7 @@ const getLevel = (score: number) => {
                         <div>
                           <div className={`font-medium ${true ? 'text-emerald-300' : 'text-white'}`}>
                             {player.name}
-                            {true && (
+                            {username==player.name && (
                               <Badge variant="outline" className="ml-2 border-emerald-500 text-emerald-300 bg-emerald-500/10 text-xs">
                                 You
                               </Badge>
@@ -360,7 +362,7 @@ const getLevel = (score: number) => {
                     
                     <TableCell>
                       <div className="flex flex-wrap gap-1 max-w-xs">
-                        {Object.entries(player.scores).slice(0, 5).map(([lang, score]) => (
+                      {Object.entries(player.scores).filter(([_, score]) => score !== 0).map(([lang, score]) => (
                       <div key={lang} className="bg-slate-800/50 rounded px-2 py-1">
                         <div className="text-emerald-400 font-semibold">{score}</div>
                         <div className="text-gray-400 capitalize">{lang}</div>

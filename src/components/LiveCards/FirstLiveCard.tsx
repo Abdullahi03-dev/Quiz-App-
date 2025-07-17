@@ -27,20 +27,16 @@ import { serverTimestamp } from 'firebase/firestore';
       label: "15 Questions",
     },
     {
+      value: "20",
+      label: "20 Questions",
+    },
+    {
       value: "25",
       label: "25 Questions",
     },
     {
       value: "30",
-      label: "25 Questions",
-    },
-    {
-      value: "35",
-      label: "25 Questions",
-    },
-    {
-      value: "40",
-      label: "25 Questions",
+      label: "30 Questions",
     }
   ]
 
@@ -56,13 +52,7 @@ import { serverTimestamp } from 'firebase/firestore';
     {
       value: "golang",
       label: "Golang",
-    },{
-      value: "react",
-      label: "React",
-    },{
-      value: "java",
-      label: "Java",
-    },
+    }
   ]
   const time = [
     {
@@ -166,6 +156,12 @@ const updateScore=async(generatedRoomCode:number)=> {
           languageChoosed:selectedLanguage,
           time:selectedTime,
           quizHasStarted:false,
+          messages:{
+            user1:[
+            ],
+            user2:[
+            ]
+          },
           createdAt: serverTimestamp(),
   })
       toast.success('Goodluck')

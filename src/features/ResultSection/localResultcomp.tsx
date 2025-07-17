@@ -100,14 +100,16 @@ useEffect(()=>{
           <Card className="bg-slate-900/80 border-slate-800 backdrop-blur-sm">
             <CardHeader className="text-center">
               <div className="w-20 h-20 bg-gradient-to-br from-emerald-400 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">{(score/Number(questonsLenght))*100}%</span>
+                <span className="text-2xl font-bold text-white">{score!==0?((score/Number(questonsLenght))*100):'0'}%</span>
               </div>
               <CardTitle className={`text-3xl font-bold ${getScoreColor()}`}>
-              {calculateFinalScore(
+              {
+                score!==0?
+              calculateFinalScore(
               score,
              Number(questonsLenght),
              difficultyLevel as Difficulty
-            )} Points
+            ):0} Points
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -205,9 +207,9 @@ useEffect(()=>{
             variant="outline" 
             className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white px-8 py-6 text-lg"
           >
-            <Link to="/categories">
+            <Link to="/verifyanswers">
               <Home className="w-5 h-5 mr-2" />
-              Back to Quiz Categories
+              Check Answers
             </Link>
           </Button>
 

@@ -4,6 +4,8 @@ import { useEffect,useState } from "react"
 import { useNavigate } from "react-router-dom";
 import Loader from "../../components/loader";
 import { calculateFinalScore } from "../../utils/calculateScore";
+import useUsername from "../../hooks/useUsername";
+import toast from "react-hot-toast";
 // import NotFound from "../../components/notFound";
 interface QuestionProps{
   question:string;
@@ -11,6 +13,7 @@ interface QuestionProps{
   correctAnswer:string[];
 }
 const quizComp = () => {
+  const {username}=useUsername()
   const [questionIndex,setQuestionIndex]=useState<number>(0)
   const [questionNumber,setQuestionNumber]=useState<number>(1)
   const [data,setData]=useState<QuestionProps[]>([])
@@ -19,17 +22,34 @@ const quizComp = () => {
   const [scoreToBeSave,setscoreToBeSave]=useState<number>(0)
   const [selected,setSelected]=useState<{[key:number]:string}>({})
   const [selectedId,setSelectedId]=useState<string[]>([])
+  const [selectedIndex,setSelectedIndex]=useState<number[]>([])
   // const [username,setUserName]=useState<string>('')
   const saveData= JSON.parse(localStorage.getItem('quizSettings')||'{}')
 
   const navigate=useNavigate()
 
+  useEffect(()=>{
+    const handleVisibilityChange=()=>{
+      if(document.visibilityState==='hidden'){
+          toast.error('Disqualified')
+      }else{
+        navigate('/result')
+      }
+    }
+    document.addEventListener('visibilitychange',handleVisibilityChange)
+    return ()=>{
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
 
+    }
+  },[])
   ////NAVIGATE FUNION TO RESULT PAGE
   const navigateToResult=()=>{
     navigate('/result')
   }
   
+
+   /// IF HE OPENS A NEW TAB((Cheating))
+ 
 
   useEffect(()=>{
     const quizStatus=localStorage.getItem('quizSettings')
@@ -136,8 +156,8 @@ const quizComp = () => {
       setQuestionIndex(parsed.questionIndex);
       setQuestionNumber(parsed.questionNumber);
       setQuestionLenght(parsed.questionlenght);
-      setScore(parsed.scoreToBeSave)
-      setSelected(parsed.selected)
+      setScore(parsed.scoreToBeSave);
+      setSelected(parsed.selected);
       return
     }
 
@@ -148,19 +168,26 @@ const quizComp = () => {
         navigate(-1)
       }else{
         setQuestionLenght(parseInt(saveData.questonsLenghtSaved))
-         filename=`data/${saveData.languageChoosed}.json`;
+         filename=`data/${saveData.languageChoosed}/${saveData.languageChoosed}${saveData.difficultyLevel}.json`;
       }
       fetch(`${filename}`)
       .then((response)=>response.json() as Promise<QuestionProps[]>)
       .then((data)=>{
         // setData(data)
-       const shuffled=[...data];
+       let shuffled=[...data].map((q,index)=>({
+        ...q,
+        originalIndex:index
+       }))
         for (let i = shuffled.length-1; i > 0; i--) {
           
           const j=Math.floor(Math.random()*(i+1));
           [shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]]
         }
-        const selectedQues=shuffled.slice(0,saveData.questonsLenghtSaved)
+        const maxStart=Math.max(0,shuffled.length-saveData.questonsLenghtSaved)
+        const startIndex=Math.floor(Math.random()*(maxStart+1))
+        const selectedQues=shuffled.slice(startIndex,startIndex+saveData.questonsLenghtSaved)
+        const selectedIndexes=selectedQues.map(q=>q.originalIndex).slice(0,saveData.questonsLenghtSaved)
+        setSelectedIndex(selectedIndexes)
         setData(selectedQues)
         setQuestionIndex(0)
       })
@@ -191,10 +218,12 @@ const quizComp = () => {
        if(questionNumber!==questionlenght){
         return prev+1
       }
-      const userNamesaved=localStorage.getItem('username')
-      if(userNamesaved){
-        updateWholeScore(userNamesaved)
+      if(username!==null){
+        updateWholeScore(username)
       }
+        
+      localStorage.setItem('AnswersChosed',JSON.stringify(selected))
+      localStorage.setItem('QuestionsChosed',JSON.stringify(selectedIndex))
       localStorage.setItem('scoreSaved',`${scoreToBeSave}`)
       localStorage.setItem('langused',`${questionlenght}`)
       navigateToResult()
@@ -233,7 +262,7 @@ const quizComp = () => {
                   return updated
                 })
                 if(score!==null){
-                  const count=Object.values(score).filter(value=>value===true).length
+                  const count=Object.values(score).filter(value=>value===true).length+1
                   setscoreToBeSave(count)
                 }
             setSelected((prev:{[key:number]:string})=>{
@@ -273,7 +302,7 @@ const quizComp = () => {
     <div className="flex flex-col   justify-center gap-y-5 md:grid md:grid-cols-2 md:gap-x-[8rem] md:gap-y-[2rem] md:pt-6 md:place-items-center md:justify-center">
       {currentQUes.options.map((val,index)=>(
 
-<span key={index} onClick={()=>checkAnswer(val,questionNumber)} className={`cursor-pointer border border-[#ffffff59] py-4 text-white pl-5 rounded-[13px] bg-gradient-to-br from-[#a1f2c] to-[#131720]/90 md:w-[310px] ${selected[questionNumber]===val?'shadow-[0_4px_10px_rgba(0,255,128,0.2)] border-3 border-green-700':''} `}>{val}</span>
+<span key={index} onClick={()=>checkAnswer(val,questionNumber)} className={`h-[70px] text-left cursor-pointer border border-[#ffffff59] flex items-center text-white pl-5 pr-5 rounded-[13px] bg-gradient-to-br from-[#a1f2c] to-[#131720]/90 md:w-[310px] ${selected[questionNumber]===val?'shadow-[0_4px_10px_rgba(0,255,128,0.2)] border-3 border-green-700':''} `}>{val}</span>
 
       ))}
 

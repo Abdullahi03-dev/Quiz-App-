@@ -2,17 +2,16 @@ import { useEffect, useState } from "react"
 import { db, collection, query, where} from "../../firebase/firebase";
 import { onSnapshot } from "firebase/firestore";
 import {  useNavigate } from "react-router-dom";
+import useUsername from "../../hooks/useUsername";
 const waitingroom = () => {
+  const {username}=useUsername()
   const navigate=useNavigate()
-  const [username,setUserName]=useState<string>('')
   const [roomCode,setRoomCode]=useState<string>('')
   const [secondUser,setSecondUser]=useState<string>('')
 
   useEffect(()=>{
-    const saved=localStorage.getItem('username')
   const saved1=localStorage.getItem('Roomcode')
-  if(saved&&saved1){
-    setUserName(saved)
+  if(saved1){
     setRoomCode(saved1)
   }else{
     navigate('/livesettings')
@@ -62,7 +61,7 @@ console.log(doc)
             <h3 className='text-white text-[16px] w-[100%] text-center pb-4'>Waiting For Opponent To Join....</h3>
             <div className="flex justify-center items-center flex-col  py-2 md:flex-row">
 
-              <h3 className="text-xl md:mx-1.5">{username}  </h3>
+              <h3 className="text-xl md:mx-1.5">{ username!==null? username:'USER1'}  </h3>
               <h3 className="text-xl md:mx-1.5 pr-3">vs</h3>
               {/* <h3 className="text-xl md:mx-1.5">Loading....{secondUser}</h3> */}
               <div className="flex items-baseline  space-x-2 mb-3">

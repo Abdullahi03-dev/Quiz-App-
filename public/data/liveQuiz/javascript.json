@@ -1,0 +1,2152 @@
+[
+    
+    {
+        "question": "What does the 'this' keyword refer to inside a regular function in strict mode?",
+        "options": ["The global object", "The object invoking the function", "undefined", "The prototype of the object"],
+        "correctAnswer": ["undefined"]
+      },
+      {
+        "question": "Which keyword is used to define a JavaScript class?",
+        "options": ["define", "class", "object", "constructor"],
+        "correctAnswer": ["class"]
+      },
+      {
+        "question": "Which method in a class is called automatically when a new object is created?",
+        "options": ["create()", "init()", "constructor()", "build()"],
+        "correctAnswer": ["constructor()"]
+      },
+      {
+        "question": "Which of the following best describes encapsulation in JavaScript?",
+        "options": ["Wrapping data and methods together", "Hiding logic from the user", "Inheriting multiple classes", "Making global variables"],
+        "correctAnswer": ["Wrapping data and methods together"]
+      },
+      {
+        "question": "How do you create a method in a JavaScript class?",
+        "options": ["function myMethod() {}", "this.myMethod = () => {}", "myMethod() {}", "method: function() {}"],
+        "correctAnswer": ["myMethod() {}"]
+      },
+      {
+        "question": "Which of the following is true about inheritance in JavaScript classes?",
+        "options": ["A class can extend only one class", "Multiple inheritance is allowed", "JavaScript doesn't support inheritance", "Objects can't inherit properties"],
+        "correctAnswer": ["A class can extend only one class"]
+      },
+      {
+        "question": "How do you call the parent class constructor in a subclass?",
+        "options": ["super()", "this()", "constructor()", "base()"],
+        "correctAnswer": ["super()"]
+      },
+      {
+        "question": "What keyword is used to define a class that inherits from another?",
+        "options": ["inherits", "extends", "prototype", "super"],
+        "correctAnswer": ["extends"]
+      },
+      {
+        "question": "What is polymorphism in JavaScript?",
+        "options": ["Defining multiple functions with the same name", "Creating multiple classes", "Using the same method name with different implementations", "Accessing private variables"],
+        "correctAnswer": ["Using the same method name with different implementations"]
+      },
+      {
+        "question": "What happens when you use 'super' inside a derived class method?",
+        "options": ["It refers to the current class", "It accesses the global object", "It calls the parent class's method", "It initializes the current class"],
+        "correctAnswer": ["It calls the parent class's method"]
+      },
+      {
+        "question": "How are private fields declared in modern JavaScript classes?",
+        "options": ["this.privateVar = 1;", "var privateVar = 1;", "#privateVar = 1;", "private privateVar = 1;"],
+        "correctAnswer": ["#privateVar = 1;"]
+      },
+      {
+        "question": "Which of these allows controlled access to a property?",
+        "options": ["Constructor", "Getter/Setter", "Prototype", "Static method"],
+        "correctAnswer": ["Getter/Setter"]
+      },
+      {
+        "question": "How do you define a getter in a class?",
+        "options": ["get: function() {}", "function getValue() {}", "get value() {}", "getter() {}"],
+        "correctAnswer": ["get value() {}"]
+      },
+      {
+        "question": "Which is an example of abstraction in JS?",
+        "options": ["Using a class to hide implementation details", "Creating variables outside functions", "Assigning event listeners", "Writing comments"],
+        "correctAnswer": ["Using a class to hide implementation details"]
+      },
+      {
+        "question": "What is the main benefit of using OOP in JavaScript?",
+        "options": ["Smaller files", "Faster compilation", "Better organization and reuse", "Shorter syntax"],
+        "correctAnswer": ["Better organization and reuse"]
+      },
+      {
+        "question": "Which statement is used to create an object from a class?",
+        "options": ["object = new()", "let obj = create Class()", "let obj = new ClassName()", "ClassName obj = new()"],
+        "correctAnswer": ["let obj = new ClassName()"]
+      },
+      {
+        "question": "What is a prototype in JavaScript?",
+        "options": ["A class instance", "A built-in function", "An object from which other objects inherit", "A DOM element"],
+        "correctAnswer": ["An object from which other objects inherit"]
+      },
+      {
+        "question": "Which method can be used to add a method to a constructor function’s prototype?",
+        "options": ["Object.assign()", "constructor.prototype.methodName = function() {}", "addMethod()", "this.method()"],
+        "correctAnswer": ["constructor.prototype.methodName = function() {}"]
+      },
+      {
+        "question": "What does Object.create() do?",
+        "options": ["Creates a DOM element", "Creates a new class", "Creates a new object with the specified prototype", "Copies an object"],
+        "correctAnswer": ["Creates a new object with the specified prototype"]
+      },
+      {
+        "question": "How do static methods differ from instance methods in a class?",
+        "options": ["Static methods are not allowed", "They can only be called inside constructors", "They belong to the class, not instances", "They automatically bind to 'this'"],
+        "correctAnswer": ["They belong to the class, not instances"]
+      },
+      {
+        "question": "In JavaScript OOP, what is the primary use of a constructor function?",
+        "options": [
+          "To call APIs",
+          "To set global variables",
+          "To initialize new object instances",
+          "To define event listeners"
+        ],
+        "correctAnswer": ["To initialize new object instances"]
+      },
+      {
+        "question": "Which keyword is used to inherit a class in JavaScript ES6?",
+        "options": [
+          "implement",
+          "extends",
+          "inherits",
+          "derive"
+        ],
+        "correctAnswer": ["extends"]
+      },
+      {
+        "question": "How does method overriding work in JavaScript OOP?",
+        "options": [
+          "By using the override keyword",
+          "By defining a method in the subclass with the same name as in the superclass",
+          "By renaming the method",
+          "By deleting the superclass method"
+        ],
+        "correctAnswer": ["By defining a method in the subclass with the same name as in the superclass"]
+      },
+      {
+        "question": "What is the result of calling `typeof class MyClass {}`?",
+        "options": [
+          "'function'",
+          "'class'",
+          "'object'",
+          "'undefined'"
+        ],
+        "correctAnswer": ["'function'"]
+      },
+      {
+        "question": "What is an instance method in JavaScript OOP?",
+        "options": [
+          "A method that is not bound to an object",
+          "A method used to run asynchronous code",
+          "A method defined in a class and available to instances of that class",
+          "A method that deletes object properties"
+        ],
+        "correctAnswer": ["A method defined in a class and available to instances of that class"]
+      },
+      {
+        "question": "Which concept allows objects to take on more than one form in JavaScript OOP?",
+        "options": [
+          "Abstraction",
+          "Encapsulation",
+          "Polymorphism",
+          "Recursion"
+        ],
+        "correctAnswer": ["Polymorphism"]
+      },
+      {
+        "question": "What will happen if a subclass does not call `super()` in its constructor?",
+        "options": [
+          "It will inherit the parent class automatically",
+          "It will throw a ReferenceError",
+          "It will work with warnings",
+          "The constructor will be ignored"
+        ],
+        "correctAnswer": ["It will throw a ReferenceError"]
+      },
+      {
+        "question": "How can encapsulation be achieved in modern JavaScript?",
+        "options": [
+          "Using public variables",
+          "Using `#` to declare private fields in a class",
+          "Using global variables",
+          "Using arrow functions"
+        ],
+        "correctAnswer": ["Using `#` to declare private fields in a class"]
+      },
+      {
+        "question": "Which of the following demonstrates method chaining in JavaScript?",
+        "options": [
+          "`obj.method1().method2()`",
+          "`obj.method1; obj.method2;`",
+          "`method1 -> method2`",
+          "`obj.call(method1).call(method2)`"
+        ],
+        "correctAnswer": ["`obj.method1().method2()`"]
+      },
+      {
+        "question": "Which JavaScript feature allows creating multiple objects from a class blueprint?",
+        "options": [
+          "Prototype chaining",
+          "Class instantiation",
+          "Method binding",
+          "Functional scope"
+        ],
+        "correctAnswer": ["Class instantiation"]
+      },
+      {
+        "question": "Which keyword inside a method refers to the current instance of a class?",
+        "options": [
+          "instance",
+          "that",
+          "this",
+          "object"
+        ],
+        "correctAnswer": ["this"]
+      },
+      {
+        "question": "In JavaScript, what does `Object.create()` do?",
+        "options": [
+          "Creates a deep copy of an object",
+          "Creates a new object with the specified prototype object and properties",
+          "Creates a new class",
+          "Creates a constructor function"
+        ],
+        "correctAnswer": ["Creates a new object with the specified prototype object and properties"]
+      },
+      {
+        "question": "What does the term 'abstraction' mean in OOP?",
+        "options": [
+          "Hiding details and showing only essential information",
+          "Exposing all class members to the global scope",
+          "Reducing code complexity with multiple files",
+          "None of the above"
+        ],
+        "correctAnswer": ["Hiding details and showing only essential information"]
+      },
+      {
+        "question": "Which built-in method is used to determine whether an object has a property as its own?",
+        "options": [
+          "Object.hasOwnProperty()",
+          "Object.checkProp()",
+          "Object.verify()",
+          "Object.getKeys()"
+        ],
+        "correctAnswer": ["Object.hasOwnProperty()"]
+      },
+      {
+        "question": "What is `super` used for in a class?",
+        "options": [
+          "To define a superclass",
+          "To access properties of the current object",
+          "To call methods from the parent class",
+          "To define static properties"
+        ],
+        "correctAnswer": ["To call methods from the parent class"]
+      },
+      {
+        "question": "How do you make a property static in a class?",
+        "options": [
+          "Use the `final` keyword",
+          "Use the `static` keyword",
+          "Use the `const` keyword",
+          "Declare outside the class"
+        ],
+        "correctAnswer": ["Use the `static` keyword"]
+      },
+      {
+        "question": "Which feature of OOP promotes code reuse?",
+        "options": [
+          "Inheritance",
+          "Polymorphism",
+          "Encapsulation",
+          "Abstraction"
+        ],
+        "correctAnswer": ["Inheritance"]
+      },
+      {
+        "question": "Which method is automatically called when an object is created using the `new` keyword?",
+        "options": [
+          "initialize()",
+          "constructor()",
+          "start()",
+          "create()"
+        ],
+        "correctAnswer": ["constructor()"]
+      },
+      {
+        "question": "What is the purpose of `Object.defineProperty()`?",
+        "options": [
+          "To create a property with custom descriptors",
+          "To delete object properties",
+          "To override object prototypes",
+          "To compare two objects"
+        ],
+        "correctAnswer": ["To create a property with custom descriptors"]
+      },
+      {
+        "question": "Which of the following is true about JavaScript's prototype-based inheritance?",
+        "options": [
+          "Objects inherit from classes directly",
+          "Functions do not support inheritance",
+          "Every object has a prototype object it inherits methods from",
+          "JavaScript does not support inheritance"
+        ],
+        "correctAnswer": ["Every object has a prototype object it inherits methods from"]
+      },
+      {
+        "question": "What is the difference between class-based and prototype-based inheritance in JavaScript?",
+        "options": [
+          "Class-based uses functions while prototype-based uses objects",
+          "There is no difference",
+          "Prototype-based inheritance doesn't support encapsulation",
+          "Class-based inheritance is not supported in JavaScript"
+        ],
+        "correctAnswer": ["Class-based uses functions while prototype-based uses objects"]
+      },
+      {
+        "question": "Which keyword is used to implement inheritance in JavaScript classes?",
+        "options": [
+          "inherit",
+          "extends",
+          "implements",
+          "super"
+        ],
+        "correctAnswer": ["extends"]
+      },
+      {
+        "question": "What will `typeof class MyClass {}` return?",
+        "options": [
+          "object",
+          "class",
+          "function",
+          "undefined"
+        ],
+        "correctAnswer": ["function"]
+      },
+      {
+        "question": "What is the purpose of the `super()` call in a derived class constructor?",
+        "options": [
+          "It initializes the child class properties",
+          "It binds `this` keyword",
+          "It calls the constructor of the parent class",
+          "It sets up the prototype chain"
+        ],
+        "correctAnswer": ["It calls the constructor of the parent class"]
+      },
+      {
+        "question": "Can a JavaScript class extend more than one class?",
+        "options": [
+          "Yes",
+          "Only with mixins",
+          "No",
+          "Only in ES6"
+        ],
+        "correctAnswer": ["Only with mixins"]
+      },
+      {
+        "question": "Which of the following best describes 'abstraction' in JavaScript OOP?",
+        "options": [
+          "Hiding implementation details",
+          "Sharing logic across objects",
+          "Extending from multiple classes",
+          "Overriding methods"
+        ],
+        "correctAnswer": ["Hiding implementation details"]
+      },
+      {
+        "question": "In JavaScript, how can we define a private method inside a class?",
+        "options": [
+          "Use `_` before the method name",
+          "Use `private` keyword",
+          "Use `#` before the method name",
+          "Declare the method outside the class"
+        ],
+        "correctAnswer": ["Use `#` before the method name"]
+      },
+      {
+        "question": "What is method overriding in JavaScript OOP?",
+        "options": [
+          "When a method calls another method",
+          "When a parent class method is hidden",
+          "When a child class redefines a parent class method",
+          "When a class has two methods with the same name"
+        ],
+        "correctAnswer": ["When a child class redefines a parent class method"]
+      },
+      {
+        "question": "What does the `Object.setPrototypeOf(obj, prototype)` function do?",
+        "options": [
+          "Creates a new class",
+          "Deletes an object's prototype",
+          "Sets the prototype of an object",
+          "Returns the class of the object"
+        ],
+        "correctAnswer": ["Sets the prototype of an object"]
+      },
+      {
+        "question": "What is a mixin in JavaScript?",
+        "options": [
+          "A class with multiple constructors",
+          "A way to extend multiple classes",
+          "An object that contains reusable methods",
+          "A type of constructor"
+        ],
+        "correctAnswer": ["An object that contains reusable methods"]
+      },
+      {
+        "question": "What will happen if you call `super()` after accessing `this` in the constructor?",
+        "options": [
+          "It will still work",
+          "It causes a reference error",
+          "It initializes the base class",
+          "It resets `this`"
+        ],
+        "correctAnswer": ["It causes a reference error"]
+      },
+      {
+        "question": "How can you implement polymorphism in JavaScript?",
+        "options": [
+          "Using `prototype` only",
+          "By method overloading only",
+          "Using method overriding in subclasses",
+          "By declaring multiple variables"
+        ],
+        "correctAnswer": ["Using method overriding in subclasses"]
+      },
+      {
+        "question": "Which of the following defines encapsulation in JavaScript?",
+        "options": [
+          "Grouping code in objects",
+          "Restricting access to certain data",
+          "Inheriting from another class",
+          "Writing code inside closures"
+        ],
+        "correctAnswer": ["Restricting access to certain data"]
+      },
+      {
+        "question": "What is the main benefit of using constructor functions for object creation?",
+        "options": [
+          "You can create multiple objects efficiently",
+          "They don't use memory",
+          "They avoid prototype inheritance",
+          "They prevent abstraction"
+        ],
+        "correctAnswer": ["You can create multiple objects efficiently"]
+      },
+      {
+        "question": "How can you define a static method in a class?",
+        "options": [
+          "With `#` symbol",
+          "With `@` symbol",
+          "Using the `static` keyword",
+          "You can't define static methods"
+        ],
+        "correctAnswer": ["Using the `static` keyword"]
+      },
+      {
+        "question": "What will be the value of `this` inside a regular function in strict mode?",
+        "options": [
+          "The global object",
+          "undefined",
+          "The class",
+          "The constructor"
+        ],
+        "correctAnswer": ["undefined"]
+      },
+      {
+        "question": "What does `Object.create()` do?",
+        "options": [
+          "Creates a copy of a class",
+          "Inherits from a prototype object",
+          "Creates an array",
+          "Converts object to class"
+        ],
+        "correctAnswer": ["Inherits from a prototype object"]
+      },
+      {
+        "question": "What is the purpose of `Object.defineProperty()`?",
+        "options": [
+          "To create new properties in a constructor",
+          "To define a method inside a class",
+          "To control property behavior on an object",
+          "To update object prototype"
+        ],
+        "correctAnswer": ["To control property behavior on an object"]
+      },
+      {
+        "question": "Which of the following are benefits of OOP in JavaScript?",
+        "options": [
+          "Better performance",
+          "Improved code reuse and readability",
+          "Faster DOM manipulation",
+          "Increased memory usage"
+        ],
+        "correctAnswer": ["Improved code reuse and readability"]
+      },
+      {
+        "question": "Which method is automatically called when creating a new object using a class?",
+        "options": [
+          "init()",
+          "constructor()",
+          "start()",
+          "main()"
+        ],
+        "correctAnswer": ["constructor()"]
+      },
+      {
+        "question": "What is the role of 'getters' and 'setters' in JavaScript classes?",
+        "options": [
+          "They define private properties",
+          "They manipulate prototypes",
+          "They define accessors for object properties",
+          "They destroy class instances"
+        ],
+        "correctAnswer": ["They define accessors for object properties"]
+      },
+      {
+        "question": "In JavaScript OOP, what is an instance method?",
+        "options": [
+          "A method defined on the prototype that can be accessed by instances",
+          "A static method that belongs to the class",
+          "A function that exists outside the class",
+          "A method that modifies class definitions"
+        ],
+        "correctAnswer": ["A method defined on the prototype that can be accessed by instances"]
+      },
+      {
+        "question": "Which JavaScript keyword is used to inherit from another class?",
+        "options": [
+          "this",
+          "extends",
+          "inherits",
+          "prototype"
+        ],
+        "correctAnswer": ["extends"]
+      },
+      {
+        "question": "How do you call the constructor of a parent class from a child class in JavaScript?",
+        "options": [
+          "super()",
+          "parent()",
+          "this()",
+          "call()"
+        ],
+        "correctAnswer": ["super()"]
+      },
+      {
+        "question": "What will `typeof class MyClass {}` return?",
+        "options": [
+          "'function'",
+          "'object'",
+          "'class'",
+          "'undefined'"
+        ],
+        "correctAnswer": ["'function'"]
+      },
+      {
+        "question": "What keyword is used to define a static method in a JavaScript class?",
+        "options": [
+          "static",
+          "const",
+          "define",
+          "prototype"
+        ],
+        "correctAnswer": ["static"]
+      },
+      {
+        "question": "Which keyword restricts access to class members in other classes in JavaScript (experimental)?",
+        "options": [
+          "#",
+          "private",
+          "this",
+          "sealed"
+        ],
+        "correctAnswer": ["#"]
+      },
+      {
+        "question": "What does `this.constructor` reference inside a class instance?",
+        "options": [
+          "The class constructor function",
+          "The parent class only",
+          "The object prototype",
+          "The child class only"
+        ],
+        "correctAnswer": ["The class constructor function"]
+      },
+      {
+        "question": "Which of the following best represents abstraction in JavaScript?",
+        "options": [
+          "Hiding internal logic using classes and exposing only necessary methods",
+          "Creating multiple instances",
+          "Overriding static methods",
+          "Using `setTimeout` to delay code"
+        ],
+        "correctAnswer": ["Hiding internal logic using classes and exposing only necessary methods"]
+      },
+      {
+        "question": "Which OOP principle allows a class to use the behavior and properties of another class?",
+        "options": [
+          "Inheritance",
+          "Encapsulation",
+          "Polymorphism",
+          "Abstraction"
+        ],
+        "correctAnswer": ["Inheritance"]
+      },
+      {
+        "question": "Which of the following allows you to create many forms of the same method in subclasses?",
+        "options": [
+          "Polymorphism",
+          "Encapsulation",
+          "Instantiation",
+          "Composition"
+        ],
+        "correctAnswer": ["Polymorphism"]
+      },
+      {
+        "question": "Which technique hides internal data from outside access?",
+        "options": [
+          "Encapsulation",
+          "Polymorphism",
+          "Inheritance",
+          "Abstraction"
+        ],
+        "correctAnswer": ["Encapsulation"]
+      },
+      {
+        "question": "In JavaScript OOP, what is the difference between 'this' in an arrow function vs a regular method?",
+        "options": [
+          "Arrow functions don’t bind their own 'this'",
+          "Arrow functions use global 'this' always",
+          "Arrow functions bind 'this' to the class",
+          "There is no difference"
+        ],
+        "correctAnswer": ["Arrow functions don’t bind their own 'this'"]
+      },
+      {
+        "question": "Which method in a class is automatically called when an object is created?",
+        "options": [
+          "constructor",
+          "init",
+          "create",
+          "start"
+        ],
+        "correctAnswer": ["constructor"]
+      },
+      {
+        "question": "How do you define a class expression in JavaScript?",
+        "options": [
+          "const MyClass = class { };",
+          "class:MyClass {}",
+          "function MyClass {}",
+          "let MyClass -> class {}"
+        ],
+        "correctAnswer": ["const MyClass = class { };"]
+      },
+      {
+        "question": "Which keyword is used to create a blueprint in JavaScript OOP?",
+        "options": [
+          "class",
+          "function",
+          "object",
+          "extends"
+        ],
+        "correctAnswer": ["class"]
+      },
+      {
+        "question": "Can JavaScript classes contain computed property names?",
+        "options": [
+          "Yes, using square brackets",
+          "No, classes do not allow it",
+          "Only with private fields",
+          "Only inside constructors"
+        ],
+        "correctAnswer": ["Yes, using square brackets"]
+      },
+      {
+        "question": "What is the best way to enforce abstraction in vanilla JavaScript?",
+        "options": [
+          "Use closures and return only the public methods",
+          "Use `delete` on private fields",
+          "Use arrow functions in global scope",
+          "Use alert() to hide data"
+        ],
+        "correctAnswer": ["Use closures and return only the public methods"]
+      },
+      {
+        "question": "Which term describes the concept of keeping class fields inaccessible directly from outside?",
+        "options": [
+          "Encapsulation",
+          "Inheritance",
+          "Abstraction",
+          "Prototyping"
+        ],
+        "correctAnswer": ["Encapsulation"]
+      },
+      {
+        "question": "What is the difference between class-based and prototype-based inheritance in JavaScript?",
+        "options": [
+          "Class-based uses functions while prototype-based does not",
+          "Prototype-based inheritance relies on objects inheriting directly from other objects, whereas class-based inheritance involves blueprint classes",
+          "They are the same in JavaScript",
+          "Prototype-based is only supported in ES5"
+        ],
+        "correctAnswer": ["Prototype-based inheritance relies on objects inheriting directly from other objects, whereas class-based inheritance involves blueprint classes"]
+      },
+      {
+        "question": "Which keyword is used to refer to the current object inside a method?",
+        "options": [
+          "self",
+          "that",
+          "this",
+          "object"
+        ],
+        "correctAnswer": ["this"]
+      },
+      {
+        "question": "How do you implement encapsulation in JavaScript?",
+        "options": [
+          "Using public variables only",
+          "Using closures or private fields to hide implementation details",
+          "Using arrays",
+          "Using comments"
+        ],
+        "correctAnswer": ["Using closures or private fields to hide implementation details"]
+      },
+      {
+        "question": "What will `this` refer to in a regular function called within `setTimeout()`?",
+        "options": [
+          "The global object or `undefined` in strict mode",
+          "The window location",
+          "The parent class",
+          "The setTimeout function"
+        ],
+        "correctAnswer": ["The global object or `undefined` in strict mode"]
+      },
+      {
+        "question": "Which feature of OOP allows JavaScript objects to inherit properties and methods from another object?",
+        "options": [
+          "Encapsulation",
+          "Abstraction",
+          "Inheritance",
+          "Polymorphism"
+        ],
+        "correctAnswer": ["Inheritance"]
+      },
+      {
+        "question": "What is a constructor function in JavaScript?",
+        "options": [
+          "A function that returns an array",
+          "A function used to create new objects and set their properties",
+          "A method inside an object",
+          "An arrow function with side effects"
+        ],
+        "correctAnswer": ["A function used to create new objects and set their properties"]
+      },
+      {
+        "question": "Which symbol is used to define private class fields in modern JavaScript?",
+        "options": [
+          "_",
+          "$",
+          "#",
+          "!"
+        ],
+        "correctAnswer": ["#"]
+      },
+      {
+        "question": "What does `Object.create()` do in JavaScript?",
+        "options": [
+          "Creates a copy of an array",
+          "Creates a new function",
+          "Creates a new object using the specified prototype object",
+          "Creates a new string object"
+        ],
+        "correctAnswer": ["Creates a new object using the specified prototype object"]
+      },
+      {
+        "question": "What is polymorphism in JavaScript?",
+        "options": [
+          "When objects have different types",
+          "When functions or methods behave differently based on the input",
+          "When prototypes are reused",
+          "When inheritance is blocked"
+        ],
+        "correctAnswer": ["When functions or methods behave differently based on the input"]
+      },
+      {
+        "question": "What is the main purpose of abstraction in JavaScript?",
+        "options": [
+          "To define multiple inheritance",
+          "To expose only necessary information and hide implementation details",
+          "To bind methods to the global scope",
+          "To increase execution time"
+        ],
+        "correctAnswer": ["To expose only necessary information and hide implementation details"]
+      },
+      {
+        "question": "How can you achieve abstraction in JavaScript?",
+        "options": [
+          "Using interfaces",
+          "By using classes and hiding methods via closures or private fields",
+          "Only by using ES5 functions",
+          "Abstraction is not supported"
+        ],
+        "correctAnswer": ["By using classes and hiding methods via closures or private fields"]
+      },
+      {
+        "question": "Which method allows you to call a function with a specific `this` value and arguments as an array?",
+        "options": [
+          "call()",
+          "apply()",
+          "bind()",
+          "execute()"
+        ],
+        "correctAnswer": ["apply()"]
+      },
+      {
+        "question": "Which method creates a new function with `this` bound to a given value?",
+        "options": [
+          "bind()",
+          "call()",
+          "apply()",
+          "attach()"
+        ],
+        "correctAnswer": ["bind()"]
+      },
+      {
+        "question": "In class-based OOP in JavaScript, how do you define a method?",
+        "options": [
+          "Using function keyword inside class",
+          "Using arrow functions outside constructor",
+          "Just methodName() inside class",
+          "Defining outside and importing"
+        ],
+        "correctAnswer": ["Just methodName() inside class"]
+      },
+      {
+        "question": "Can you inherit from more than one class in JavaScript using `extends`?",
+        "options": [
+          "Yes",
+          "Only with mixins",
+          "No",
+          "Only in ES6"
+        ],
+        "correctAnswer": ["Only with mixins"]
+      },
+      {
+        "question": "Which pattern allows for combining functionalities from multiple sources into a single class?",
+        "options": [
+          "Prototype chaining",
+          "Mixin",
+          "Composition",
+          "Decorator"
+        ],
+        "correctAnswer": ["Mixin"]
+      },
+      {
+        "question": "What will `this` point to inside an arrow function in a class method?",
+        "options": [
+          "It depends on how it's called",
+          "The global object",
+          "The class instance it was defined in",
+          "undefined"
+        ],
+        "correctAnswer": ["The class instance it was defined in"]
+      },
+      {
+        "question": "What is the result of `typeof class MyClass {}` in JavaScript?",
+        "options": [
+          "function",
+          "object",
+          "class",
+          "undefined"
+        ],
+        "correctAnswer": ["function"]
+      },
+      {
+        "question": "Which of the following is true about static methods?",
+        "options": [
+          "They can access instance properties directly",
+          "They are called on class instances",
+          "They are called on the class itself, not instances",
+          "They are used for binding `this`"
+        ],
+        "correctAnswer": ["They are called on the class itself, not instances"]
+      },
+      {
+        "question": "How do you access the prototype of a function in JavaScript?",
+        "options": [
+          "function.__proto__",
+          "function.constructor",
+          "function.prototype",
+          "function.bind()"
+        ],
+        "correctAnswer": ["function.prototype"]
+      },
+      {
+        "question": "What is encapsulation in JavaScript?",
+        "options": [
+          "Wrapping data and methods into a single unit",
+          "Using loops inside functions",
+          "Using multiple functions in one object",
+          "None of the above"
+        ],
+        "correctAnswer": ["Wrapping data and methods into a single unit"]
+      },
+      {
+        "question": "Which keyword is used to create a class in JavaScript?",
+        "options": ["object", "class", "function", "new"],
+        "correctAnswer": ["class"]
+      },
+      {
+        "question": "Which method is called when an object is created from a class?",
+        "options": ["constructor()", "init()", "setup()", "create()"],
+        "correctAnswer": ["constructor()"]
+      },
+      {
+        "question": "What does the `extends` keyword do in JavaScript?",
+        "options": [
+          "It extends the scope of a function",
+          "It creates a subclass",
+          "It copies a function",
+          "It creates a closure"
+        ],
+        "correctAnswer": ["It creates a subclass"]
+      },
+      {
+        "question": "What is polymorphism in OOP?",
+        "options": [
+          "When objects inherit from multiple classes",
+          "When a function behaves differently based on the object",
+          "When classes have multiple constructors",
+          "When variables change type"
+        ],
+        "correctAnswer": ["When a function behaves differently based on the object"]
+      },
+      {
+        "question": "Which principle hides internal object details?",
+        "options": ["Inheritance", "Polymorphism", "Abstraction", "Encapsulation"],
+        "correctAnswer": ["Encapsulation"]
+      },
+      {
+        "question": "Which of the following best describes 'abstraction'?",
+        "options": [
+          "Reducing complexity by hiding unnecessary details",
+          "Showing all class members",
+          "Copying objects",
+          "Linking classes"
+        ],
+        "correctAnswer": ["Reducing complexity by hiding unnecessary details"]
+      },
+      {
+        "question": "In JavaScript, what is the role of the `super` keyword?",
+        "options": [
+          "To import modules",
+          "To reference a superclass constructor or method",
+          "To call a static method",
+          "To create a new instance"
+        ],
+        "correctAnswer": ["To reference a superclass constructor or method"]
+      },
+      {
+        "question": "How do you define a private class field in JavaScript?",
+        "options": ["with `_` prefix", "using `#`", "with `private` keyword", "with `hidden` keyword"],
+        "correctAnswer": ["using `#`"]
+      },
+      {
+        "question": "What is method overriding?",
+        "options": [
+          "Calling a method inside another method",
+          "Replacing a superclass method in the subclass",
+          "Using multiple methods with same name in one class",
+          "Defining a static method"
+        ],
+        "correctAnswer": ["Replacing a superclass method in the subclass"]
+      },
+      {
+        "question": "Which statement about `this` keyword is true?",
+        "options": [
+          "`this` always refers to the global object",
+          "`this` refers to the object that is executing the current function",
+          "`this` is undefined in arrow functions",
+          "`this` always refers to the parent object"
+        ],
+        "correctAnswer": ["`this` refers to the object that is executing the current function"]
+      },
+      {
+        "question": "Which of these is true about static methods in a class?",
+        "options": [
+          "They belong to object instances",
+          "They can be called with `this` inside the object",
+          "They can only be called on the class itself",
+          "They are automatically bound"
+        ],
+        "correctAnswer": ["They can only be called on the class itself"]
+      },
+      {
+        "question": "Which feature of OOP allows reusability of code?",
+        "options": ["Polymorphism", "Abstraction", "Inheritance", "Encapsulation"],
+        "correctAnswer": ["Inheritance"]
+      },
+      {
+        "question": "Which keyword is used to create an object from a class?",
+        "options": ["make", "object", "new", "instance"],
+        "correctAnswer": ["new"]
+      },
+      {
+        "question": "What is the main purpose of using OOP in JavaScript?",
+        "options": [
+          "To improve variable naming",
+          "To increase page load time",
+          "To organize code using objects and classes",
+          "To add more lines of code"
+        ],
+        "correctAnswer": ["To organize code using objects and classes"]
+      },
+      {
+        "question": "Which of these is NOT a feature of OOP?",
+        "options": ["Encapsulation", "Polymorphism", "Looping", "Abstraction"],
+        "correctAnswer": ["Looping"]
+      },
+      {
+        "question": "What will `this` refer to in a regular function (non-arrow) called in global scope?",
+        "options": ["undefined", "window", "global object", "the function itself"],
+        "correctAnswer": ["window"]
+      },
+      {
+        "question": "In which scenario is an arrow function preferred over a regular function in OOP?",
+        "options": [
+          "When using as a constructor",
+          "When lexical `this` is needed",
+          "When you want to bind `this` manually",
+          "When defining class methods"
+        ],
+        "correctAnswer": ["When lexical `this` is needed"]
+      },
+      {
+        "question": "What does the `Object.create()` method do?",
+        "options": [
+          "Creates a deep clone",
+          "Creates a new object using the specified prototype",
+          "Creates an object from JSON",
+          "Creates an object with a null prototype"
+        ],
+        "correctAnswer": ["Creates a new object using the specified prototype"]
+      },
+      {
+        "question": "What is the purpose of `Object.assign()` in JavaScript?",
+        "options": [
+          "Merges properties from source to target object",
+          "Creates private members",
+          "Defines getters and setters",
+          "Creates object instances"
+        ],
+        "correctAnswer": ["Merges properties from source to target object"]
+      },{
+        "question": "What is the output of the following code: `[...'LITERALS'].filter(char => char < 'M').join('')`?",
+        "options": ["LIT", "ITE", "LET", "IRL"],
+        "correctAnswer": ["LIT"]
+      },
+      {
+        "question": "What will the following code output: `console.log(typeof NaN)`?",
+        "options": ["'number'", "'NaN'", "'undefined'", "'object'"],
+        "correctAnswer": ["'number'"]
+      },
+      {
+        "question": "How can you create an immutable object in JavaScript?",
+        "options": ["Object.freeze(obj)", "Object.seal(obj)", "Object.preventExtensions(obj)", "Object.lock(obj)"],
+        "correctAnswer": ["Object.freeze(obj)"]
+      },
+      {
+        "question": "Which of these is NOT a primitive type in JavaScript?",
+        "options": ["Boolean", "Symbol", "Function", "BigInt"],
+        "correctAnswer": ["Function"]
+      },
+      {
+        "question": "What is the time complexity of the `Array.prototype.sort` method?",
+        "options": ["O(n)", "O(n log n)", "O(log n)", "O(n^2)"],
+        "correctAnswer": ["O(n log n)"]
+      },
+      {
+        "question": "What is the output of `console.log([1, 2, 3] + [4, 5, 6]);`?",
+        "options": ["'123456'", "[1,2,3,4,5,6]", "Error", "'1,2,34,5,6'"],
+        "correctAnswer": ["'123456'"]
+      },
+      {
+        "question": "Which of the following is true about `null` in JavaScript?",
+        "options": ["It is an object", "It is a keyword", "It is a data type", "It is a function"],
+        "correctAnswer": ["It is an object"]
+      },
+      {
+        "question": "What will the following code output: `console.log(0.1 + 0.2 === 0.3);`?",
+        "options": ["true", "false", "undefined", "Error"],
+        "correctAnswer": ["false"]
+      },
+      {
+        "question": "How can you clone an object in JavaScript without referencing the original?",
+        "options": ["Object.assign({}, obj)", "JSON.stringify(obj)", "obj.copy()", "obj.slice()"],
+        "correctAnswer": ["Object.assign({}, obj)"]
+      },
+      {
+        "question": "What does the `bind` method do in JavaScript?",
+        "options": [
+          "It permanently changes the value of `this` in a function",
+          "It creates a new function with a specified `this` value",
+          "It executes a function immediately with a given `this` value",
+          "It links two functions together"
+        ],
+        "correctAnswer": ["It creates a new function with a specified `this` value"]
+      },
+      {
+        "question": "What is the output of the following code: `console.log([] == ![])`?",
+        "options": ["true", "false", "undefined", "Error"],
+        "correctAnswer": ["true"]
+      },
+      {
+        "question": "Which of the following methods will NOT modify the original array?",
+        "options": ["map", "splice", "push", "pop"],
+        "correctAnswer": ["map"]
+      },
+      {
+        "question": "What is the purpose of the `Set` object in JavaScript?",
+        "options": [
+          "To store unique values of any type",
+          "To store key-value pairs",
+          "To provide faster access to properties",
+          "To sort values in an array"
+        ],
+        "correctAnswer": ["To store unique values of any type"]
+      },
+      {
+        "question": "Which of these operators has the highest precedence in JavaScript?",
+        "options": ["++ (increment)", "|| (logical OR)", "== (equality)", "&& (logical AND)"],
+        "correctAnswer": ["++ (increment)"]
+      },
+      {
+        "question": "What will `console.log(typeof null)` output?",
+        "options": ["'object'", "'null'", "'undefined'", "'boolean'"],
+        "correctAnswer": ["'object'"]
+      },
+    {     "question": "What does the 'void' operator do in JavaScript?",
+      "options": ["It clears a variable", "It executes a function and returns undefined", "It creates a new scope", "It deletes an object"],
+      "correctAnswer": ["It executes a function and returns undefined"]
+    },
+    {     "question": "What is the output of `typeof NaN`?",
+      "options": ["'NaN'", "'undefined'", "'object'", "'number'"],
+      "correctAnswer": ["'number'"]
+    },
+    {     "question": "What will be the output of `[] == ![]`?",
+      "options": ["true", "false", "undefined", "throws error"],
+      "correctAnswer": ["true"]
+    },
+    {     "question": "What does the `Symbol` type represent in JavaScript?",
+      "options": ["A primitive type for unique identifiers", "A class", "A string", "An object wrapper"],
+      "correctAnswer": ["A primitive type for unique identifiers"]
+    },
+    {     "question": "How can you create a private variable in a JavaScript class?",
+      "options": ["Using the `private` keyword", "Prefixing with `_`", "Using closures", "Using the `#` symbol"],
+      "correctAnswer": ["Using the `#` symbol"]
+    },
+    {     "question": "What is the result of `Object.is(+0, -0)`?",
+      "options": ["true", "false", "undefined", "throws error"],
+      "correctAnswer": ["false"]
+    },
+    {     "question": "Which of the following is NOT a valid way to create an object?",
+      "options": ["Object.create(null)", "{}","new Object()", "Object.construct()"],
+      "correctAnswer": ["Object.construct()"]
+    },
+    {     "question": "What will `[].__proto__ === Array.prototype` return?",
+      "options": ["true", "false", "undefined", "TypeError"],
+      "correctAnswer": ["true"]
+    },
+    {     "question": "What is the role of the `Set` object in JavaScript?",
+      "options": ["Store unique values", "Store key-value pairs", "Sort elements", "Create weak references"],
+      "correctAnswer": ["Store unique values"]
+    },
+    {      "question": "Which method can be used to deep clone an object (excluding functions)?",
+      "options": ["Object.assign()", "JSON.parse(JSON.stringify())", "spread operator", "Object.copy()"],
+      "correctAnswer": ["JSON.parse(JSON.stringify())"]
+    },
+    {      "question": "Which statement is true about `WeakMap`?",
+      "options": ["Keys must be strings", "Keys can be garbage collected", "You can iterate over it", "It stores values by index"],
+      "correctAnswer": ["Keys can be garbage collected"]
+    },
+    {      "question": "What is the output of `typeof null` in JavaScript?",
+      "options": ["'null'", "'object'", "'undefined'", "'boolean'"],
+      "correctAnswer": ["'object'"]
+    },
+    {      "question": "Which method prevents new properties from being added to an object?",
+      "options": ["Object.freeze()", "Object.preventExtensions()", "Object.seal()", "Object.lock()"],
+      "correctAnswer": ["Object.preventExtensions()"]
+    },
+    {      "question": "What is the purpose of `Function.prototype.bind()`?",
+      "options": ["To execute a function", "To copy a function", "To set `this` value", "To delay execution"],
+      "correctAnswer": ["To set `this` value"]
+    },
+    {      "question": "What is a generator function in JavaScript?",
+      "options": ["A function that never stops", "A function that yields values lazily", "A recursive function", "An async function"],
+      "correctAnswer": ["A function that yields values lazily"]
+    },
+    {      "question": "What is the correct syntax for declaring a generator function?",
+      "options": ["function* myFunc() {}", "generator myFunc() {}", "function myFunc*() {}", "*function myFunc() {}"],
+      "correctAnswer": ["function* myFunc() {}"]
+    },
+    {      "question": "Which object method returns an array of a given object's own property names?",
+      "options": ["Object.entries()", "Object.keys()", "Object.getOwnPropertySymbols()", "Object.map()"],
+      "correctAnswer": ["Object.keys()"]
+    },
+    {      "question": "What does `Object.seal()` do?",
+      "options": ["Makes object immutable", "Prevents adding or removing properties", "Prevents function execution", "Removes all properties"],
+      "correctAnswer": ["Prevents adding or removing properties"]
+    },
+    {      "question": "What is the result of `Object.is(NaN, NaN)`?",
+      "options": ["false", "true", "undefined", "Error"],
+      "correctAnswer": ["true"]
+    },
+    {      "question": "What is the output of `[...'hello']`?",
+      "options": [["'hello'"], "['h', 'e', 'l', 'l', 'o']", "[104, 101, 108, 108, 111]", "Error"],
+      "correctAnswer": ["['h', 'e', 'l', 'l', 'o']"]
+    },
+    {      "question": "What will `[].toString.call([1,2,3])` return?",
+      "options": ["[object Object]", "[1,2,3]", "[object Array]", "1,2,3"],
+      "correctAnswer": ["1,2,3"]
+    },
+    {      "question": "How do you make a property read-only in a JavaScript object?",
+      "options": ["Using Object.defineProperty with writable: false", "Using const", "Using Object.freeze", "Using Object.preventExtensions"],
+      "correctAnswer": ["Using Object.defineProperty with writable: false"]
+    },
+    {      "question": "What will `let a = (1, 2, 3); console.log(a);` output?",
+      "options": ["1", "2", "3", "undefined"],
+      "correctAnswer": ["3"]
+    },
+    {      "question": "What does the comma operator do?",
+      "options": ["Combines arrays", "Evaluates expressions left to right and returns the last", "Separates strings", "Creates an array"],
+      "correctAnswer": ["Evaluates expressions left to right and returns the last"]
+    },
+    {      "question": "What is tail call optimization?",
+      "options": ["A way to optimize loops", "Calling a function from the top of the stack", "A compiler feature that optimizes recursive functions", "A feature for async/await"],
+      "correctAnswer": ["A compiler feature that optimizes recursive functions"]
+    },
+    {      "question": "What does `[].__proto__.__proto__` equal?",
+      "options": ["Array.prototype", "null", "Object.prototype", "undefined"],
+      "correctAnswer": ["Object.prototype"]
+    },
+    {      "question": "Which JavaScript method can create a new object with a specified prototype?",
+      "options": ["Object.copy()", "Object.assign()", "Object.create()", "Object.define()"],
+      "correctAnswer": ["Object.create()"]
+    },
+    {      "question": "What is the difference between `Object.freeze()` and `Object.seal()`?",
+      "options": ["Freeze makes properties immutable; seal allows modification but not addition/removal", "Both do the same", "Seal prevents value access", "Freeze makes the object invisible"],
+      "correctAnswer": ["Freeze makes properties immutable; seal allows modification but not addition/removal"]
+    },
+    {      "question": "How do you get the prototype of an object in modern JS?",
+      "options": ["obj.prototype", "obj.__proto__", "Object.getPrototypeOf(obj)", "obj.constructor"],
+      "correctAnswer": ["Object.getPrototypeOf(obj)"]
+    },
+    {      "question": "Which keyword allows breaking from nested loops in a labeled block?",
+      "options": ["break outer", "break()", "stop()", "break with label"],
+      "correctAnswer": ["break with label"]
+    },
+  
+    {      "question": "Which of the following statements is true about `WeakSet`?",
+      "options": ["It can store only primitive values", "It holds weak references to object values", "You can iterate over it", "It allows duplicate values"],
+      "correctAnswer": ["It holds weak references to object values"]
+    },
+    {      "question": "What is the difference between `let`, `const`, and `var` in terms of scope?",
+      "options": ["Only `const` is block-scoped", "`let` and `const` are block-scoped, `var` is function-scoped", "`var` is global-scoped", "All are block-scoped"],
+      "correctAnswer": ["`let` and `const` are block-scoped, `var` is function-scoped"]
+    },
+    {      "question": "What does `async function` return?",
+      "options": ["A callback", "A promise", "A generator", "undefined"],
+      "correctAnswer": ["A promise"]
+    },
+    {      "question": "How can you handle errors in an async/await function?",
+      "options": ["Using try/catch", "Using catch only", "Using return false", "Using async.catch"],
+      "correctAnswer": ["Using try/catch"]
+    },
+    {      "question": "What does the spread operator (`...`) do when used on an array?",
+      "options": ["Creates a shallow copy", "Deletes the array", "Creates a deep clone", "Appends values"],
+      "correctAnswer": ["Creates a shallow copy"]
+    },
+    {      "question": "What is `debouncing` in JavaScript?",
+      "options": ["Cancelling a request", "Delaying execution until after a pause in activity", "Running a function multiple times", "Fixing errors in code"],
+      "correctAnswer": ["Delaying execution until after a pause in activity"]
+    },
+    {      "question": "What is the main difference between `map()` and `forEach()`?",
+      "options": ["map mutates array, forEach does not", "map returns a new array, forEach does not", "forEach returns value, map does not", "They are identical"],
+      "correctAnswer": ["map returns a new array, forEach does not"]
+    },
+    {      "question": "What is the result of `typeof undefined == typeof null`?",
+      "options": ["true", "false", "undefined", "TypeError"],
+      "correctAnswer": ["true"]
+    },
+    {      "question": "What are template literals in JavaScript?",
+      "options": ["Old string formatting", "Functions", "Strings enclosed in backticks allowing interpolation", "Arrays of strings"],
+      "correctAnswer": ["Strings enclosed in backticks allowing interpolation"]
+    },
+    {      "question": "What will `[1] + [1,2,3]` output?",
+      "options": ["[1,1,2,3]", "NaN", "'11,2,3'", "Error"],
+      "correctAnswer": ["'11,2,3'"]
+    },
+    {      "question": "What will be the result of `[...'abc'].length`?",
+      "options": ["1", "2", "3", "undefined"],
+      "correctAnswer": ["3"]
+    },
+    {      "question": "Which method is used to define a getter in an object?",
+      "options": ["Object.defineGetter()", "Object.get()", "Object.defineProperty()", "Object.assign()"],
+      "correctAnswer": ["Object.defineProperty()"]
+    },
+    {      "question": "What is the main purpose of a Proxy in JavaScript?",
+      "options": ["To secure properties", "To intercept and redefine fundamental operations", "To create inheritance", "To parse JSON"],
+      "correctAnswer": ["To intercept and redefine fundamental operations"]
+    },
+    {      "question": "What will `typeof Infinity` return?",
+      "options": ["'undefined'", "'object'", "'number'", "'NaN'"],
+      "correctAnswer": ["'number'"]
+    },
+    {      "question": "What will be the result of `!!null`?",
+      "options": ["true", "false", "null", "undefined"],
+      "correctAnswer": ["false"]
+    },
+    {      "question": "What is the role of `Reflect` in JavaScript?",
+      "options": ["To reflect strings", "To build UIs", "To perform meta-programming operations", "To debug memory"],
+      "correctAnswer": ["To perform meta-programming operations"]
+    },
+    {      "question": "How is the event loop related to asynchronous behavior in JS?",
+      "options": ["It runs all code immediately", "It handles callbacks and promises after the stack is clear", "It blocks the call stack", "It refreshes variables"],
+      "correctAnswer": ["It handles callbacks and promises after the stack is clear"]
+    },
+    {      "question": "What is the output of `typeof []`?",
+      "options": ["'array'", "'object'", "'undefined'", "'null'"],
+      "correctAnswer": ["'object'"]
+    },
+    {      "question": "Which of the following creates a shallow copy of an array?",
+      "options": ["Array.slice()", "Array.splice()", "Array.push()", "Array.reverse()"],
+      "correctAnswer": ["Array.slice()"]
+    },
+    {      "question": "Which method is used to combine two or more arrays?",
+      "options": ["push()", "pop()", "concat()", "splice()"],
+      "correctAnswer": ["concat()"]
+    },
+    {      "question": "What is returned by `Promise.resolve(5)`?",
+      "options": ["5", "undefined", "A promise that resolves to 5", "A rejected promise"],
+      "correctAnswer": ["A promise that resolves to 5"]
+    },
+    {      "question": "What does the `globalThis` keyword refer to?",
+      "options": ["Only window", "Only global", "The global object regardless of environment", "The nearest object scope"],
+      "correctAnswer": ["The global object regardless of environment"]
+    },
+    {      "question": "What is the use of `Symbol.iterator`?",
+      "options": ["To create JSON", "To access map values", "To define iteration behavior", "To freeze objects"],
+      "correctAnswer": ["To define iteration behavior"]
+    },
+    {      "question": "How do you prevent object mutation in JavaScript?",
+      "options": ["Object.preventExtensions()", "Object.freeze()", "Object.block()", "Object.seal()"],
+      "correctAnswer": ["Object.freeze()"]
+    },
+    {      "question": "What is an Immediately Invoked Function Expression (IIFE)?",
+      "options": ["A function that runs when the browser loads", "A function that runs as soon as it's defined", "A recursive function", "A method bound to an event"],
+      "correctAnswer": ["A function that runs as soon as it's defined"]
+    },
+    {      "question": "What will the expression `true + false` evaluate to?",
+      "options": ["true", "false", "1", "0"],
+      "correctAnswer": ["1"]
+    },
+    {      "question": "How can you make a JavaScript object iterable?",
+      "options": ["Using Symbol.key", "By setting a map to it", "By defining a [Symbol.iterator] method", "Using forEach"],
+      "correctAnswer": ["By defining a [Symbol.iterator] method"]
+    },
+    {      "question": "Which operator checks both value and type?",
+      "options": ["==", "=", "===", "typeof"],
+      "correctAnswer": ["==="]
+    },
+    {      "question": "What will `typeof function(){} === 'function'` return?",
+      "options": ["true", "false", "function", "undefined"],
+      "correctAnswer": ["true"]
+    },
+    {      "question": "Which method is used to schedule a function call after delay?",
+      "options": ["setInterval()", "setTimeout()", "delay()", "schedule()"],
+      "correctAnswer": ["setTimeout()"]
+    },
+    {      "question": "Which loop guarantees execution at least once?",
+      "options": ["while", "for", "do...while", "forEach"],
+      "correctAnswer": ["do...while"]
+    },
+    {      "question": "Which object is used to perform safe access in optional chaining?",
+      "options": ["safeObj", "?.", "Object.safe()", "Option"],
+      "correctAnswer": ["?."]
+    },
+    {      "question": "What does the `typeof` operator return for a function?",
+      "options": ["object", "function", "string", "undefined"],
+      "correctAnswer": ["function"]
+    },
+    {      "question": "Which method stops the propagation of an event?",
+      "options": ["stopEvent()", "event.preventDefault()", "event.stopPropagation()", "stop()"],
+      "correctAnswer": ["event.stopPropagation()"]
+    },
+    {      "question": "Which one creates a new Set in JavaScript?",
+      "options": ["new Set()", "Set()", "new set()", "createSet()"],
+      "correctAnswer": ["new Set()"]
+    },
+    {      "question": "What will `isNaN('Hello')` return?",
+      "options": ["true", "false", "undefined", "NaN"],
+      "correctAnswer": ["true"]
+    },
+    {      "question": "How can you convert a string to a number in JS?",
+      "options": ["Number(str)", "parseInt(str)", "Unary + operator", "All of the above"],
+      "correctAnswer": ["All of the above"]
+    },
+    {      "question": "What is the difference between `.call()` and `.apply()`?",
+      "options": ["No difference", "call accepts arguments individually, apply as array", "apply is async", "call only works with classes"],
+      "correctAnswer": ["call accepts arguments individually, apply as array"]
+    },
+    {      "question": "What will be returned by `typeof []`?",
+      "options": ["array", "object", "list", "function"],
+      "correctAnswer": ["object"]
+    },
+    {      "question": "What is the result of `1 + '1'`?",
+      "options": ["2", "'2'", "'11'", "NaN"],
+      "correctAnswer": ["'11'"]
+    },
+    {      "question": "What is the purpose of `Promise.all()`?",
+      "options": [
+        "Waits for all promises to resolve or any to reject",
+        "Returns the first fulfilled promise",
+        "Creates a chain of promises",
+        "Resolves one after the other"
+      ],
+      "correctAnswer": ["Waits for all promises to resolve or any to reject"]
+    },
+    {      "question": "Which data structure guarantees uniqueness in JavaScript?",
+      "options": ["Array", "Object", "Set", "Map"],
+      "correctAnswer": ["Set"]
+    },
+    {      "question": "How can you make a function return a Promise without using `async`?",
+      "options": [
+        "Wrap it in a `setTimeout()`",
+        "Return `new Promise()` manually",
+        "Use `yield`",
+        "It's not possible"
+      ],
+      "correctAnswer": ["Return `new Promise()` manually"]
+    },
+    {      "question": "What is the output of `typeof undefined == typeof NULL`?",
+      "options": ["true", "false", "TypeError", "undefined"],
+      "correctAnswer": ["true"]
+    },
+    {      "question": "What does `Array.prototype.reduce()` do?",
+      "options": [
+        "Filters array elements",
+        "Creates a new array with mapped values",
+        "Reduces array to a single value",
+        "Splits array into chunks"
+      ],
+      "correctAnswer": ["Reduces array to a single value"]
+    },
+    {      "question": "What happens if you return nothing in a constructor function?",
+      "options": [
+        "Returns undefined",
+        "Returns the newly created object",
+        "Throws an error",
+        "Returns null"
+      ],
+      "correctAnswer": ["Returns the newly created object"]
+    },
+    {      "question": "What is hoisting in JavaScript?",
+      "options": [
+        "Running code after compilation",
+        "Moving function or variable declarations to the top",
+        "Async function calls",
+        "Memory optimization"
+      ],
+      "correctAnswer": ["Moving function or variable declarations to the top"]
+    },
+    {      "question": "Which statement about `Object.assign()` is correct?",
+      "options": [
+        "It creates a deep copy",
+        "It copies properties from source to target object",
+        "It merges arrays",
+        "It deletes object properties"
+      ],
+      "correctAnswer": ["It copies properties from source to target object"]
+    },
+    {      "question": "What does the `finally` block in a `try...catch` do?",
+      "options": [
+        "Runs only when there's an error",
+        "Runs only when there's no error",
+        "Runs always after try/catch",
+        "Skips if error is thrown"
+      ],
+      "correctAnswer": ["Runs always after try/catch"]
+    },
+    {      "question": "What is the purpose of `Object.entries()`?",
+      "options": [
+        "Returns keys only",
+        "Returns an array of [key, value] pairs",
+        "Returns values only",
+        "Freezes the object"
+      ],
+      "correctAnswer": ["Returns an array of [key, value] pairs"]
+    },
+    {      "question": "What does the unary plus (`+`) operator do to a string?",
+      "options": [
+        "Converts it to uppercase",
+        "Converts it to a number",
+        "Appends numbers",
+        "Throws an error"
+      ],
+      "correctAnswer": ["Converts it to a number"]
+    },
+    {      "question": "What will be the result of `new Array(3).fill(0)`?",
+      "options": [
+        "[undefined, undefined, undefined]",
+        "[0, 0, 0]",
+        "An error",
+        "[null, null, null]"
+      ],
+      "correctAnswer": ["[0, 0, 0]"]
+    },
+    {      "question": "What does the optional chaining operator (`?.`) do?",
+      "options": [
+        "Skips undefined properties safely",
+        "Throws if undefined",
+        "Chains promises",
+        "Freezes the object"
+      ],
+      "correctAnswer": ["Skips undefined properties safely"]
+    },
+    {      "question": "What is a closure in JavaScript?",
+      "options": [
+        "A variable passed to another function",
+        "A function bound to an object",
+        "A function that retains access to its lexical scope",
+        "An async call"
+      ],
+      "correctAnswer": ["A function that retains access to its lexical scope"]
+    },
+    {      "question": "What will `0.1 + 0.2 === 0.3` return?",
+      "options": ["true", "false", "NaN", "undefined"],
+      "correctAnswer": ["false"]
+    },
+    {      "question": "What will `typeof NaN` return?",
+      "options": ["'number'", "'NaN'", "'undefined'", "'object'"],
+      "correctAnswer": ["'number'"]
+    },
+    {      "question": "What is the difference between `null` and `undefined`?",
+      "options": [
+        "No difference",
+        "`null` is an object, `undefined` is a type",
+        "`undefined` means declared but not assigned, `null` is intentional empty",
+        "They are the same value"
+      ],
+      "correctAnswer": ["`undefined` means declared but not assigned, `null` is intentional empty"]
+    },
+    {      "question": "What does the `instanceof` operator check?",
+      "options": [
+        "If a value is defined",
+        "If an object is an instance of a constructor",
+        "If two values are equal",
+        "If a value is an array"
+      ],
+      "correctAnswer": ["If an object is an instance of a constructor"]
+    },
+    {      "question": "What will `Boolean([])` return?",
+      "options": ["true", "false", "undefined", "null"],
+      "correctAnswer": ["true"]
+    },
+    {      "question": "What does `JSON.stringify(undefined)` return?",
+      "options": ["'undefined'", "null", "Error", "undefined"],
+      "correctAnswer": ["undefined"]
+    },
+    {      "question": "How do you check if a variable is an array?",
+      "options": [
+        "typeof arr === 'array'",
+        "arr instanceof Array",
+        "Array.isArray(arr)",
+        "Both 2 and 3"
+      ],
+      "correctAnswer": ["Both 2 and 3"]
+    },
+    {      "question": "What will `'5' - 2` return?",
+      "options": ["3", "7", "'3'", "NaN"],
+      "correctAnswer": ["3"]
+    },
+    {      "question": "Which of the following is not a primitive in JS?",
+      "options": ["Symbol", "BigInt", "Object", "Boolean"],
+      "correctAnswer": ["Object"]
+    },
+    {      "question": "What is lexical scoping?",
+      "options": [
+        "Scope defined at runtime",
+        "Scope determined by function call",
+        "Scope determined by position in code",
+        "Global scope always overrides"
+      ],
+      "correctAnswer": ["Scope determined by position in code"]
+    },
+    {      "question": "What does `Array.from('abc')` return?",
+      "options": ["['abc']", "['a', 'b', 'c']", "['a,b,c']", "Error"],
+      "correctAnswer": ["['a', 'b', 'c']"]
+    },
+    {      "question": "What is the output of `[NaN].indexOf(NaN)`?",
+      "options": ["0", "-1", "undefined", "null"],
+      "correctAnswer": ["-1"]
+    },
+    {      "question": "What is the value of `!![]`?",
+      "options": ["false", "true", "undefined", "null"],
+      "correctAnswer": ["true"]
+    },
+    {      "question": "Which statement about `eval()` is true?",
+      "options": [
+        "It's safe to use",
+        "It evaluates JS code as a string",
+        "It's faster than regular code",
+        "It only works in strict mode"
+      ],
+      "correctAnswer": ["It evaluates JS code as a string"]
+    },
+    {      "question": "What is the default value of an uninitialized variable?",
+      "options": ["null", "0", "undefined", "false"],
+      "correctAnswer": ["undefined"]
+    },
+    {
+      "question": "What is returned by `Array(3).keys()`?",
+      "options": [
+        "[0, 1, 2]",
+        "An iterator of keys",
+        "A map of values",
+        "undefined"
+      ],
+      "correctAnswer": ["An iterator of keys"]
+    },
+    {
+      "question": "What is the purpose of `Function.prototype.call()`?",
+      "options": ["To invoke a function with a specific `this` value", "To copy a function", "To create closures", "To bind a function permanently"],
+      "correctAnswer": ["To invoke a function with a specific `this` value"]
+    },
+    {
+      "question": "What is the result of `[1, 2] + [3, 4]`?",
+      "options": ["[1,2,3,4]", "'1,23,4'", "'1,23,4'", "'1,2,3,4'"],
+      "correctAnswer": ["'1,23,4'"]
+    },
+    {
+      "question": "What is the effect of the `delete` operator on arrays?",
+      "options": ["Removes the element and shifts others", "Removes the element and leaves a hole", "Clears the array", "Deletes the entire array"],
+      "correctAnswer": ["Removes the element and leaves a hole"]
+    },
+    {
+      "question": "What is the purpose of `Object.getOwnPropertyDescriptors()`?",
+      "options": ["Returns array of descriptors", "Returns all descriptors of an object’s own properties", "Freezes an object", "Returns symbol keys"],
+      "correctAnswer": ["Returns all descriptors of an object’s own properties"]
+    },
+    {
+      "question": "Which of the following methods can create a delay in async functions?",
+      "options": ["await setTimeout()", "setInterval()", "sleep()", "await new Promise(resolve => setTimeout(resolve, time))"],
+      "correctAnswer": ["await new Promise(resolve => setTimeout(resolve, time))"]
+    },
+    {
+      "question": "How do you check if a property exists directly on an object (not in prototype)?",
+      "options": ["'key' in obj", "obj.hasOwnProperty('key')", "obj.includes('key')", "obj.keys.includes()"],
+      "correctAnswer": ["obj.hasOwnProperty('key')"]
+    },
+    {
+      "question": "What will `new Boolean(false)` return?",
+      "options": ["false", "true", "Boolean object", "null"],
+      "correctAnswer": ["Boolean object"]
+    },
+    {
+      "question": "What does `.flat(Infinity)` do to a nested array?",
+      "options": ["Flattens it to a single level", "Does nothing", "Throws an error", "Returns undefined"],
+      "correctAnswer": ["Flattens it to a single level"]
+    },
+    {
+      "question": "What will `console.log([] == ![])` output?",
+      "options": ["true", "false", "undefined", "throws error"],
+      "correctAnswer": ["true"]
+    },
+    {
+      "question": "Which feature allows default function parameters?",
+      "options": ["ES6", "ES3", "ES5", "ECMAScript 2"],
+      "correctAnswer": ["ES6"]
+    },
+    {
+      "question": "What does `Promise.race()` do?",
+      "options": ["Waits for all promises to resolve", "Returns the first settled promise", "Returns the last resolved promise", "Rejects all on any error"],
+      "correctAnswer": ["Returns the first settled promise"]
+    },
+    {
+      "question": "Which method converts a Set to an Array?",
+      "options": ["Array.from(set)", "set.toArray()", "set.map()", "Object.assign(set)"],
+      "correctAnswer": ["Array.from(set)"]
+    },
+    {
+      "question": "What is the difference between `Promise.all()` and `Promise.allSettled()`?",
+      "options": ["They behave the same", "`all` fails fast, `allSettled` waits for all", "`allSettled` returns only fulfilled values", "`allSettled` throws on rejection"],
+      "correctAnswer": ["`all` fails fast, `allSettled` waits for all"]
+    },
+    {
+      "question": "What will `console.log(typeof NaN)` output?",
+      "options": ["'NaN'", "'object'", "'undefined'", "'number'"],
+      "correctAnswer": ["'number'"]
+    },
+    {
+      "question": "What does `Object.freeze()` do?",
+      "options": ["Makes object values constant", "Prevents all modifications", "Seals and locks all nested objects", "Prevents reading values"],
+      "correctAnswer": ["Prevents all modifications"]
+    },
+    {
+      "question": "What is returned by `Object.keys({ a: 1, b: 2 })`?",
+      "options": ["[1, 2]", "['a', 'b']", "['1', '2']", "[a, b]"],
+      "correctAnswer": ["['a', 'b']"]
+    },
+    {
+      "question": "Which is a valid way to clone an object in JS?",
+      "options": ["Object.assign({}, obj)", "JSON.parse(JSON.stringify(obj))", "StructuredClone(obj)", "All of the above"],
+      "correctAnswer": ["All of the above"]
+    },
+    {
+      "question": "What happens if you `return` from a constructor function?",
+      "options": ["It replaces the constructed object", "It throws error", "It does nothing", "It returns undefined"],
+      "correctAnswer": ["It replaces the constructed object"]
+    },
+    {
+      "question": "What is the result of `typeof null`?",
+      "options": ["'null'", "'object'", "'undefined'", "'NaN'"],
+      "correctAnswer": ["'object'"]
+    },
+    {
+      "question": "Which statement about `WeakMap` is true?",
+      "options": ["It stores only primitive keys", "Keys are garbage collected if unreferenced", "It allows iteration", "It has size property"],
+      "correctAnswer": ["Keys are garbage collected if unreferenced"]
+    },
+    {
+      "question": "What will be output of `true == '1'`?",
+      "options": ["true", "false", "undefined", "NaN"],
+      "correctAnswer": ["true"]
+    },
+    {
+      "question": "What does the `Symbol()` constructor return?",
+      "options": ["An object", "A string", "A primitive symbol", "An array"],
+      "correctAnswer": ["A primitive symbol"]
+    },
+    {
+      "question": "What is the value of `typeof []`?",
+      "options": ["'array'", "'object'", "'list'", "'undefined'"],
+      "correctAnswer": ["'object'"]
+    },
+    {
+      "question": "Which method is used to parse a JSON string?",
+      "options": ["JSON.stringify()", "JSON.parse()", "JSON.encode()", "parse.JSON()"],
+      "correctAnswer": ["JSON.parse()"]
+    },
+    {
+      "question": "What is the output of `'10' - 5`?",
+      "options": ["'105'", "NaN", "5", "5 (number)"],
+      "correctAnswer": ["5 (number)"]
+    },
+    {
+      "question": "Which function is used to delay code execution?",
+      "options": ["delay()", "timeout()", "setTimeout()", "sleep()"],
+      "correctAnswer": ["setTimeout()"]
+    },
+    {
+      "question": "What will `'5' + 1` return?",
+      "options": ["6", "'6'", "'51'", "NaN"],
+      "correctAnswer": ["'51'"]
+    },
+    {
+      "question": "What will `typeof undefined === typeof null` return?",
+      "options": ["true", "false", "null", "TypeError"],
+      "correctAnswer": ["true"]
+    },
+    {
+      "question": "Which of the following is not a falsy value in JavaScript?",
+      "options": ["0", "null", "undefined", "'0'"],
+      "correctAnswer": ["'0'"]
+    },
+    {
+      "question": "What is the output of `typeof new Number(5)`?",
+      "options": ["'number'", "'object'", "'Number'", "'undefined'"],
+      "correctAnswer": ["'object'"]
+    },
+    {
+      "question": "What is the purpose of `Object.is()`?",
+      "options": ["Deep comparison", "Strict equality + edge cases", "Compare only types", "Merge objects"],
+      "correctAnswer": ["Strict equality + edge cases"]
+    },
+    {
+      "question": "Which method is used to sort array elements?",
+      "options": ["sort()", "order()", "filter()", "arrange()"],
+      "correctAnswer": ["sort()"]
+    },
+    {
+      "question": "What is the output of `typeof function() {}`?",
+      "options": ["'object'", "'function'", "'undefined'", "'class'"],
+      "correctAnswer": ["'function'"]
+    },
+    {
+      "question": "What does `!!value` do?",
+      "options": ["Negates value twice to get boolean", "Returns opposite of value", "Multiplies value", "Converts to string"],
+      "correctAnswer": ["Negates value twice to get boolean"]
+    },
+    {
+      "question": "Which of these is a valid generator declaration?",
+      "options": ["function* gen()", "function gen*()", "function gen()", "generator gen()"],
+      "correctAnswer": ["function* gen()"]
+    },
+    {
+      "question": "What does `yield` do in a generator function?",
+      "options": ["Stops execution", "Returns a value and pauses", "Exits the function", "Throws error"],
+      "correctAnswer": ["Returns a value and pauses"]
+    },
+    {
+      "question": "What is a side effect in functional programming?",
+      "options": ["When function returns undefined", "Modification of external state", "Calling nested functions", "Returning multiple values"],
+      "correctAnswer": ["Modification of external state"]
+    },
+    {
+      "question": "How do you define a default parameter value?",
+      "options": ["param = default", "param: default", "param || default", "param ?= default"],
+      "correctAnswer": ["param = default"]
+    },
+    {
+      "question": "Which keyword allows creating a class?",
+      "options": ["class", "constructor", "object", "function"],
+      "correctAnswer": ["class"]
+    },
+    {
+      "question": "What is prototype inheritance?",
+      "options": ["Cloning objects", "Extending objects using prototype chain", "Creating private properties", "Deep copying"],
+      "correctAnswer": ["Extending objects using prototype chain"]
+    },
+    {
+      "question": "What does `.every()` do on an array?",
+      "options": ["Checks if at least one element passes", "Checks if all elements pass", "Filters elements", "Returns last element"],
+      "correctAnswer": ["Checks if all elements pass"]
+    },
+    {
+      "question": "What is a thunk in JavaScript?",
+      "options": ["A delayed computation wrapped in a function", "A method that multiplies functions", "A string to integer converter", "A mutation method"],
+      "correctAnswer": ["A delayed computation wrapped in a function"]
+    },
+    {
+      "question": "Which loop type ensures at least one execution?",
+      "options": ["for", "while", "do...while", "foreach"],
+      "correctAnswer": ["do...while"]
+    },
+    {
+      "question": "What is the difference between synchronous and asynchronous?",
+      "options": ["Sync happens immediately, async happens later", "Async runs slower", "Async requires internet", "Sync uses events"],
+      "correctAnswer": ["Sync happens immediately, async happens later"]
+    },
+    {
+      "question": "What does `typeof` return for an array?",
+      "options": ["'array'", "'object'", "'list'", "'undefined'"],
+      "correctAnswer": ["'object'"]
+    },
+    {
+      "question": "What is short-circuit evaluation?",
+      "options": ["Skipping unreachable conditions", "Logical operators stopping when result is known", "Code optimization", "Switching between conditions"],
+      "correctAnswer": ["Logical operators stopping when result is known"]
+    },
+    {
+      "question": "What does `Array.prototype.map()` do?",
+      "options": ["Modifies original array", "Returns a new array with transformed values", "Filters elements", "Sorts array"],
+      "correctAnswer": ["Returns a new array with transformed values"]
+    },
+    {
+      "question": "What is a first-class function?",
+      "options": ["Can be passed, returned, and assigned", "Only used in expressions", "Must be named", "Has priority in execution"],
+      "correctAnswer": ["Can be passed, returned, and assigned"]
+    },
+    {
+      "question": "What does `Promise.reject()` return?",
+      "options": ["Resolved promise", "Pending promise", "Rejected promise", "Nothing"],
+      "correctAnswer": ["Rejected promise"]
+    },
+    {
+      "question": "Which statement about `null === undefined` is true?",
+      "options": ["true", "false", "throws error", "undefined"],
+      "correctAnswer": ["false"]
+    },
+    {
+      "question": "What will `JSON.stringify({ a: undefined })` return?",
+      "options": ["'{}'", "'{\"a\":undefined}'", "'{\"a\":null}'", "undefined"],
+      "correctAnswer": ["'{}'"]
+    },
+    {
+      "question": "What does the spread operator `...` do in arrays?",
+      "options": ["Copies by reference", "Spreads values into a new array", "Deletes items", "Reverses array"],
+      "correctAnswer": ["Spreads values into a new array"]
+    },
+    {
+      "question": "What is a pure function?",
+      "options": ["Depends on external state", "Has side effects", "Always returns same output for same input", "Mutates input"],
+      "correctAnswer": ["Always returns same output for same input"]
+    },
+    {
+      "question": "What is the purpose of `Object.defineProperties()`?",
+      "options": ["Assigns values only", "Freezes the object", "Defines multiple property descriptors", "Returns property values"],
+      "correctAnswer": ["Defines multiple property descriptors"]
+    },
+    {
+      "question": "What is the output of `parseInt('10px')`?",
+      "options": ["10", "NaN", "0", "'10px'"],
+      "correctAnswer": ["10"]
+    },
+    {
+      "question": "What is the scope of `let` declared variables?",
+      "options": ["Global", "Function", "Block", "Module"],
+      "correctAnswer": ["Block"]
+    },
+    {
+      "question": "What is the purpose of `Reflect.ownKeys()`?",
+      "options": ["To get values of object", "To reflect inheritance", "To return all own keys (including symbols)", "To log properties"],
+      "correctAnswer": ["To return all own keys (including symbols)"]
+    },
+    {
+      "question": "Which value is considered falsy?",
+      "options": ["'false'", "[]", "0", "{}"],
+      "correctAnswer": ["0"]
+    },
+    {
+      "question": "What will `typeof Symbol('id')` return?",
+      "options": ["'object'", "'symbol'", "'function'", "'string'"],
+      "correctAnswer": ["'symbol'"]
+    },
+    {
+      "question": "What does `Array.prototype.find()` return?",
+      "options": ["Index of element", "First element that matches condition", "Filtered array", "Boolean"],
+      "correctAnswer": ["First element that matches condition"]
+    },
+    {
+      "question": "What will be the output of `Math.max(...[])`?",
+      "options": ["NaN", "undefined", "-Infinity", "Infinity"],
+      "correctAnswer": ["-Infinity"]
+    },
+    {
+      "question": "What is a tagged template literal?",
+      "options": ["A comment inside a string", "A way to call a function with a template", "A function to parse HTML", "A template ID"],
+      "correctAnswer": ["A way to call a function with a template"]
+    },
+    {
+      "question": "What is the use of `Object.seal()`?",
+      "options": ["Prevents any changes to object", "Prevents adding or removing properties", "Freezes nested properties", "Deletes all properties"],
+      "correctAnswer": ["Prevents adding or removing properties"]
+    },
+    {
+      "question": "Which operator is used for exponentiation in JavaScript?",
+      "options": ["^", "**", "exp()", "pow()"],
+      "correctAnswer": ["**"]
+    },
+    {
+      "question": "How does `typeof null` behave in JavaScript?",
+      "options": ["Returns 'null'", "Returns 'object'", "Returns 'undefined'", "Throws error"],
+      "correctAnswer": ["Returns 'object'"]
+    },
+    {
+      "question": "What is the result of `'2' * '3'`?",
+      "options": ["'6'", "6", "NaN", "'23'"],
+      "correctAnswer": ["6"]
+    },
+    {
+      "question": "Which statement is true about arrow functions?",
+      "options": ["They bind their own `this`", "They inherit `this` from parent scope", "They can be used as constructors", "They support arguments object"],
+      "correctAnswer": ["They inherit `this` from parent scope"]
+    },
+    {
+      "question": "How do you check for equality without type coercion?",
+      "options": ["==", "===", "equals()", "typeof"],
+      "correctAnswer": ["==="]
+    },
+    {
+      "question": "What will `typeof NaN === 'number'` return?",
+      "options": ["true", "false", "undefined", "NaN"],
+      "correctAnswer": ["true"]
+    },
+    {
+      "question": "How do you create a shallow clone of an object?",
+      "options": ["Object.clone()", "Object.assign({}, obj)", "JSON.stringify(obj)", "obj.copy()"],
+      "correctAnswer": ["Object.assign({}, obj)"]
+    },
+    {
+      "question": "Which keyword is used for declaring constants?",
+      "options": ["let", "var", "const", "define"],
+      "correctAnswer": ["const"]
+    },
+    {
+      "question": "What is a JavaScript event loop?",
+      "options": ["A loop structure", "Manages execution of sync tasks", "Manages call stack and task queue", "A function wrapper"],
+      "correctAnswer": ["Manages call stack and task queue"]
+    },
+    {
+      "question": "What is the role of `setImmediate()` in Node.js?",
+      "options": ["Blocks stack", "Runs before I/O", "Executes after I/O events", "Used in browser only"],
+      "correctAnswer": ["Executes after I/O events"]
+    },
+    {
+      "question": "What is the default return value of a function with no return?",
+      "options": ["null", "0", "undefined", "false"],
+      "correctAnswer": ["undefined"]
+    },
+    {
+      "question": "What does `Array.prototype.some()` return?",
+      "options": ["true if any element matches", "false if all match", "Number of matches", "First match"],
+      "correctAnswer": ["true if any element matches"]
+    },
+    {
+      "question": "Which object holds the global context in browsers?",
+      "options": ["this", "global", "window", "self"],
+      "correctAnswer": ["window"]
+    },
+    {
+      "question": "What is the result of `'2' === 2`?",
+      "options": ["true", "false", "undefined", "null"],
+      "correctAnswer": ["false"]
+    },
+    {
+      "question": "What does `map()` return if no condition matches?",
+      "options": ["undefined", "null", "empty array", "same array length with transformed values"],
+      "correctAnswer": ["same array length with transformed values"]
+    },
+    {
+      "question": "What will `console.log(0 == false)` print?",
+      "options": ["true", "false", "undefined", "NaN"],
+      "correctAnswer": ["true"]
+    },
+    {
+      "question": "What will `new Date('invalid')` return?",
+      "options": ["null", "NaN", "Invalid Date object", "undefined"],
+      "correctAnswer": ["Invalid Date object"]
+    },
+    {
+      "question": "Which of these is NOT a valid loop?",
+      "options": ["for", "while", "do...while", "forEach in"],
+      "correctAnswer": ["forEach in"]
+    },
+    {
+      "question": "What does `setTimeout(fn, 0)` do?",
+      "options": ["Runs instantly", "Blocks execution", "Schedules after current call stack", "Cancels fn"],
+      "correctAnswer": ["Schedules after current call stack"]
+    },
+    {
+      "question": "Which method returns string representation of object?",
+      "options": ["toString()", "valueOf()", "join()", "convert()"],
+      "correctAnswer": ["toString()"]
+    },
+    {
+      "question": "What is the result of `typeof undefined`?",
+      "options": ["'null'", "'object'", "'undefined'", "'number'"],
+      "correctAnswer": ["'undefined'"]
+    },
+    {
+      "question": "Which method turns a string into an array?",
+      "options": ["split()", "slice()", "map()", "filter()"],
+      "correctAnswer": ["split()"]
+    },
+    {
+      "question": "What will `'10' / 2` return?",
+      "options": ["5", "'5'", "NaN", "'102'"],
+      "correctAnswer": ["5"]
+    },
+    {
+      "question": "Which array method does NOT mutate original array?",
+      "options": ["reverse()", "splice()", "map()", "sort()"],
+      "correctAnswer": ["map()"]
+    },
+    {
+      "question": "What is the value of `Boolean('false')`?",
+      "options": ["true", "false", "NaN", "undefined"],
+      "correctAnswer": ["true"]
+    },
+    {
+      "question": "What does `typeof []` return?",
+      "options": ["'array'", "'object'", "'undefined'", "'list'"],
+      "correctAnswer": ["'object'"]
+    },
+    {
+      "question": "What will be the result of `[2] == 2`?",
+      "options": ["true", "false", "undefined", "NaN"],
+      "correctAnswer": ["true"]
+    },
+    {
+      "question": "Which data structure does `Map` use internally?",
+      "options": ["Array", "Linked list", "Hash table", "Set"],
+      "correctAnswer": ["Hash table"]
+    },
+    {
+      "question": "What is the result of `typeof function* () {}`?",
+      "options": ["'function'", "'object'", "'generator'", "'undefined'"],
+      "correctAnswer": ["'function'"]
+    },
+    {
+      "question": "How do you make a property read-only in JS?",
+      "options": ["Object.freeze()", "Using defineProperty with writable: false", "Using readonly keyword", "delete property"],
+      "correctAnswer": ["Using defineProperty with writable: false"]
+    },
+    {
+      "question": "What does the `in` operator check?",
+      "options": ["Value exists in array", "Property exists in object", "Instance relationship", "Key comparison"],
+      "correctAnswer": ["Property exists in object"]
+    },
+    {
+      "question": "Which method adds one or more elements to end of array?",
+      "options": ["pop()", "shift()", "push()", "concat()"],
+      "correctAnswer": ["push()"]
+    },
+    {
+      "question": "What is the output of `'5' - 3`?",
+      "options": ["2", "'53'", "8", "NaN"],
+      "correctAnswer": ["2"]
+    },
+    {
+      "question": "What is the result of `false == 0`?",
+      "options": ["true", "false", "undefined", "NaN"],
+      "correctAnswer": ["true"]
+    },
+    {
+      "question": "What will `Symbol('x') === Symbol('x')` return?",
+      "options": ["true", "false", "Symbol", "undefined"],
+      "correctAnswer": ["false"]
+    },
+    {
+      "question": "What is the result of `[1,2,3].reduce((a,b) => a + b)`?",
+      "options": ["6", "1", "NaN", "[1,2,3]"],
+      "correctAnswer": ["6"]
+    },
+    {
+      "question": "What does `Object.create(null)` produce?",
+      "options": ["Empty object with no prototype", "Object with Object prototype", "Null object", "Throws error"],
+      "correctAnswer": ["Empty object with no prototype"]
+    }
+  ]
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

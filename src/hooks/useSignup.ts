@@ -5,7 +5,7 @@ import { useState } from 'react';
 import toast from 'react-hot-toast'
 
 const useSignup = () => {
-    const navigate=useNavigate()
+      const navigate=useNavigate()
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");

@@ -1,0 +1,633 @@
+[
+    {
+      "id": 71,
+      "question": "What does the Open/Closed Principle state?",
+      "options": ["Software should be open for extension but closed for modification", "Classes should be private", "All methods must be static", "Software should be open source"],
+      "correctAnswer": ["Software should be open for extension but closed for modification"]
+    },
+    {
+      "id": 72,
+      "question": "What does the Dependency Inversion Principle promote?",
+      "options": ["High-level modules should not depend on low-level modules", "Methods should not depend on classes", "Interfaces must depend on classes", "Inheritance over composition"],
+      "correctAnswer": ["High-level modules should not depend on low-level modules"]
+    },
+    {
+      "id": 73,
+      "question": "What is interface segregation?",
+      "options": ["Clients should not be forced to depend on methods they do not use", "Interfaces should be private", "Multiple interfaces must be merged", "Interfaces should extend base classes"],
+      "correctAnswer": ["Clients should not be forced to depend on methods they do not use"]
+    },
+    {
+      "id": 74,
+      "question": "What does the Liskov Substitution Principle ensure?",
+      "options": ["Derived classes can replace base classes without altering program correctness", "Private methods must be inherited", "Static methods must override", "Variables must be public"],
+      "correctAnswer": ["Derived classes can replace base classes without altering program correctness"]
+    },
+    {
+      "id": 75,
+      "question": "Which SOLID principle is violated if a class has too many unrelated responsibilities?",
+      "options": ["Single Responsibility Principle", "Interface Segregation", "Abstraction", "Inheritance"],
+      "correctAnswer": ["Single Responsibility Principle"]
+    },
+    {
+      "id": 76,
+      "question": "What is the result of calling an abstract method directly?",
+      "options": ["Compilation error", "Method not found error", "Null return", "Silent execution"],
+      "correctAnswer": ["Compilation error"]
+    },
+    {
+      "id": 77,
+      "question": "What does 'favor composition over inheritance' mean?",
+      "options": ["Use object relationships instead of class hierarchies", "Avoid using OOP", "Always use static classes", "Avoid interfaces"],
+      "correctAnswer": ["Use object relationships instead of class hierarchies"]
+    },
+    {
+      "id": 78,
+      "question": "Which OOP concept encourages information hiding?",
+      "options": ["Encapsulation", "Abstraction", "Inheritance", "Polymorphism"],
+      "correctAnswer": ["Encapsulation"]
+    },
+    {
+      "id": 79,
+      "question": "What is true about a static method in OOP?",
+      "options": ["It belongs to the class rather than instances", "It can access instance variables", "It overrides interfaces", "It runs before the constructor"],
+      "correctAnswer": ["It belongs to the class rather than instances"]
+    },
+    {
+      "id": 80,
+      "question": "What is the benefit of using abstract classes over interfaces?",
+      "options": ["They can provide shared default implementation", "They support multiple inheritance", "They reduce code size", "They can be instantiated directly"],
+      "correctAnswer": ["They can provide shared default implementation"]
+    },
+    {
+      "id": 81,
+      "question": "Which of the following is NOT a benefit of OOP?",
+      "options": ["Tight coupling", "Reusability", "Modularity", "Maintainability"],
+      "correctAnswer": ["Tight coupling"]
+    },
+    {
+      "id": 82,
+      "question": "Which term refers to the automatic selection of a method at runtime?",
+      "options": ["Dynamic dispatch", "Static dispatch", "Method overloading", "Constructor chaining"],
+      "correctAnswer": ["Dynamic dispatch"]
+    },
+    {
+      "id": 83,
+      "question": "What does 'composition' mean in OOP?",
+      "options": ["A class contains other class objects", "A class extends another class", "A class implements an interface", "A class inherits from multiple parents"],
+      "correctAnswer": ["A class contains other class objects"]
+    },
+    {
+      "id": 84,
+      "question": "Which pattern of OOP makes use of object composition?",
+      "options": ["Decorator pattern", "Factory pattern", "Inheritance", "Singleton"],
+      "correctAnswer": ["Decorator pattern"]
+    },
+    {
+      "id": 85,
+      "question": "Which of the following violates encapsulation?",
+      "options": ["Making data members public", "Using getters and setters", "Using private variables", "Accessing via methods"],
+      "correctAnswer": ["Making data members public"]
+    },
+    {
+      "id": 86,
+      "question": "In OOP, which concept allows an object to behave differently based on its type?",
+      "options": ["Polymorphism", "Encapsulation", "Inheritance", "Composition"],
+      "correctAnswer": ["Polymorphism"]
+    },
+    {
+      "id": 87,
+      "question": "How does object slicing occur in OOP?",
+      "options": ["When a derived object is assigned to a base object", "When data is deleted", "When memory is full", "When private members are accessed"],
+      "correctAnswer": ["When a derived object is assigned to a base object"]
+    },
+    {
+      "id": 88,
+      "question": "What type of method cannot be overridden?",
+      "options": ["Final method", "Public method", "Constructor", "Protected method"],
+      "correctAnswer": ["Final method"]
+    },
+    {
+      "id": 89,
+      "question": "Which OOP concept helps in replacing switch statements with polymorphic calls?",
+      "options": ["Dynamic dispatch", "Method chaining", "Static binding", "Static import"],
+      "correctAnswer": ["Dynamic dispatch"]
+    },
+    {
+      "id": 90,
+      "question": "Which method is called when an object is destroyed?",
+      "options": ["Destructor", "Finalizer", "Deallocator", "Cleaner"],
+      "correctAnswer": ["Destructor"]
+    },
+    {
+      "id": 91,
+      "question": "Which access modifier allows visibility only within the same package?",
+      "options": ["Default (package-private)", "Private", "Protected", "Public"],
+      "correctAnswer": ["Default (package-private)"]
+    },
+    {
+      "id": 92,
+      "question": "Which OOP principle helps to build loosely coupled software?",
+      "options": ["Dependency Injection", "Static method use", "Constructor overloading", "Object slicing"],
+      "correctAnswer": ["Dependency Injection"]
+    },
+    {
+      "id": 93,
+      "question": "What is true about overloading and overriding?",
+      "options": ["Overloading happens in same class, overriding in child class", "Both are same", "Only overriding supports polymorphism", "Overloading only in interfaces"],
+      "correctAnswer": ["Overloading happens in same class, overriding in child class"]
+    },
+    {
+      "id": 94,
+      "question": "Which of the following best represents the purpose of a constructor?",
+      "options": ["Initialize object state", "Destroy object", "Clone class", "Create static method"],
+      "correctAnswer": ["Initialize object state"]
+    },
+    {
+      "id": 95,
+      "question": "Which principle improves testability in OOP?",
+      "options": ["Dependency Injection", "Static classes", "Method overloading", "Using final fields"],
+      "correctAnswer": ["Dependency Injection"]
+    },
+    {
+      "id": 96,
+      "question": "Which keyword is commonly used to invoke the parent constructor?",
+      "options": ["super", "this", "parent", "base"],
+      "correctAnswer": ["super"]
+    },
+    {
+      "id": 97,
+      "question": "Which feature allows defining behavior that is shared across unrelated classes?",
+      "options": ["Interfaces", "Constructors", "Static blocks", "Final fields"],
+      "correctAnswer": ["Interfaces"]
+    },
+    {
+      "id": 98,
+      "question": "What type of relationship is implemented using aggregation?",
+      "options": ["Has-a", "Is-a", "Depends-on", "Extends"],
+      "correctAnswer": ["Has-a"]
+    },
+    {
+      "id": 99,
+      "question": "What is a virtual destructor used for in C++?",
+      "options": ["To ensure derived class destructors are called", "To call static methods", "To clean public data", "To override abstract methods"],
+      "correctAnswer": ["To ensure derived class destructors are called"]
+    },
+    {
+      "id": 100,
+      "question": "Which concept is mainly used in runtime polymorphism?",
+      "options": ["Method overriding", "Method overloading", "Constructor chaining", "Getter methods"],
+      "correctAnswer": ["Method overriding"]
+    },
+    {
+      "id": 26,
+      "question": "What is the output of `type(lambda x: x)`?",
+      "options": ["function", "lambda", "method", "generator"],
+      "correctAnswer": ["function"]
+    },
+    {
+      "id": 27,
+      "question": "Which keyword is used for exception handling?",
+      "options": ["try", "catch", "error", "handle"],
+      "correctAnswer": ["try"]
+    },
+    {
+      "id": 28,
+      "question": "How can you sort a list in descending order?",
+      "options": ["list.sort(reverse=True)", "list.sort(desc=True)", "list.reverse(sort=True)", "sort(list, desc=True)"],
+      "correctAnswer": ["list.sort(reverse=True)"]
+    },
+    {
+      "id": 29,
+      "question": "What is the output of `bool(0)`?",
+      "options": ["False", "True", "None", "Error"],
+      "correctAnswer": ["False"]
+    },
+    {
+      "id": 30,
+      "question": "How do you define a class in Python?",
+      "options": ["class MyClass:", "def MyClass():", "new class MyClass", "MyClass = class()"],
+      "correctAnswer": ["class MyClass:"]
+    },
+    {
+      "id": 31,
+      "question": "What is `self` in Python class methods?",
+      "options": ["The instance of the class", "A reference to another class", "A global variable", "A default keyword"],
+      "correctAnswer": ["The instance of the class"]
+    },
+    {
+      "id": 32,
+      "question": "Which method is called when an object is created?",
+      "options": ["__init__", "__new__", "__start__", "__create__"],
+      "correctAnswer": ["__init__"]
+    },
+    {
+      "id": 33,
+      "question": "What will `len(set([1, 2, 2, 3]))` return?",
+      "options": ["3", "4", "2", "Error"],
+      "correctAnswer": ["3"]
+    },
+    {
+      "id": 34,
+      "question": "Which method returns a shallow copy of a list?",
+      "options": ["copy()", "clone()", "copyList()", "shallow()"],
+      "correctAnswer": ["copy()"]
+    },
+    {
+      "id": 35,
+      "question": "What is the output of `5 // 2`?",
+      "options": ["2", "2.5", "3", "2.0"],
+      "correctAnswer": ["2"]
+    },
+    {
+      "id": 36,
+      "question": "Which keyword is used to inherit a class?",
+      "options": ["class Child(Parent):", "inherit Parent", "extends Parent", "def Child: Parent"],
+      "correctAnswer": ["class Child(Parent):"]
+    },
+    {
+      "id": 37,
+      "question": "What is a Python module?",
+      "options": ["A file containing Python code", "A database", "A binary library", "A class"],
+      "correctAnswer": ["A file containing Python code"]
+    },
+    {
+      "id": 38,
+      "question": "Which operator is used to test object identity?",
+      "options": ["is", "==", "!=", "in"],
+      "correctAnswer": ["is"]
+    },
+    {
+      "id": 39,
+      "question": "How do you handle multiple exceptions in one block?",
+      "options": ["except (TypeError, ValueError):", "except TypeError or ValueError:", "catch TypeError, ValueError:", "except: TypeError, ValueError"],
+      "correctAnswer": ["except (TypeError, ValueError):"]
+    },
+    {
+      "id": 40,
+      "question": "Which function can be used to filter elements from a list?",
+      "options": ["filter()", "map()", "reduce()", "lambda()"],
+      "correctAnswer": ["filter()"]
+    },
+    {
+      "id": 41,
+      "question": "What is the result of `sum([1, 2, 3, 4])`?",
+      "options": ["10", "24", "1234", "Error"],
+      "correctAnswer": ["10"]
+    },
+    {
+      "id": 42,
+      "question": "How do you define a constant in Python?",
+      "options": ["By convention with uppercase", "Using const keyword", "Using define()", "Constants don't exist in Python"],
+      "correctAnswer": ["By convention with uppercase"]
+    },
+    {
+      "id": 43,
+      "question": "Which function returns the absolute value of a number?",
+      "options": ["abs()", "absolute()", "fabs()", "mod()"],
+      "correctAnswer": ["abs()"]
+    },
+    {
+      "id": 44,
+      "question": "Which keyword is used to exit a loop prematurely?",
+      "options": ["break", "exit", "stop", "return"],
+      "correctAnswer": ["break"]
+    },
+    {
+      "id": 45,
+      "question": "How can you convert a list to a tuple?",
+      "options": ["tuple(list)", "list(tuple)", "list.toTuple()", "convert(list)"],
+      "correctAnswer": ["tuple(list)"]
+    },
+    {
+      "id": 46,
+      "question": "Which built-in function returns the length of a string?",
+      "options": ["len()", "size()", "length()", "count()"],
+      "correctAnswer": ["len()"]
+    },
+    {
+      "id": 47,
+      "question": "How do you raise a custom exception?",
+      "options": ["raise ValueError('Error')", "throw ValueError()", "raise Exception()", "error ValueError"],
+      "correctAnswer": ["raise ValueError('Error')"]
+    },
+    {
+      "id": 48,
+      "question": "Which method removes all items from a list?",
+      "options": ["clear()", "remove()", "pop()", "delete()"],
+      "correctAnswer": ["clear()"]
+    },
+    {
+      "id": 49,
+      "question": "What is the output of `max([2, 5, 1, 9])`?",
+      "options": ["9", "5", "1", "2"],
+      "correctAnswer": ["9"]
+    },
+    {
+      "id": 50,
+      "question": "Which function can be used to convert a string to an integer?",
+      "options": ["int()", "str()", "eval()", "float()"],
+      "correctAnswer": ["int()"]
+    },
+    {
+      "id": 51,
+      "question": "What does the `map()` function return in Python 3?",
+      "options": ["Map object (iterator)", "List", "Tuple", "Dictionary"],
+      "correctAnswer": ["Map object (iterator)"]
+    },
+    {
+      "id": 52,
+      "question": "Which method can be used to capitalize the first character of a string?",
+      "options": ["capitalize()", "upper()", "title()", "cap()"],
+      "correctAnswer": ["capitalize()"]
+    },
+    {
+      "id": 53,
+      "question": "Which of these types is mutable?",
+      "options": ["List", "Tuple", "String", "Integer"],
+      "correctAnswer": ["List"]
+    },
+    {
+      "id": 54,
+      "question": "What will `print('Hello {0} {1}'.format('World', '!'))` output?",
+      "options": ["Hello World !", "Hello {0} {1}", "World !", "Error"],
+      "correctAnswer": ["Hello World !"]
+    },
+    {
+      "id": 55,
+      "question": "What does `isinstance(5, int)` return?",
+      "options": ["True", "False", "None", "Error"],
+      "correctAnswer": ["True"]
+    },
+    {
+      "id": 56,
+      "question": "What is the use of `with` statement in file handling?",
+      "options": ["Automatically closes file", "Opens multiple files", "Reads entire content", "Writes in binary"],
+      "correctAnswer": ["Automatically closes file"]
+    },
+    {
+      "id": 57,
+      "question": "What does `list[::-1]` do?",
+      "options": ["Reverses the list", "Sorts the list", "Removes duplicates", "Slices from middle"],
+      "correctAnswer": ["Reverses the list"]
+    },
+    {
+      "id": 58,
+      "question": "How do you check the type of a variable?",
+      "options": ["type()", "typeof()", "checktype()", "varType()"],
+      "correctAnswer": ["type()"]
+    },
+    {
+      "id": 59,
+      "question": "What is the difference between `is` and `==`?",
+      "options": ["`is` compares identity, `==` compares values", "`is` is faster", "They are the same", "`==` is not supported"],
+      "correctAnswer": ["`is` compares identity, `==` compares values"]
+    },
+    {
+      "id": 60,
+      "question": "What does `*` mean in function arguments?",
+      "options": ["Collects extra positional arguments", "Multiplies arguments", "Used for decorators", "Defines private args"],
+      "correctAnswer": ["Collects extra positional arguments"]
+    },
+    {
+      "id": 61,
+      "question": "What is the correct way to define a default argument?",
+      "options": ["def func(x=10):", "def func(=10 x):", "def func(x:10)", "def func(x 10)"],
+      "correctAnswer": ["def func(x=10):"]
+    },
+    {
+      "id": 62,
+      "question": "Which function returns all attributes and methods of an object?",
+      "options": ["dir()", "type()", "vars()", "inspect()"],
+      "correctAnswer": ["dir()"]
+    },
+    {
+      "id": 63,
+      "question": "What is the result of `any([0, '', None, False, 1])`?",
+      "options": ["True", "False", "None", "Error"],
+      "correctAnswer": ["True"]
+    },
+    {
+      "id": 64,
+      "question": "Which function returns a sequence of numbers?",
+      "options": ["range()", "enumerate()", "map()", "sorted()"],
+      "correctAnswer": ["range()"]
+    },
+    {
+      "id": 65,
+      "question": "How do you import only sqrt from math module?",
+      "options": ["from math import sqrt", "import sqrt from math", "include math.sqrt", "use math.sqrt"],
+      "correctAnswer": ["from math import sqrt"]
+    },
+    {
+      "id": 66,
+      "question": "Which operator is used for floor division?",
+      "options": ["//", "/", "%", "**"],
+      "correctAnswer": ["//"]
+    },
+    {
+      "id": 67,
+      "question": "What does `del` do?",
+      "options": ["Deletes variable or item", "Clears memory", "Logs error", "Defines variable"],
+      "correctAnswer": ["Deletes variable or item"]
+    },
+    {
+      "id": 68,
+      "question": "What is a list comprehension?",
+      "options": ["Compact syntax to create lists", "A string operation", "Looping through strings", "Module import"],
+      "correctAnswer": ["Compact syntax to create lists"]
+    },
+    {
+      "id": 69,
+      "question": "How do you get the index of an item in a list?",
+      "options": ["list.index(item)", "list.find(item)", "list.locate(item)", "list.search(item)"],
+      "correctAnswer": ["list.index(item)"]
+    },
+    {
+      "id": 70,
+      "question": "Which keyword exits a function?",
+      "options": ["return", "exit", "break", "stop"],
+      "correctAnswer": ["return"]
+    },
+    {
+      "id": 71,
+      "question": "Which built-in module helps in working with dates?",
+      "options": ["datetime", "calendar", "dateutils", "timeit"],
+      "correctAnswer": ["datetime"]
+    },
+    {
+      "id": 72,
+      "question": "What does `set.intersection()` do?",
+      "options": ["Finds common elements", "Adds all elements", "Removes duplicates", "Sorts sets"],
+      "correctAnswer": ["Finds common elements"]
+    },
+    {
+      "id": 73,
+      "question": "What is returned by `re.findall()`?",
+      "options": ["List of all matches", "Single match", "Boolean", "Count"],
+      "correctAnswer": ["List of all matches"]
+    },
+    {
+      "id": 74,
+      "question": "What is the purpose of `pass` statement?",
+      "options": ["Do nothing (placeholder)", "Skip loop", "Delete variable", "Throw exception"],
+      "correctAnswer": ["Do nothing (placeholder)"]
+    },
+    {
+      "id": 75,
+      "question": "What does `__name__ == '__main__'` check?",
+      "options": ["If file is run directly", "If class is defined", "If loop has started", "If import is working"],
+      "correctAnswer": ["If file is run directly"]
+    },
+    {
+      "id": 76,
+      "question": "Which method adds multiple elements to a list?",
+      "options": ["extend()", "append()", "insert()", "add()"],
+      "correctAnswer": ["extend()"]
+    },
+    {
+      "id": 77,
+      "question": "What is the use of `globals()`?",
+      "options": ["Returns global namespace", "Returns global variables only", "Deletes globals", "Logs global scope"],
+      "correctAnswer": ["Returns global namespace"]
+    },
+    {
+      "id": 78,
+      "question": "How do you convert a string to lowercase?",
+      "options": ["lower()", "downcase()", "capitalize()", "smallcase()"],
+      "correctAnswer": ["lower()"]
+    },
+    {
+      "id": 79,
+      "question": "Which function reverses a list without modifying the original?",
+      "options": ["reversed()", "reverse()", "sort()", "flip()"],
+      "correctAnswer": ["reversed()"]
+    },
+    {
+      "id": 80,
+      "question": "Which method finds a substring in a string?",
+      "options": ["find()", "match()", "search()", "locate()"],
+      "correctAnswer": ["find()"]
+    },
+    {
+      "id": 81,
+      "question": "What will `round(3.145, 2)` return?",
+      "options": ["3.15", "3.14", "3.1", "3.145"],
+      "correctAnswer": ["3.15"]
+    },
+    {
+      "id": 82,
+      "question": "What is the result of `sorted([3, 1, 2])`?",
+      "options": ["[1, 2, 3]", "[3, 2, 1]", "[1, 3, 2]", "[2, 1, 3]"],
+      "correctAnswer": ["[1, 2, 3]"]
+    },
+    {
+      "id": 83,
+      "question": "Which module is used for command-line argument parsing?",
+      "options": ["argparse", "sys", "cli", "parser"],
+      "correctAnswer": ["argparse"]
+    },
+    {
+      "id": 84,
+      "question": "What is the correct syntax for defining a function?",
+      "options": ["def my_func():", "function my_func():", "func my_func():", "create my_func()"],
+      "correctAnswer": ["def my_func():"]
+    },
+    {
+      "id": 85,
+      "question": "Which module lets you generate random numbers?",
+      "options": ["random", "math", "numbers", "os"],
+      "correctAnswer": ["random"]
+    },
+    {
+      "id": 86,
+      "question": "How do you open a file in binary mode?",
+      "options": ["'rb'", "'br'", "'binary'", "'b'"],
+      "correctAnswer": ["'rb'"]
+    },
+    {
+      "id": 87,
+      "question": "What does `set()` do?",
+      "options": ["Removes duplicates", "Sorts list", "Creates dictionary", "Creates tuple"],
+      "correctAnswer": ["Removes duplicates"]
+    },
+    {
+      "id": 88,
+      "question": "Which method converts a list to a string?",
+      "options": ["join()", "concat()", "merge()", "combine()"],
+      "correctAnswer": ["join()"]
+    },
+    {
+      "id": 89,
+      "question": "What is the default return value of a function without `return`?",
+      "options": ["None", "0", "False", "Empty string"],
+      "correctAnswer": ["None"]
+    },
+    {
+      "id": 90,
+      "question": "Which symbol is used to comment a single line?",
+      "options": ["#", "//", "/*", "--"],
+      "correctAnswer": ["#"]
+    },
+    {
+      "id": 91,
+      "question": "What is the output of `3 != 3`?",
+      "options": ["False", "True", "None", "Error"],
+      "correctAnswer": ["False"]
+    },
+    {
+      "id": 92,
+      "question": "Which keyword continues the next iteration of a loop?",
+      "options": ["continue", "pass", "next", "skip"],
+      "correctAnswer": ["continue"]
+    },
+    {
+      "id": 93,
+      "question": "What will `print(type({}))` display?",
+      "options": ["<class 'dict'>", "<class 'set'>", "<type 'object'>", "<class 'tuple'>"],
+      "correctAnswer": ["<class 'dict'>"]
+    },
+    {
+      "id": 94,
+      "question": "What is `__repr__()` used for?",
+      "options": ["Official string representation", "Readable display", "Object creation", "Function call"],
+      "correctAnswer": ["Official string representation"]
+    },
+    {
+      "id": 95,
+      "question": "What is a decorator?",
+      "options": ["A function that modifies another function", "A string formatter", "A data type", "A class initializer"],
+      "correctAnswer": ["A function that modifies another function"]
+    },
+    {
+      "id": 96,
+      "question": "Which module is used for timing code execution?",
+      "options": ["timeit", "timer", "datetime", "clock"],
+      "correctAnswer": ["timeit"]
+    },
+    {
+      "id": 97,
+      "question": "What does `enumerate()` return?",
+      "options": ["Index and value pair", "Sorted list", "Reversed list", "Filtered list"],
+      "correctAnswer": ["Index and value pair"]
+    },
+    {
+      "id": 98,
+      "question": "Which method replaces a substring in a string?",
+      "options": ["replace()", "substitute()", "switch()", "change()"],
+      "correctAnswer": ["replace()"]
+    },
+    {
+      "id": 99,
+      "question": "How do you comment multiple lines in Python?",
+      "options": ["Using triple quotes", "Using //", "Using ---", "Using semicolon"],
+      "correctAnswer": ["Using triple quotes"]
+    },
+    {
+      "id": 100,
+      "question": "Which keyword defines a generator function?",
+      "options": ["yield", "return", "generate", "lambda"],
+      "correctAnswer": ["yield"]
+      
+    }
+  ]  

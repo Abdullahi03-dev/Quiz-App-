@@ -1,0 +1,598 @@
+
+[
+    {      "question": "Which keyword is used to launch a goroutine in Go?",
+      "options": ["start", "go", "async", "launch"],
+      "correctAnswer": ["go"]
+    },
+    {      "question": "What is the zero value of a pointer in Go?",
+      "options": ["nil", "0", "null", "undefined"],
+      "correctAnswer": ["nil"]
+    },
+    {      "question": "What is the purpose of a Go interface?",
+      "options": ["To create classes", "To define method signatures", "To implement inheritance", "To define constants"],
+      "correctAnswer": ["To define method signatures"]
+    },
+    {      "question": "Which data structure in Go is inherently unordered?",
+      "options": ["Array", "Slice", "Map", "Struct"],
+      "correctAnswer": ["Map"]
+    },
+    {      "question": "Which Go keyword is used for error handling?",
+      "options": ["try", "throw", "catch", "if err != nil"],
+      "correctAnswer": ["if err != nil"]
+    },
+    {      "question": "What does the `select` statement do in Go?",
+      "options": ["Loops over arrays", "Handles type switches", "Waits on multiple channel operations", "None of the above"],
+      "correctAnswer": ["Waits on multiple channel operations"]
+    },
+    {      "question": "What is the default value of a `bool` in Go?",
+      "options": ["nil", "0", "false", "true"],
+      "correctAnswer": ["false"]
+    },
+    {      "question": "Which Go function is used to allocate memory dynamically for a type?",
+      "options": ["new", "alloc", "make", "malloc"],
+      "correctAnswer": ["new"]
+    },
+    {      "question": "Which Go function initializes slices, maps, or channels?",
+      "options": ["new", "make", "alloc", "init"],
+      "correctAnswer": ["make"]
+    },
+    {
+      "question": "Which Go feature allows concurrent execution?",
+      "options": ["Channels", "Structs", "Interfaces", "Goroutines"],
+      "correctAnswer": ["Goroutines"]
+    },
+    {
+      "question": "What does the `recover` function do in Go?",
+      "options": ["Catches panics", "Handles nil values", "Resumes suspended goroutines", "Restarts functions"],
+      "correctAnswer": ["Catches panics"]
+    },
+    {
+      "question": "Which keyword is used to stop execution and throw a runtime error in Go?",
+      "options": ["throw", "raise", "panic", "fatal"],
+      "correctAnswer": ["panic"]
+    },
+    {
+      "question": "What is the output of `len(make([]int, 5))`?",
+      "options": ["5", "0", "nil", "undefined"],
+      "correctAnswer": ["5"]
+    },
+    {
+      "question": "Which Go package is used to format I/O?",
+      "options": ["fmt", "io", "os", "strings"],
+      "correctAnswer": ["fmt"]
+    },
+    {
+      "question": "What is the purpose of Go's `defer` statement?",
+      "options": ["Run a function later", "Call async tasks", "Return values early", "Handle errors"],
+      "correctAnswer": ["Run a function later"]
+    },
+    {
+      "question": "What happens when a deferred function panics?",
+      "options": ["It gets ignored", "It overrides the original panic", "It stops execution", "It is recovered automatically"],
+      "correctAnswer": ["It overrides the original panic"]
+    },
+    {
+      "question": "Which statement is true about Go's garbage collector?",
+      "options": ["It must be manually invoked", "It is automatic and concurrent", "It does not exist", "It only collects pointers"],
+      "correctAnswer": ["It is automatic and concurrent"]
+    },
+    {
+      "question": "How do you write a constant block in Go?",
+      "options": ["const ( )", "consts { }", "define ( )", "const { }"],
+      "correctAnswer": ["const ( )"]
+    },
+    {
+      "question": "Which built-in function is used to create a slice with capacity?",
+      "options": ["make", "new", "alloc", "slice"],
+      "correctAnswer": ["make"]
+    },
+    {
+      "question": "Which Go type can hold any value?",
+      "options": ["interface{}", "string", "void", "any"],
+      "correctAnswer": ["interface{}"]
+    },
+    {
+      "question": "What will `cap([]int{1, 2, 3})` return?",
+      "options": ["0", "1", "3", "undefined"],
+      "correctAnswer": ["3"]
+    },
+    {
+      "question": "What is true about Go’s `switch` statement?",
+      "options": ["Fallthrough is default", "Each case must break", "It uses implicit break", "It requires default case"],
+      "correctAnswer": ["It uses implicit break"]
+    },
+    {
+      "question": "What is the zero value of a `string`?",
+      "options": ["nil", "0", "empty string", "null"],
+      "correctAnswer": ["empty string"]
+    },
+    {
+      "question": "Which function converts a string to an integer?",
+      "options": ["strconv.ParseInt", "string.toInt", "cast.Int", "math.Atoi"],
+      "correctAnswer": ["strconv.ParseInt"]
+    },
+    {
+      "question": "What does `close(ch)` do in Go?",
+      "options": ["Closes goroutine", "Closes map", "Closes channel", "Closes struct"],
+      "correctAnswer": ["Closes channel"]
+    },
+    {
+      "question": "What is returned by `len(map[string]int{})`?",
+      "options": ["0", "nil", "1", "undefined"],
+      "correctAnswer": ["0"]
+    },
+    {
+      "question": "What happens when you read from a closed channel?",
+      "options": ["Panic", "Deadlock", "Zero value is returned", "Error"],
+      "correctAnswer": ["Zero value is returned"]
+    },
+    {
+      "question": "What is the size of an empty struct in Go?",
+      "options": ["1 byte", "0 bytes", "4 bytes", "8 bytes"],
+      "correctAnswer": ["0 bytes"]
+    },
+    {
+      "question": "How do you embed a struct in Go?",
+      "options": ["Using extends", "Using includes", "Using anonymous fields", "Using inheritance"],
+      "correctAnswer": ["Using anonymous fields"]
+    },
+    {
+      "question": "Which data type supports concurrent access without additional synchronization?",
+      "options": ["slice", "channel", "map", "interface"],
+      "correctAnswer": ["channel"]
+    },
+    {
+      "question": "Which tool is used to format Go code?",
+      "options": ["gofmt", "golint", "goclean", "goformat"],
+      "correctAnswer": ["gofmt"]
+    },
+    {
+      "question": "Which keyword defines a new Go package?",
+      "options": ["import", "package", "define", "module"],
+      "correctAnswer": ["package"]
+    },
+    {
+      "question": "How do you define an exported function in Go?",
+      "options": ["With export keyword", "With capitalized name", "With @public", "With func!"],
+      "correctAnswer": ["With capitalized name"]
+    },
+    {
+      "question": "Which function returns current Unix timestamp?",
+      "options": ["time.Now().Unix()", "time.Timestamp()", "date.Unix()", "clock.now()"],
+      "correctAnswer": ["time.Now().Unix()"]
+    },
+    {
+      "question": "What does `go vet` do?",
+      "options": ["Runs tests", "Finds suspicious code", "Formats code", "Compiles code"],
+      "correctAnswer": ["Finds suspicious code"]
+    },
+    {
+      "question": "What happens if a goroutine panics and is not recovered?",
+      "options": ["Crash only goroutine", "Crash whole program", "Continues normally", "Recovered by default"],
+      "correctAnswer": ["Crash whole program"]
+    },
+    {
+      "question": "What is the purpose of Go's blank identifier `_`?",
+      "options": ["Export variable", "Ignore value", "Declare unused variable", "Comment variable"],
+      "correctAnswer": ["Ignore value"]
+    },
+    {
+      "question": "Which of the following is true about Go maps?",
+      "options": ["Ordered", "Thread-safe", "Unordered", "Immutable"],
+      "correctAnswer": ["Unordered"]
+    },
+    {
+      "question": "Which tool is used to manage Go module dependencies?",
+      "options": ["dep", "gom", "go mod", "gopkg"],
+      "correctAnswer": ["go mod"]
+    },
+    {
+      "question": "Which function converts an int to a string?",
+      "options": ["strconv.Itoa", "int.ToString", "fmt.Int", "cast.String"],
+      "correctAnswer": ["strconv.Itoa"]
+    },
+    {
+      "question": "Which Go type is best for high-performance concurrent pipelines?",
+      "options": ["slice", "goroutine", "channel", "interface"],
+      "correctAnswer": ["channel"]
+    },
+    {
+      "question": "Which Go statement blocks until one of several channel operations proceeds?",
+      "options": ["switch", "select", "case", "wait"],
+      "correctAnswer": ["select"]
+    },
+    {
+      "question": "What is the visibility of variables starting with lowercase in Go?",
+      "options": ["Public", "Global", "Private", "Package-level"],
+      "correctAnswer": ["Package-level"]
+    },
+    {
+      "question": "Which built-in function returns the type of a variable at runtime?",
+      "options": ["reflect.TypeOf", "type()", "typeof()", "runtime.Type()"],
+      "correctAnswer": ["reflect.TypeOf"]
+    },
+    {
+      "question": "What will `cap(nil)` return for a slice?",
+      "options": ["0", "nil", "panic", "undefined"],
+      "correctAnswer": ["0"]
+    },
+    {
+      "question": "How do you handle optional parameters in Go?",
+      "options": ["Use default values", "Use function overloading", "Use variadic functions", "Use optional keyword"],
+      "correctAnswer": ["Use variadic functions"]
+    },
+    {
+      "question": "What does `:=` do in Go?",
+      "options": ["Defines constant", "Declares and initializes", "Imports module", "None"],
+      "correctAnswer": ["Declares and initializes"]
+    },
+    {
+      "question": "What does `copy(dst, src)` return?",
+      "options": ["bool", "number of elements copied", "error", "nil"],
+      "correctAnswer": ["number of elements copied"]
+    },
+    {
+      "question": "What is the default behavior when writing to a nil channel?",
+      "options": ["Crash", "Block forever", "Error", "Retry"],
+      "correctAnswer": ["Block forever"]
+    },
+    {
+      "question": "What is `runtime.GOMAXPROCS()` used for?",
+      "options": ["Set goroutine stack size", "Limit memory", "Set max CPUs used", "Control panic recovery"],
+      "correctAnswer": ["Set max CPUs used"]
+    },
+    {
+      "question": "What is the result of sending to a closed channel in Go?",
+      "options": ["Panic", "Blocks forever", "Returns nil", "Does nothing"],
+      "correctAnswer": ["Panic"]
+    },
+    {
+      "question": "What kind of channel allows data flow in one direction only?",
+      "options": ["Bidirectional", "Buffered", "Unidirectional", "Infinite"],
+      "correctAnswer": ["Unidirectional"]
+    },
+    {
+      "question": "What will happen if you try to access a nil map in Go?",
+      "options": ["Panic", "Error", "Read returns zero value, write panics", "Nothing happens"],
+      "correctAnswer": ["Read returns zero value, write panics"]
+    },
+    {
+      "question": "Which keyword prevents a function from returning normally?",
+      "options": ["return", "goto", "panic", "defer"],
+      "correctAnswer": ["panic"]
+    },
+    {
+      "question": "Which package provides runtime reflection in Go?",
+      "options": ["reflect", "runtime", "os", "types"],
+      "correctAnswer": ["reflect"]
+    },
+    {
+      "question": "Which function gets the number of CPUs available to Go?",
+      "options": ["runtime.NumCPU()", "os.CPU()", "cpu.Count()", "sys.NumCPU()"],
+      "correctAnswer": ["runtime.NumCPU()"]
+    },
+    {
+      "question": "How do you embed interfaces in Go?",
+      "options": ["Using extends", "By composition", "By anonymous field", "By struct embedding"],
+      "correctAnswer": ["By composition"]
+    },
+    {
+      "question": "What does `sync.WaitGroup` do?",
+      "options": ["Controls channels", "Tracks goroutines", "Locks structs", "Measures time"],
+      "correctAnswer": ["Tracks goroutines"]
+    },
+    {
+      "question": "What is the default buffer size of an unbuffered channel?",
+      "options": ["0", "1", "10", "unlimited"],
+      "correctAnswer": ["0"]
+    },
+    {
+      "question": "Which method makes a Go HTTP server listen?",
+      "options": ["http.Run()", "http.ListenAndServe()", "http.Serve()", "http.Start()"],
+      "correctAnswer": ["http.ListenAndServe()"]
+    },
+    {
+      "question": "How do you force a goroutine to yield the processor?",
+      "options": ["runtime.Goexit()", "runtime.Gosched()", "time.Sleep()", "defer yield()"],
+      "correctAnswer": ["runtime.Gosched()"]
+    },
+    {
+      "question": "How are maps passed to functions in Go?",
+      "options": ["By value", "By reference", "By pointer", "Copied always"],
+      "correctAnswer": ["By reference"]
+    },
+    {
+      "question": "How do you serialize Go data into JSON?",
+      "options": ["json.Write()", "json.Dump()", "json.Marshal()", "json.Encode()"],
+      "correctAnswer": ["json.Marshal()"]
+    },
+    {
+      "question": "Which function do you use to handle timeouts in Go channels?",
+      "options": ["select with time.After", "timeout()", "time.Wait()", "channel.Timer()"],
+      "correctAnswer": ["select with time.After"]
+    },
+    {
+      "question": "Which statement is used to declare constants in Go?",
+      "options": ["define", "constant", "const", "static"],
+      "correctAnswer": ["const"]
+    },
+    {
+      "question": "What is the output of `copy([]int{1,2}, []int{3,4,5})`?",
+      "options": ["3", "2", "1", "error"],
+      "correctAnswer": ["2"]
+    },
+    {
+      "question": "What does `unsafe.Pointer` allow in Go?",
+      "options": ["Safe type casting", "Memory manipulation", "Concurrent safety", "Secure encryption"],
+      "correctAnswer": ["Memory manipulation"]
+    },
+    {
+      "question": "How are goroutines scheduled in Go?",
+      "options": ["Preemptive scheduling", "OS-based threads", "Cooperative scheduling", "Go runtime scheduler"],
+      "correctAnswer": ["Go runtime scheduler"]
+    },
+    {
+      "question": "How do you compare two structs deeply?",
+      "options": ["== operator", "deep.Equal()", "reflect.DeepEqual()", "fmt.Compare()"],
+      "correctAnswer": ["reflect.DeepEqual()"]
+    },
+    {
+      "question": "Which package is used for logging in Go?",
+      "options": ["fmt", "log", "output", "io"],
+      "correctAnswer": ["log"]
+    },
+    {
+      "question": "What does `defer` execute if multiple are declared?",
+      "options": ["FIFO", "LIFO", "Random", "Simultaneously"],
+      "correctAnswer": ["LIFO"]
+    },
+    {
+      "question": "What is the default behavior of an unbuffered channel?",
+      "options": ["Non-blocking", "Blocking", "Parallel", "Fatal error"],
+      "correctAnswer": ["Blocking"]
+    },
+    {
+      "question": "What is the correct way to declare a slice with length 0 but capacity 10?",
+      "options": ["make([]int, 10, 0)", "make([]int, 0, 10)", "new([]int)", "[]int{10}"],
+      "correctAnswer": ["make([]int, 0, 10)"]
+    },
+    {
+      "question": "How do you avoid race conditions in goroutines?",
+      "options": ["Using goroutines only", "Using channels or sync.Mutex", "Using defer only", "Using select only"],
+      "correctAnswer": ["Using channels or sync.Mutex"]
+    },
+    {
+      "question": "Which method starts a ticker in Go?",
+      "options": ["time.NewTicker()", "time.Tick()", "ticker.New()", "tick.New()"],
+      "correctAnswer": ["time.NewTicker()"]
+    },
+    {
+      "question": "How are variadic functions declared in Go?",
+      "options": ["...args", "args...", "args[]", "...type"],
+      "correctAnswer": ["...type"]
+    },
+    {
+      "question": "Which method returns the type of a value at runtime?",
+      "options": ["reflect.TypeOf()", "type()", "runtime.Type()", "cast.Type()"],
+      "correctAnswer": ["reflect.TypeOf()"]
+    },
+    {
+      "question": "What is the signature of the `main` function in Go?",
+      "options": ["main()", "void main()", "func main()", "start main()"],
+      "correctAnswer": ["func main()"]
+    },
+    {
+      "question": "Which method creates a buffered channel?",
+      "options": ["make(chan int, n)", "make(chan int)", "chan(n)", "buffer(chan, n)"],
+      "correctAnswer": ["make(chan int, n)"]
+    },
+    {
+      "question": "What happens if a goroutine leaks?",
+      "options": ["It gets garbage collected", "It blocks resources forever", "It’s killed automatically", "It crashes the program"],
+      "correctAnswer": ["It blocks resources forever"]
+    },
+    {
+      "question": "How do you convert `string` to `int` safely in Go?",
+      "options": ["strconv.Atoi", "int.Parse()", "cast.StringToInt()", "parseInt()"],
+      "correctAnswer": ["strconv.Atoi"]
+    },
+    {
+      "question": "Which operator is used to check if a channel is closed?",
+      "options": ["if channel == nil", "value, ok := <-ch", "len(ch) == 0", "closed(ch)"],
+      "correctAnswer": ["value, ok := <-ch"]
+    },
+    {
+      "question": "Which keyword is used to import other packages?",
+      "options": ["require", "import", "include", "module"],
+      "correctAnswer": ["import"]
+    },
+    {
+      "question": "What is the return value of a function that returns nothing in Go?",
+      "options": ["nil", "void", "None", "Nothing"],
+      "correctAnswer": ["Nothing"]
+    },
+    {
+      "question": "How do you access environment variables in Go?",
+      "options": ["os.Getenv()", "env.get()", "system.env()", "os.env.get()"],
+      "correctAnswer": ["os.Getenv()"]
+    },
+    {
+      "question": "What will `var s []int` create?",
+      "options": ["A slice with nil", "An empty slice", "A slice with 0", "Error"],
+      "correctAnswer": ["A slice with nil"]
+    },
+    {
+      "question": "Which Go tool installs external dependencies?",
+      "options": ["go get", "go install", "go mod", "go build"],
+      "correctAnswer": ["go get"]
+    },
+    {
+      "question": "Which method can block indefinitely?",
+      "options": ["Reading from nil channel", "Buffered channel send", "Close channel", "Read from map"],
+      "correctAnswer": ["Reading from nil channel"]
+    },
+    {
+      "question": "How can you check if a key exists in a map?",
+      "options": ["map.contains()", "value, ok := map[key]", "map[key] != nil", "check(map, key)"],
+      "correctAnswer": ["value, ok := map[key]"]
+    },
+    {
+      "question": "Which command initializes a Go module?",
+      "options": ["go mod init", "go init", "go module new", "go new mod"],
+      "correctAnswer": ["go mod init"]
+    },
+    {
+      "question": "What is the use of `go test`?",
+      "options": ["Runs benchmarks", "Runs unit tests", "Compiles binary", "Installs packages"],
+      "correctAnswer": ["Runs unit tests"]
+    },
+    {
+      "question": "Which function is used to sleep for a duration?",
+      "options": ["time.Wait()", "time.Sleep()", "sleep()", "pause()"],
+      "correctAnswer": ["time.Sleep()"]
+    },
+    {
+      "question": "Which method returns the current time?",
+      "options": ["time.Now()", "now()", "clock.Get()", "current.Time()"],
+      "correctAnswer": ["time.Now()"]
+    },
+    {
+      "question": "Which package is used to manipulate strings?",
+      "options": ["strings", "str", "stringutil", "text"],
+      "correctAnswer": ["strings"]
+    },
+    {
+      "question": "What will `len(nil)` return?",
+      "options": ["0", "panic", "nil", "undefined"],
+      "correctAnswer": ["panic"]
+    },
+    {
+      "question": "What does the `go run` command do?",
+      "options": ["Runs Go code without compiling a binary", "Compiles Go code", "Installs Go packages", "Starts Go services"],
+      "correctAnswer": ["Runs Go code without compiling a binary"]
+    },
+    {
+      "question": "What is the zero value of a function type?",
+      "options": ["nil", "0", "undefined", "false"],
+      "correctAnswer": ["nil"]
+    },
+    {
+      "question": "What is the purpose of `iota` in Go?",
+      "options": ["Generate incremental constants", "Index arrays", "Loop control", "Create random numbers"],
+      "correctAnswer": ["Generate incremental constants"]
+    },
+    {
+      "question": "What does `runtime.NumGoroutine()` return?",
+      "options": ["Number of goroutines running", "Max CPUs used", "RAM used", "Idle goroutines"],
+      "correctAnswer": ["Number of goroutines running"]
+    },
+    {
+      "question": "Which format verb prints Go values with full struct field names?",
+      "options": ["%s", "%d", "%#v", "%v"],
+      "correctAnswer": ["%#v"]
+    },{
+      "question": "What does the `recover()` function do?",
+      "options": ["Starts panic", "Resumes a panic", "Handles runtime error", "Stops panic and returns control"],
+      "correctAnswer": ["Stops panic and returns control"]
+    },
+    {
+      "question": "Which package is used to read files in Go?",
+      "options": ["os", "file", "reader", "fs"],
+      "correctAnswer": ["os"]
+    },
+    {
+      "question": "Which Go keyword is used to skip an iteration in a loop?",
+      "options": ["pass", "continue", "skip", "next"],
+      "correctAnswer": ["continue"]
+    },
+    {
+      "question": "What is the default capacity of an empty slice created using `make([]int, 0)`?",
+      "options": ["0", "1", "nil", "undefined"],
+      "correctAnswer": ["0"]
+    },
+    {
+      "question": "Which function is used to stop a goroutine?",
+      "options": ["goroutine.Stop()", "goexit()", "runtime.Goexit()", "go.Stop()"],
+      "correctAnswer": ["runtime.Goexit()"]
+    },
+    {
+      "question": "Which Go data type is used to store Unicode characters?",
+      "options": ["byte", "rune", "string", "char"],
+      "correctAnswer": ["rune"]
+    },
+    {
+      "question": "Which keyword is used to terminate a function early?",
+      "options": ["stop", "end", "return", "break"],
+      "correctAnswer": ["return"]
+    },
+    {
+      "question": "Which of the following is true about slices in Go?",
+      "options": ["Fixed length", "Can grow dynamically", "Immutable", "Thread-safe"],
+      "correctAnswer": ["Can grow dynamically"]
+    },
+    {
+      "question": "What is the use of `defer` in Go?",
+      "options": ["Stop panic", "Delay variable", "Schedule function for after return", "Log errors"],
+      "correctAnswer": ["Schedule function for after return"]
+    },
+    {
+      "question": "What happens if you access an index out of range in a slice?",
+      "options": ["nil", "error", "panic", "false"],
+      "correctAnswer": ["panic"]
+    },
+    {
+      "question": "How do you define an anonymous function?",
+      "options": ["function(){}", "func(){}", "def(){}", "() -> {}"],
+      "correctAnswer": ["func(){}"]
+    },
+    {
+      "question": "Which operator is used to compare values in Go?",
+      "options": ["==", "=", "===", "!"],
+      "correctAnswer": ["=="]
+    },
+    {
+      "question": "What is the output of `len(\"hello\")` in Go?",
+      "options": ["4", "5", "6", "0"],
+      "correctAnswer": ["5"]
+    },
+    {
+      "question": "Which Go keyword declares a constant?",
+      "options": ["let", "define", "const", "fixed"],
+      "correctAnswer": ["const"]
+    },
+    {
+      "question": "What is the purpose of `:=` in Go?",
+      "options": ["Type hint", "Import package", "Short variable declaration", "Error handler"],
+      "correctAnswer": ["Short variable declaration"]
+    },
+    {
+      "question": "Which package handles time-related functionality?",
+      "options": ["clock", "time", "date", "chrono"],
+      "correctAnswer": ["time"]
+    },
+    {
+      "question": "Which keyword is used to exit a loop early in Go?",
+      "options": ["exit", "return", "break", "stop"],
+      "correctAnswer": ["break"]
+    },
+    {
+      "question": "How do you handle multiple return values from a function?",
+      "options": ["Use a tuple", "Separate variables with comma", "List destructuring", "Only one variable allowed"],
+      "correctAnswer": ["Separate variables with comma"]
+    },
+    {
+      "question": "Which keyword is used to call a function concurrently?",
+      "options": ["async", "go", "thread", "start"],
+      "correctAnswer": ["go"]
+    },
+    {
+      "question": "Which type is used to represent a group of methods in Go?",
+      "options": ["interface", "struct", "map", "type"],
+      "correctAnswer": ["interface"]
+    },
+    {
+      "question": "Which method reads a line of input from the console?",
+      "options": ["input.Scan()", "fmt.Scanln()", "os.Read()", "readline()"],
+      "correctAnswer": ["fmt.Scanln()"]
+    }
+  ]

@@ -1,4 +1,185 @@
 [
+
+  {
+    "id": 1,
+    "question": "What is React?",
+    "options": [
+      "A JavaScript library for building user interfaces",
+      "A CSS framework",
+      "A database engine",
+      "A backend framework"
+    ],
+    "correctAnswer": ["A JavaScript library for building user interfaces"]
+  },
+  {
+    "id": 2,
+    "question": "Who developed React?",
+    "options": ["Facebook", "Google", "Microsoft", "Twitter"],
+    "correctAnswer": ["Facebook"]
+  },
+  {
+    "id": 3,
+    "question": "What is JSX?",
+    "options": [
+      "A syntax extension for JavaScript",
+      "A CSS preprocessor",
+      "A database query language",
+      "A data structure"
+    ],
+    "correctAnswer": ["A syntax extension for JavaScript"]
+  },
+  {
+    "id": 4,
+    "question": "Which method is used to create components in React?",
+    "options": ["Function or class", "Only function", "Only class", "HTML tags"],
+    "correctAnswer": ["Function or class"]
+  },
+  {
+    "id": 5,
+    "question": "How do you define state in a functional component?",
+    "options": [
+      "Using the useState hook",
+      "Using setState directly",
+      "Using props",
+      "You can't use state in functional components"
+    ],
+    "correctAnswer": ["Using the useState hook"]
+  },
+  {
+    "id": 6,
+    "question": "Which hook is used for side effects?",
+    "options": ["useEffect", "useState", "useContext", "useRef"],
+    "correctAnswer": ["useEffect"]
+  },
+  {
+    "id": 7,
+    "question": "How do you pass data from a parent to a child component?",
+    "options": ["Using props", "Using state", "Using context", "Using useRef"],
+    "correctAnswer": ["Using props"]
+  },
+  {
+    "id": 8,
+    "question": "What is a component in React?",
+    "options": [
+      "A reusable piece of UI",
+      "A type of database",
+      "A backend service",
+      "A JavaScript variable"
+    ],
+    "correctAnswer": ["A reusable piece of UI"]
+  },
+  {
+    "id": 9,
+    "question": "Which hook is used to create a reference to a DOM element?",
+    "options": ["useRef", "useState", "useEffect", "useMemo"],
+    "correctAnswer": ["useRef"]
+  },
+  {
+    "id": 10,
+    "question": "What is the default port for a React development server?",
+    "options": ["3000", "8000", "8080", "5000"],
+    "correctAnswer": ["3000"]
+  },
+  {
+    "id": 11,
+    "question": "How do you render a list of items in React?",
+    "options": ["Using map()", "Using forEach()", "Using while()", "Using filter()"],
+    "correctAnswer": ["Using map()"]
+  },
+  {
+    "id": 12,
+    "question": "What is the virtual DOM?",
+    "options": [
+      "A lightweight copy of the real DOM used by React",
+      "The same as the real DOM",
+      "A part of a database",
+      "A CSS engine"
+    ],
+    "correctAnswer": ["A lightweight copy of the real DOM used by React"]
+  },
+  {
+    "id": 13,
+    "question": "What does setState do?",
+    "options": [
+      "Updates a component's state and re-renders it",
+      "Saves state to a database",
+      "Deletes the current state",
+      "Resets props"
+    ],
+    "correctAnswer": ["Updates a component's state and re-renders it"]
+  },
+  {
+    "id": 14,
+    "question": "How do you handle form inputs in React?",
+    "options": [
+      "By updating state with onChange",
+      "By changing props",
+      "By using DOM selectors",
+      "By using setTimeout"
+    ],
+    "correctAnswer": ["By updating state with onChange"]
+  },
+  {
+    "id": 15,
+    "question": "What is a prop in React?",
+    "options": [
+      "A way to pass data from parent to child",
+      "A built-in React hook",
+      "An HTML attribute",
+      "A CSS class"
+    ],
+    "correctAnswer": ["A way to pass data from parent to child"]
+  },
+  {
+    "id": 16,
+    "question": "What does useState return?",
+    "options": [
+      "An array with the current state and a function to update it",
+      "Only the state value",
+      "Only the setter function",
+      "An object"
+    ],
+    "correctAnswer": ["An array with the current state and a function to update it"]
+  },
+  {
+    "id": 17,
+    "question": "What does 'lifting state up' mean in React?",
+    "options": [
+      "Moving state to a common parent component",
+      "Moving props to child components",
+      "Creating a new context",
+      "Deleting state"
+    ],
+    "correctAnswer": ["Moving state to a common parent component"]
+  },
+  {
+    "id": 18,
+    "question": "How do you add conditional rendering in JSX?",
+    "options": [
+      "Using ternary operator or &&",
+      "Using if-else outside JSX",
+      "Using switch statements only",
+      "Using props only"
+    ],
+    "correctAnswer": ["Using ternary operator or &&"]
+  },
+  {
+    "id": 19,
+    "question": "Which hook helps in sharing state across components without prop drilling?",
+    "options": ["useContext", "useMemo", "useState", "useReducer"],
+    "correctAnswer": ["useContext"]
+  },
+  {
+    "id": 20,
+    "question": "How do you import React in a file?",
+    "options": [
+      "import React from 'react';",
+      "require('react');",
+      "import { React } from 'react';",
+      "load React;"
+    ],
+    "correctAnswer": ["import React from 'react';"]
+  },
   {
     "question": "What is the correct syntax to create a functional component in React?",
     "options": ["function MyComponent() {}", "component MyComponent() {}", "class MyComponent {}", "def MyComponent():"],

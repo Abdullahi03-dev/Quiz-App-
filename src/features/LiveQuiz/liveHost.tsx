@@ -3,12 +3,16 @@ import { ArrowLeft,ArrowRight,Clock } from "lucide-react"
 import { useEffect,useState ,useRef} from "react"
 import { useNavigate } from "react-router-dom";
 import Loader from "../../components/loader";
+import { arrayUnion } from "firebase/firestore";
+import toast from "react-hot-toast";
+import useRoomMessages from "../../hooks/useMessages";
 interface QuestionProps{
   question:string;
   options:string[];
   correctAnswer:string[];
 }
 const livehost = () => {
+  useRoomMessages(222,'user1')
   const [questionIndex,setQuestionIndex]=useState<number>(0)
   const [questionNumber,setQuestionNumber]=useState<number>(1)
   const [data,setData]=useState<QuestionProps[]>([])
@@ -24,8 +28,79 @@ const livehost = () => {
   const [questonsLenghtSaved,setquestonsLenghtSaved]=useState<string>('')
   const [roomCode,setRoomCode]=useState(0)
   const navigate=useNavigate()
+  const saved=localStorage.getItem('Roomcode')
   
+  if(saved){
+    useRoomMessages(parseInt(saved),'user1')
+  }
+  const sendMessage=async()=>{
+    try{
+      const q=query(collection(db,'Rooms'),where('roomCode','==',roomCode));
+    
+      const querySanpshot=await getDocs(q)
+      if(querySanpshot.empty){
+        console.log('does ot match')
+      }
+      querySanpshot.forEach(async(document)=>{
+        const docRef=doc(db,'Rooms',document.id);
+          console.log(document.id,document.data())
+        await updateDoc(docRef,{
+          [`messages.user1`]:arrayUnion({text:`User 1 was disqualified for leaving page`})
+        })
+    
+      })
+    }catch(err){
+      console.log(err)
+    }
+    }
+    /// IF HE OPENS A NEW TAB((Cheating))
+    useEffect(()=>{
+      const handleVisibilityChange=()=>{
+        if(document.visibilityState==='hidden'){
+            toast.error('Disqualified')
+            sendMessage()
+        }else{
+          navigate('/result')
+        }
+      }
+      document.addEventListener('visibilitychange',handleVisibilityChange)
+      return ()=>{
+        document.removeEventListener('visibilitychange', handleVisibilityChange)
+  
+      }
+    },[])
 
+  /////NAVIGATE TO CATEGORIES PAGE IF HE TRIES TO GO BACK AFTER COMPLETETING QUIZ
+     useEffect(()=>{
+      const saved=localStorage.getItem('Roomcode')
+      const checkIfRoomExists = async (roomCode: number) => {
+        try{
+          const usersRef = collection(db, "Rooms");
+        const q = query(usersRef, where("roomCode", "==", roomCode));
+        const querySnapshot = await getDocs(q);
+        if(querySnapshot){
+            const roomDoc=querySnapshot.docs[0]
+            const data=roomDoc.data()
+            if(!data.quizHasStarted){
+                navigate('/livesettings')
+            }
+        }else{
+          <Loader/>
+          setTimeout(()=>{
+            navigate('/livesettings')
+          },2000) 
+        }
+        }catch(err){
+          console.log(err)
+        }
+        
+      }
+      if(saved){
+        checkIfRoomExists(parseInt(saved))
+      }else{
+        navigate('/livesettings')
+      }
+     },[])
 
 
   ////GET THE VALUES OF SETTINGS FROM FIREBASE LIKE TIME , QUESTION LENGHT , LANGUAGE CHOOSED ETC.....
@@ -99,8 +174,7 @@ const livehost = () => {
                 const array=Object.values(selected)
                 console.log(array)
                 if(array!==null){
-                //  setSelectedId(array)      
-                  
+                //  setSelectedId(array)        
               }
           }
      },[selected])
@@ -206,15 +280,21 @@ const formatTime = (secs:number) => {
       fetch(`${filename}`)
       .then((response)=>response.json() as Promise<QuestionProps[]>)
       .then((data)=>{
-        const shuffled=[...data];
-        for (let i = shuffled.length-1; i > 0; i--) {
-          
-          const j=Math.floor(Math.random()*(i+1));
-          [shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]]
-        }
-        const selectedQues=shuffled.slice(0,parseInt(questonsLenghtSaved))
-        setData(selectedQues)
-        setQuestionIndex(0)
+        let shuffled=[...data].map((q,index)=>({
+          ...q,
+          originalIndex:index
+         }))
+          for (let i = shuffled.length-1; i > 0; i--) {
+            
+            const j=Math.floor(Math.random()*(i+1));
+            [shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]]
+          }
+          const maxStart=Math.max(0,shuffled.length-Number(questonsLenghtSaved))
+          const startIndex=Math.floor(Math.random()*(maxStart+1))
+          const selectedQues=shuffled.slice(startIndex,startIndex+Number(questonsLenghtSaved))
+          // const selectedIndexes=selectedQues.map(q=>q.originalIndex).slice(0,Number(questonsLenghtSaved))
+          setData(selectedQues)
+          setQuestionIndex(0)
       })
       .catch((err)=>{
           console.log(err)
@@ -279,7 +359,7 @@ const formatTime = (secs:number) => {
                   return updated
                 })
                 if(score!=null){
-                  const count=Object.values(score).filter(value=>value===true).length
+                  const count=Object.values(score).filter(value=>value===true).length+1
                   setscoreToBeSave(count)
                 }
             setSelected((prev:{[key:number]:string})=>{
@@ -327,7 +407,7 @@ const formatTime = (secs:number) => {
     <div className="flex flex-col   justify-center gap-y-5 md:grid md:grid-cols-2 md:gap-x-[8rem] md:gap-y-[2rem] md:pt-6 md:place-items-center md:justify-center">
       {currentQUes.options.map((val,index)=>(
 
-<span key={index} onClick={()=>checkAnswer(val,questionNumber)} className={`cursor-pointer border border-[#ffffff59] py-4 text-white pl-5 rounded-[13px] bg-gradient-to-br from-[#a1f2c] to-[#131720]/90 md:w-[310px] ${selected[questionNumber]===val?'shadow-[0_4px_10px_rgba(0,255,128,0.2)] border-3 border-green-700':''} `}>{val}</span>
+<span key={index} onClick={()=>checkAnswer(val,questionNumber)} className={`h-[70px] text-left cursor-pointer border border-[#ffffff59] flex items-center text-white pl-5 pr-5 rounded-[13px] bg-gradient-to-br from-[#a1f2c] to-[#131720]/90 md:w-[310px] ${selected[questionNumber]===val?'shadow-[0_4px_10px_rgba(0,255,128,0.2)] border-3 border-green-700':''} `}>{val}</span>
 
 
       ))}

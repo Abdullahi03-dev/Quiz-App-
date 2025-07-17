@@ -117,7 +117,7 @@ const QuizSettings = () => {
     // { value: "csharp", label: "C#", icon: "💎" },
     // { value: "php", label: "PHP", icon: "🐘" },
     // { value: "ruby", label: "Ruby", icon: "💎" },
-    { value: "go", label: "Go", icon: "🔵" }
+    { value: "golang", label: "Go", icon: "🔵" }
     // { value: "rust", label: "Rust", icon: "🦀" },
     // { value: "swift", label: "Swift", icon: "🍎" }
   ];

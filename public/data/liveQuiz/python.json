@@ -1,0 +1,603 @@
+[
+    {
+      "id": 1,
+      "question": "What is the output of `0.1 + 0.2 == 0.3` in Python?",
+      "options": ["True", "False", "None", "Raises an error"],
+      "correctAnswer": ["False"]
+    },
+    {
+      "id": 2,
+      "question": "Which of the following is NOT a valid way to declare a set?",
+      "options": ["set()", "{} (empty set)", "{1, 2, 3}", "set([1, 2, 3])"],
+      "correctAnswer": ["{} (empty set)"]
+    },
+    {
+      "id": 3,
+      "question": "What is the output of `list(range(10, 1, -2))`?",
+      "options": ["[10, 9, 8, 7, 6, 5, 4, 3, 2]", "[10, 8, 6, 4, 2]", "[10, 8, 6, 4]", "[10, 9, 8, 7, 6, 5, 4, 3]"],
+      "correctAnswer": ["[10, 8, 6, 4, 2]"]
+    },
+    {
+      "id": 4,
+      "question": "Which of the following statements is true about Python's GIL?",
+      "options": ["It allows true parallelism in threads", "It prevents race conditions in multiprocessing", "It limits execution to one thread at a time", "It is deprecated in Python 3"],
+      "correctAnswer": ["It limits execution to one thread at a time"]
+    },
+    {
+      "id": 5,
+      "question": "What is the output of `' '.join(['Python', '3', 'Rocks'])`?",
+      "options": ["Python3Rocks", "['Python', '3', 'Rocks']", "Python 3 Rocks", "Python,3,Rocks"],
+      "correctAnswer": ["Python 3 Rocks"]
+    },
+    {
+      "id": 6,
+      "question": "Which method can be used to create an iterator from a class?",
+      "options": ["__start__", "__yield__", "__next__", "__iter__"],
+      "correctAnswer": ["__iter__"]
+    },
+    {
+      "id": 7,
+      "question": "Which built-in function is used to get the memory address of an object?",
+      "options": ["mem()", "id()", "addr()", "pointer()"],
+      "correctAnswer": ["id()"]
+    },
+    {
+      "id": 8,
+      "question": "What is the type of `lambda x: x + 1`?",
+      "options": ["function", "method", "lambda", "<lambda_function>"],
+      "correctAnswer": ["function"]
+    },
+    {
+      "id": 9,
+      "question": "What does the `zip()` function return?",
+      "options": ["List of tuples", "A dictionary", "An iterator of tuples", "A generator"],
+      "correctAnswer": ["An iterator of tuples"]
+    },
+    {
+      "id": 10,
+      "question": "Which operator is overloaded by `__eq__`?",
+      "options": ["=", "==", "!=", "<>"],
+      "correctAnswer": ["=="]
+    },
+    {
+      "id": 11,
+      "question": "Which statement is used to catch exceptions in Python?",
+      "options": ["try/except", "catch/except", "handle/except", "try/catch"],
+      "correctAnswer": ["try/except"]
+    },
+    {
+      "id": 12,
+      "question": "What does the `@staticmethod` decorator do?",
+      "options": ["Defines a method without self", "Creates a class method", "Adds static typing", "Registers external functions"],
+      "correctAnswer": ["Defines a method without self"]
+    },
+    {
+      "id": 13,
+      "question": "What is the output of `bool('False')`?",
+      "options": ["True", "False", "None", "Raises TypeError"],
+      "correctAnswer": ["True"]
+    },
+    {
+      "id": 14,
+      "question": "Which data type is immutable in Python?",
+      "options": ["List", "Set", "Dictionary", "Tuple"],
+      "correctAnswer": ["Tuple"]
+    },
+    {
+      "id": 15,
+      "question": "What is the result of `set([1, 2, 2, 3])`?",
+      "options": ["[1, 2, 2, 3]", "{1, 2, 3}", "{1, 1, 2, 2, 3}", "[1, 2, 3]"],
+      "correctAnswer": ["{1, 2, 3}"]
+    },
+    {
+      "id": 16,
+      "question": "How is memory managed in Python?",
+      "options": ["Reference counting", "Garbage collection", "Manual deletion", "Both A and B"],
+      "correctAnswer": ["Both A and B"]
+    },
+    {
+      "id": 17,
+      "question": "Which keyword is used to handle exceptions?",
+      "options": ["try", "error", "handle", "assert"],
+      "correctAnswer": ["try"]
+    },
+    {
+      "id": 18,
+      "question": "What does `is` check in Python?",
+      "options": ["Equality", "Data type", "Object identity", "Class match"],
+      "correctAnswer": ["Object identity"]
+    },
+    {
+      "id": 19,
+      "question": "What does `*args` do in function definitions?",
+      "options": ["Accepts unlimited positional args", "Accepts unlimited keyword args", "Returns a tuple", "Accepts default args"],
+      "correctAnswer": ["Accepts unlimited positional args"]
+    },
+    {
+      "id": 20,
+      "question": "What will `len(set('banana'))` return?",
+      "options": ["6", "3", "5", "4"],
+      "correctAnswer": ["3"]
+    },
+    {
+      "id": 21,
+      "question": "What is a generator in Python?",
+      "options": ["A compiled loop", "A lazy iterator", "A decorator", "A method"],
+      "correctAnswer": ["A lazy iterator"]
+    },
+    {
+      "id": 22,
+      "question": "What is the output of `type([]) == list`?",
+      "options": ["True", "False", "None", "Raises an error"],
+      "correctAnswer": ["True"]
+    },
+    {
+      "id": 23,
+      "question": "What does `enumerate()` return?",
+      "options": ["List of tuples", "Dict", "Iterator of tuples with index", "Set"],
+      "correctAnswer": ["Iterator of tuples with index"]
+    },
+    {
+      "id": 24,
+      "question": "How can you convert a string to a number safely?",
+      "options": ["int(x)", "eval(x)", "float(x)", "use try/except with int(x)"],
+      "correctAnswer": ["use try/except with int(x)"]
+    },
+    {
+      "id": 25,
+      "question": "What will `int(True) + int(False)` return?",
+      "options": ["0", "1", "2", "Error"],
+      "correctAnswer": ["1"]
+    },
+    {
+      "id": 26,
+      "question": "What does `__str__` do in a class?",
+      "options": ["Returns class type", "Returns string representation", "Returns docstring", "Initializes class"],
+      "correctAnswer": ["Returns string representation"]
+    },
+    {
+      "id": 27,
+      "question": "What is the default value of `end` in `print()`?",
+      "options": ["\\n", "\\t", "''", "None"],
+      "correctAnswer": ["\\n"]
+    },
+    {
+      "id": 28,
+      "question": "Which function is used to get input from the user?",
+      "options": ["scan()", "get()", "input()", "prompt()"],
+      "correctAnswer": ["input()"]
+    },
+    {
+      "id": 29,
+      "question": "Which keyword is used for anonymous functions?",
+      "options": ["def", "anon", "lambda", "func"],
+      "correctAnswer": ["lambda"]
+    },
+    {
+      "id": 30,
+      "question": "What does `assert` do in Python?",
+      "options": ["Print errors", "Raise error if condition is False", "Debug code", "Runs test cases"],
+      "correctAnswer": ["Raise error if condition is False"]
+    },
+    {
+      "id": 31,
+      "question": "What is the use of `__init__.py`?",
+      "options": ["Initializes a package", "Starts a loop", "Declares a class", "Defines a script"],
+      "correctAnswer": ["Initializes a package"]
+    },
+    {
+      "id": 32,
+      "question": "Which of these creates a dictionary?",
+      "options": ["{}", "dict()", "Both A and B", "[]"],
+      "correctAnswer": ["Both A and B"]
+    },
+    {
+      "id": 33,
+      "question": "Which module helps manage memory in Python?",
+      "options": ["gc", "mem", "sys", "memory"],
+      "correctAnswer": ["gc"]
+    },
+    {
+      "id": 34,
+      "question": "What is slicing in Python?",
+      "options": ["Dividing numbers", "Splitting modules", "Extracting sub-parts of sequences", "Memory allocation"],
+      "correctAnswer": ["Extracting sub-parts of sequences"]
+    },
+    {
+      "id": 35,
+      "question": "What does `yield` keyword do?",
+      "options": ["Pauses function and saves state", "Stops function", "Returns permanently", "Repeats value"],
+      "correctAnswer": ["Pauses function and saves state"]
+    },
+    {
+      "id": 36,
+      "question": "What is monkey patching?",
+      "options": ["Fixing bugs", "Changing module behavior at runtime", "Threading technique", "Overloading operators"],
+      "correctAnswer": ["Changing module behavior at runtime"]
+    },
+    {
+      "id": 37,
+      "question": "Which keyword is used for inheritance?",
+      "options": ["super", "class", "extends", "None (just pass parent in parentheses)"],
+      "correctAnswer": ["None (just pass parent in parentheses)"]
+    },
+    {
+      "id": 38,
+      "question": "What is the purpose of `with open()`?",
+      "options": ["File reading", "Handles file exceptions", "Automatically closes file", "All of the above"],
+      "correctAnswer": ["All of the above"]
+    },
+    {
+      "id": 39,
+      "question": "What is the output of `bool([])`?",
+      "options": ["True", "False", "None", "Error"],
+      "correctAnswer": ["False"]
+    },
+    {
+      "id": 40,
+      "question": "Which exception is raised by `int('abc')`?",
+      "options": ["ValueError", "TypeError", "SyntaxError", "KeyError"],
+      "correctAnswer": ["ValueError"]
+    },
+    {
+      "id": 41,
+      "question": "What does `dir()` do?",
+      "options": ["Returns a list of methods and attributes", "Returns a dictionary", "Shows variable values", "Clears console"],
+      "correctAnswer": ["Returns a list of methods and attributes"]
+    },
+    {
+      "id": 42,
+      "question": "What is the purpose of `nonlocal` keyword?",
+      "options": ["Modifies global var", "Creates a class", "Access outer scope variable", "Deletes variable"],
+      "correctAnswer": ["Access outer scope variable"]
+    },
+    {
+      "id": 43,
+      "question": "Which module provides support for regular expressions?",
+      "options": ["string", "re", "regex", "search"],
+      "correctAnswer": ["re"]
+    },
+    {
+      "id": 44,
+      "question": "What will `type((1,))` return?",
+      "options": ["tuple", "int", "list", "set"],
+      "correctAnswer": ["tuple"]
+    },
+    {
+      "id": 45,
+      "question": "Which of these can be a dictionary key?",
+      "options": ["list", "set", "tuple", "dict"],
+      "correctAnswer": ["tuple"]
+    },
+    {
+      "id": 46,
+      "question": "What is the default return value of a function with no return?",
+      "options": ["0", "null", "None", "False"],
+      "correctAnswer": ["None"]
+    },
+    {
+      "id": 47,
+      "question": "What will `print('a' * 3)` output?",
+      "options": ["aaa", "Error", "a3", "3a"],
+      "correctAnswer": ["aaa"]
+    },
+    {
+      "id": 48,
+      "question": "What is a decorator?",
+      "options": ["Function that modifies another function", "A design pattern", "Class wrapper", "Global variable"],
+      "correctAnswer": ["Function that modifies another function"]
+    },
+    {
+      "id": 49,
+      "question": "Which collection is unordered and mutable?",
+      "options": ["list", "set", "tuple", "str"],
+      "correctAnswer": ["set"]
+    },
+    {
+      "id": 50,
+      "question": "Which function is used to convert a number to hex?",
+      "options": ["hex()", "int()", "float()", "toHex()"],
+      "correctAnswer": ["hex()"]
+    },
+    {
+      "id": 51,
+      "question": "What is the difference between `is` and `==` in Python?",
+      "options": ["Both check identity", "`is` checks equality", "`is` checks identity, `==` checks value equality", "No difference"],
+      "correctAnswer": ["`is` checks identity, `==` checks value equality"]
+    },
+    {
+      "id": 52,
+      "question": "Which method is called when an object is created?",
+      "options": ["__create__", "__init__", "__new__", "__build__"],
+      "correctAnswer": ["__init__"]
+    },
+    {
+      "id": 53,
+      "question": "What does `globals()` return?",
+      "options": ["Local variables", "Global variables as a dict", "Current file path", "Built-in objects"],
+      "correctAnswer": ["Global variables as a dict"]
+    },
+    {
+      "id": 54,
+      "question": "Which of these types is unordered?",
+      "options": ["list", "dict", "tuple", "set"],
+      "correctAnswer": ["set"]
+    },
+    {
+      "id": 55,
+      "question": "How can you generate a random float between 0 and 1?",
+      "options": ["random()", "randfloat()", "random.uniform()", "random.range()"],
+      "correctAnswer": ["random()"]
+    },
+    {
+      "id": 56,
+      "question": "What will `round(3.14159, 2)` return?",
+      "options": ["3.14", "3.1", "3", "3.15"],
+      "correctAnswer": ["3.14"]
+    },
+    {
+      "id": 57,
+      "question": "Which of these methods modifies a list in place?",
+      "options": ["sorted()", "sort()", "reversed()", "map()"],
+      "correctAnswer": ["sort()"]
+    },
+    {
+      "id": 58,
+      "question": "What does `del` do in Python?",
+      "options": ["Deletes variable", "Deletes memory", "Uninstalls package", "Removes modules"],
+      "correctAnswer": ["Deletes variable"]
+    },
+    {
+      "id": 59,
+      "question": "What is the result of `3 < 4 < 5`?",
+      "options": ["True", "False", "Error", "None"],
+      "correctAnswer": ["True"]
+    },
+    {
+      "id": 60,
+      "question": "Which function is used to read input as a string?",
+      "options": ["input()", "raw_input()", "scanf()", "get()"],
+      "correctAnswer": ["input()"]
+    },
+    {
+      "id": 61,
+      "question": "Which module provides date/time functionality?",
+      "options": ["time", "calendar", "datetime", "date"],
+      "correctAnswer": ["datetime"]
+    },
+    {
+      "id": 62,
+      "question": "Which operator is used for floor division?",
+      "options": ["/", "//", "%", "**"],
+      "correctAnswer": ["//"]
+    },
+    {
+      "id": 63,
+      "question": "What will `None == 0` return?",
+      "options": ["True", "False", "Error", "None"],
+      "correctAnswer": ["False"]
+    },
+    {
+      "id": 64,
+      "question": "What is a metaclass in Python?",
+      "options": ["Type of class", "A class of a class", "A data structure", "Built-in decorator"],
+      "correctAnswer": ["A class of a class"]
+    },
+    {
+      "id": 65,
+      "question": "What is the result of `'abc'.find('b')`?",
+      "options": ["0", "1", "2", "-1"],
+      "correctAnswer": ["1"]
+    },
+    {
+      "id": 66,
+      "question": "How can you make a class iterable?",
+      "options": ["Implement __iter__", "Implement __next__", "Use yield", "Use @iter"],
+      "correctAnswer": ["Implement __iter__"]
+    },
+    {
+      "id": 67,
+      "question": "What is the result of `all([0, 1, 2])`?",
+      "options": ["True", "False", "0", "None"],
+      "correctAnswer": ["False"]
+    },
+    {
+      "id": 68,
+      "question": "What does `ord('A')` return?",
+      "options": ["'A'", "65", "Unicode string", "ASCII of 0"],
+      "correctAnswer": ["65"]
+    },
+    {
+      "id": 69,
+      "question": "Which module is used to handle command-line arguments?",
+      "options": ["argparse", "sys", "os", "cli"],
+      "correctAnswer": ["argparse"]
+    },
+    {
+      "id": 70,
+      "question": "What is the purpose of `*` in function arguments?",
+      "options": ["Unpack keyword args", "Unpack positional args", "Multiply args", "Set default values"],
+      "correctAnswer": ["Unpack positional args"]
+    },
+    {
+      "id": 71,
+      "question": "Which function checks if all elements are True?",
+      "options": ["any()", "every()", "all()", "check()"],
+      "correctAnswer": ["all()"]
+    },
+    {
+      "id": 72,
+      "question": "What does `re.match()` do?",
+      "options": ["Search whole string", "Match from beginning", "Match end only", "Returns list"],
+      "correctAnswer": ["Match from beginning"]
+    },
+    {
+      "id": 73,
+      "question": "What will `len({})` return?",
+      "options": ["0", "1", "None", "Error"],
+      "correctAnswer": ["0"]
+    },
+    {
+      "id": 74,
+      "question": "Which Python feature is used for managing resources like files?",
+      "options": ["with statement", "try-finally", "open-close", "file()"],
+      "correctAnswer": ["with statement"]
+    },
+    {
+      "id": 75,
+      "question": "What is `frozenset`?",
+      "options": ["A mutable set", "A hashable, immutable set", "A frozen list", "A dictionary key"],
+      "correctAnswer": ["A hashable, immutable set"]
+    },
+    {
+      "id": 76,
+      "question": "What will `divmod(9, 4)` return?",
+      "options": ["(2, 1)", "(2, 0)", "(2.25, 1)", "(2.0, 1)"],
+      "correctAnswer": ["(2, 1)"]
+    },
+    {
+      "id": 77,
+      "question": "What is the default return type of `input()`?",
+      "options": ["str", "int", "bool", "float"],
+      "correctAnswer": ["str"]
+    },
+    {
+      "id": 78,
+      "question": "How do you define a docstring in a function?",
+      "options": ["# comment", "/* */", "`string`", "''' triple quotes '''"],
+      "correctAnswer": ["''' triple quotes '''"]
+    },
+    {
+      "id": 79,
+      "question": "What does `filter()` return?",
+      "options": ["List", "Iterator", "Dict", "None"],
+      "correctAnswer": ["Iterator"]
+    },
+    {
+      "id": 80,
+      "question": "What will `print(type(lambda x: x))` return?",
+      "options": ["<class 'function'>", "<lambda>", "<method>", "anonymous"],
+      "correctAnswer": ["<class 'function'>"]
+    },
+    {
+      "id": 81,
+      "question": "What is a closure in Python?",
+      "options": ["A block of memory", "Function returning another function that remembers its scope", "A class method", "A static method"],
+      "correctAnswer": ["Function returning another function that remembers its scope"]
+    },
+    {
+      "id": 82,
+      "question": "What does `re.search()` return if no match is found?",
+      "options": ["[]", "None", "False", "Error"],
+      "correctAnswer": ["None"]
+    },
+    {
+      "id": 83,
+      "question": "What is the use of `pass` statement?",
+      "options": ["Skips execution", "Does nothing", "Breaks loop", "Pauses function"],
+      "correctAnswer": ["Does nothing"]
+    },
+    {
+      "id": 84,
+      "question": "How do you create an empty dictionary?",
+      "options": ["[]", "{}", "()", "dict()"],
+      "correctAnswer": ["{}"]
+    },
+    {
+      "id": 85,
+      "question": "Which operator checks for membership?",
+      "options": ["in", "==", "is", "has"],
+      "correctAnswer": ["in"]
+    },
+    {
+      "id": 86,
+      "question": "What will `''.join(['a','b','c'])` return?",
+      "options": ["abc", "a b c", "['a','b','c']", "None"],
+      "correctAnswer": ["abc"]
+    },
+    {
+      "id": 87,
+      "question": "Which exception is raised by accessing a missing key in a dictionary?",
+      "options": ["IndexError", "ValueError", "KeyError", "AttributeError"],
+      "correctAnswer": ["KeyError"]
+    },
+    {
+      "id": 88,
+      "question": "What is the output of `len('🐍')`?",
+      "options": ["1", "2", "4", "Error"],
+      "correctAnswer": ["1"]
+    },
+    {
+      "id": 89,
+      "question": "What will `print({1, 2, 3} & {2, 3, 4})` return?",
+      "options": ["{1, 4}", "{2, 3}", "[]", "{1, 2, 3, 4}"],
+      "correctAnswer": ["{2, 3}"]
+    },
+    {
+      "id": 90,
+      "question": "Which method is used to copy a dictionary?",
+      "options": ["copy()", "clone()", "dict()", "assign()"],
+      "correctAnswer": ["copy()"]
+    },
+    {
+      "id": 91,
+      "question": "Which of these is a Python tuple?",
+      "options": ["(1,)", "(1)", "[1]", "{1}"],
+      "correctAnswer": ["(1,)"]
+    },
+    {
+      "id": 92,
+      "question": "Which function returns the largest item in an iterable?",
+      "options": ["largest()", "max()", "high()", "top()"],
+      "correctAnswer": ["max()"]
+    },
+    {
+      "id": 93,
+      "question": "What will `bool({})` return?",
+      "options": ["True", "False", "None", "0"],
+      "correctAnswer": ["False"]
+    },
+    {
+      "id": 94,
+      "question": "Which exception occurs when dividing by zero?",
+      "options": ["ValueError", "ArithmeticError", "ZeroDivisionError", "None"],
+      "correctAnswer": ["ZeroDivisionError"]
+    },
+    {
+      "id": 95,
+      "question": "Which module handles file system paths in a platform-independent way?",
+      "options": ["os", "sys", "pathlib", "platform"],
+      "correctAnswer": ["pathlib"]
+    },
+    {
+      "id": 96,
+      "question": "What is the output of `int(3.99)`?",
+      "options": ["4", "3", "3.99", "Error"],
+      "correctAnswer": ["3"]
+    },
+    {
+      "id": 97,
+      "question": "What is the scope of a variable declared inside a function?",
+      "options": ["Global", "Class", "Function", "Static"],
+      "correctAnswer": ["Function"]
+    },
+    {
+      "id": 98,
+      "question": "What is the use of `try...finally`?",
+      "options": ["Only for catching errors", "Always runs finally block", "Skips exceptions", "Breaks loop"],
+      "correctAnswer": ["Always runs finally block"]
+    },
+    {
+      "id": 99,
+      "question": "What will be the result of `bool('0')`?",
+      "options": ["True", "False", "0", "None"],
+      "correctAnswer": ["True"]
+    },
+    {
+      "id": 100,
+      "question": "Which of the following data types is not hashable?",
+      "options": ["tuple", "str", "list", "int"],
+      "correctAnswer": ["list"]
+    }
+  ]
+  

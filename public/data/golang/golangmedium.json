@@ -1,0 +1,423 @@
+
+[
+    {
+      "id": 1,
+      "question": "Which Go keyword is used to define a function?",
+      "options": ["define", "func", "function", "def"],
+      "correctAnswer": ["func"]
+    },
+    {
+      "id": 2,
+      "question": "What is the correct way to declare and initialize a variable in Go?",
+      "options": ["var x = 5", "int x = 5", "x := 5", "let x = 5"],
+      "correctAnswer": ["x := 5"]
+    },
+    {
+      "id": 3,
+      "question": "Which of these types is used to store floating-point numbers?",
+      "options": ["int", "float32", "byte", "rune"],
+      "correctAnswer": ["float32"]
+    },
+    {
+      "id": 4,
+      "question": "What is the default value of an int in Go?",
+      "options": ["0", "nil", "undefined", "-1"],
+      "correctAnswer": ["0"]
+    },
+    {
+      "id": 5,
+      "question": "How do you create a slice from an array in Go?",
+      "options": ["arr.slice(0,2)", "arr[0:2]", "arr->slice(0,2)", "slice(arr, 0, 2)"],
+      "correctAnswer": ["arr[0:2]"]
+    },
+    {
+      "id": 6,
+      "question": "Which function is used to print output to the console?",
+      "options": ["os.Print()", "fmt.Print()", "log.Println()", "print()"],
+      "correctAnswer": ["fmt.Print()"]
+    },
+    {
+      "id": 7,
+      "question": "Which keyword is used to create a loop in Go?",
+      "options": ["loop", "for", "while", "repeat"],
+      "correctAnswer": ["for"]
+    },
+    {
+      "id": 8,
+      "question": "Which keyword is used to import external packages?",
+      "options": ["import", "use", "require", "include"],
+      "correctAnswer": ["import"]
+    },
+    {
+      "id": 9,
+      "question": "Which built-in Go type is used to store true/false values?",
+      "options": ["int", "bool", "bit", "boolean"],
+      "correctAnswer": ["bool"]
+    },
+    {
+      "id": 10,
+      "question": "What is the output type of the `len()` function in Go?",
+      "options": ["int", "uint", "float64", "byte"],
+      "correctAnswer": ["int"]
+    },
+    {
+      "id": 11,
+      "question": "How do you define a struct in Go?",
+      "options": ["struct {}", "type Name struct {}", "define struct {}", "object Name {}"],
+      "correctAnswer": ["type Name struct {}"]
+    },
+    {
+      "id": 12,
+      "question": "How do you add an element to a slice?",
+      "options": ["slice.add(val)", "slice = append(slice, val)", "slice.push(val)", "append(slice)"],
+      "correctAnswer": ["slice = append(slice, val)"]
+    },
+    {
+      "id": 13,
+      "question": "How do you check if a map key exists?",
+      "options": ["if key in map", "if map[key] != nil", "val, ok := map[key]", "exists(map, key)"],
+      "correctAnswer": ["val, ok := map[key]"]
+    },
+    {
+      "id": 14,
+      "question": "Which Go data type can store key-value pairs?",
+      "options": ["slice", "map", "struct", "interface"],
+      "correctAnswer": ["map"]
+    },
+    {
+      "id": 15,
+      "question": "Which Go feature allows functions to accept variable arguments?",
+      "options": ["optional()", "ellipsis (...)", "args[]", "varargs"],
+      "correctAnswer": ["ellipsis (...)"]
+    },
+    {
+      "id": 16,
+      "question": "Which symbol is used to create a pointer in Go?",
+      "options": ["&", "*", "@", "#"],
+      "correctAnswer": ["*"]
+    },
+    {
+      "id": 17,
+      "question": "What is the result of comparing two structs with the same fields and values?",
+      "options": ["false", "true", "undefined", "error"],
+      "correctAnswer": ["true"]
+    },
+    {
+      "id": 18,
+      "question": "Which Go package is used to convert types to strings?",
+      "options": ["strconv", "strings", "cast", "parser"],
+      "correctAnswer": ["strconv"]
+    },
+    {
+      "id": 19,
+      "question": "What is the default value of a string in Go?",
+      "options": ["nil", "\"\"", "null", "0"],
+      "correctAnswer": ["\"\""]
+    },
+    {
+      "id": 20,
+      "question": "What does the `recover()` function do?",
+      "options": ["Starts panic", "Resumes a panic", "Handles runtime error", "Stops panic and returns control"],
+      "correctAnswer": ["Stops panic and returns control"]
+    },
+    {
+      "id": 21,
+      "question": "Which package is used to read files in Go?",
+      "options": ["os", "file", "reader", "fs"],
+      "correctAnswer": ["os"]
+    },
+    {
+      "id": 22,
+      "question": "Which Go keyword is used to skip an iteration in a loop?",
+      "options": ["pass", "continue", "skip", "next"],
+      "correctAnswer": ["continue"]
+    },
+    {
+      "id": 23,
+      "question": "What is the default capacity of an empty slice created using `make([]int, 0)`?",
+      "options": ["0", "1", "nil", "undefined"],
+      "correctAnswer": ["0"]
+    },
+    {
+      "id": 24,
+      "question": "Which function is used to stop a goroutine?",
+      "options": ["goroutine.Stop()", "goexit()", "runtime.Goexit()", "go.Stop()"],
+      "correctAnswer": ["runtime.Goexit()"]
+    },
+    {
+      "id": 25,
+      "question": "Which Go data type is used to store Unicode characters?",
+      "options": ["byte", "rune", "string", "char"],
+      "correctAnswer": ["rune"]
+    },
+    {
+      "id": 26,
+      "question": "Which keyword is used to terminate a function early?",
+      "options": ["stop", "end", "return", "break"],
+      "correctAnswer": ["return"]
+    },
+    {
+      "id": 27,
+      "question": "Which of the following is true about slices in Go?",
+      "options": ["Fixed length", "Can grow dynamically", "Immutable", "Thread-safe"],
+      "correctAnswer": ["Can grow dynamically"]
+    },
+    {
+      "id": 28,
+      "question": "What is the use of `defer` in Go?",
+      "options": ["Stop panic", "Delay variable", "Schedule function for after return", "Log errors"],
+      "correctAnswer": ["Schedule function for after return"]
+    },
+    {
+      "id": 29,
+      "question": "What happens if you access an index out of range in a slice?",
+      "options": ["nil", "error", "panic", "false"],
+      "correctAnswer": ["panic"]
+    },
+    {
+      "id": 30,
+      "question": "How do you define an anonymous function?",
+      "options": ["function(){}", "func(){}", "def(){}", "() -> {}"],
+      "correctAnswer": ["func(){}"]
+    },
+    {
+      "id": 31,
+      "question": "Which operator is used to compare values in Go?",
+      "options": ["==", "=", "===", "!"],
+      "correctAnswer": ["=="]
+    },
+    {
+      "id": 32,
+      "question": "What is the output of `len(\"hello\")` in Go?",
+      "options": ["4", "5", "6", "0"],
+      "correctAnswer": ["5"]
+    },
+    {
+      "id": 33,
+      "question": "Which Go keyword declares a constant?",
+      "options": ["let", "define", "const", "fixed"],
+      "correctAnswer": ["const"]
+    },
+    {
+      "id": 34,
+      "question": "What is the purpose of `:=` in Go?",
+      "options": ["Type hint", "Import package", "Short variable declaration", "Error handler"],
+      "correctAnswer": ["Short variable declaration"]
+    },
+    {
+      "id": 35,
+      "question": "Which package handles time-related functionality?",
+      "options": ["clock", "time", "date", "chrono"],
+      "correctAnswer": ["time"]
+    },
+    {
+      "id": 36,
+      "question": "Which keyword is used to exit a loop early in Go?",
+      "options": ["exit", "return", "break", "stop"],
+      "correctAnswer": ["break"]
+    },
+    {
+      "id": 37,
+      "question": "How do you handle multiple return values from a function?",
+      "options": ["Use a tuple", "Separate variables with comma", "List destructuring", "Only one variable allowed"],
+      "correctAnswer": ["Separate variables with comma"]
+    },
+    {
+      "id": 38,
+      "question": "Which keyword is used to call a function concurrently?",
+      "options": ["async", "go", "thread", "start"],
+      "correctAnswer": ["go"]
+    },
+    {
+      "id": 39,
+      "question": "Which type is used to represent a group of methods in Go?",
+      "options": ["interface", "struct", "map", "type"],
+      "correctAnswer": ["interface"]
+    },
+    {
+      "id": 40,
+      "question": "Which method reads a line of input from the console?",
+      "options": ["input.Scan()", "fmt.Scanln()", "os.Read()", "readline()"],
+      "correctAnswer": ["fmt.Scanln()"]
+    },
+    {
+      "id": 41,
+      "question": "What will `make(chan int)` return?",
+      "options": ["A map", "A channel", "A goroutine", "A slice"],
+      "correctAnswer": ["A channel"]
+    },
+    {
+      "id": 42,
+      "question": "How do you pass a pointer to a function?",
+      "options": ["func(ptr *int)", "func(int pointer)", "func(&int)", "func(int*)"],
+      "correctAnswer": ["func(ptr *int)"]
+    },
+    {
+      "id": 43,
+      "question": "Which of these are valid Go loop styles?",
+      "options": ["for", "while", "foreach", "repeat"],
+      "correctAnswer": ["for"]
+    },
+    {
+      "id": 44,
+      "question": "Which Go keyword is used to define your own type?",
+      "options": ["define", "type", "struct", "alias"],
+      "correctAnswer": ["type"]
+    },
+    {
+      "id": 45,
+      "question": "What does `:=` do in Go?",
+      "options": ["Assigns and declares variable", "Imports package", "Checks types", "Defines constants"],
+      "correctAnswer": ["Assigns and declares variable"]
+    },
+    {
+      "id": 46,
+      "question": "Which statement is used to define an interface in Go?",
+      "options": ["interface MyType {}", "type MyType interface {}", "interface = MyType {}", "MyType implements {}"],
+      "correctAnswer": ["type MyType interface {}"]
+    },
+    {
+      "id": 47,
+      "question": "What is the output of `len([]int{1,2,3})`?",
+      "options": ["2", "3", "0", "nil"],
+      "correctAnswer": ["3"]
+    },
+    {
+      "id": 48,
+      "question": "What is true about Go arrays?",
+      "options": ["Resizable", "Fixed length", "Thread-safe", "Optional"],
+      "correctAnswer": ["Fixed length"]
+    },
+    {
+      "id": 49,
+      "question": "Which Go keyword is used to create a new goroutine?",
+      "options": ["new", "go", "thread", "create"],
+      "correctAnswer": ["go"]
+    },
+    {
+      "id": 50,
+      "question": "What does `nil` mean in Go?",
+      "options": ["Zero value for pointers, interfaces, maps, etc.", "Undefined", "Null object", "Empty string"],
+      "correctAnswer": ["Zero value for pointers, interfaces, maps, etc."]
+    },
+    {
+      "id": 51,
+      "question": "Which function is used to get the current year in Go?",
+      "options": ["time.Now().Year()", "time.Year()", "year()", "clock.Year()"],
+      "correctAnswer": ["time.Now().Year()"]
+    },
+    {
+      "id": 52,
+      "question": "What does `cap()` return when called on a slice?",
+      "options": ["Length", "Capacity", "Size in bytes", "Pointer address"],
+      "correctAnswer": ["Capacity"]
+    },
+    {
+      "id": 53,
+      "question": "What is the proper way to convert a string to an integer?",
+      "options": ["string.ToInt()", "strconv.Atoi()", "int.Parse()", "parseInt()"],
+      "correctAnswer": ["strconv.Atoi()"]
+    },
+    {
+      "id": 54,
+      "question": "How can you prevent a panic from crashing your program?",
+      "options": ["Use defer and recover", "Try-catch", "Ignore the panic", "Wrap in return"],
+      "correctAnswer": ["Use defer and recover"]
+    },
+    {
+      "id": 55,
+      "question": "How do you write unit tests in Go?",
+      "options": ["Use test.go suffix", "Use _test.go and testing package", "Use JUnit", "Use go.mock"],
+      "correctAnswer": ["Use _test.go and testing package"]
+    },
+    {
+      "id": 56,
+      "question": "Which function is used to convert an int to a string?",
+      "options": ["strconv.Itoa()", "int.toString()", "stringify()", "parseInt()"],
+      "correctAnswer": ["strconv.Itoa()"]
+    },
+    {
+      "id": 57,
+      "question": "What happens when you `range` over a map?",
+      "options": ["Iterates key-value pairs in random order", "Sorted order", "Throws error", "Only keys"],
+      "correctAnswer": ["Iterates key-value pairs in random order"]
+    },
+    {
+      "id": 58,
+      "question": "How do you define a method on a struct?",
+      "options": ["func (r Receiver) MethodName() {}", "method(){}", "Receiver.func(){}", "define(){}"],
+      "correctAnswer": ["func (r Receiver) MethodName() {}"]
+    },
+    {
+      "id": 59,
+      "question": "What is returned when accessing a non-existent map key?",
+      "options": ["nil", "panic", "zero value", "error"],
+      "correctAnswer": ["zero value"]
+    },
+    {
+      "id": 60,
+      "question": "Which data type should be used to store true/false?",
+      "options": ["bool", "bit", "binary", "int"],
+      "correctAnswer": ["bool"]
+    },
+    {
+      "id": 61,
+      "question": "What is the file extension of Go source files?",
+      "options": [".go", ".golang", ".g", ".gs"],
+      "correctAnswer": [".go"]
+    },
+    {
+      "id": 62,
+      "question": "Which Go command compiles and runs the code directly?",
+      "options": ["go build", "go install", "go run", "go execute"],
+      "correctAnswer": ["go run"]
+    },
+    {
+      "id": 63,
+      "question": "What is the starting index of arrays in Go?",
+      "options": ["1", "0", "-1", "Undefined"],
+      "correctAnswer": ["0"]
+    },
+    {
+      "id": 64,
+      "question": "How do you ignore a value from a function returning multiple values?",
+      "options": ["Use underscore _", "Use nil", "Use ignore()", "Leave blank"],
+      "correctAnswer": ["Use underscore _"]
+    },
+    {
+      "id": 65,
+      "question": "Which command runs Go tests?",
+      "options": ["go test", "go check", "go run test", "test.go"],
+      "correctAnswer": ["go test"]
+    },
+    {
+      "id": 66,
+      "question": "How do you check the type of an interface value at runtime?",
+      "options": ["Type assertion", "Reflect package", "Casting", "Typeof()"],
+      "correctAnswer": ["Type assertion"]
+    },
+    {
+      "id": 67,
+      "question": "Which package is used for HTTP servers in Go?",
+      "options": ["http", "net/http", "web/http", "net"],
+      "correctAnswer": ["net/http"]
+    },
+    {
+      "id": 68,
+      "question": "What is a goroutine?",
+      "options": ["Lightweight thread", "Go class", "Memory pointer", "Loop structure"],
+      "correctAnswer": ["Lightweight thread"]
+    },
+    {
+      "id": 69,
+      "question": "How can you make a slice from an existing array?",
+      "options": ["arr[low:high]", "slice(arr)", "new(arr)", "array.toSlice()"],
+      "correctAnswer": ["arr[low:high]"]
+    },
+    {
+      "id": 70,
+      "question": "Which function is used to panic manually?",
+      "options": ["panic()", "throw()", "fatal()", "fail()"],
+      "correctAnswer": ["panic()"]
+    }
+  ]

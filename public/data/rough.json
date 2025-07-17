@@ -1,0 +1,1052 @@
+[
+    {
+      "question": "What does the 'this' keyword refer to inside a regular function in strict mode?",
+      "options": ["The global object", "The object invoking the function", "undefined", "The prototype of the object"],
+      "correctAnswer": ["undefined"]
+    },
+    {
+      "question": "Which keyword is used to define a JavaScript class?",
+      "options": ["define", "class", "object", "constructor"],
+      "correctAnswer": ["class"]
+    },
+    {
+      "question": "Which method in a class is called automatically when a new object is created?",
+      "options": ["create()", "init()", "constructor()", "build()"],
+      "correctAnswer": ["constructor()"]
+    },
+    {
+      "question": "Which of the following best describes encapsulation in JavaScript?",
+      "options": ["Wrapping data and methods together", "Hiding logic from the user", "Inheriting multiple classes", "Making global variables"],
+      "correctAnswer": ["Wrapping data and methods together"]
+    },
+    {
+      "question": "How do you create a method in a JavaScript class?",
+      "options": ["function myMethod() {}", "this.myMethod = () => {}", "myMethod() {}", "method: function() {}"],
+      "correctAnswer": ["myMethod() {}"]
+    },
+    {
+      "question": "Which of the following is true about inheritance in JavaScript classes?",
+      "options": ["A class can extend only one class", "Multiple inheritance is allowed", "JavaScript doesn't support inheritance", "Objects can't inherit properties"],
+      "correctAnswer": ["A class can extend only one class"]
+    },
+    {
+      "question": "How do you call the parent class constructor in a subclass?",
+      "options": ["super()", "this()", "constructor()", "base()"],
+      "correctAnswer": ["super()"]
+    },
+    {
+      "question": "What keyword is used to define a class that inherits from another?",
+      "options": ["inherits", "extends", "prototype", "super"],
+      "correctAnswer": ["extends"]
+    },
+    {
+      "question": "What is polymorphism in JavaScript?",
+      "options": ["Defining multiple functions with the same name", "Creating multiple classes", "Using the same method name with different implementations", "Accessing private variables"],
+      "correctAnswer": ["Using the same method name with different implementations"]
+    },
+    {
+      "question": "What happens when you use 'super' inside a derived class method?",
+      "options": ["It refers to the current class", "It accesses the global object", "It calls the parent class's method", "It initializes the current class"],
+      "correctAnswer": ["It calls the parent class's method"]
+    },
+    {
+      "question": "How are private fields declared in modern JavaScript classes?",
+      "options": ["this.privateVar = 1;", "var privateVar = 1;", "#privateVar = 1;", "private privateVar = 1;"],
+      "correctAnswer": ["#privateVar = 1;"]
+    },
+    {
+      "question": "Which of these allows controlled access to a property?",
+      "options": ["Constructor", "Getter/Setter", "Prototype", "Static method"],
+      "correctAnswer": ["Getter/Setter"]
+    },
+    {
+      "question": "How do you define a getter in a class?",
+      "options": ["get: function() {}", "function getValue() {}", "get value() {}", "getter() {}"],
+      "correctAnswer": ["get value() {}"]
+    },
+    {
+      "question": "Which is an example of abstraction in JS?",
+      "options": ["Using a class to hide implementation details", "Creating variables outside functions", "Assigning event listeners", "Writing comments"],
+      "correctAnswer": ["Using a class to hide implementation details"]
+    },
+    {
+      "question": "What is the main benefit of using OOP in JavaScript?",
+      "options": ["Smaller files", "Faster compilation", "Better organization and reuse", "Shorter syntax"],
+      "correctAnswer": ["Better organization and reuse"]
+    },
+    {
+      "question": "Which statement is used to create an object from a class?",
+      "options": ["object = new()", "let obj = create Class()", "let obj = new ClassName()", "ClassName obj = new()"],
+      "correctAnswer": ["let obj = new ClassName()"]
+    },
+    {
+      "question": "What is a prototype in JavaScript?",
+      "options": ["A class instance", "A built-in function", "An object from which other objects inherit", "A DOM element"],
+      "correctAnswer": ["An object from which other objects inherit"]
+    },
+    {
+      "question": "Which method can be used to add a method to a constructor function’s prototype?",
+      "options": ["Object.assign()", "constructor.prototype.methodName = function() {}", "addMethod()", "this.method()"],
+      "correctAnswer": ["constructor.prototype.methodName = function() {}"]
+    },
+    {
+      "question": "What does Object.create() do?",
+      "options": ["Creates a DOM element", "Creates a new class", "Creates a new object with the specified prototype", "Copies an object"],
+      "correctAnswer": ["Creates a new object with the specified prototype"]
+    },
+    {
+      "question": "How do static methods differ from instance methods in a class?",
+      "options": ["Static methods are not allowed", "They can only be called inside constructors", "They belong to the class, not instances", "They automatically bind to 'this'"],
+      "correctAnswer": ["They belong to the class, not instances"]
+    },
+    {
+      "question": "In JavaScript OOP, what is the primary use of a constructor function?",
+      "options": [
+        "To call APIs",
+        "To set global variables",
+        "To initialize new object instances",
+        "To define event listeners"
+      ],
+      "correctAnswer": ["To initialize new object instances"]
+    },
+    {
+      "question": "Which keyword is used to inherit a class in JavaScript ES6?",
+      "options": [
+        "implement",
+        "extends",
+        "inherits",
+        "derive"
+      ],
+      "correctAnswer": ["extends"]
+    },
+    {
+      "question": "How does method overriding work in JavaScript OOP?",
+      "options": [
+        "By using the override keyword",
+        "By defining a method in the subclass with the same name as in the superclass",
+        "By renaming the method",
+        "By deleting the superclass method"
+      ],
+      "correctAnswer": ["By defining a method in the subclass with the same name as in the superclass"]
+    },
+    {
+      "question": "What is the result of calling `typeof class MyClass {}`?",
+      "options": [
+        "'function'",
+        "'class'",
+        "'object'",
+        "'undefined'"
+      ],
+      "correctAnswer": ["'function'"]
+    },
+    {
+      "question": "What is an instance method in JavaScript OOP?",
+      "options": [
+        "A method that is not bound to an object",
+        "A method used to run asynchronous code",
+        "A method defined in a class and available to instances of that class",
+        "A method that deletes object properties"
+      ],
+      "correctAnswer": ["A method defined in a class and available to instances of that class"]
+    },
+    {
+      "question": "Which concept allows objects to take on more than one form in JavaScript OOP?",
+      "options": [
+        "Abstraction",
+        "Encapsulation",
+        "Polymorphism",
+        "Recursion"
+      ],
+      "correctAnswer": ["Polymorphism"]
+    },
+    {
+      "question": "What will happen if a subclass does not call `super()` in its constructor?",
+      "options": [
+        "It will inherit the parent class automatically",
+        "It will throw a ReferenceError",
+        "It will work with warnings",
+        "The constructor will be ignored"
+      ],
+      "correctAnswer": ["It will throw a ReferenceError"]
+    },
+    {
+      "question": "How can encapsulation be achieved in modern JavaScript?",
+      "options": [
+        "Using public variables",
+        "Using `#` to declare private fields in a class",
+        "Using global variables",
+        "Using arrow functions"
+      ],
+      "correctAnswer": ["Using `#` to declare private fields in a class"]
+    },
+    {
+      "question": "Which of the following demonstrates method chaining in JavaScript?",
+      "options": [
+        "`obj.method1().method2()`",
+        "`obj.method1; obj.method2;`",
+        "`method1 -> method2`",
+        "`obj.call(method1).call(method2)`"
+      ],
+      "correctAnswer": ["`obj.method1().method2()`"]
+    },
+    {
+      "question": "Which JavaScript feature allows creating multiple objects from a class blueprint?",
+      "options": [
+        "Prototype chaining",
+        "Class instantiation",
+        "Method binding",
+        "Functional scope"
+      ],
+      "correctAnswer": ["Class instantiation"]
+    },
+    {
+      "question": "Which keyword inside a method refers to the current instance of a class?",
+      "options": [
+        "instance",
+        "that",
+        "this",
+        "object"
+      ],
+      "correctAnswer": ["this"]
+    },
+    {
+      "question": "In JavaScript, what does `Object.create()` do?",
+      "options": [
+        "Creates a deep copy of an object",
+        "Creates a new object with the specified prototype object and properties",
+        "Creates a new class",
+        "Creates a constructor function"
+      ],
+      "correctAnswer": ["Creates a new object with the specified prototype object and properties"]
+    },
+    {
+      "question": "What does the term 'abstraction' mean in OOP?",
+      "options": [
+        "Hiding details and showing only essential information",
+        "Exposing all class members to the global scope",
+        "Reducing code complexity with multiple files",
+        "None of the above"
+      ],
+      "correctAnswer": ["Hiding details and showing only essential information"]
+    },
+    {
+      "question": "Which built-in method is used to determine whether an object has a property as its own?",
+      "options": [
+        "Object.hasOwnProperty()",
+        "Object.checkProp()",
+        "Object.verify()",
+        "Object.getKeys()"
+      ],
+      "correctAnswer": ["Object.hasOwnProperty()"]
+    },
+    {
+      "question": "What is `super` used for in a class?",
+      "options": [
+        "To define a superclass",
+        "To access properties of the current object",
+        "To call methods from the parent class",
+        "To define static properties"
+      ],
+      "correctAnswer": ["To call methods from the parent class"]
+    },
+    {
+      "question": "How do you make a property static in a class?",
+      "options": [
+        "Use the `final` keyword",
+        "Use the `static` keyword",
+        "Use the `const` keyword",
+        "Declare outside the class"
+      ],
+      "correctAnswer": ["Use the `static` keyword"]
+    },
+    {
+      "question": "Which feature of OOP promotes code reuse?",
+      "options": [
+        "Inheritance",
+        "Polymorphism",
+        "Encapsulation",
+        "Abstraction"
+      ],
+      "correctAnswer": ["Inheritance"]
+    },
+    {
+      "question": "Which method is automatically called when an object is created using the `new` keyword?",
+      "options": [
+        "initialize()",
+        "constructor()",
+        "start()",
+        "create()"
+      ],
+      "correctAnswer": ["constructor()"]
+    },
+    {
+      "question": "What is the purpose of `Object.defineProperty()`?",
+      "options": [
+        "To create a property with custom descriptors",
+        "To delete object properties",
+        "To override object prototypes",
+        "To compare two objects"
+      ],
+      "correctAnswer": ["To create a property with custom descriptors"]
+    },
+    {
+      "question": "Which of the following is true about JavaScript's prototype-based inheritance?",
+      "options": [
+        "Objects inherit from classes directly",
+        "Functions do not support inheritance",
+        "Every object has a prototype object it inherits methods from",
+        "JavaScript does not support inheritance"
+      ],
+      "correctAnswer": ["Every object has a prototype object it inherits methods from"]
+    },
+    {
+      "question": "What is the difference between class-based and prototype-based inheritance in JavaScript?",
+      "options": [
+        "Class-based uses functions while prototype-based uses objects",
+        "There is no difference",
+        "Prototype-based inheritance doesn't support encapsulation",
+        "Class-based inheritance is not supported in JavaScript"
+      ],
+      "correctAnswer": ["Class-based uses functions while prototype-based uses objects"]
+    },
+    {
+      "question": "Which keyword is used to implement inheritance in JavaScript classes?",
+      "options": [
+        "inherit",
+        "extends",
+        "implements",
+        "super"
+      ],
+      "correctAnswer": ["extends"]
+    },
+    {
+      "question": "What will `typeof class MyClass {}` return?",
+      "options": [
+        "object",
+        "class",
+        "function",
+        "undefined"
+      ],
+      "correctAnswer": ["function"]
+    },
+    {
+      "question": "What is the purpose of the `super()` call in a derived class constructor?",
+      "options": [
+        "It initializes the child class properties",
+        "It binds `this` keyword",
+        "It calls the constructor of the parent class",
+        "It sets up the prototype chain"
+      ],
+      "correctAnswer": ["It calls the constructor of the parent class"]
+    },
+    {
+      "question": "Can a JavaScript class extend more than one class?",
+      "options": [
+        "Yes",
+        "Only with mixins",
+        "No",
+        "Only in ES6"
+      ],
+      "correctAnswer": ["Only with mixins"]
+    },
+    {
+      "question": "Which of the following best describes 'abstraction' in JavaScript OOP?",
+      "options": [
+        "Hiding implementation details",
+        "Sharing logic across objects",
+        "Extending from multiple classes",
+        "Overriding methods"
+      ],
+      "correctAnswer": ["Hiding implementation details"]
+    },
+    {
+      "question": "In JavaScript, how can we define a private method inside a class?",
+      "options": [
+        "Use `_` before the method name",
+        "Use `private` keyword",
+        "Use `#` before the method name",
+        "Declare the method outside the class"
+      ],
+      "correctAnswer": ["Use `#` before the method name"]
+    },
+    {
+      "question": "What is method overriding in JavaScript OOP?",
+      "options": [
+        "When a method calls another method",
+        "When a parent class method is hidden",
+        "When a child class redefines a parent class method",
+        "When a class has two methods with the same name"
+      ],
+      "correctAnswer": ["When a child class redefines a parent class method"]
+    },
+    {
+      "question": "What does the `Object.setPrototypeOf(obj, prototype)` function do?",
+      "options": [
+        "Creates a new class",
+        "Deletes an object's prototype",
+        "Sets the prototype of an object",
+        "Returns the class of the object"
+      ],
+      "correctAnswer": ["Sets the prototype of an object"]
+    },
+    {
+      "question": "What is a mixin in JavaScript?",
+      "options": [
+        "A class with multiple constructors",
+        "A way to extend multiple classes",
+        "An object that contains reusable methods",
+        "A type of constructor"
+      ],
+      "correctAnswer": ["An object that contains reusable methods"]
+    },
+    {
+      "question": "What will happen if you call `super()` after accessing `this` in the constructor?",
+      "options": [
+        "It will still work",
+        "It causes a reference error",
+        "It initializes the base class",
+        "It resets `this`"
+      ],
+      "correctAnswer": ["It causes a reference error"]
+    },
+    {
+      "question": "How can you implement polymorphism in JavaScript?",
+      "options": [
+        "Using `prototype` only",
+        "By method overloading only",
+        "Using method overriding in subclasses",
+        "By declaring multiple variables"
+      ],
+      "correctAnswer": ["Using method overriding in subclasses"]
+    },
+    {
+      "question": "Which of the following defines encapsulation in JavaScript?",
+      "options": [
+        "Grouping code in objects",
+        "Restricting access to certain data",
+        "Inheriting from another class",
+        "Writing code inside closures"
+      ],
+      "correctAnswer": ["Restricting access to certain data"]
+    },
+    {
+      "question": "What is the main benefit of using constructor functions for object creation?",
+      "options": [
+        "You can create multiple objects efficiently",
+        "They don't use memory",
+        "They avoid prototype inheritance",
+        "They prevent abstraction"
+      ],
+      "correctAnswer": ["You can create multiple objects efficiently"]
+    },
+    {
+      "question": "How can you define a static method in a class?",
+      "options": [
+        "With `#` symbol",
+        "With `@` symbol",
+        "Using the `static` keyword",
+        "You can't define static methods"
+      ],
+      "correctAnswer": ["Using the `static` keyword"]
+    },
+    {
+      "question": "What will be the value of `this` inside a regular function in strict mode?",
+      "options": [
+        "The global object",
+        "undefined",
+        "The class",
+        "The constructor"
+      ],
+      "correctAnswer": ["undefined"]
+    },
+    {
+      "question": "What does `Object.create()` do?",
+      "options": [
+        "Creates a copy of a class",
+        "Inherits from a prototype object",
+        "Creates an array",
+        "Converts object to class"
+      ],
+      "correctAnswer": ["Inherits from a prototype object"]
+    },
+    {
+      "question": "What is the purpose of `Object.defineProperty()`?",
+      "options": [
+        "To create new properties in a constructor",
+        "To define a method inside a class",
+        "To control property behavior on an object",
+        "To update object prototype"
+      ],
+      "correctAnswer": ["To control property behavior on an object"]
+    },
+    {
+      "question": "Which of the following are benefits of OOP in JavaScript?",
+      "options": [
+        "Better performance",
+        "Improved code reuse and readability",
+        "Faster DOM manipulation",
+        "Increased memory usage"
+      ],
+      "correctAnswer": ["Improved code reuse and readability"]
+    },
+    {
+      "question": "Which method is automatically called when creating a new object using a class?",
+      "options": [
+        "init()",
+        "constructor()",
+        "start()",
+        "main()"
+      ],
+      "correctAnswer": ["constructor()"]
+    },
+    {
+      "question": "What is the role of 'getters' and 'setters' in JavaScript classes?",
+      "options": [
+        "They define private properties",
+        "They manipulate prototypes",
+        "They define accessors for object properties",
+        "They destroy class instances"
+      ],
+      "correctAnswer": ["They define accessors for object properties"]
+    },
+    {
+      "question": "In JavaScript OOP, what is an instance method?",
+      "options": [
+        "A method defined on the prototype that can be accessed by instances",
+        "A static method that belongs to the class",
+        "A function that exists outside the class",
+        "A method that modifies class definitions"
+      ],
+      "correctAnswer": ["A method defined on the prototype that can be accessed by instances"]
+    },
+    {
+      "question": "Which JavaScript keyword is used to inherit from another class?",
+      "options": [
+        "this",
+        "extends",
+        "inherits",
+        "prototype"
+      ],
+      "correctAnswer": ["extends"]
+    },
+    {
+      "question": "How do you call the constructor of a parent class from a child class in JavaScript?",
+      "options": [
+        "super()",
+        "parent()",
+        "this()",
+        "call()"
+      ],
+      "correctAnswer": ["super()"]
+    },
+    {
+      "question": "What will `typeof class MyClass {}` return?",
+      "options": [
+        "'function'",
+        "'object'",
+        "'class'",
+        "'undefined'"
+      ],
+      "correctAnswer": ["'function'"]
+    },
+    {
+      "question": "What keyword is used to define a static method in a JavaScript class?",
+      "options": [
+        "static",
+        "const",
+        "define",
+        "prototype"
+      ],
+      "correctAnswer": ["static"]
+    },
+    {
+      "question": "Which keyword restricts access to class members in other classes in JavaScript (experimental)?",
+      "options": [
+        "#",
+        "private",
+        "this",
+        "sealed"
+      ],
+      "correctAnswer": ["#"]
+    },
+    {
+      "question": "What does `this.constructor` reference inside a class instance?",
+      "options": [
+        "The class constructor function",
+        "The parent class only",
+        "The object prototype",
+        "The child class only"
+      ],
+      "correctAnswer": ["The class constructor function"]
+    },
+    {
+      "question": "Which of the following best represents abstraction in JavaScript?",
+      "options": [
+        "Hiding internal logic using classes and exposing only necessary methods",
+        "Creating multiple instances",
+        "Overriding static methods",
+        "Using `setTimeout` to delay code"
+      ],
+      "correctAnswer": ["Hiding internal logic using classes and exposing only necessary methods"]
+    },
+    {
+      "question": "Which OOP principle allows a class to use the behavior and properties of another class?",
+      "options": [
+        "Inheritance",
+        "Encapsulation",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "correctAnswer": ["Inheritance"]
+    },
+    {
+      "question": "Which of the following allows you to create many forms of the same method in subclasses?",
+      "options": [
+        "Polymorphism",
+        "Encapsulation",
+        "Instantiation",
+        "Composition"
+      ],
+      "correctAnswer": ["Polymorphism"]
+    },
+    {
+      "question": "Which technique hides internal data from outside access?",
+      "options": [
+        "Encapsulation",
+        "Polymorphism",
+        "Inheritance",
+        "Abstraction"
+      ],
+      "correctAnswer": ["Encapsulation"]
+    },
+    {
+      "question": "In JavaScript OOP, what is the difference between 'this' in an arrow function vs a regular method?",
+      "options": [
+        "Arrow functions don’t bind their own 'this'",
+        "Arrow functions use global 'this' always",
+        "Arrow functions bind 'this' to the class",
+        "There is no difference"
+      ],
+      "correctAnswer": ["Arrow functions don’t bind their own 'this'"]
+    },
+    {
+      "question": "Which method in a class is automatically called when an object is created?",
+      "options": [
+        "constructor",
+        "init",
+        "create",
+        "start"
+      ],
+      "correctAnswer": ["constructor"]
+    },
+    {
+      "question": "How do you define a class expression in JavaScript?",
+      "options": [
+        "const MyClass = class { };",
+        "class:MyClass {}",
+        "function MyClass {}",
+        "let MyClass -> class {}"
+      ],
+      "correctAnswer": ["const MyClass = class { };"]
+    },
+    {
+      "question": "Which keyword is used to create a blueprint in JavaScript OOP?",
+      "options": [
+        "class",
+        "function",
+        "object",
+        "extends"
+      ],
+      "correctAnswer": ["class"]
+    },
+    {
+      "question": "Can JavaScript classes contain computed property names?",
+      "options": [
+        "Yes, using square brackets",
+        "No, classes do not allow it",
+        "Only with private fields",
+        "Only inside constructors"
+      ],
+      "correctAnswer": ["Yes, using square brackets"]
+    },
+    {
+      "question": "What is the best way to enforce abstraction in vanilla JavaScript?",
+      "options": [
+        "Use closures and return only the public methods",
+        "Use `delete` on private fields",
+        "Use arrow functions in global scope",
+        "Use alert() to hide data"
+      ],
+      "correctAnswer": ["Use closures and return only the public methods"]
+    },
+    {
+      "question": "Which term describes the concept of keeping class fields inaccessible directly from outside?",
+      "options": [
+        "Encapsulation",
+        "Inheritance",
+        "Abstraction",
+        "Prototyping"
+      ],
+      "correctAnswer": ["Encapsulation"]
+    },
+    {
+      "question": "What is the difference between class-based and prototype-based inheritance in JavaScript?",
+      "options": [
+        "Class-based uses functions while prototype-based does not",
+        "Prototype-based inheritance relies on objects inheriting directly from other objects, whereas class-based inheritance involves blueprint classes",
+        "They are the same in JavaScript",
+        "Prototype-based is only supported in ES5"
+      ],
+      "correctAnswer": ["Prototype-based inheritance relies on objects inheriting directly from other objects, whereas class-based inheritance involves blueprint classes"]
+    },
+    {
+      "question": "Which keyword is used to refer to the current object inside a method?",
+      "options": [
+        "self",
+        "that",
+        "this",
+        "object"
+      ],
+      "correctAnswer": ["this"]
+    },
+    {
+      "question": "How do you implement encapsulation in JavaScript?",
+      "options": [
+        "Using public variables only",
+        "Using closures or private fields to hide implementation details",
+        "Using arrays",
+        "Using comments"
+      ],
+      "correctAnswer": ["Using closures or private fields to hide implementation details"]
+    },
+    {
+      "question": "What will `this` refer to in a regular function called within `setTimeout()`?",
+      "options": [
+        "The global object or `undefined` in strict mode",
+        "The window location",
+        "The parent class",
+        "The setTimeout function"
+      ],
+      "correctAnswer": ["The global object or `undefined` in strict mode"]
+    },
+    {
+      "question": "Which feature of OOP allows JavaScript objects to inherit properties and methods from another object?",
+      "options": [
+        "Encapsulation",
+        "Abstraction",
+        "Inheritance",
+        "Polymorphism"
+      ],
+      "correctAnswer": ["Inheritance"]
+    },
+    {
+      "question": "What is a constructor function in JavaScript?",
+      "options": [
+        "A function that returns an array",
+        "A function used to create new objects and set their properties",
+        "A method inside an object",
+        "An arrow function with side effects"
+      ],
+      "correctAnswer": ["A function used to create new objects and set their properties"]
+    },
+    {
+      "question": "Which symbol is used to define private class fields in modern JavaScript?",
+      "options": [
+        "_",
+        "$",
+        "#",
+        "!"
+      ],
+      "correctAnswer": ["#"]
+    },
+    {
+      "question": "What does `Object.create()` do in JavaScript?",
+      "options": [
+        "Creates a copy of an array",
+        "Creates a new function",
+        "Creates a new object using the specified prototype object",
+        "Creates a new string object"
+      ],
+      "correctAnswer": ["Creates a new object using the specified prototype object"]
+    },
+    {
+      "question": "What is polymorphism in JavaScript?",
+      "options": [
+        "When objects have different types",
+        "When functions or methods behave differently based on the input",
+        "When prototypes are reused",
+        "When inheritance is blocked"
+      ],
+      "correctAnswer": ["When functions or methods behave differently based on the input"]
+    },
+    {
+      "question": "What is the main purpose of abstraction in JavaScript?",
+      "options": [
+        "To define multiple inheritance",
+        "To expose only necessary information and hide implementation details",
+        "To bind methods to the global scope",
+        "To increase execution time"
+      ],
+      "correctAnswer": ["To expose only necessary information and hide implementation details"]
+    },
+    {
+      "question": "How can you achieve abstraction in JavaScript?",
+      "options": [
+        "Using interfaces",
+        "By using classes and hiding methods via closures or private fields",
+        "Only by using ES5 functions",
+        "Abstraction is not supported"
+      ],
+      "correctAnswer": ["By using classes and hiding methods via closures or private fields"]
+    },
+    {
+      "question": "Which method allows you to call a function with a specific `this` value and arguments as an array?",
+      "options": [
+        "call()",
+        "apply()",
+        "bind()",
+        "execute()"
+      ],
+      "correctAnswer": ["apply()"]
+    },
+    {
+      "question": "Which method creates a new function with `this` bound to a given value?",
+      "options": [
+        "bind()",
+        "call()",
+        "apply()",
+        "attach()"
+      ],
+      "correctAnswer": ["bind()"]
+    },
+    {
+      "question": "In class-based OOP in JavaScript, how do you define a method?",
+      "options": [
+        "Using function keyword inside class",
+        "Using arrow functions outside constructor",
+        "Just methodName() inside class",
+        "Defining outside and importing"
+      ],
+      "correctAnswer": ["Just methodName() inside class"]
+    },
+    {
+      "question": "Can you inherit from more than one class in JavaScript using `extends`?",
+      "options": [
+        "Yes",
+        "Only with mixins",
+        "No",
+        "Only in ES6"
+      ],
+      "correctAnswer": ["Only with mixins"]
+    },
+    {
+      "question": "Which pattern allows for combining functionalities from multiple sources into a single class?",
+      "options": [
+        "Prototype chaining",
+        "Mixin",
+        "Composition",
+        "Decorator"
+      ],
+      "correctAnswer": ["Mixin"]
+    },
+    {
+      "question": "What will `this` point to inside an arrow function in a class method?",
+      "options": [
+        "It depends on how it's called",
+        "The global object",
+        "The class instance it was defined in",
+        "undefined"
+      ],
+      "correctAnswer": ["The class instance it was defined in"]
+    },
+    {
+      "question": "What is the result of `typeof class MyClass {}` in JavaScript?",
+      "options": [
+        "function",
+        "object",
+        "class",
+        "undefined"
+      ],
+      "correctAnswer": ["function"]
+    },
+    {
+      "question": "Which of the following is true about static methods?",
+      "options": [
+        "They can access instance properties directly",
+        "They are called on class instances",
+        "They are called on the class itself, not instances",
+        "They are used for binding `this`"
+      ],
+      "correctAnswer": ["They are called on the class itself, not instances"]
+    },
+    {
+      "question": "How do you access the prototype of a function in JavaScript?",
+      "options": [
+        "function.__proto__",
+        "function.constructor",
+        "function.prototype",
+        "function.bind()"
+      ],
+      "correctAnswer": ["function.prototype"]
+    },
+    {
+      "question": "What is encapsulation in JavaScript?",
+      "options": [
+        "Wrapping data and methods into a single unit",
+        "Using loops inside functions",
+        "Using multiple functions in one object",
+        "None of the above"
+      ],
+      "correctAnswer": ["Wrapping data and methods into a single unit"]
+    },
+    {
+      "question": "Which keyword is used to create a class in JavaScript?",
+      "options": ["object", "class", "function", "new"],
+      "correctAnswer": ["class"]
+    },
+    {
+      "question": "Which method is called when an object is created from a class?",
+      "options": ["constructor()", "init()", "setup()", "create()"],
+      "correctAnswer": ["constructor()"]
+    },
+    {
+      "question": "What does the `extends` keyword do in JavaScript?",
+      "options": [
+        "It extends the scope of a function",
+        "It creates a subclass",
+        "It copies a function",
+        "It creates a closure"
+      ],
+      "correctAnswer": ["It creates a subclass"]
+    },
+    {
+      "question": "What is polymorphism in OOP?",
+      "options": [
+        "When objects inherit from multiple classes",
+        "When a function behaves differently based on the object",
+        "When classes have multiple constructors",
+        "When variables change type"
+      ],
+      "correctAnswer": ["When a function behaves differently based on the object"]
+    },
+    {
+      "question": "Which principle hides internal object details?",
+      "options": ["Inheritance", "Polymorphism", "Abstraction", "Encapsulation"],
+      "correctAnswer": ["Encapsulation"]
+    },
+    {
+      "question": "Which of the following best describes 'abstraction'?",
+      "options": [
+        "Reducing complexity by hiding unnecessary details",
+        "Showing all class members",
+        "Copying objects",
+        "Linking classes"
+      ],
+      "correctAnswer": ["Reducing complexity by hiding unnecessary details"]
+    },
+    {
+      "question": "In JavaScript, what is the role of the `super` keyword?",
+      "options": [
+        "To import modules",
+        "To reference a superclass constructor or method",
+        "To call a static method",
+        "To create a new instance"
+      ],
+      "correctAnswer": ["To reference a superclass constructor or method"]
+    },
+    {
+      "question": "How do you define a private class field in JavaScript?",
+      "options": ["with `_` prefix", "using `#`", "with `private` keyword", "with `hidden` keyword"],
+      "correctAnswer": ["using `#`"]
+    },
+    {
+      "question": "What is method overriding?",
+      "options": [
+        "Calling a method inside another method",
+        "Replacing a superclass method in the subclass",
+        "Using multiple methods with same name in one class",
+        "Defining a static method"
+      ],
+      "correctAnswer": ["Replacing a superclass method in the subclass"]
+    },
+    {
+      "question": "Which statement about `this` keyword is true?",
+      "options": [
+        "`this` always refers to the global object",
+        "`this` refers to the object that is executing the current function",
+        "`this` is undefined in arrow functions",
+        "`this` always refers to the parent object"
+      ],
+      "correctAnswer": ["`this` refers to the object that is executing the current function"]
+    },
+    {
+      "question": "Which of these is true about static methods in a class?",
+      "options": [
+        "They belong to object instances",
+        "They can be called with `this` inside the object",
+        "They can only be called on the class itself",
+        "They are automatically bound"
+      ],
+      "correctAnswer": ["They can only be called on the class itself"]
+    },
+    {
+      "question": "Which feature of OOP allows reusability of code?",
+      "options": ["Polymorphism", "Abstraction", "Inheritance", "Encapsulation"],
+      "correctAnswer": ["Inheritance"]
+    },
+    {
+      "question": "Which keyword is used to create an object from a class?",
+      "options": ["make", "object", "new", "instance"],
+      "correctAnswer": ["new"]
+    },
+    {
+      "question": "What is the main purpose of using OOP in JavaScript?",
+      "options": [
+        "To improve variable naming",
+        "To increase page load time",
+        "To organize code using objects and classes",
+        "To add more lines of code"
+      ],
+      "correctAnswer": ["To organize code using objects and classes"]
+    },
+    {
+      "question": "Which of these is NOT a feature of OOP?",
+      "options": ["Encapsulation", "Polymorphism", "Looping", "Abstraction"],
+      "correctAnswer": ["Looping"]
+    },
+    {
+      "question": "What will `this` refer to in a regular function (non-arrow) called in global scope?",
+      "options": ["undefined", "window", "global object", "the function itself"],
+      "correctAnswer": ["window"]
+    },
+    {
+      "question": "In which scenario is an arrow function preferred over a regular function in OOP?",
+      "options": [
+        "When using as a constructor",
+        "When lexical `this` is needed",
+        "When you want to bind `this` manually",
+        "When defining class methods"
+      ],
+      "correctAnswer": ["When lexical `this` is needed"]
+    },
+    {
+      "question": "What does the `Object.create()` method do?",
+      "options": [
+        "Creates a deep clone",
+        "Creates a new object using the specified prototype",
+        "Creates an object from JSON",
+        "Creates an object with a null prototype"
+      ],
+      "correctAnswer": ["Creates a new object using the specified prototype"]
+    },
+    {
+      "question": "What is the purpose of `Object.assign()` in JavaScript?",
+      "options": [
+        "Merges properties from source to target object",
+        "Creates private members",
+        "Defines getters and setters",
+        "Creates object instances"
+      ],
+      "correctAnswer": ["Merges properties from source to target object"]
+    }
+  ]

@@ -1,0 +1,527 @@
+[
+    {
+      "id": 1,
+      "question": "What is the purpose of the useEffect hook in React?",
+      "options": ["To fetch data only", "To directly manipulate DOM", "To perform side effects in function components", "To replace useState"],
+      "correctAnswer": ["To perform side effects in function components"]
+    },
+    {
+      "id": 2,
+      "question": "What will happen if you call setState in componentDidMount?",
+      "options": ["It causes an infinite loop", "It throws an error", "It updates state after initial render", "It doesn’t do anything"],
+      "correctAnswer": ["It updates state after initial render"]
+    },
+    {
+      "id": 3,
+      "question": "Which hook allows you to persist values between renders without causing a re-render?",
+      "options": ["useEffect", "useRef", "useState", "useMemo"],
+      "correctAnswer": ["useRef"]
+    },
+    {
+      "id": 4,
+      "question": "What is the default behavior of React’s useEffect hook?",
+      "options": ["Runs before every render", "Runs after every render", "Runs once on mount only", "Never runs by default"],
+      "correctAnswer": ["Runs after every render"]
+    },
+    {
+      "id": 5,
+      "question": "Why is a key prop important in a list of elements?",
+      "options": ["For accessibility", "For CSS styling", "To uniquely identify elements and help React optimize rendering", "To name elements"],
+      "correctAnswer": ["To uniquely identify elements and help React optimize rendering"]
+    },
+    {
+      "id": 6,
+      "question": "Which method in class components is equivalent to useEffect with an empty dependency array?",
+      "options": ["componentDidUpdate", "componentDidMount", "render", "constructor"],
+      "correctAnswer": ["componentDidMount"]
+    },
+    {
+      "id": 7,
+      "question": "What does the useMemo hook do?",
+      "options": ["Prevents re-renders", "Runs on every render", "Memoizes a function return to avoid recalculation", "Memoizes component itself"],
+      "correctAnswer": ["Memoizes a function return to avoid recalculation"]
+    },
+    {
+      "id": 8,
+      "question": "In React, what is context primarily used for?",
+      "options": ["State management across multiple components", "Styling components", "Creating new components", "Handling API calls"],
+      "correctAnswer": ["State management across multiple components"]
+    },
+    {
+      "id": 9,
+      "question": "What is a controlled component?",
+      "options": ["A component with no state", "A component with default state", "A component whose form data is handled by React state", "A class component only"],
+      "correctAnswer": ["A component whose form data is handled by React state"]
+    },
+    {
+      "id": 10,
+      "question": "What’s the use of useCallback in React?",
+      "options": ["It avoids re-declaring functions unnecessarily", "It updates the DOM", "It fetches data", "It memoizes computed values"],
+      "correctAnswer": ["It avoids re-declaring functions unnecessarily"]
+    },
+    {
+      "id": 11,
+      "question": "Which lifecycle method is called before a component is removed from the DOM?",
+      "options": ["componentWillUnmount", "componentDidMount", "componentDidUpdate", "render"],
+      "correctAnswer": ["componentWillUnmount"]
+    },
+    {
+      "id": 12,
+      "question": "How can props be passed to a child component in JSX?",
+      "options": ["<Child prop1='value' />", "<Child:prop1='value'>", "<Child.prop1=value>", "Child(prop1=value)"],
+      "correctAnswer": ["<Child prop1='value' />"]
+    },
+    {
+      "id": 13,
+      "question": "What does the 'key' prop help React identify?",
+      "options": ["Which items have changed", "Component types", "Function scope", "Component state"],
+      "correctAnswer": ["Which items have changed"]
+    },
+    {
+      "id": 14,
+      "question": "What is the second argument of useEffect used for?",
+      "options": ["Dependency array to control re-run", "Styling hooks", "Child props", "Passing context"],
+      "correctAnswer": ["Dependency array to control re-run"]
+    },
+    {
+      "id": 15,
+      "question": "Which hook would you use to store a complex object and update it immutably?",
+      "options": ["useState", "useReducer", "useEffect", "useCallback"],
+      "correctAnswer": ["useReducer"]
+    },
+    {
+      "id": 16,
+      "question": "What will happen if you update state inside a render function?",
+      "options": ["It causes infinite re-renders", "It works normally", "It runs once", "It triggers useEffect only"],
+      "correctAnswer": ["It causes infinite re-renders"]
+    },
+    {
+      "id": 17,
+      "question": "What does JSX stand for?",
+      "options": ["JavaScript XML", "Java Syntax Extension", "JavaScript Extension", "JavaScript Expression"],
+      "correctAnswer": ["JavaScript XML"]
+    },
+    {
+      "id": 18,
+      "question": "In which situation would you use useRef instead of useState?",
+      "options": ["To persist a value without re-rendering", "To hold form inputs", "To style a component", "To manage props"],
+      "correctAnswer": ["To persist a value without re-rendering"]
+    },
+    {
+      "id": 19,
+      "question": "How can React.Fragment be written using shorthand?",
+      "options": ["<>...</>", "<frag>...</frag>", "<React.Fragment>...</React.Fragment>", "Both 1 and 3"],
+      "correctAnswer": ["<>...</>"]
+    },
+    {
+      "id": 20,
+      "question": "Which method is used to lift state up in React?",
+      "options": ["Pass a callback to child", "Use useContext", "Use global variable", "Use useReducer"],
+      "correctAnswer": ["Pass a callback to child"]
+    },
+    {
+      "id": 21,
+      "question": "What is the difference between useMemo and useCallback?",
+      "options": [
+        "useMemo memoizes values, useCallback memoizes functions",
+        "Both are used to memoize values",
+        "Both are used to memoize functions",
+        "useCallback is faster than useMemo"
+      ],
+      "correctAnswer": ["useMemo memoizes values, useCallback memoizes functions"]
+    },
+    {
+      "id": 22,
+      "question": "How do you update the state based on the previous state using useState?",
+      "options": [
+        "setCount(prev => prev + 1)",
+        "setCount(count + 1)",
+        "updateCount(count++)",
+        "setCount(prev + 1)"
+      ],
+      "correctAnswer": ["setCount(prev => prev + 1)"]
+    },
+    {
+      "id": 23,
+      "question": "What does the useLayoutEffect hook do?",
+      "options": [
+        "It runs synchronously after all DOM mutations",
+        "It runs before render",
+        "It delays rendering",
+        "It runs after the paint"
+      ],
+      "correctAnswer": ["It runs synchronously after all DOM mutations"]
+    },
+    {
+      "id": 24,
+      "question": "Which hook would you use to manage a dynamic form state?",
+      "options": ["useReducer", "useMemo", "useCallback", "useRef"],
+      "correctAnswer": ["useReducer"]
+    },
+    {
+      "id": 25,
+      "question": "How do you prevent a default form submission in React?",
+      "options": [
+        "event.preventDefault()",
+        "event.stopPropagation()",
+        "event.cancel()",
+        "return false"
+      ],
+      "correctAnswer": ["event.preventDefault()"]
+    },
+    {
+      "id": 26,
+      "question": "Which file extension is commonly used for JSX files?",
+      "options": [".jsx", ".js", ".json", ".tsx"],
+      "correctAnswer": [".jsx"]
+    },
+    {
+      "id": 27,
+      "question": "How would you conditionally apply a className in JSX?",
+      "options": [
+        "`className={isActive ? 'active' : ''}`",
+        "`className='isActive && active'`",
+        "`class='active' if isActive`",
+        "`applyClass(active)`"
+      ],
+      "correctAnswer": ["`className={isActive ? 'active' : ''}`"]
+    },
+    {
+      "id": 28,
+      "question": "Which function is called when a functional component is rendered?",
+      "options": ["The component itself", "render()", "main()", "updateComponent()"],
+      "correctAnswer": ["The component itself"]
+    },
+    {
+      "id": 29,
+      "question": "How can you prevent a child component from re-rendering unnecessarily?",
+      "options": ["Use React.memo", "Use useEffect", "Use useRef", "Use useState"],
+      "correctAnswer": ["Use React.memo"]
+    },
+    {
+      "id": 30,
+      "question": "What happens when the key prop changes in a list item?",
+      "options": [
+        "React re-creates the element",
+        "React ignores the change",
+        "React uses the index instead",
+        "Nothing changes"
+      ],
+      "correctAnswer": ["React re-creates the element"]
+    },
+    {
+      "id": 31,
+      "question": "Which prop allows data to be passed from parent to child?",
+      "options": ["props", "state", "context", "useState"],
+      "correctAnswer": ["props"]
+    },
+    {
+      "id": 32,
+      "question": "What does useImperativeHandle hook allow?",
+      "options": [
+        "Customizing the instance value exposed to parent",
+        "Direct DOM access",
+        "Updating context",
+        "Preventing re-renders"
+      ],
+      "correctAnswer": ["Customizing the instance value exposed to parent"]
+    },
+    {
+      "id": 33,
+      "question": "Which lifecycle method is used to perform actions after the component updates?",
+      "options": ["componentDidUpdate", "componentDidMount", "componentWillUnmount", "render"],
+      "correctAnswer": ["componentDidUpdate"]
+    },
+    {
+      "id": 34,
+      "question": "How do you initialize local state in a class component?",
+      "options": [
+        "this.state = {} in constructor",
+        "setState()",
+        "this.localState = {}",
+        "useState()"
+      ],
+      "correctAnswer": ["this.state = {} in constructor"]
+    },
+    {
+      "id": 35,
+      "question": "What hook is used to subscribe to context changes?",
+      "options": ["useContext", "useState", "useRef", "useCallback"],
+      "correctAnswer": ["useContext"]
+    },
+    {
+      "id": 36,
+      "question": "Which part of React updates the UI based on state changes?",
+      "options": ["Virtual DOM", "Real DOM", "Props", "Redux"],
+      "correctAnswer": ["Virtual DOM"]
+    },
+    {
+      "id": 37,
+      "question": "What does the 'children' prop in React represent?",
+      "options": [
+        "Nested components or elements",
+        "Parent props",
+        "Default data",
+        "Component styles"
+      ],
+      "correctAnswer": ["Nested components or elements"]
+    },
+    {
+      "id": 38,
+      "question": "How do you call a function only once when a component mounts?",
+      "options": [
+        "useEffect(()] => {}, [])",
+        "useState(()] => {}, [])",
+        "useRef(()] => {}, [])",
+        "useEffect(() => {})"
+      ],
+      "correctAnswer": ["useEffect(()] => {}, [])"]
+    },
+    {
+      "id": 39,
+      "question": "What does the term 'lifting state up' mean in React?",
+      "options": [
+        "Moving state to the nearest common ancestor",
+        "Converting state to props",
+        "Moving props to context",
+        "Using global variables"
+      ],
+      "correctAnswer": ["Moving state to the nearest common ancestor"]
+    },
+    {
+      "id": 40,
+      "question": "What does useId provide in React?",
+      "options": [
+        "Unique ID for accessibility or DOM elements",
+        "UUID for forms",
+        "ID for styling",
+        "Database IDs"
+      ],
+      "correctAnswer": ["Unique ID for accessibility or DOM elements"]
+    },
+    {
+      "id": 41,
+      "question": "How do you ensure a useEffect does not run on initial render but only on updates?",
+      "options": [
+        "Use a ref to skip initial run",
+        "Remove the dependency array",
+        "Use setTimeout inside useEffect",
+        "Wrap it in useCallback"
+      ],
+      "correctAnswer": ["Use a ref to skip initial run"]
+    },
+    {
+      "id": 42,
+      "question": "What is the primary benefit of using useReducer over useState?",
+      "options": [
+        "Better for complex state logic",
+        "Faster re-renders",
+        "Easier to use",
+        "Avoids useEffect"
+      ],
+      "correctAnswer": ["Better for complex state logic"]
+    },
+    {
+      "id": 43,
+      "question": "How can React.memo help in performance optimization?",
+      "options": [
+        "Prevents unnecessary re-renders by memoizing components",
+        "Stops context updates",
+        "Caches API calls",
+        "Avoids useEffect"
+      ],
+      "correctAnswer": ["Prevents unnecessary re-renders by memoizing components"]
+    },
+    {
+      "id": 44,
+      "question": "What is the role of the React key prop in lists?",
+      "options": [
+        "Helps identify which items changed",
+        "Used for styling",
+        "Controls conditional rendering",
+        "Defines the order of execution"
+      ],
+      "correctAnswer": ["Helps identify which items changed"]
+    },
+    {
+      "id": 45,
+      "question": "Which React hook is best for integrating third-party DOM libraries?",
+      "options": [
+        "useRef",
+        "useEffect",
+        "useCallback",
+        "useState"
+      ],
+      "correctAnswer": ["useRef"]
+    },
+    {
+      "id": 46,
+      "question": "When using useContext, where must the provider be placed?",
+      "options": [
+        "Above the consuming components in the component tree",
+        "Inside the component",
+        "Outside ReactDOM.render",
+        "In useEffect"
+      ],
+      "correctAnswer": ["Above the consuming components in the component tree"]
+    },
+    {
+      "id": 47,
+      "question": "How do you avoid stale closures inside useEffect?",
+      "options": [
+        "Add dependencies to the array",
+        "Use setTimeout",
+        "Use useLayoutEffect instead",
+        "Avoid hooks"
+      ],
+      "correctAnswer": ["Add dependencies to the array"]
+    },
+    {
+      "id": 48,
+      "question": "Which hook would you use to access the DOM element directly?",
+      "options": [
+        "useRef",
+        "useCallback",
+        "useEffect",
+        "useState"
+      ],
+      "correctAnswer": ["useRef"]
+    },
+    {
+      "id": 49,
+      "question": "What is the return type of useState hook?",
+      "options": [
+        "An array with current state and a setter function",
+        "A single value",
+        "A number",
+        "An object"
+      ],
+      "correctAnswer": ["An array with current state and a setter function"]
+    },
+    {
+      "id": 50,
+      "question": "Which lifecycle phase is simulated by useEffect with empty dependencies?",
+      "options": [
+        "componentDidMount",
+        "componentDidUpdate",
+        "componentWillUnmount",
+        "render"
+      ],
+      "correctAnswer": ["componentDidMount"]
+    },
+    {
+      "id": 51,
+      "question": "What is the correct way to update an object state immutably?",
+      "options": [
+        "setState(prev => ({ ...prev, updatedProp: value }))",
+        "state.updatedProp = value",
+        "setState({ updatedProp: value })",
+        "useEffect(() => state.updatedProp = value)"
+      ],
+      "correctAnswer": ["setState(prev => ({ ...prev, updatedProp: value }))"]
+    },
+    {
+      "id": 52,
+      "question": "What problem does useCallback solve in prop drilling?",
+      "options": [
+        "Avoids re-creation of functions passed to children",
+        "Prevents prop mutation",
+        "Creates global variables",
+        "Delays re-render"
+      ],
+      "correctAnswer": ["Avoids re-creation of functions passed to children"]
+    },
+    {
+      "id": 53,
+      "question": "When does useEffect run by default?",
+      "options": [
+        "After every render",
+        "Before every render",
+        "Only once on mount",
+        "Never automatically"
+      ],
+      "correctAnswer": ["After every render"]
+    },
+    {
+      "id": 54,
+      "question": "Which hook allows tracking component dimensions or window resize?",
+      "options": [
+        "useLayoutEffect",
+        "useEffect",
+        "useRef",
+        "useState"
+      ],
+      "correctAnswer": ["useLayoutEffect"]
+    },
+    {
+      "id": 55,
+      "question": "How can React components be styled?",
+      "options": [
+        "Inline styles, CSS modules, styled-components",
+        "Only inline styles",
+        "Only global CSS",
+        "Just use external libraries"
+      ],
+      "correctAnswer": ["Inline styles, CSS modules, styled-components"]
+    },
+    {
+      "id": 56,
+      "question": "Which method is used to render arrays in JSX?",
+      "options": [
+        "Array.map()",
+        "Array.forEach()",
+        "Array.reduce()",
+        "Array.filter()"
+      ],
+      "correctAnswer": ["Array.map()"]
+    },
+    {
+      "id": 57,
+      "question": "What happens if two sibling elements have the same key in a list?",
+      "options": [
+        "React may incorrectly reuse elements",
+        "Nothing will happen",
+        "Render is faster",
+        "They will merge"
+      ],
+      "correctAnswer": ["React may incorrectly reuse elements"]
+    },
+    {
+      "id": 58,
+      "question": "What is the function of React.StrictMode?",
+      "options": [
+        "Highlights potential problems in an app",
+        "Enables production mode",
+        "Removes console logs",
+        "Adds debugging tools"
+      ],
+      "correctAnswer": ["Highlights potential problems in an app"]
+    },
+    {
+      "id": 59,
+      "question": "What is returned by the useRef hook initially?",
+      "options": [
+        "An object with a current property",
+        "A DOM node",
+        "A boolean",
+        "Nothing"
+      ],
+      "correctAnswer": ["An object with a current property"]
+    },
+    {
+      "id": 60,
+      "question": "How do you reset a form in React?",
+      "options": [
+        "By clearing state tied to input fields",
+        "Call reset() on the form element",
+        "Remove the form",
+        "Change placeholder values"
+      ],
+      "correctAnswer": ["By clearing state tied to input fields"]
+    }
+  ]
+  
+  
+  
+
+   

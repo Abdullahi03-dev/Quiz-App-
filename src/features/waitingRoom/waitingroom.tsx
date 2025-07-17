@@ -61,7 +61,7 @@ console.log(doc)
             <h3 className='text-white text-[16px] w-[100%] text-center pb-4'>Waiting For Opponent To Join....</h3>
             <div className="flex justify-center items-center flex-col  py-2 md:flex-row">
 
-              <h3 className="text-xl md:mx-1.5">{ username!==null? username:'USER1'}  </h3>
+              <h3 className="text-xl md:mx-1.5">{ username}  </h3>
               <h3 className="text-xl md:mx-1.5 pr-3">vs</h3>
               {/* <h3 className="text-xl md:mx-1.5">Loading....{secondUser}</h3> */}
               <div className="flex items-baseline  space-x-2 mb-3">

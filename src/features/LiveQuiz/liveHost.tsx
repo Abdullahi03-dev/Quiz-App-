@@ -275,7 +275,7 @@ const formatTime = (secs:number) => {
         navigate(-1)
       }else {
         setQuestionLenght(parseInt(questonsLenghtSaved))
-         filename=`data/${languageChoosed.trim()}.json`;
+        filename=`data/liveQuiz/${languageChoosed.trim()}.json`;
       }
       fetch(`${filename}`)
       .then((response)=>response.json() as Promise<QuestionProps[]>)

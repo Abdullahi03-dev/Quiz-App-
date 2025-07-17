@@ -5,7 +5,7 @@ import { useEffect,useState,useRef } from "react"
 import { useNavigate } from "react-router-dom";
 import Loader from "../../components/loader";
 import toast from "react-hot-toast";
-import { arrayUnion } from "firebase/firestore";
+import { arrayUnion, getDoc } from "firebase/firestore";
 import useRoomMessages from "../../hooks/useMessages";
 interface QuestionProps{
   question:string;
@@ -28,82 +28,100 @@ const liveJoin = () => {
   const [roomCode,setRoomCode]=useState(0)
   const navigate=useNavigate()
   const saved=localStorage.getItem('Roomcode')
+
   if(saved){
-    useRoomMessages(parseInt(saved),'user1')
+    useRoomMessages(parseInt(saved),'user2')
   }
-const sendMessage=async()=>{
-try{
-  const q=query(collection(db,'Rooms'),where('roomCode','==',saved));
+  const sendMessage=async()=>{
+    try{
+      const q=query(collection(db,'Rooms'),where('roomCode','==',saved));
+    
+      const querySanpshot=await getDocs(q)
+      if(querySanpshot.empty){
+        console.log('does ot match')
+      }
+      querySanpshot.forEach(async(document)=>{
+        const docRef=doc(db,'Rooms',document.id);
+        const docSnap=await getDoc(docRef)
 
-  const querySanpshot=await getDocs(q)
-  if(querySanpshot.empty){
-    console.log('does not match')
-  }
-  querySanpshot.forEach(async(document)=>{
-    const docRef=doc(db,'Rooms',document.id);
-      console.log(document.id,document.data())
-    await updateDoc(docRef,{
-      [`messages.user2`]:arrayUnion({text:`User 2 was disqualified for leaving page`,sender:'user2'})
-    })
+          if(docSnap.exists()){
+            const data=docSnap.data();
+            const messages=data.messages||{}
+            const user1Messages=messages.user1||[]
+            const updatedUser1Message=[
+              ...user1Messages,
+              {
+                text:'User 2 was disqualified for leaving the page',
+                sender:'user2'
+              }
+            ]
 
-  })
-}catch(err){
-  console.log(err)
-}
-}
-/// IF HE OPENS A NEW TAB((Cheating))
-useEffect(()=>{
-  const handleVisibilityChange=()=>{
-    if(document.visibilityState==='hidden'){
-        toast.error('Disqualified')
-        sendMessage()
-    }else{
-      navigate('/liveresult')
+            await updateDoc(docRef,{
+              messages:{
+                ...messages,
+                user1:updatedUser1Message
+              }
+            })
+          }
+    
+      })
+    }catch(err){
+      console.log(err)
     }
+    }
+    /// IF HE OPENS A NEW TAB((Cheating))
+    useEffect(()=>{
+      const handleVisibilityChange=()=>{
+        if(document.visibilityState==='hidden'){
+            toast.error('Disqualified')
+            const saved=localStorage.getItem('Roomcode')
+  if(saved){
+     updateWholeScore(parseInt(saved))
   }
-  document.addEventListener('visibilitychange',handleVisibilityChange)
-  return ()=>{
-    document.removeEventListener('visibilitychange', handleVisibilityChange)
-
-  }
-},[])
-
-
-
+           
+            sendMessage()
+        }else{
+          navigate('/liveresult')
+        }
+      }
+      document.addEventListener('visibilitychange',handleVisibilityChange)
+      return ()=>{
+        document.removeEventListener('visibilitychange', handleVisibilityChange)
+  
+      }
+    },[])
 
   /////NAVIGATE TO CATEGORIES PAGE IF HE TRIES TO GO BACK AFTER COMPLETETING QUIZ
-
-  useEffect(()=>{
-    const saved=localStorage.getItem('Roomcode')
-    const checkIfRoomExists = async (roomCode: number) => {
-      try{
+     useEffect(()=>{
+      const saved=localStorage.getItem('Roomcode')
+      const checkIfRoomExists = async (roomCode: number) => {
+        try{
         const usersRef = collection(db, "Rooms");
-      const q = query(usersRef, where("roomCode", "==", roomCode));
-      const querySnapshot = await getDocs(q);
-      if(querySnapshot){
-          const roomDoc=querySnapshot.docs[0]
-          const data=roomDoc.data()
-          if(!data.quizHasStarted){
-              navigate('/livesettings')
-          }
+        const q = query(usersRef, where("roomCode", "==", roomCode));
+        const querySnapshot = await getDocs(q);
+        if(querySnapshot){
+            const roomDoc=querySnapshot.docs[0]
+            const data=roomDoc.data()
+            if(!data.userOneOnline&&!data.userTwoOnline){
+                navigate('/livesettings')
+            }
+        }else{
+          <Loader/>
+          setTimeout(()=>{
+            navigate('/livesettings')
+          },2000) 
+        }
+        }catch(err){
+          console.log(err)
+        }
+        
+      }
+      if(saved){
+        checkIfRoomExists(parseInt(saved))
       }else{
-        <Loader/>
-        setTimeout(()=>{
-          navigate('/livesettings')
-        },2000) 
+        navigate('/livesettings')
       }
-      }catch(err){
-        console.log(err)
-      }
-      
-    }
-    if(saved){
-      checkIfRoomExists(parseInt(saved))
-    }else{
-      navigate('/livesettings')
-    }
-   },[])
-
+     },[])
   
 
 

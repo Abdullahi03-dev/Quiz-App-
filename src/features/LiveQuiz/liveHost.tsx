@@ -3,7 +3,7 @@ import { ArrowLeft,ArrowRight,Clock } from "lucide-react"
 import { useEffect,useState ,useRef} from "react"
 import { useNavigate } from "react-router-dom";
 import Loader from "../../components/loader";
-import { arrayUnion } from "firebase/firestore";
+import { arrayUnion, getDoc } from "firebase/firestore";
 import toast from "react-hot-toast";
 import useRoomMessages from "../../hooks/useMessages";
 interface QuestionProps{
@@ -43,10 +43,27 @@ const livehost = () => {
       }
       querySanpshot.forEach(async(document)=>{
         const docRef=doc(db,'Rooms',document.id);
-          console.log(document.id,document.data())
-        await updateDoc(docRef,{
-          [`messages.user1`]:arrayUnion({text:`User 1 was disqualified for leaving page`,sender:'user1'})
-        })
+        const docSnap=await getDoc(docRef)
+
+          if(docSnap.exists()){
+            const data=docSnap.data();
+            const messages=data.messages||{}
+            const user1Messages=messages.user1||[]
+            const updatedUser1Message=[
+              ...user1Messages,
+              {
+                text:'User 1 was disqualified for leaving the page',
+                sender:'user1'
+              }
+            ]
+
+            await updateDoc(docRef,{
+              messages:{
+                ...messages,
+                user1:updatedUser1Message
+              }
+            })
+          }
     
       })
     }catch(err){
@@ -58,6 +75,11 @@ const livehost = () => {
       const handleVisibilityChange=()=>{
         if(document.visibilityState==='hidden'){
             toast.error('Disqualified')
+            const saved=localStorage.getItem('Roomcode')
+  if(saved){
+     updateWholeScore(parseInt(saved),0)
+  }
+           
             sendMessage()
         }else{
           navigate('/liveresult')

@@ -45,7 +45,7 @@ const livehost = () => {
         const docRef=doc(db,'Rooms',document.id);
           console.log(document.id,document.data())
         await updateDoc(docRef,{
-          [`messages.user1`]:arrayUnion({text:`User 1 was disqualified for leaving page`})
+          [`messages.user1`]:arrayUnion({text:`User 1 was disqualified for leaving page`,sender:'user1'})
         })
     
       })
@@ -75,13 +75,13 @@ const livehost = () => {
       const saved=localStorage.getItem('Roomcode')
       const checkIfRoomExists = async (roomCode: number) => {
         try{
-          const usersRef = collection(db, "Rooms");
+        const usersRef = collection(db, "Rooms");
         const q = query(usersRef, where("roomCode", "==", roomCode));
         const querySnapshot = await getDocs(q);
         if(querySnapshot){
             const roomDoc=querySnapshot.docs[0]
             const data=roomDoc.data()
-            if(!data.quizHasStarted){
+            if(!data.userOneOnline&&!data.userTwoOnline){
                 navigate('/livesettings')
             }
         }else{

@@ -28,11 +28,9 @@ const liveJoin = () => {
   const [roomCode,setRoomCode]=useState(0)
   const navigate=useNavigate()
   const saved=localStorage.getItem('Roomcode')
-  
   if(saved){
     useRoomMessages(parseInt(saved),'user1')
   }
-
 const sendMessage=async()=>{
 try{
   const q=query(collection(db,'Rooms'),where('roomCode','==',saved));
@@ -45,7 +43,7 @@ try{
     const docRef=doc(db,'Rooms',document.id);
       console.log(document.id,document.data())
     await updateDoc(docRef,{
-      [`messages.user2`]:arrayUnion({text:`User 2 was disqualified for leaving page`})
+      [`messages.user2`]:arrayUnion({text:`User 2 was disqualified for leaving page`,sender:'user2'})
     })
 
   })

@@ -35,7 +35,7 @@ const liveJoin = () => {
 
 const sendMessage=async()=>{
 try{
-  const q=query(collection(db,'Rooms'),where('roomCode','==',roomCode));
+  const q=query(collection(db,'Rooms'),where('roomCode','==',saved));
 
   const querySanpshot=await getDocs(q)
   if(querySanpshot.empty){
@@ -60,7 +60,7 @@ useEffect(()=>{
         toast.error('Disqualified')
         sendMessage()
     }else{
-      navigate('/result')
+      navigate('/liveresult')
     }
   }
   document.addEventListener('visibilitychange',handleVisibilityChange)

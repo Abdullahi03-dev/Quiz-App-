@@ -92,7 +92,7 @@ const liveJoin = () => {
     },[])
 
   /////NAVIGATE TO CATEGORIES PAGE IF HE TRIES TO GO BACK AFTER COMPLETETING QUIZ
-     useEffect(()=>{
+         useEffect(()=>{
       const saved=localStorage.getItem('Roomcode')
       const checkIfRoomExists = async (roomCode: number) => {
         try{
@@ -114,7 +114,7 @@ const liveJoin = () => {
         }catch(err){
           console.log(err)
         }
-        
+
       }
       if(saved){
         checkIfRoomExists(parseInt(saved))

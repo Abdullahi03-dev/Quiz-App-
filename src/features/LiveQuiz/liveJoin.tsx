@@ -75,10 +75,7 @@ const liveJoin = () => {
       const handleVisibilityChange=()=>{
         if(document.visibilityState==='hidden'){
             toast.error('Disqualified')
-            const saved=localStorage.getItem('Roomcode')
-  if(saved){
-     updateWholeScore(parseInt(saved))
-  }
+
            
             sendMessage()
         }else{

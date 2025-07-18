@@ -75,11 +75,8 @@ const livehost = () => {
       const handleVisibilityChange=()=>{
         if(document.visibilityState==='hidden'){
             toast.error('Disqualified')
-            const saved=localStorage.getItem('Roomcode')
-  if(saved){
-     updateWholeScore(parseInt(saved),0)
-  }
-           
+
+  
             sendMessage()
         }else{
           navigate('/liveresult')

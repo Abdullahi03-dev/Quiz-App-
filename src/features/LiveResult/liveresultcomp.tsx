@@ -7,7 +7,7 @@ import { Unsubscribe,DocumentData, db,collection,
   onSnapshot,
    } from "../../firebase/firebase";        // ← adjust path if needed
 import { Button } from "../../components/ui/button";
-const navigate=useNavigate()
+
 /* ---------- types ---------- */
 interface RoomData {
   quizHasStarted: boolean;
@@ -23,19 +23,11 @@ interface RoomData {
   userTwoOnline: boolean;
   userTwoScore: number;
 }
-useEffect(()=>{
-  const handlepop=()=>{
-    navigate('/categories',{replace:true})
 
-  }
-  window.addEventListener('popstate',handlepop)
-  return()=>{
-    window.removeEventListener('popstate',handlepop)
-  }
-},[navigate])
 
 /* ---------- component ---------- */
 const LiveResult = () => {
+
   const navigate = useNavigate();
 
   /* initial state identical to your previous object  */
@@ -87,7 +79,16 @@ console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
 
     return unsub
   };
+useEffect(()=>{
+  const handlepop=()=>{
+    navigate('/categories',{replace:true})
 
+  }
+  window.addEventListener('popstate',handlepop)
+  return()=>{
+    window.removeEventListener('popstate',handlepop)
+  }
+},[navigate])
   /* ---------- mount: attach listener ---------- */
   useEffect(() => {
     const saved = localStorage.getItem("Roomcode");

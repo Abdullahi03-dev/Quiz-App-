@@ -1,5 +1,14 @@
+import { useEffect } from "react";
 import LiveCards from "../features/LiveSettings/liveCards"
 const liveSettingsComp = () => {
+     
+  useEffect(()=>{
+ const saved=localStorage.getItem('Roomcode');
+  if(saved){
+      localStorage.removeItem(saved)
+  }
+
+  },[])
   return (
 <>
 <section className=" md:h-[100vh] bg-slate-950">

@@ -7,10 +7,12 @@ const categoriesComp = () => {
       const saved=localStorage.getItem("quizSettings");
       const saved2=localStorage.getItem("quizState");
     const scoreSaved =localStorage.getItem('scoreSaved')
-      if(saved!=null||saved2!=null||scoreSaved!=null){
+    const RoomCode=localStorage.getItem('Roomcode');
+      if(saved!=null||saved2!=null||scoreSaved!=null||RoomCode!=null){
         localStorage.removeItem('quizSettings')
         localStorage.removeItem('scoreSaved')
         localStorage.removeItem('quizState')
+        localStorage.removeItem('RoomCode')
         return
       }
      },[])

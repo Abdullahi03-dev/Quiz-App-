@@ -28,73 +28,83 @@ const liveJoin = () => {
   const [questonsLenghtSaved,setquestonsLenghtSaved]=useState<string>('')
   const [roomCode,setRoomCode]=useState(0)
   const navigate=useNavigate()
-  const saved=localStorage.getItem('Roomcode')
-
+  const saved=localStorage.getItem('Roomcode');
+  const userKey='user1'
+  ///if already finish and wants to navigate
+  useCheckRoomStatus()
+  ///
   if(saved){
-    useRoomMessages(parseInt(saved),'user2')
+    const Roomcode=Number(saved)
+    useRoomMessages(Roomcode, userKey);
+  }else{
+    navigate('/categories')
   }
-  const sendMessage=async()=>{
-    try{
-      const q=query(collection(db,'Rooms'),where('roomCode','==',saved));
-    
-      const querySanpshot=await getDocs(q)
-      if(querySanpshot.empty){
-        console.log('does ot match')
+  
+
+
+
+  const sendMessage = async (saved:string) => {
+    try {
+      const q = query(collection(db, 'Rooms'), where('roomCode', '==', saved));
+      const querySnapshot = await getDocs(q);
+  
+      if (querySnapshot.empty) {
+        console.log('Room code not found');
+        return;
       }
-      querySanpshot.forEach(async(document)=>{
-        const docRef=doc(db,'Rooms',document.id);
-        const docSnap=await getDoc(docRef)
-
-          if(docSnap.exists()){
-            const data=docSnap.data();
-            const messages=data.messages||{}
-            const user1Messages=messages.user1||[]
-            const updatedUser1Message=[
-              ...user1Messages,
-              {
-                text:'User 2 was disqualified for leaving the page',
-                sender:'user2'
-              }
-            ]
-
-            await updateDoc(docRef,{
-              messages:{
-                ...messages,
-                user1:updatedUser1Message
-              }
-            })
-          }
-    
-      })
-    }catch(err){
-      console.log(err)
-    }
-    }
-    /// IF HE OPENS A NEW TAB((Cheating))
-    useEffect(()=>{
-      const handleVisibilityChange=()=>{
-        if(document.visibilityState==='hidden'){
-            toast.error('Disqualified')
-            const saved=localStorage.getItem('Roomcode')
-  if(saved){
-     updateWholeScore(parseInt(saved))
-  }
-           
-            sendMessage()
-        }else{
-          navigate('/liveresult')
+  
+      for (const document of querySnapshot.docs) {
+        const docRef = doc(db, 'Rooms', document.id);
+        const docSnap = await getDoc(docRef);
+  
+        if (docSnap.exists()) {
+          const data = docSnap.data();
+          const messages = data.messages || {};
+          const user1Messages = messages.user1 || [];
+  
+          const updatedUser1Message = [
+            ...user1Messages,
+            {
+              text: 'User 2 was disqualified for leaving the page',
+              sender: 'user2',
+            },
+          ];
+  
+          await updateDoc(docRef, {
+            [`messages.user2`]: updatedUser1Message,
+          });
         }
       }
-      document.addEventListener('visibilitychange',handleVisibilityChange)
-      return ()=>{
-        document.removeEventListener('visibilitychange', handleVisibilityChange)
+    } catch (err) {
+      console.log(err);
+    }
+  };
   
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'hidden') {
+        toast.error('Disqualified');
+  
+        const saved = localStorage.getItem('Roomcode');
+        console.log('Roomcode:', saved);
+  
+        if (saved) {
+          updateWholeScore(parseInt(saved));
+          sendMessage(saved);
+        }
+      } else {
+        navigate('/liveresult');
       }
-    },[])
+    };
+  
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
 
 
-  ///if already finish and wants to navigate
-useCheckRoomStatus()
+
 
  
   

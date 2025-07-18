@@ -25,7 +25,7 @@ const useCheckRoomStatus = () => {
           (player1Online === false && player2Online === true) ||
           (player1Online === true && player2Online === false)
         ) {
-          navigate('/another-page'); // replace with your actual route
+          navigate('/categories'); // replace with your actual route
         }
       }
     };

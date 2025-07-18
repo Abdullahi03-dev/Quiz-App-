@@ -31,8 +31,8 @@ const liveJoin = () => {
   const saved=localStorage.getItem('Roomcode');
   const userKey='user1'
   ///if already finish and wants to navigate
+   useCheckRoomStatus()
   useEffect(()=>{
- useCheckRoomStatus()
  if(saved){
   const Roomcode=Number(saved)
   useRoomMessages(Roomcode, userKey);

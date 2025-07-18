@@ -37,7 +37,7 @@ const AppRoutes=()=>{
         <Route element={<Signup/>} path='signup'/>
         <Route element={<Signin/>} path='signin'/>
         {/* PROTECTED LAYOUT */}
-        <Route element={<ProtectedLayout/>}>
+        {/* <Route element={<ProtectedLayout/>}> */}
           <Route element={<Categories/>} path='categories'/>
         <Route element={<Settings/>} path='settings'/>
         <Route element={<Quiz/>} path='quiz'/>
@@ -52,7 +52,7 @@ const AppRoutes=()=>{
         <Route element={<Livetquiz/>} path='livetquiz'/>
         <Route element={<LiveResult/>} path='liveresult'/>
         <Route element={<NotFound/>} path='404'/>
-        </Route>
+        {/* </Route> */}
         
       </Routes>
     

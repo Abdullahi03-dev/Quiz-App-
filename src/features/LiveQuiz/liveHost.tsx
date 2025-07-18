@@ -31,8 +31,9 @@ const livehost = () => {
   const saved=localStorage.getItem('Roomcode');
   const userKey='user1'
   ///if already finish and wants to navigate
+   useCheckRoomStatus()
   useEffect(()=>{
-    useCheckRoomStatus()
+    
     if(saved){
       const Roomcode=Number(saved)
       useRoomMessages(Roomcode, userKey);
@@ -40,7 +41,9 @@ const livehost = () => {
       navigate('/categories')
     }
      },[])
-     useEffect(()=>{
+
+
+useEffect(()=>{
       const handlepop=()=>{
         navigate('/categories',{replace:true})
   

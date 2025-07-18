@@ -1,11 +1,12 @@
 
-import { db, collection, query, where, getDocs, doc,updateDoc ,increment} from "../../firebase/firebase";
+import { db, collection, query, where, getDocs, doc,updateDoc ,increment, getDoc} from "../../firebase/firebase";
 import { ArrowLeft,ArrowRight,Clock } from "lucide-react"
 import { useEffect,useState,useRef } from "react"
 import { useNavigate } from "react-router-dom";
 import Loader from "../../components/loader";
 import toast from "react-hot-toast";
-import { arrayUnion, getDoc } from "firebase/firestore";
+import useCheckRoomStatus from "../../hooks/useCheckRoomStatus";
+
 import useRoomMessages from "../../hooks/useMessages";
 interface QuestionProps{
   question:string;
@@ -91,39 +92,8 @@ const liveJoin = () => {
       }
     },[])
 
-  /////NAVIGATE TO CATEGORIES PAGE IF HE TRIES TO GO BACK AFTER COMPLETETING QUIZ
-     useEffect(()=>{
-      const saved=localStorage.getItem('Roomcode')
-      const checkIfRoomExists = async (roomCode: number) => {
-        try{
-        const usersRef = collection(db, "Rooms");
-        const q = query(usersRef, where("roomCode", "==", roomCode));
-        const querySnapshot = await getDocs(q);
-        if(querySnapshot){
-            const roomDoc=querySnapshot.docs[0]
-            const data=roomDoc.data()
-            if(!data.userOneOnline&&!data.userTwoOnline){
-                navigate('/livesettings')
-            }
-        }else{
-          <Loader/>
-          setTimeout(()=>{
-            navigate('/livesettings')
-          },2000) 
-        }
-        }catch(err){
-          console.log(err)
-        }
-        
-      }
-      if(saved){
-        checkIfRoomExists(parseInt(saved))
-      }else{
-        navigate('/livesettings')
-      }
-     },[])
-  
-
+  ///if already finish and wants to navigate
+useCheckRoomStatus()
 
 
   ////GET THE VALUES OF SETTINGS FROM FIREBASE LIKE TIME , QUESTION LENGHT , LANGUAGE CHOOSED ETC.....

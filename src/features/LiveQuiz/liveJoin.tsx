@@ -92,8 +92,13 @@ const liveJoin = () => {
       }
     },[])
 
+
   ///if already finish and wants to navigate
 useCheckRoomStatus()
+
+ 
+  
+
 
 
   ////GET THE VALUES OF SETTINGS FROM FIREBASE LIKE TIME , QUESTION LENGHT , LANGUAGE CHOOSED ETC.....

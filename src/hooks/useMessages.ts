@@ -8,7 +8,7 @@ import {
   doc,
   getDoc,
   DocumentData
-} from 'firebase/firestore';
+} from "../firebase/firebase";;
 import { toast } from 'react-hot-toast';
 
 type Message = {

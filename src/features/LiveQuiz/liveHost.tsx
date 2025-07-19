@@ -42,9 +42,9 @@ const livehost = () => {
   },[navigate,allowed])
 
   
-  const sendMessage = async (saved:string) => {
+  const sendMessage = async (code:string) => {
     try {
-      const q = query(collection(db, 'Rooms'), where('roomCode', '==', saved));
+      const q = query(collection(db, 'Rooms'), where('roomCode', '==', code));
       const querySnapshot = await getDocs(q);
   
       if (querySnapshot.empty) {

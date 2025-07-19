@@ -82,9 +82,9 @@ console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
   };
 
   useEffect(()=>{
-    const saved1=localStorage.getItem('resultCode');
+    const saved1=localStorage.getItem('Roomcode');
      if(saved1!==null){
-         localStorage.removeItem('resultCode')
+         localStorage.removeItem('Roomcode')
          return
      }
      },[])

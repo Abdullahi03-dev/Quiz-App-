@@ -8,11 +8,13 @@ const categoriesComp = () => {
       const saved2=localStorage.getItem("quizState");
     const scoreSaved =localStorage.getItem('scoreSaved')
     const RoomCode=localStorage.getItem('Roomcode');
-      if(saved!=null||saved2!=null||scoreSaved!=null||RoomCode!=null){
+    const resultCode=localStorage.getItem('resultCode')
+      if(saved!=null||saved2!=null||scoreSaved!=null||RoomCode!=null||resultCode!=null){
         localStorage.removeItem('quizSettings')
         localStorage.removeItem('scoreSaved')
         localStorage.removeItem('quizState')
-        localStorage.removeItem('RoomCode')
+        localStorage.removeItem('Roomcode')
+        localStorage.removeItem('resultCode')
         return
       }
      },[])

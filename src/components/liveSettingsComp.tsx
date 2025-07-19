@@ -4,10 +4,12 @@ const liveSettingsComp = () => {
      
   useEffect(()=>{
  const saved=localStorage.getItem('Roomcode');
-  if(saved){
-      localStorage.removeItem(saved)
+ const saved1=localStorage.getItem('resultCode');
+  if(saved!=null||saved1!==null){
+      localStorage.removeItem('Roomcode')
+      localStorage.removeItem('resultCode')
+      return
   }
-
   },[])
   return (
 <>

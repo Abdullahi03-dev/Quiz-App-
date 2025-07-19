@@ -162,6 +162,7 @@ const updateScore=async(generatedRoomCode:number)=> {
   })
       toast.success('Goodluck')
       localStorage.setItem('Roomcode',`${generatedRoomCode}`)
+      localStorage.setItem('resultCode',`${generatedRoomCode}`)
       navigate('/waitingroom')
     }else{
       toast.error('ROOM CODE ALREADY EXIST TRY REFRESHING')

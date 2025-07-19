@@ -27,6 +27,7 @@ interface RoomData {
 
 /* ---------- component ---------- */
 const LiveResult = () => {
+  
 
   const navigate = useNavigate();
 
@@ -79,9 +80,17 @@ console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
 
     return unsub
   };
+
+  useEffect(()=>{
+    const saved1=localStorage.getItem('resultCode');
+     if(saved1!==null){
+         localStorage.removeItem('resultCode')
+         return
+     }
+     },[])
 useEffect(()=>{
   const handlepop=()=>{
-    navigate(1)
+    navigate('/categories')
   }
   window.addEventListener('popstate',handlepop)
   return()=>{
@@ -90,7 +99,7 @@ useEffect(()=>{
 },[navigate])
   /* ---------- mount: attach listener ---------- */
   useEffect(() => {
-    const saved = localStorage.getItem("Roomcode");
+    const saved = localStorage.getItem("resultCode");
     if (!saved) return;
     const unsub = listenToRoom(parseInt(saved));
     return () => unsub();               // cleanup

@@ -79,7 +79,7 @@ const updateScore=async(generatedRoomCode:number)=> {
         quizHasStarted:true,
        })
       localStorage.setItem('Roomcode',`${generatedRoomCode}`)
-
+      localStorage.setItem('resultCode',`${generatedRoomCode}`)
       toast.success('WISH YOU LUCK')
       navigate('/livetquiz')
     }else{

@@ -31,16 +31,16 @@ const livehost = () => {
   const saved=localStorage.getItem('Roomcode');
   const userKey='user1'
   const allowed=useCheckRoomStatus('userOneOnline')
-  if(allowed===null) return <Loader/>
-  if(allowed===false) {
-    navigate('/categories')
-    }
-
-  ///if already finish and wants to navigate
-  //  useCheckRoomStatus()
   const Roomcode=saved?Number(saved):0
   useRoomMessages(Roomcode, userKey);
 
+  useEffect(()=>{
+    if(allowed===false) {
+    navigate('/categories')
+    }
+  },[navigate,allowed])
+  if(allowed===null) return <Loader/>
+  
   const sendMessage = async (saved:string) => {
     try {
       const q = query(collection(db, 'Rooms'), where('roomCode', '==', saved));

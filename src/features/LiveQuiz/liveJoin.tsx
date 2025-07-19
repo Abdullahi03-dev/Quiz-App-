@@ -30,19 +30,18 @@ const liveJoin = () => {
   const [roomCode,setRoomCode]=useState(0)
   const navigate=useNavigate()
   const saved=localStorage.getItem('Roomcode');
-  const userKey='user2'
+  const userKey='user1'
   const allowed=useCheckRoomStatus('userTwoOnline')
-  if(allowed===null) return <Loader/>
-  if(allowed===false) {
-    navigate('/categories')
-    }
-
-
-  ///if already finish and wants to navigate
-  //  useCheckRoomStatus()
   const Roomcode=saved?Number(saved):0
   useRoomMessages(Roomcode, userKey);
 
+  useEffect(()=>{
+    if(allowed===false) {
+    navigate('/categories')
+    }
+  },[navigate,allowed])
+  if(allowed===null) return <Loader/>
+  
 
 useEffect(()=>{
       const handlepop=()=>{

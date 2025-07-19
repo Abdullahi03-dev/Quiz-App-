@@ -58,23 +58,22 @@ useEffect(()=>{
   
 
 
-
-  const sendMessage = async (code:string) => {
+  const sendMessage = async (roomCode:string) => {
     try {
-      const q = query(collection(db, 'Rooms'), where('roomCode', '==', code));
-      const querySnapshot = await getDocs(q);
-  
-      if (querySnapshot.empty) {
-        console.log('Room code not found');
-        return;
-      }
-  
-      for (const document of querySnapshot.docs) {
-        const docRef = doc(db, 'Rooms', document.id);
-          await updateDoc(docRef, {
-            user1Messages:'User 2 was disqualified for leaving the page'
-          });
-      }
+      const q=query(collection(db,'Rooms'),where('roomCode','==',roomCode));
+
+        const querySanpshot=await getDocs(q)
+        if(querySanpshot.empty){
+          console.log('does ot match')
+        }
+        querySanpshot.forEach(async(document)=>{
+          const docRef=doc(db,'Rooms',document.id);
+            console.log(document.id,document.data())
+          await updateDoc(docRef,{
+            user1Messages:'User 1 was disqualified for leaving the page'
+          })
+
+        })
     } catch (err) {
       console.log(err);
     }

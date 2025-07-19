@@ -58,19 +58,19 @@ useEffect(()=>{
   
 
 
-  const sendMessage = async (roomCode:string) => {
+  const sendMessage = async (roomCode:number) => {
     try {
       const q=query(collection(db,'Rooms'),where('roomCode','==',roomCode));
 
         const querySanpshot=await getDocs(q)
         if(querySanpshot.empty){
-          console.log('does ot match')
+          console.log('does not match')
         }
         querySanpshot.forEach(async(document)=>{
           const docRef=doc(db,'Rooms',document.id);
             console.log(document.id,document.data())
           await updateDoc(docRef,{
-            user1Messages:'User 1 was disqualified for leaving the page'
+            user2Messages:'User 2 was disqualified for leaving the page'
           })
 
         })
@@ -89,7 +89,7 @@ useEffect(()=>{
   
         if (saved) {
           updateWholeScore(parseInt(saved));
-          sendMessage(saved);
+          sendMessage(parseInt(saved));
         }
       } else {
         navigate('/liveresult');

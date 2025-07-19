@@ -42,7 +42,7 @@ const livehost = () => {
   },[navigate,allowed])
 
   
-  const sendMessage = async (roomCode:string) => {
+  const sendMessage = async (roomCode:number) => {
     try {
       const q=query(collection(db,'Rooms'),where('roomCode','==',roomCode));
 
@@ -73,7 +73,7 @@ const livehost = () => {
   
         if (saved) {
           updateWholeScore(parseInt(saved),0);
-          sendMessage(saved);
+          sendMessage(parseInt(saved));
         }
       } else {
         navigate('/liveresult');

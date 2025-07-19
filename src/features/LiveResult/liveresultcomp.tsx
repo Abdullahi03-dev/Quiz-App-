@@ -81,7 +81,7 @@ console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
   };
 useEffect(()=>{
   const handlepop=()=>{
-    navigate('/categories',{replace:true})
+    navigate(1)
 
   }
   window.addEventListener('popstate',handlepop)

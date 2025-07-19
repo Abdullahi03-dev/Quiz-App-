@@ -1,18 +1,18 @@
-import { db, collection, query, where, getDocs, doc,updateDoc ,increment, getDoc} from "../../firebase/firebase";
+import { db, collection, query, where, getDocs, doc,updateDoc ,increment} from "../../firebase/firebase";
 import { ArrowLeft,ArrowRight,Clock } from "lucide-react"
 import { useEffect,useState ,useRef} from "react"
 import { useNavigate } from "react-router-dom";
 import Loader from "../../components/loader";
 import toast from "react-hot-toast";
 import useRoomMessages from "../../hooks/useMessages";
-import useCheckRoomStatus from "../../hooks/useCheckRoomStatus";
+// import useCheckRoomStatus from "../../hooks/useCheckRoomStatus";
 interface QuestionProps{
   question:string;
   options:string[];
   correctAnswer:string[];
 }
 const livehost = () => {
-  useRoomMessages(222,'user1')
+  
   const [questionIndex,setQuestionIndex]=useState<number>(0)
   const [questionNumber,setQuestionNumber]=useState<number>(1)
   const [data,setData]=useState<QuestionProps[]>([])
@@ -30,8 +30,13 @@ const livehost = () => {
   const navigate=useNavigate()
   const saved=localStorage.getItem('Roomcode');
   const userKey='user1'
+  if(saved){
+    const roomCode=Number(saved)
+      useRoomMessages(roomCode,userKey)
+  }
+
   ///if already finish and wants to navigate
-   useCheckRoomStatus()
+  //  useCheckRoomStatus()
   useEffect(()=>{
     
     if(saved){
@@ -40,12 +45,12 @@ const livehost = () => {
     }else{
       navigate('/categories')
     }
-     },[])
+     },[navigate])
 
 
 useEffect(()=>{
       const handlepop=()=>{
-        navigate('/categories',{replace:true})
+        navigate(1)
   
       }
       window.addEventListener('popstate',handlepop)
@@ -71,25 +76,9 @@ useEffect(()=>{
   
       for (const document of querySnapshot.docs) {
         const docRef = doc(db, 'Rooms', document.id);
-        const docSnap = await getDoc(docRef);
-  
-        if (docSnap.exists()) {
-          const data = docSnap.data();
-          const messages = data.messages || {};
-          const user1Messages = messages.user1 || [];
-  
-          const updatedUser1Message = [
-            ...user1Messages,
-            {
-              text: 'User 1 was disqualified for leaving the page',
-              sender: 'user1',
-            },
-          ];
-  
           await updateDoc(docRef, {
-            [`messages.user1`]: updatedUser1Message,
+            user1Messages:'User 1 was disqualified for leaving the page'
           });
-        }
       }
     } catch (err) {
       console.log(err);

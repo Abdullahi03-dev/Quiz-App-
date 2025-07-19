@@ -1,11 +1,11 @@
 
-import { db, collection, query, where, getDocs, doc,updateDoc ,increment, getDoc} from "../../firebase/firebase";
+import { db, collection, query, where, getDocs, doc,updateDoc ,increment} from "../../firebase/firebase";
 import { ArrowLeft,ArrowRight,Clock } from "lucide-react"
 import { useEffect,useState,useRef } from "react"
 import { useNavigate } from "react-router-dom";
 import Loader from "../../components/loader";
 import toast from "react-hot-toast";
-import useCheckRoomStatus from "../../hooks/useCheckRoomStatus";
+// import useCheckRoomStatus from "../../hooks/useCheckRoomStatus";
 
 import useRoomMessages from "../../hooks/useMessages";
 interface QuestionProps{
@@ -29,29 +29,37 @@ const liveJoin = () => {
   const [roomCode,setRoomCode]=useState(0)
   const navigate=useNavigate()
   const saved=localStorage.getItem('Roomcode');
-  const userKey='user1'
-  ///if already finish and wants to navigate
-   useCheckRoomStatus()
-  useEffect(()=>{
- if(saved){
-  const Roomcode=Number(saved)
-  useRoomMessages(Roomcode, userKey);
-}else{
-  navigate('/categories')
-}
-  },[])
-  useEffect(()=>{
-    const handlepop=()=>{
-      navigate('/categories',{replace:true})
+  const userKey='user2'
+  if(saved){
+    const roomCode=Number(saved)
+      useRoomMessages(roomCode,userKey)
+  }
 
+  ///if already finish and wants to navigate
+  //  useCheckRoomStatus()
+  useEffect(()=>{
+    
+    if(saved){
+      const Roomcode=Number(saved)
+      useRoomMessages(Roomcode, userKey);
+    }else{
+      navigate('/categories')
     }
-    window.addEventListener('popstate',handlepop)
-    return()=>{
-      window.removeEventListener('popstate',handlepop)
-    }
-  },[navigate])
-  ///
+     },[navigate])
+
+
+useEffect(()=>{
+      const handlepop=()=>{
+        navigate(1)
   
+      }
+      window.addEventListener('popstate',handlepop)
+      return()=>{
+        window.removeEventListener('popstate',handlepop)
+      }
+    },[navigate])
+  ///
+ 
   
 
 
@@ -68,25 +76,9 @@ const liveJoin = () => {
   
       for (const document of querySnapshot.docs) {
         const docRef = doc(db, 'Rooms', document.id);
-        const docSnap = await getDoc(docRef);
-  
-        if (docSnap.exists()) {
-          const data = docSnap.data();
-          const messages = data.messages || {};
-          const user1Messages = messages.user1 || [];
-  
-          const updatedUser1Message = [
-            ...user1Messages,
-            {
-              text: 'User 2 was disqualified for leaving the page',
-              sender: 'user2',
-            },
-          ];
-  
           await updateDoc(docRef, {
-            [`messages.user2`]: updatedUser1Message,
+            user1Messages:'User 2 was disqualified for leaving the page'
           });
-        }
       }
     } catch (err) {
       console.log(err);

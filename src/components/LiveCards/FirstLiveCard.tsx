@@ -156,12 +156,8 @@ const updateScore=async(generatedRoomCode:number)=> {
           languageChoosed:selectedLanguage,
           time:selectedTime,
           quizHasStarted:false,
-          messages:{
-            user1:[
-            ],
-            user2:[
-            ]
-          },
+          user1Messages:'',
+          user2Messages:'',
           createdAt: serverTimestamp(),
   })
       toast.success('Goodluck')

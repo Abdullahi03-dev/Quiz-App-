@@ -70,7 +70,7 @@ useEffect(()=>{
           const docRef=doc(db,'Rooms',document.id);
             console.log(document.id,document.data())
           await updateDoc(docRef,{
-            user2Messages:'User 2 was disqualified for leaving the page'
+            user1Messages:'User 1 was disqualified for leaving the page'
           })
 
         })

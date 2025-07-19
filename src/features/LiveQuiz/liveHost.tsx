@@ -32,6 +32,7 @@ const livehost = () => {
   const userKey='user1'
   const allowed=useCheckRoomStatus('userOneOnline')
   const Roomcode=saved?Number(saved):0
+  // if(allowed===null) return <Loader/>
   useRoomMessages(Roomcode, userKey);
 
   useEffect(()=>{
@@ -39,7 +40,7 @@ const livehost = () => {
     navigate('/categories')
     }
   },[navigate,allowed])
-  if(allowed===null) return <Loader/>
+
   
   const sendMessage = async (saved:string) => {
     try {

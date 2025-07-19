@@ -40,7 +40,7 @@ const liveJoin = () => {
     navigate('/categories')
     }
   },[navigate,allowed])
-  if(allowed===null) return <Loader/>
+  // if(allowed===null) return <Loader/>
   
 
 useEffect(()=>{

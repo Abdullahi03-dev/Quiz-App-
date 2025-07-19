@@ -10,10 +10,10 @@ const useRoomMessages = (roomCode: number, fieldName: string) => {
     const roomsRef = collection(db, "Rooms");
     const q = query(roomsRef, where("roomCode", "==", roomCode));
 
-    const unsubscribe = onSnapshot(q, (docSnap) => {
-      if (!docSnap.empty) return;
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      if (querySnapshot.empty) return; // ✅ This is now correct
 
-      const data = docSnap.docs[0].data() as DocumentData;
+      const data = querySnapshot.docs[0].data() as DocumentData;
       const fieldValue = data?.[fieldName];
 
       if (typeof fieldValue === "string" && fieldValue.trim() !== "") {

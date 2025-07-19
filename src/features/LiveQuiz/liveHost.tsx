@@ -29,7 +29,7 @@ const livehost = () => {
   const [roomCode,setRoomCode]=useState(0)
   const navigate=useNavigate()
   const saved=localStorage.getItem('Roomcode');
-  const userKey='user1Messages'
+  const userKey='user2Messages'
   const allowed=useCheckRoomStatus('userOneOnline')
   const Roomcode=saved?Number(saved):0
   // if(allowed===null) return <Loader/>

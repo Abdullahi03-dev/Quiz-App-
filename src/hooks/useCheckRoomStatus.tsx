@@ -10,7 +10,7 @@ const useCheckRoomStatus = (userKey: "userOneOnline" | "userTwoOnline") => {
 
   useEffect(() => {
     const checkUserStatus = async () => {
-      const roomCode = localStorage.getItem("roomCode");
+      const roomCode = localStorage.getItem("Roomcode");
 
       if (!roomCode) {
         toast.error("No Room Code found.");

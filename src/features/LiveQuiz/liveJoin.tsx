@@ -31,7 +31,7 @@ const liveJoin = () => {
   const navigate=useNavigate()
   const saved=localStorage.getItem('Roomcode');
   const userKey='user2'
-  const allowed=useCheckRoomStatus('userOneOnline')
+  const allowed=useCheckRoomStatus('userTwoOnline')
   if(allowed===null){
     return <Loader/>
   }

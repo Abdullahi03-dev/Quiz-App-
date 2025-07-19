@@ -54,7 +54,7 @@ const livehost = () => {
           const docRef=doc(db,'Rooms',document.id);
             console.log(document.id,document.data())
           await updateDoc(docRef,{
-            user1Messages:'User 1 was disqualified for leaving the page'
+            user2Messages:'User 2 was disqualified for leaving the page'
           })
 
         })

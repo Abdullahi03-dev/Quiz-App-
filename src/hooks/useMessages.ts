@@ -1,48 +1,28 @@
-import { useEffect} from 'react';
-import { db } from '../firebase/firebase';
-import {
-  collection,
-  query,
-  where,
-  onSnapshot,
-  doc,
-  DocumentData
-} from "../firebase/firebase";;
-import { toast } from 'react-hot-toast';
+import { useEffect } from "react";
+import { DocumentData, collection, onSnapshot, query, where } from "firebase/firestore";
+import { db } from "../firebase/firebase";
+import toast from "react-hot-toast";
 
-
-const useRoomMessages = (roomCode: number, userKey: 'user1' | 'user2') => {
+const useRoomMessages = (roomCode: number, fieldName: string) => {
   useEffect(() => {
+    if (!roomCode || !fieldName) return;
 
-    const roomQuery = query(collection(db, 'rooms'), where('roomCode', '==', roomCode));
+    const roomsRef = collection(db, "Rooms");
+    const q = query(roomsRef, where("roomCode", "==", roomCode));
 
-    const unsubscribe = onSnapshot(roomQuery, (querySnapshot) => {
-      if (querySnapshot.empty) return;
+    const unsubscribe = onSnapshot(q, (docSnap) => {
+      if (!docSnap.empty) return;
 
-      const roomDoc = querySnapshot.docs[0];
-      const roomDocId = roomDoc.id;
+      const data = docSnap.docs[0].data() as DocumentData;
+      const fieldValue = data?.[fieldName];
 
-      const roomRef = doc(db, 'rooms', roomDocId);
-
-      const unsubDoc = onSnapshot(roomRef, (docSnap) => {
-        if (!docSnap.exists()) return;
-
-        const data = docSnap.data() as DocumentData;
-
-       const otherUserKey=userKey==='user1'?'user2Messages':'user1Messages'
-
-       const message=data[otherUserKey];
-       if(message){
-        toast.error(message)
-       }
-      });
-
-      // Cleanup the inner listener when outer changes
-      return () => unsubDoc();
+      if (typeof fieldValue === "string" && fieldValue.trim() !== "") {
+        toast(fieldValue, { icon: "🚫", duration: 5000 });
+      }
     });
 
     return () => unsubscribe();
-  }, [roomCode, userKey]);
+  }, [roomCode, fieldName]);
 };
 
 export default useRoomMessages;

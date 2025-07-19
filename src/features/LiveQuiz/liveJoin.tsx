@@ -37,22 +37,23 @@ const liveJoin = () => {
 
   ///if already finish and wants to navigate
   //  useCheckRoomStatus()
+  const Roomcode=saved?Number(saved):0
+  useRoomMessages(Roomcode, userKey);
+
   useEffect(()=>{
-    
-    if(saved){
-      const Roomcode=Number(saved)
-      useRoomMessages(Roomcode, userKey);
-    }else{
+    if(!saved){
       navigate('/categories')
     }
-     },[navigate])
+     },[navigate,saved])
+
+
 
 
 useEffect(()=>{
       const handlepop=()=>{
-        navigate(1)
-  
+       window.history.pushState(null,'',window.location.href)
       }
+      window.history.pushState(null,'',window.location.href)
       window.addEventListener('popstate',handlepop)
       return()=>{
         window.removeEventListener('popstate',handlepop)

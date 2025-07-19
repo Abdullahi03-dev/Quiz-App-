@@ -30,7 +30,7 @@ const liveJoin = () => {
   const [roomCode,setRoomCode]=useState(0)
   const navigate=useNavigate()
   const saved=localStorage.getItem('Roomcode');
-  const userKey='user1'
+  const userKey='user2Messages'
   const allowed=useCheckRoomStatus('userTwoOnline')
   const Roomcode=saved?Number(saved):0
   useRoomMessages(Roomcode, userKey);

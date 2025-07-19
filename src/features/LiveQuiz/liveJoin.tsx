@@ -32,9 +32,11 @@ const liveJoin = () => {
   const saved=localStorage.getItem('Roomcode');
   const userKey='user2'
   const allowed=useCheckRoomStatus('userTwoOnline')
-  if(allowed===null){
-    return <Loader/>
-  }
+  if(allowed===null) return <Loader/>
+  if(allowed===false) {
+    navigate('/categories')
+    }
+
 
   ///if already finish and wants to navigate
   //  useCheckRoomStatus()

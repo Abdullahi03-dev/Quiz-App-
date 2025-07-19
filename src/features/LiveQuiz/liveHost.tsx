@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Loader from "../../components/loader";
 import toast from "react-hot-toast";
 import useRoomMessages from "../../hooks/useMessages";
-// import useCheckRoomStatus from "../../hooks/useCheckRoomStatus";
+import useCheckRoomStatus from "../../hooks/useCheckRoomStatus";
 interface QuestionProps{
   question:string;
   options:string[];
@@ -30,27 +30,15 @@ const livehost = () => {
   const navigate=useNavigate()
   const saved=localStorage.getItem('Roomcode');
   const userKey='user1'
-  if(saved){
-    const roomCode=Number(saved)
-      useRoomMessages(roomCode,userKey)
+  const allowed=useCheckRoomStatus('userOneOnline')
+  if(allowed===null){
+    return <Loader/>
   }
 
   ///if already finish and wants to navigate
   //  useCheckRoomStatus()
   const Roomcode=saved?Number(saved):0
   useRoomMessages(Roomcode, userKey);
-
-  useEffect(()=>{
-    if(!saved){
-      navigate('/categories')
-    }
-     },[navigate,saved])
-
-
- 
-  
-
-
 
   const sendMessage = async (saved:string) => {
     try {

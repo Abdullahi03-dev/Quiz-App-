@@ -11,7 +11,7 @@ const useRoomMessages = (roomCode: number, fieldName: string) => {
     const q = query(roomsRef, where("roomCode", "==", roomCode));
 
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      if (querySnapshot.empty) return; // ✅ This is now correct
+      if (querySnapshot.empty) return; 
 
       const data = querySnapshot.docs[0].data() as DocumentData;
       const fieldValue = data?.[fieldName];

@@ -29,7 +29,7 @@ const livehost = () => {
   const [roomCode,setRoomCode]=useState(0)
   const navigate=useNavigate()
   const saved=localStorage.getItem('Roomcode');
-  const userKey='user2Messages'
+  const userKey='user1Messages'
   const allowed=useCheckRoomStatus('userOneOnline')
   const Roomcode=saved?Number(saved):0
   // if(allowed===null) return <Loader/>
@@ -54,7 +54,7 @@ const livehost = () => {
           const docRef=doc(db,'Rooms',document.id);
             console.log(document.id,document.data())
           await updateDoc(docRef,{
-            user2Messages:'User 2 was disqualified for leaving the page'
+            user2Messages:'User 1 was disqualified for leaving the page'
           })
 
         })

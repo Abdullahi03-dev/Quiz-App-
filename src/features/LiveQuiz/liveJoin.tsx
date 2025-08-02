@@ -30,7 +30,7 @@ const liveJoin = () => {
   const [roomCode,setRoomCode]=useState(0)
   const navigate=useNavigate()
   const saved=localStorage.getItem('Roomcode');
-  const userKey='user1Messages'
+  const userKey='user2Messages'
   const allowed=useCheckRoomStatus('userTwoOnline')
   const Roomcode=saved?Number(saved):0
   useRoomMessages(Roomcode, userKey);
@@ -70,7 +70,7 @@ useEffect(()=>{
           const docRef=doc(db,'Rooms',document.id);
             console.log(document.id,document.data())
           await updateDoc(docRef,{
-            user1Messages:'User 1 was disqualified for leaving the page'
+            user1Messages:'User 2 was disqualified for leaving the page'
           })
 
         })

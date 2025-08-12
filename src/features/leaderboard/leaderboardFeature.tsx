@@ -157,11 +157,13 @@ const Leaderboards = () => {
         fetchUsers()
     },[])
   
-  
+  if(data===null){
+    return 'Loading.....'
+  }
     const sortedData = data
     .map(player => ({
       ...player,
-      totalScore: Object.values(player.scores).reduce((a, b) => a + b, 0)
+      totalScore: Object.values(player.scores||{}).reduce((a, b) => a + b, 0)
     }))
     .sort((a, b) => b.totalScore - a.totalScore);
     const FirstThree=sortedData.slice(0,3);
@@ -196,7 +198,7 @@ console.log(leaderboardData)
   };
 
   const getTotalScore=(score:Record<string,number>)=>{
-    return Object.values(score).reduce((a, b) => a + b, 0)
+    return Object.values(score??{}).reduce((a, b) => a + b, 0)
   }
 const getLevel = (score: number) => {
     if(score>=2400) return 'GrandMaster';
@@ -292,7 +294,7 @@ const getLevel = (score: number) => {
                 
                 <div className="space-y-2">
                   <div className="grid grid-cols-2 gap-2 text-xs">
-                    {Object.entries(player.scores).filter(([_, score]) => score !== 0).map(([lang, score]) => (
+                    {Object.entries(player.scores??{}).filter(([_, score]) => score !== 0).map(([lang, score]) => (
                       <div key={lang} className="bg-slate-800/50 rounded px-2 py-1">
                         <div className="text-emerald-400 font-semibold">{score}</div>
                         <div className="text-gray-400 capitalize">{lang}</div>
@@ -362,7 +364,7 @@ const getLevel = (score: number) => {
                     
                     <TableCell>
                       <div className="flex flex-wrap gap-1 max-w-xs">
-                      {Object.entries(player.scores).filter(([_, score]) => score !== 0).map(([lang, score]) => (
+                      {Object.entries(player.scores??{}).filter(([_, score]) => score !== 0).map(([lang, score]) => (
                       <div key={lang} className="bg-slate-800/50 rounded px-2 py-1">
                         <div className="text-emerald-400 font-semibold">{score}</div>
                         <div className="text-gray-400 capitalize">{lang}</div>

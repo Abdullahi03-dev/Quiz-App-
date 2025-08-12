@@ -1,0 +1,23 @@
+  {
+    "starterCode": "function sum(a, b) {\n  // Your code here return a+b \n}",
+    "id": "q1",
+    "title": "Sum Two Numbers",
+    "description": "Write a function called `sum` that takes two numbers and returns their sum 2.",
+    "difficulty": "Medium",
+    "points": "500",
+    "timeLimit": "900",
+    "testCases": [
+      {
+        "input": [2, 3],
+        "output": "5"
+      },
+      {
+        "input": [10 ,15],
+        "output": "25"
+      },
+      {
+        "input": [-4 ,9],
+        "output": "5"
+      }
+    ]
+  }

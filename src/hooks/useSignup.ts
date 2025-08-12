@@ -60,6 +60,11 @@ setTimeout(()=>{
               Python: 0,
               java:0,
               react:0
+        },
+        completedChallenges: {
+          easy: [],
+          medium: [],
+          hard: []
         }
       });
       localStorage.setItem('username',Username)

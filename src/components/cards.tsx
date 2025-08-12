@@ -31,7 +31,12 @@ const cardsObj:cardProps[]=[
     heading:'P V P',
     text:'Compete with other Javascript enthusiats in real-time! Our live quizzes will test yor skills and knowledge of javascript concepts,from basics to advanced topics.',
     image:image2,
-    path:'/settings'
+    path:'/livesettings'
+  },{
+    heading:'Code Arena',
+    text:'Step into the Code Arena- a live coding battleground where speed, accuracy, and skill determine the victor. Solve real challenges, beat the clock, and the rise as the ultimatr coder',
+    image:image2,
+    path:'/codeclashsettings'
   },
   {
     heading:'LEADERBOARD',
@@ -56,20 +61,14 @@ const cardsObj:cardProps[]=[
 
 const cards = () => {
   const navigate =useNavigate()
-
-  // const handlepath=():void=>{
-  //   navigate('/settings')
-  // }
   return (
     <>
     
-    <div className='flex flex-col items-center justify-center md:grid md:grid-cols-2 md:w-[75%] md:place-items-center md:gap-y-1 md:min-h-screen md:overflow-y-auto md:relative md:left-[50%] md:transform md:translate-x-[-50%]'>
+    <div className='flex flex-col items-center justify-center md:grid md:grid-cols-2 md:w-[80%] md:place-items-center md:min-h-screen md:overflow-y-auto md:relative md:left-[50%] md:transform md:translate-x-[-50%]'>
        {cardsObj.map((char,index)=>{
-        const isLastItem=index===cardsObj.length-1
-        const isSecondItem=index===cardsObj.length-2
 
 return(
-<motion.div onClick={()=>navigate(`${isSecondItem?'/livesettings':char.path}`)} initial='hidden'animate='visible' variants={cardVariants} key={index} className={`z-50 mb-6.5 py-7 w-[335px] flex flex-col items-start justify-center md:w-[450px] md:h-[240px]  bg-gradient-to-br from-[#a1f2c] to-black/80 rounded-[6px] md:px-3.5 cursor-pointer ${isLastItem?"col-span-4" :""}`} >
+<motion.div onClick={()=>navigate(char.path)} initial='hidden'animate='visible' variants={cardVariants} key={index} className={`z-50 mb-6.5 py-7 w-[335px] flex flex-col items-start justify-center md:w-[450px] md:h-[240px]  bg-gradient-to-br from-[#a1f2c] to-black/80 rounded-[6px] md:px-3.5 cursor-pointer `} >
 
 <span className='mx-[13px] pt-[8px] bg-[#22c55e] w-[60px] rounded-[5px] py-[5px]'>
     <ImageComponent src={char.image} alt='heading' width='35px' height='25px'  className='block mx-auto'/>

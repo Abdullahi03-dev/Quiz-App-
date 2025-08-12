@@ -1,12 +1,22 @@
 
-
-import {  useState } from "react";
+import { ensureCompletedChallenges } from "../utils/ensureCompletedChallenges";
+import { useAuth } from "../context/AuthProvider";
+import {  useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import { Brain, Zap, Trophy, Users, Gamepad2, Crown, ArrowRight, Sparkles, Target, Globe } from "lucide-react";
 const Index = () => {
+  const {user}=useAuth()
+  useEffect(()=>{
+    if(user?.uid){
+      ensureCompletedChallenges(user.uid)
+      .catch((err)=>
+      console.log(err)
+      )
+    }
+  },[user?.uid])
   const [hoveredFeature, setHoveredFeature] = useState<number | null>(null);
 
   const features = [
@@ -15,21 +25,21 @@ const Index = () => {
       title: "Normal Quiz",
       description: "Challenge yourself with thousands of questions across multiple categories. Perfect your knowledge at your own pace.",
       color: "from-emerald-400 to-green-600",
-      bgGradient: "from-emerald-500/10 to-green-500/5"
+      // bgGradient: "from-emerald-500/10 to-green-500/5"
     },
     {
       icon: Zap,
       title: "PvP Quiz Battle",
       description: "Face off against players worldwide in real-time quiz battles. Fast-paced, competitive, and thrilling!",
       color: "from-yellow-400 to-orange-500",
-      bgGradient: "from-yellow-500/10 to-orange-500/5"
+      // bgGradient: "from-yellow-500/10 to-orange-500/5"
     },
     {
       icon: Trophy,
       title: "Global Leaderboard",
       description: "Climb the ranks and prove you're the ultimate quiz master. Compete with millions of players worldwide.",
       color: "from-purple-400 to-pink-500",
-      bgGradient: "from-purple-500/10 to-pink-500/5"
+      // bgGradient: "from-purple-500/10 to-pink-500/5"
     }
   ];
 
@@ -85,11 +95,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative px-6 pt-20 pb-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-purple-500/5"></div>
-        <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-        
+      <section className="relative px-6 pt-20 pb-32">       
         <div className="relative max-w-7xl mx-auto text-center">
           <Badge className="mb-6 bg-emerald-500/10 text-emerald-400 border-emerald-500/20 hover:bg-emerald-500/20">
             <Sparkles className="w-4 h-4 mr-2" />
@@ -162,7 +168,7 @@ const Index = () => {
                 onMouseEnter={() => setHoveredFeature(index)}
                 onMouseLeave={() => setHoveredFeature(null)}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${feature.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                <div className={`opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
                 <CardContent className="relative p-8">
                   <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <feature.icon className="w-8 h-8 text-white" />

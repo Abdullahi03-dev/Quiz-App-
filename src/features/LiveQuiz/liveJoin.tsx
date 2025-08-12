@@ -9,6 +9,7 @@ import toast from "react-hot-toast";
 
 import useRoomMessages from "../../hooks/useMessages";
 import useCheckRoomStatus from "../../hooks/useCheckRoomStatus";
+import { arrayUnion } from "firebase/firestore";
 interface QuestionProps{
   question:string;
   options:string[];
@@ -27,6 +28,7 @@ const liveJoin = () => {
   const intervalRef = useRef<ReturnType<typeof setInterval>|null>(null);
   const [languageChoosed,setlanguageChoosed]=useState<string>('')
   const [questonsLenghtSaved,setquestonsLenghtSaved]=useState<string>('')
+  const [selectedIndex,setSelectedIndex]=useState<number[]>([])
   const [roomCode,setRoomCode]=useState(0)
   const navigate=useNavigate()
   const saved=localStorage.getItem('Roomcode');
@@ -88,7 +90,7 @@ useEffect(()=>{
         console.log('Roomcode:', saved);
   
         if (saved) {
-          updateWholeScore(parseInt(saved));
+          updateWholeScore(parseInt(saved),0,selected,selectedIndex);
           sendMessage(parseInt(saved));
         }
       } else {
@@ -138,7 +140,7 @@ useEffect(()=>{
         return !querySnapshot.empty; // Returns true if name exists
       };
 
-      const updateScoreAndState=async(roomCode:number)=> {
+      const updateScoreAndState=async(roomCode:number,scoreToBeSave:number,AnswersChosed:Record<number,string>,QuestionsChosed:number[])=> {
         const q=query(collection(db,'Rooms'),where('roomCode','==',roomCode));
 
         const querySanpshot=await getDocs(q)
@@ -149,28 +151,32 @@ useEffect(()=>{
           const docRef=doc(db,'Rooms',document.id);
             console.log(document.id,document.data())
           await updateDoc(docRef,{
-            userTwoScore:increment(scoreToBeSave),
-            userTwoOnline:false
+            userOneScore:increment(scoreToBeSave/2),
+            userOneOnline:false,
+            AnswersChosed:AnswersChosed,
+            QuestionsChosed:arrayUnion(...QuestionsChosed),
           })
 
         })
       }
       
 
-      const updateWholeScore = async (roomCode:number) => {
+      const updateWholeScore = async (roomCode:number,scoreToBeSave:number,AnswersChosed:Record<number,string>,QuestionsChosed:number[]) => {
         try {
           // Check if the name already exists in Firestore
           const nameExists = await checkIfNameExists(roomCode);
           if (!nameExists) {
             return;
           }else{
-            updateScoreAndState(roomCode)
+            updateScoreAndState(roomCode,scoreToBeSave,AnswersChosed,QuestionsChosed)
           }
           // Store the user details in Firestore
         } catch (error: any) {
           console.log(error)
         }
       }
+
+
 
 
 
@@ -204,7 +210,7 @@ useEffect(() => {
 useEffect(() => {
   if ( time===0) {
     if(intervalRef.current!==null){
-      updateWholeScore(roomCode)
+      updateWholeScore(roomCode,scoreToBeSave,selected,selectedIndex)
       navigate('/liveresult')
       clearInterval(intervalRef.current); // cleanup
 
@@ -284,7 +290,8 @@ const formatTime = (secs:number) => {
           const maxStart=Math.max(0,shuffled.length-Number(questonsLenghtSaved))
           const startIndex=Math.floor(Math.random()*(maxStart+1))
           const selectedQues=shuffled.slice(startIndex,startIndex+Number(questonsLenghtSaved))
-          // const selectedIndexes=selectedQues.map(q=>q.originalIndex).slice(0,Number(questonsLenghtSaved))
+          const selectedIndexes=selectedQues.map(q=>q.originalIndex).slice(0,Number(questonsLenghtSaved))
+          setSelectedIndex(selectedIndexes)
           setData(selectedQues)
           setQuestionIndex(0)
       })
@@ -314,7 +321,7 @@ const formatTime = (secs:number) => {
        if(questionNumber!==questionlenght){
         return prev+1
       }
-        updateWholeScore(roomCode)
+      updateWholeScore(roomCode,scoreToBeSave,selected,selectedIndex)
         navigate('/liveresult')
       return prev
   })    
@@ -351,7 +358,7 @@ const formatTime = (secs:number) => {
                   return updated
                 })
                 if(score!=null){
-                  const count=Object.values(score).filter(value=>value===true).length+1
+                  const count=Object.values(score).filter(value=>value===true).length
                   setscoreToBeSave(count)
                 }
             setSelected((prev:{[key:number]:string})=>{

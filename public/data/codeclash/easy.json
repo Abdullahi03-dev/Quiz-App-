@@ -1,0 +1,1187 @@
+[
+    {
+      "id": 1,
+      "title": "Reverse String",
+      "description": "Reverse a given string and return the result.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function reverseString(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"hello\""], "output": "\"olleh\"" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 2,
+      "title": "Palindrome Check",
+      "description": "Check if the given string is a palindrome.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function isPalindrome(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"racecar\""], "output": "true" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 3,
+      "title": "Factorial",
+      "description": "Return the factorial of a non-negative integer n.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function factorial(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [5], "output": "120" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 4,
+      "title": "Fibonacci Number",
+      "description": "Return the nth Fibonacci number (0-indexed).",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function fib(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [6], "output": "8" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 5,
+      "title": "Sum of Array",
+      "description": "Return the sum of all numbers in an array.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function sumArray(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3,4]"], "output": "10" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 6,
+      "title": "Max Number in Array",
+      "description": "Return the maximum number in the array.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function maxNumber(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,7,3,9,2]"], "output": "9" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 7,
+      "title": "Count Vowels",
+      "description": "Count the number of vowels in a given string.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function countVowels(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"hello world\""], "output": "3" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 8,
+      "title": "Remove Duplicates from Array",
+      "description": "Remove duplicate numbers from an array.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function removeDuplicates(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,2,3,4,4,5]"], "output": "[1,2,3,4,5]" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 9,
+      "title": "Capitalize First Letter",
+      "description": "Capitalize the first letter of each word in a string.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function capitalizeWords(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"hello world\""], "output": "\"Hello World\"" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 10,
+      "title": "Array Contains Element",
+      "description": "Check if an array contains a specific element.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function containsElement(arr, elem) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3,4]", 3], "output": "true" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 11,
+      "title": "Count Occurrences",
+      "description": "Count how many times an element appears in an array.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function countOccurrences(arr, elem) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,2,3,2]", 2], "output": "3" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 12,
+      "title": "Merge Two Arrays",
+      "description": "Merge two arrays and return the result.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function mergeArrays(arr1, arr2) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2]", "[3,4]"], "output": "[1,2,3,4]" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 13,
+      "title": "Find Index of Element",
+      "description": "Return the index of the given element in an array, or -1 if not found.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function findIndex(arr, elem) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3,4]", 3], "output": "2" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 14,
+      "title": "Check Even or Odd",
+      "description": "Return 'even' if the number is even, otherwise 'odd'.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function evenOrOdd(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [4], "output": "\"even\"" }
+      ],
+      "timeLimit": 500
+    },
+    {
+      "id": 15,
+      "title": "Multiply Array Elements",
+      "description": "Multiply all elements of an array by a given number.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function multiplyArray(arr, factor) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3]", 2], "output": "[2,4,6]" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 16,
+      "title": "Reverse Array",
+      "description": "Reverse the elements of an array.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function reverseArray(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3,4]"], "output": "[4,3,2,1]" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 17,
+      "title": "Check Positive Number",
+      "description": "Return true if the number is positive.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function isPositive(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [5], "output": "true" }
+      ],
+      "timeLimit": 500
+    },
+    {
+      "id": 18,
+      "title": "Convert Celsius to Fahrenheit",
+      "description": "Convert a temperature from Celsius to Fahrenheit.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function celsiusToFahrenheit(celsius) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [0], "output": "32" }
+      ],
+      "timeLimit": 500
+    },
+    {
+      "id": 19,
+      "title": "String Length",
+      "description": "Return the length of a given string.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function stringLength(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"hello\""], "output": "5" }
+      ],
+      "timeLimit": 500
+    },
+    {
+      "id": 20,
+      "title": "Repeat String",
+      "description": "Repeat the given string n times.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function repeatString(str, times) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"abc\"", 3], "output": "\"abcabcabc\"" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 21,
+      "title": "Get Last Element of Array",
+      "description": "Return the last element in an array.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function getLastElement(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3,4]"], "output": "4" }
+      ],
+      "timeLimit": 500
+    },
+    {
+      "id": 22,
+      "title": "Square Numbers in Array",
+      "description": "Return a new array where each number is squared.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function squareNumbers(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3]"], "output": "[1,4,9]" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 23,
+      "title": "Check Array Empty",
+      "description": "Return true if the array is empty, otherwise false.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function isArrayEmpty(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[]"], "output": "true" }
+      ],
+      "timeLimit": 500
+    },
+    {
+      "id": 24,
+      "title": "Join Array into String",
+      "description": "Join all elements of an array into a string separated by spaces.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function joinArray(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[\"a\",\"b\",\"c\"]"], "output": "\"a b c\"" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 25,
+      "title": "Check Divisible by 3",
+      "description": "Return true if the number is divisible by 3.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function divisibleByThree(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [9], "output": "true" }
+      ],
+      "timeLimit": 500
+    },
+    {
+      "id": 26,
+      "title": "Convert to Uppercase",
+      "description": "Convert the given string to uppercase.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function toUpperCaseStr(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"hello\""], "output": "\"HELLO\"" }
+      ],
+      "timeLimit": 500
+    },
+    {
+      "id": 27,
+      "title": "Convert to Lowercase",
+      "description": "Convert the given string to lowercase.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function toLowerCaseStr(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"HELLO\""], "output": "\"hello\"" }
+      ],
+      "timeLimit": 500
+    },
+    {
+      "id": 28,
+      "title": "Check Multiple of 5",
+      "description": "Return true if the number is a multiple of 5.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function multipleOfFive(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [15], "output": "true" }
+      ],
+      "timeLimit": 500
+    },
+    {
+      "id": 29,
+      "title": "Trim Whitespace",
+      "description": "Remove leading and trailing whitespace from the given string.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function trimString(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"  hello  \""], "output": "\"hello\"" }
+      ],
+      "timeLimit": 500
+    },
+    {
+      "id": 30,
+      "title": "Check Starts With Letter",
+      "description": "Return true if the string starts with a given letter.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function startsWithLetter(str, letter) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"hello\"", "\"h\""], "output": "true" }
+      ],
+      "timeLimit": 500
+    },
+    {
+      "id": 31,
+      "title": "Get First Character",
+      "description": "Return the first character of the string.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function getFirstChar(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"world\""], "output": "\"w\"" }
+      ],
+      "timeLimit": 500
+    },
+    {
+      "id": 32,
+      "title": "Get Last Character",
+      "description": "Return the last character of the string.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function getLastChar(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"world\""], "output": "\"d\"" }
+      ],
+      "timeLimit": 500
+    },
+    {
+      "id": 33,
+      "title": "Absolute Value",
+      "description": "Return the absolute value of a number.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function absoluteValue(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [-5], "output": "5" }
+      ],
+      "timeLimit": 500
+    },
+    {
+      "id": 34,
+      "title": "Double a Number",
+      "description": "Return twice the given number.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function doubleNumber(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [6], "output": "12" }
+      ],
+      "timeLimit": 500
+    },
+    {
+      "id": 35,
+      "title": "Half a Number",
+      "description": "Return half of the given number.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function halfNumber(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [8], "output": "4" }
+      ],
+      "timeLimit": 500
+    },
+    {
+      "id": 36,
+      "title": "Check Prime Number",
+      "description": "Return true if the number is prime.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function isPrime(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [7], "output": "true" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 37,
+      "title": "Array Length",
+      "description": "Return the length of an array.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function arrayLength(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3]"], "output": "3" }
+      ],
+      "timeLimit": 500
+    },
+    {
+      "id": 38,
+      "title": "Filter Even Numbers",
+      "description": "Return only the even numbers from an array.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function filterEven(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3,4]"], "output": "[2,4]" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 39,
+      "title": "Filter Odd Numbers",
+      "description": "Return only the odd numbers from an array.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function filterOdd(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3,4]"], "output": "[1,3]" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 40,
+      "title": "Sum of First N Numbers",
+      "description": "Return the sum of all numbers from 1 to n.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function sumFirstN(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [5], "output": "15" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 41,
+      "title": "Reverse an Array",
+      "description": "Return the given array reversed.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function reverseArray(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3]"], "output": "[3,2,1]" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 42,
+      "title": "Reverse a String",
+      "description": "Return the given string reversed.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function reverseString(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"abc\""], "output": "\"cba\"" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 43,
+      "title": "Find Minimum in Array",
+      "description": "Return the smallest number in the array.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function findMin(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[5,1,9,3]"], "output": "1" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 44,
+      "title": "Find Maximum in Array",
+      "description": "Return the largest number in the array.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function findMax(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[5,1,9,3]"], "output": "9" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 45,
+      "title": "Count Occurrences",
+      "description": "Return how many times a value appears in an array.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function countOccurrences(arr, val) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,2,3]", 2], "output": "2" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 46,
+      "title": "Repeat String",
+      "description": "Return the string repeated n times.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function repeatString(str, n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"ab\"", 3], "output": "\"ababab\"" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 47,
+      "title": "Remove First Element",
+      "description": "Return the array with the first element removed.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function removeFirst(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3]"], "output": "[2,3]" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 48,
+      "title": "Remove Last Element",
+      "description": "Return the array with the last element removed.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function removeLast(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3]"], "output": "[1,2]" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 49,
+      "title": "Check Includes Value",
+      "description": "Return true if the array contains the given value.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function arrayIncludes(arr, val) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3]", 2], "output": "true" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 50,
+      "title": "Capitalize First Letter",
+      "description": "Return the string with its first letter capitalized.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function capitalizeFirst(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"hello\""], "output": "\"Hello\"" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 51,
+      "title": "Find Index of Value",
+      "description": "Return the index of the given value in the array, or -1 if not found.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function findIndex(arr, val) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[10,20,30]", 20], "output": "1" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 52,
+      "title": "Remove Duplicates",
+      "description": "Return a new array with duplicate values removed.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function removeDuplicates(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,2,3,3,4]"], "output": "[1,2,3,4]" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 53,
+      "title": "Sum Array Values",
+      "description": "Return the sum of all values in the array.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function sumArray(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3,4]"], "output": "10" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 54,
+      "title": "Multiply Array Values",
+      "description": "Return the product of all values in the array.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function multiplyArray(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3,4]"], "output": "24" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 55,
+      "title": "Get Middle Element",
+      "description": "Return the middle element of the array. If even length, return the first of the two middle elements.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function getMiddleElement(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3,4,5]"], "output": "3" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 56,
+      "title": "Merge Arrays",
+      "description": "Return a new array that combines both arrays.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function mergeArrays(arr1, arr2) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2]", "[3,4]"], "output": "[1,2,3,4]" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 57,
+      "title": "Check Palindrome",
+      "description": "Return true if the string is the same forwards and backwards.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function isPalindrome(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"racecar\""], "output": "true" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 58,
+      "title": "Count Vowels",
+      "description": "Return the number of vowels in the given string.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function countVowels(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"hello\""], "output": "2" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 59,
+      "title": "Count Consonants",
+      "description": "Return the number of consonants in the given string.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function countConsonants(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"hello\""], "output": "3" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 60,
+      "title": "Sum Digits",
+      "description": "Return the sum of all digits in a number.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function sumDigits(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [1234], "output": "10" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 61,
+      "title": "Square Numbers in Array",
+      "description": "Return a new array where each number is squared.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function squareNumbers(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3]"], "output": "[1,4,9]" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 62,
+      "title": "Filter Even Numbers",
+      "description": "Return only even numbers from the array.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function filterEvens(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3,4]"], "output": "[2,4]" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 63,
+      "title": "Filter Odd Numbers",
+      "description": "Return only odd numbers from the array.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function filterOdds(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3,4]"], "output": "[1,3]" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 64,
+      "title": "Check Prime Number",
+      "description": "Return true if the given number is prime.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function isPrime(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [7], "output": "true" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 65,
+      "title": "Fibonacci Sequence",
+      "description": "Return the first n numbers in the Fibonacci sequence.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function fibonacci(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [5], "output": "[0,1,1,2,3]" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 66,
+      "title": "Factorial",
+      "description": "Return the factorial of the given number.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function factorial(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [5], "output": "120" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 67,
+      "title": "Find Longest Word",
+      "description": "Return the longest word in the string.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function longestWord(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"The quick brown fox\""], "output": "\"quick\"" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 68,
+      "title": "Find Shortest Word",
+      "description": "Return the shortest word in the string.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function shortestWord(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"The quick brown fox\""], "output": "\"The\"" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 69,
+      "title": "Title Case a String",
+      "description": "Return the string with each word capitalized.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function titleCase(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"hello world\""], "output": "\"Hello World\"" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 70,
+      "title": "Swap First and Last Elements",
+      "description": "Swap the first and last elements in an array and return it.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function swapEnds(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3,4]"], "output": "[4,2,3,1]" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 71,
+      "title": "Get Array Length",
+      "description": "Return the length of the given array.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function arrayLength(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3]"], "output": "3" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 72,
+      "title": "Check Empty Array",
+      "description": "Return true if the array is empty.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function isEmptyArray(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[]"], "output": "true" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 73,
+      "title": "Check Empty String",
+      "description": "Return true if the string is empty.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function isEmptyString(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"\""], "output": "true" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 74,
+      "title": "Absolute Value",
+      "description": "Return the absolute value of the given number.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function absoluteValue(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [-5], "output": "5" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 75,
+      "title": "Round Number",
+      "description": "Return the number rounded to the nearest integer.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function roundNumber(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [4.6], "output": "5" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 76,
+      "title": "Floor Number",
+      "description": "Return the largest integer less than or equal to the given number.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function floorNumber(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [4.9], "output": "4" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 77,
+      "title": "Ceil Number",
+      "description": "Return the smallest integer greater than or equal to the given number.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function ceilNumber(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [4.1], "output": "5" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 78,
+      "title": "Generate Random Number",
+      "description": "Return a random number between 0 and 1.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function randomNumber() {\n  // Your code here\n}",
+      "testCases": []
+    },
+    {
+      "id": 79,
+      "title": "Check Positive Number",
+      "description": "Return true if the number is positive.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function isPositive(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [5], "output": "true" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 80,
+      "title": "Check Negative Number",
+      "description": "Return true if the number is negative.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function isNegative(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [-3], "output": "true" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 81,
+      "title": "String Contains Substring",
+      "description": "Return true if the string contains the given substring.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function containsSubstring(str, sub) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"hello world\"", "\"world\""], "output": "true" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 82,
+      "title": "Trim Whitespace",
+      "description": "Return the string without leading and trailing spaces.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function trimString(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"  hello  \""], "output": "\"hello\"" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 83,
+      "title": "Convert to Lowercase",
+      "description": "Return the string converted to lowercase.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function toLowerCase(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"HELLO\""], "output": "\"hello\"" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 84,
+      "title": "Convert to Uppercase",
+      "description": "Return the string converted to uppercase.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function toUpperCase(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"hello\""], "output": "\"HELLO\"" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 85,
+      "title": "Array to String",
+      "description": "Join all array elements into a string separated by commas.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function arrayToString(arr) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3]"], "output": "\"1,2,3\"" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 86,
+      "title": "String to Array",
+      "description": "Split a string into an array by spaces.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function stringToArray(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"a b c\""], "output": "[\"a\",\"b\",\"c\"]" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 87,
+      "title": "Get First Character",
+      "description": "Return the first character of the string.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function firstChar(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"hello\""], "output": "\"h\"" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 88,
+      "title": "Get Last Character",
+      "description": "Return the last character of the string.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function lastChar(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"hello\""], "output": "\"o\"" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 89,
+      "title": "Repeat Character N Times",
+      "description": "Return a character repeated n times.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function repeatChar(c, n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"a\"", 5], "output": "\"aaaaa\"" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 90,
+      "title": "Replace All Spaces",
+      "description": "Replace all spaces in a string with hyphens.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function replaceSpaces(str) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"a b c\""], "output": "\"a-b-c\"" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 91,
+      "title": "Check Starts With",
+      "description": "Return true if the string starts with the given substring.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function startsWith(str, sub) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"hello\"", "\"he\""], "output": "true" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 92,
+      "title": "Check Ends With",
+      "description": "Return true if the string ends with the given substring.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function endsWith(str, sub) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["\"hello\"", "\"lo\""], "output": "true" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 93,
+      "title": "Add Numbers",
+      "description": "Return the sum of two numbers.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function add(a, b) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [2, 3], "output": "5" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 94,
+      "title": "Subtract Numbers",
+      "description": "Return the difference of two numbers.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function subtract(a, b) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [5, 2], "output": "3" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 95,
+      "title": "Multiply Numbers",
+      "description": "Return the product of two numbers.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function multiply(a, b) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [3, 4], "output": "12" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 96,
+      "title": "Divide Numbers",
+      "description": "Return the quotient of two numbers.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function divide(a, b) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [8, 2], "output": "4" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 97,
+      "title": "Check Even Number",
+      "description": "Return true if the number is even.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function isEven(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [4], "output": "true" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 98,
+      "title": "Check Odd Number",
+      "description": "Return true if the number is odd.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function isOdd(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [7], "output": "true" }
+      ],
+      "timeLimit": 1000
+    },
+    {
+      "id": 99,
+      "title": "Get Remainder",
+      "description": "Return the remainder of a divided by b.",
+      "difficulty": "easy",
+      "points": 10,
+      "starterCode": "function remainder(a, b) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [7, 3], "output": "1" }
+      ],
+      "timeLimit": 1000
+    }
+]

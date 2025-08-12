@@ -1,7 +1,20 @@
 // import React from 'react'
 import { useEffect } from 'react';
 import Cards from '../../components/cards'
+import { ensureCompletedChallenges } from '../../utils/ensureCompletedChallenges';
+import { useAuth } from '../../context/AuthProvider';
 const categoriesComp = () => {
+
+
+  const {user}=useAuth()
+  useEffect(()=>{
+    if(user?.uid){
+      ensureCompletedChallenges(user.uid)
+      .catch((err)=>
+      console.log(err)
+      )
+    }
+  },[user?.uid])
        useEffect(()=>{
   
       const saved=localStorage.getItem("quizSettings");

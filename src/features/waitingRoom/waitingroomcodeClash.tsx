@@ -10,11 +10,11 @@ const waitingroom = () => {
   const [secondUser,setSecondUser]=useState<string>('')
 
   useEffect(()=>{
-  const saved1=localStorage.getItem('Roomcode')
+  const saved1=localStorage.getItem('Codclroomcd')
   if(saved1){
     setRoomCode(saved1)
   }else{
-    navigate('/livesettings')
+    navigate('/codeclashsettings')
   }
   },[])
   
@@ -24,7 +24,7 @@ const waitingroom = () => {
   useEffect(()=>{
     if(!roomCode)return ;
     console.log(roomCode)
-    const usersRef = collection(db, "Rooms");
+    const usersRef = collection(db, "Codeclash");
     const q = query(usersRef, where("roomCode", "==",parseInt(roomCode) ));
 
     const unsubscribe=onSnapshot(q,(querySnapshot)=>{
@@ -33,13 +33,12 @@ const waitingroom = () => {
  }
       querySnapshot.forEach((doc)=>{
         const data=doc.data(); 
-console.log(doc)
-        if(data.userTwoOnline===true){
-          setSecondUser(data.userTwoName)
+        if(data.participants.length===2){
+          // if(true){
+          setSecondUser(data.participants[1])
           setTimeout(()=>{
-            navigate('/liveoquiz')
+            navigate(`/codeClash/${parseInt(roomCode)}`)
           },1000)
-          // alert('success')
         }else{
           console.log(data)
           console.log(secondUser)

@@ -20,6 +20,11 @@ import Livetquiz from './pages/LiveQuiz/livetquiz.tsx'
 import WaitingRoom from './pages/waitingRoom.tsx'
 import LiveResult from './pages/LiveResult.tsx'
 import CheckAnswers from './pages/checkAnswers.tsx'
+import LiveQuizChecker from './pages/LiveQuizChecker.tsx'
+import CodeClashGame from './pages/codeClashPages/codeClashGame.tsx'
+import CodeClashSttings from './pages/codeClashPages/codeClashSttings.tsx'
+import Waitingcodeclash from './pages/waitingcodeclash.tsx'
+import CodeclashresultPage from './pages/codeclashresult.tsx'
 // import { useAuth } from './context/AuthProvider.tsx'
 import Loader from './components/loader.tsx'
 
@@ -51,6 +56,11 @@ const AppRoutes=()=>{
         <Route element={<Liveoquiz/>} path='liveoquiz'/>
         <Route element={<Livetquiz/>} path='livetquiz'/>
         <Route element={<LiveResult/>} path='liveresult'/>
+        <Route element={<CodeClashSttings/>} path='codeclashsettings'/>
+        <Route element={<Waitingcodeclash/>} path='waitingcodeclash'/>
+        <Route element={<CodeclashresultPage/>} path='codeclashresult/:roomId'/>
+        <Route element={<CodeClashGame/>} path='codeClash/:roomId'/>
+        <Route element={<LiveQuizChecker/>} path='quizchecker'/>
         <Route element={<NotFound/>} path='404'/>
         </Route>
         

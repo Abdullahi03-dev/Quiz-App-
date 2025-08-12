@@ -1,0 +1,1206 @@
+[
+    {
+      "id": 1,
+      "title": "Two Sum II - Input Array Is Sorted",
+      "description": "Given a sorted array of integers, return the indices (1-indexed) of the two numbers such that they add up to a specific target.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function twoSum(numbers, target) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[2,7,11,15], 9], "output": "[1,2]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 2,
+      "title": "Rotate Image",
+      "description": "Rotate an n x n 2D matrix 90 degrees clockwise in place.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function rotate(matrix) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[1,2,3],[4,5,6],[7,8,9]]"], "output": "[[7,4,1],[8,5,2],[9,6,3]]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 3,
+      "title": "Valid Sudoku",
+      "description": "Determine if a 9x9 Sudoku board is valid according to the rules.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function isValidSudoku(board) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[ [\"5\",\"3\",\".\",\".\",\"7\",\".\",\".\",\".\",\".\"], [\"6\",\".\",\".\",\"1\",\"9\",\"5\",\".\",\".\",\".\"], [\".\",\"9\",\"8\",\".\",\".\",\".\",\".\",\"6\",\".\"], [\"8\",\".\",\".\",\".\",\"6\",\".\",\".\",\".\",\"3\"], [\"4\",\".\",\".\",\"8\",\".\",\"3\",\".\",\".\",\"1\"], [\"7\",\".\",\".\",\".\",\"2\",\".\",\".\",\".\",\"6\"], [\".\",\"6\",\".\",\".\",\".\",\".\",\"2\",\"8\",\".\"], [\".\",\".\",\".\",\"4\",\"1\",\"9\",\".\",\".\",\"5\"], [\".\",\".\",\".\",\".\",\"8\",\".\",\".\",\"7\",\"9\"] ]"], "output": "true" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 4,
+      "title": "Combination Sum",
+      "description": "Find all unique combinations of candidates where the chosen numbers sum to target.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function combinationSum(candidates, target) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[2,3,6,7], 7], "output": "[[2,2,3],[7]]" }
+      ],
+      "timeLimit": 2500
+    },
+    {
+      "id": 5,
+      "title": "Group Anagrams",
+      "description": "Group an array of strings into anagrams.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function groupAnagrams(strs) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [["eat","tea","tan","ate","nat","bat"]], "output": "[[\"eat\",\"tea\",\"ate\"],[\"tan\",\"nat\"],[\"bat\"]]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 6,
+      "title": "Spiral Matrix",
+      "description": "Return all elements of an m x n matrix in spiral order.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function spiralOrder(matrix) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[1,2,3],[4,5,6],[7,8,9]]"], "output": "[1,2,3,6,9,8,7,4,5]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 7,
+      "title": "Set Matrix Zeroes",
+      "description": "If an element in a matrix is 0, set its entire row and column to 0 in place.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function setZeroes(matrix) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[1,1,1],[1,0,1],[1,1,1]]"], "output": "[[1,0,1],[0,0,0],[1,0,1]]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 8,
+      "title": "Subsets",
+      "description": "Return all possible subsets (the power set) of a given array.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function subsets(nums) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[1,2,3]], "output": "[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 9,
+      "title": "Word Search",
+      "description": "Given an m x n board and a word, return true if the word exists in the grid.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function exist(board, word) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]", "\"ABCCED\""], "output": "true" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 10,
+      "title": "Search a 2D Matrix II",
+      "description": "Search a target in an m x n matrix with sorted rows and columns.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function searchMatrix(matrix, target) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]]", 5], "output": "true" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 11,
+      "title": "Top K Frequent Elements",
+      "description": "Return the k most frequent elements from a non-empty array.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function topKFrequent(nums, k) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[1,1,1,2,2,3], 2], "output": "[1,2]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 12,
+      "title": "Kth Largest Element in an Array",
+      "description": "Find the kth largest element in an unsorted array.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function findKthLargest(nums, k) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[3,2,1,5,6,4], 2], "output": "5" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 13,
+      "title": "Find Peak Element",
+      "description": "Find a peak element in an array where a peak is greater than its neighbors.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function findPeakElement(nums) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[1,2,3,1]], "output": "2" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 14,
+      "title": "Task Scheduler",
+      "description": "Given a list of tasks and a cooldown interval, return the least number of intervals to finish all tasks.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function leastInterval(tasks, n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [["A","A","A","B","B","B"], 2], "output": "8" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 15,
+      "title": "Product of Array Except Self",
+      "description": "Return an array where each element is the product of all the numbers except itself.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function productExceptSelf(nums) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[1,2,3,4]], "output": "[24,12,8,6]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 16,
+      "title": "Longest Palindromic Substring",
+      "description": "Given a string, return the longest palindromic substring in it.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function longestPalindrome(s) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["babad"], "output": "\"bab\"" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 17,
+      "title": "Coin Change",
+      "description": "Given coins of different denominations, return the fewest number of coins to make up a given amount.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function coinChange(coins, amount) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[1,2,5], 11], "output": "3" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 18,
+      "title": "Number of Islands",
+      "description": "Count the number of islands in a 2D grid map.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function numIslands(grid) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[\"1\",\"1\",\"1\",\"1\",\"0\"],[\"1\",\"1\",\"0\",\"1\",\"0\"],[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"0\",\"0\",\"0\",\"0\",\"0\"]]"], "output": "1" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 19,
+      "title": "Clone Graph",
+      "description": "Clone an undirected graph given a reference node.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function cloneGraph(node) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[2,4],[1,3],[2,4],[1,3]]"], "output": "[[2,4],[1,3],[2,4],[1,3]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 20,
+      "title": "Course Schedule",
+      "description": "Determine if you can finish all courses given prerequisites.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function canFinish(numCourses, prerequisites) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [2, [[1,0]]], "output": "true" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 21,
+      "title": "Implement Trie (Prefix Tree)",
+      "description": "Implement a trie with insert, search, and startsWith methods.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "class Trie {\n  constructor() {\n    // Your code here\n  }\n  insert(word) {\n    // Your code here\n  }\n  search(word) {\n    // Your code here\n  }\n  startsWith(prefix) {\n    // Your code here\n  }\n}",
+      "testCases": [
+        { "input": ["insert apple", "search apple", "search app", "startsWith app", "insert app", "search app"], "output": "[true,false,true,true]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 22,
+      "title": "Design Add and Search Words Data Structure",
+      "description": "Design a data structure that supports adding new words and finding if a string matches any previously added string with '.' as a wildcard.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "class WordDictionary {\n  constructor() {\n    // Your code here\n  }\n  addWord(word) {\n    // Your code here\n  }\n  search(word) {\n    // Your code here\n  }\n}",
+      "testCases": [
+        { "input": ["addWord bad", "addWord dad", "addWord mad", "search pad", "search bad", "search .ad", "search b.."], "output": "[false,true,true,true]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 23,
+      "title": "Binary Tree Zigzag Level Order Traversal",
+      "description": "Return the zigzag level order traversal of a binary tree's nodes' values.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function zigzagLevelOrder(root) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[3,9,20,null,null,15,7]"], "output": "[[3],[20,9],[15,7]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 24,
+      "title": "Flatten Binary Tree to Linked List",
+      "description": "Flatten a binary tree to a linked list in-place.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function flatten(root) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,5,3,4,null,6]"], "output": "[1,null,2,null,3,null,4,null,5,null,6]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 25,
+      "title": "Populating Next Right Pointers in Each Node",
+      "description": "Populate each next pointer to point to its next right node in a perfect binary tree.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function connect(root) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3,4,5,6,7]"], "output": "[[1,#],[2,3,#],[4,5,6,7,#]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 26,
+      "title": "Minimum Height Trees",
+      "description": "Find all roots of minimum height trees given n nodes and edges.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function findMinHeightTrees(n, edges) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [4, [[1,0],[1,2],[1,3]]], "output": "[1]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 27,
+      "title": "Evaluate Reverse Polish Notation",
+      "description": "Evaluate the value of an arithmetic expression in Reverse Polish Notation.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function evalRPN(tokens) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [["2","1","+","3","*"]], "output": "9" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 28,
+      "title": "Basic Calculator II",
+      "description": "Implement a basic calculator to evaluate a string expression containing non-negative integers and operators +, -, *, /.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function calculate(s) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["3+2*2"], "output": "7" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 29,
+      "title": "Integer to Roman",
+      "description": "Convert an integer to a Roman numeral.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function intToRoman(num) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [1994], "output": "\"MCMXCIV\"" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 30,
+      "title": "Roman to Integer",
+      "description": "Convert a Roman numeral to an integer.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function romanToInt(s) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["MCMXCIV"], "output": "1994" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 31,
+      "title": "String to Integer (atoi)",
+      "description": "Implement the myAtoi(string s) function to convert a string to a 32-bit signed integer.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function myAtoi(s) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["42"], "output": "42" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 32,
+      "title": "Multiply Strings",
+      "description": "Given two non-negative integers num1 and num2 represented as strings, return the product as a string.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function multiply(num1, num2) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["123","456"], "output": "\"56088\"" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 33,
+      "title": "Add Binary",
+      "description": "Given two binary strings, return their sum as a binary string.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function addBinary(a, b) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["11","1"], "output": "\"100\"" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 34,
+      "title": "Length of Longest Substring Without Repeating Characters",
+      "description": "Given a string, find the length of the longest substring without repeating characters.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function lengthOfLongestSubstring(s) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["abcabcbb"], "output": "3" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 35,
+      "title": "Generate Parentheses",
+      "description": "Given n pairs of parentheses, generate all combinations of well-formed parentheses.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function generateParenthesis(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [3], "output": "[\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 36,
+      "title": "Letter Combinations of a Phone Number",
+      "description": "Given a string containing digits from 2-9, return all possible letter combinations.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function letterCombinations(digits) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["23"], "output": "[\"ad\",\"ae\",\"af\",\"bd\",\"be\",\"bf\",\"cd\",\"ce\",\"cf\"]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 37,
+      "title": "Permutations",
+      "description": "Return all possible permutations of a given array of distinct integers.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function permute(nums) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[1,2,3]], "output": "[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 38,
+      "title": "Combinations",
+      "description": "Return all possible combinations of k numbers out of the range 1..n.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function combine(n, k) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [4,2], "output": "[[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 39,
+      "title": "Unique Paths",
+      "description": "Find the number of unique paths in an m x n grid.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function uniquePaths(m, n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [3,7], "output": "28" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 40,
+      "title": "Unique Paths II",
+      "description": "Find the number of unique paths in an m x n grid with obstacles.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function uniquePathsWithObstacles(obstacleGrid) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[0,0,0],[0,1,0],[0,0,0]]"], "output": "2" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 41,
+      "title": "Set Matrix Zeroes",
+      "description": "Given an m x n matrix, if an element is 0, set its entire row and column to 0 in-place.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function setZeroes(matrix) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[1,1,1],[1,0,1],[1,1,1]]"], "output": "[[1,0,1],[0,0,0],[1,0,1]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 42,
+      "title": "Search a 2D Matrix",
+      "description": "Write an efficient algorithm that searches for a value in an m x n matrix.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function searchMatrix(matrix, target) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[1,3,5,7],[10,11,16,20],[23,30,34,50]]", 3], "output": "true" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 43,
+      "title": "Sort Colors",
+      "description": "Sort an array with 0, 1, and 2 in-place without library sort.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function sortColors(nums) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[2,0,2,1,1,0]], "output": "[0,0,1,1,2,2]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 44,
+      "title": "Minimum Path Sum",
+      "description": "Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right with minimum sum.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function minPathSum(grid) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[1,3,1],[1,5,1],[4,2,1]]"], "output": "7" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 45,
+      "title": "Climbing Stairs with Variable Jumps",
+      "description": "Given an array where each element represents max jump length from that position, find the minimum number of jumps to reach the end.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function jump(nums) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[2,3,1,1,4]], "output": "2" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 46,
+      "title": "Longest Increasing Subsequence",
+      "description": "Find the length of the longest strictly increasing subsequence.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function lengthOfLIS(nums) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[10,9,2,5,3,7,101,18]], "output": "4" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 47,
+      "title": "Coin Change",
+      "description": "Given coins of different denominations and an amount, compute fewest coins to make up the amount.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function coinChange(coins, amount) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[1,2,5], 11], "output": "3" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 48,
+      "title": "Word Break",
+      "description": "Given a string s and a dictionary of words, determine if s can be segmented into a space-separated sequence of dictionary words.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function wordBreak(s, wordDict) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["leetcode", ["leet","code"]], "output": "true" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 49,
+      "title": "Longest Palindromic Substring",
+      "description": "Given a string s, return the longest palindromic substring.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function longestPalindrome(s) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["babad"], "output": "\"bab\"" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 50,
+      "title": "Count and Say",
+      "description": "Given an integer n, generate the nth term of the count-and-say sequence.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function countAndSay(n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [4], "output": "\"1211\"" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 51,
+      "title": "Spiral Matrix",
+      "description": "Return all elements of the matrix in spiral order.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function spiralOrder(matrix) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[1,2,3],[4,5,6],[7,8,9]]"], "output": "[1,2,3,6,9,8,7,4,5]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 52,
+      "title": "Rotate Image",
+      "description": "Rotate the given n x n matrix by 90 degrees (clockwise) in-place.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function rotate(matrix) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[1,2,3],[4,5,6],[7,8,9]]"], "output": "[[7,4,1],[8,5,2],[9,6,3]]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 53,
+      "title": "Group Anagrams",
+      "description": "Group the anagrams together from an array of strings.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function groupAnagrams(strs) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [["eat","tea","tan","ate","nat","bat"]], "output": "[[\"eat\",\"tea\",\"ate\"],[\"tan\",\"nat\"],[\"bat\"]]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 54,
+      "title": "Product of Array Except Self",
+      "description": "Return an array answer such that answer[i] is the product of all elements of nums except nums[i].",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function productExceptSelf(nums) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[1,2,3,4]], "output": "[24,12,8,6]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 55,
+      "title": "Subsets",
+      "description": "Return all possible subsets (the power set).",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function subsets(nums) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[1,2,3]], "output": "[[],[1],[2],[3],[1,2],[1,3],[2,3],[1,2,3]]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 56,
+      "title": "Combination Sum",
+      "description": "Return all unique combinations of candidates where the chosen numbers sum to target.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function combinationSum(candidates, target) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[2,3,6,7], 7], "output": "[[2,2,3],[7]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 57,
+      "title": "Combination Sum II",
+      "description": "Return all unique combinations where the chosen numbers sum to target without reuse.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function combinationSum2(candidates, target) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[10,1,2,7,6,1,5], 8], "output": "[[1,1,6],[1,2,5],[1,7],[2,6]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 58,
+      "title": "Binary Search",
+      "description": "Implement binary search to find the index of a target in a sorted array.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function search(nums, target) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[-1,0,3,5,9,12], 9], "output": "4" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 59,
+      "title": "Find First and Last Position of Element in Sorted Array",
+      "description": "Return the starting and ending position of a given target in a sorted array.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function searchRange(nums, target) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[5,7,7,8,8,10], 8], "output": "[3,4]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 60,
+      "title": "Merge Intervals",
+      "description": "Given a collection of intervals, merge all overlapping intervals.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function merge(intervals) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[1,3],[2,6],[8,10],[15,18]]"], "output": "[[1,6],[8,10],[15,18]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 61,
+      "title": "Insert Interval",
+      "description": "Insert a new interval into a sorted list of non-overlapping intervals and merge if necessary.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function insert(intervals, newInterval) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[1,3],[6,9]]", "[2,5]"], "output": "[[1,5],[6,9]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 62,
+      "title": "Top K Frequent Elements",
+      "description": "Return the k most frequent elements from the array.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function topKFrequent(nums, k) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[1,1,1,2,2,3], 2], "output": "[1,2]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 63,
+      "title": "Kth Largest Element in an Array",
+      "description": "Find the kth largest element in an unsorted array.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function findKthLargest(nums, k) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[3,2,1,5,6,4], 2], "output": "5" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 64,
+      "title": "Find Peak Element",
+      "description": "A peak element is an element strictly greater than its neighbors. Return the index of a peak element.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function findPeakElement(nums) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[1,2,3,1]], "output": "2" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 65,
+      "title": "Search in Rotated Sorted Array II",
+      "description": "Determine if a target value exists in a rotated sorted array that may contain duplicates.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function search(nums, target) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[2,5,6,0,0,1,2], 0], "output": "true" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 66,
+      "title": "Find Minimum in Rotated Sorted Array",
+      "description": "Find the minimum element in a rotated sorted array without duplicates.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function findMin(nums) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [[3,4,5,1,2]], "output": "1" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 67,
+      "title": "Valid Sudoku",
+      "description": "Determine if a 9x9 Sudoku board is valid.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function isValidSudoku(board) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[ ['5','3','.','.','7','.','.','.','.'], ['6','.','.','1','9','5','.','.','.'], ['.','9','8','.','.','.','.','6','.'], ['8','.','.','.','6','.','.','.','3'], ['4','.','.','8','.','3','.','.','1'], ['7','.','.','.','2','.','.','.','6'], ['.','6','.','.','.','.','2','8','.'], ['.','.','.','4','1','9','.','.','5'], ['.','.','.','.','8','.','.','7','9'] ]"], "output": "true" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 68,
+      "title": "Binary Tree Level Order Traversal",
+      "description": "Return the level order traversal of a binary tree.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function levelOrder(root) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[3,9,20,null,null,15,7]"], "output": "[[3],[9,20],[15,7]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 69,
+      "title": "Binary Tree Zigzag Level Order Traversal",
+      "description": "Return the zigzag level order traversal of a binary tree.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function zigzagLevelOrder(root) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[3,9,20,null,null,15,7]"], "output": "[[3],[20,9],[15,7]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 70,
+      "title": "Binary Tree Right Side View",
+      "description": "Return the values of the nodes visible from the right side of the binary tree.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function rightSideView(root) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3,null,5,null,4]"], "output": "[1,3,4]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 71,
+      "title": "Binary Tree Inorder Traversal",
+      "description": "Return the inorder traversal of a binary tree without recursion.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function inorderTraversal(root) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,null,2,3]"], "output": "[1,3,2]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 72,
+      "title": "Flatten Binary Tree to Linked List",
+      "description": "Flatten a binary tree into a linked list in-place.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function flatten(root) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,5,3,4,null,6]"], "output": "[1,null,2,null,3,null,4,null,5,null,6]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 73,
+      "title": "Path Sum II",
+      "description": "Return all root-to-leaf paths where each path's sum equals the given target sum.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function pathSum(root, targetSum) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[5,4,8,11,null,13,4,7,2,null,null,5,1]", 22], "output": "[[5,4,11,2],[5,8,4,5]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 74,
+      "title": "Sum Root to Leaf Numbers",
+      "description": "Given a binary tree containing digits 0–9 only, return the total sum of all root-to-leaf numbers.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function sumNumbers(root) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3]"], "output": "25" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 75,
+      "title": "Populating Next Right Pointers in Each Node",
+      "description": "Populate each next pointer to point to its next right node in a perfect binary tree.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function connect(root) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3,4,5,6,7]"], "output": "[1,#,2,3,#,4,5,6,7,#]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 76,
+      "title": "Populating Next Right Pointers in Each Node II",
+      "description": "Populate each next pointer to point to its next right node in any binary tree.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function connect(root) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3,4,5,null,7]"], "output": "[1,#,2,3,#,4,5,7,#]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 77,
+      "title": "Unique Paths II",
+      "description": "Find the number of unique paths in a grid with obstacles.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function uniquePathsWithObstacles(obstacleGrid) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[0,0,0],[0,1,0],[0,0,0]]"], "output": "2" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 78,
+      "title": "Minimum Path Sum with Obstacles",
+      "description": "Find the minimum path sum in a grid with obstacles.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function minPathSumWithObstacles(grid) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[1,3,1],[1,0,1],[4,2,1]]"], "output": "7" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+        "id": 79,
+        "title": "Array Intersection",
+        "description": "Return an array containing elements common to both arrays.",
+        "difficulty": "Easy",
+        "points": 15,
+        "input": ["[1, 2, 3]", "[2, 3, 4]"],
+        "output": "[2, 3]",
+        "timeLimit": 2000,
+        "starterCode": "function arrayIntersection(arr1, arr2) {\n  // write code here\n}"
+      },
+        
+    {
+      "id": 80,
+      "title": "Rotate Image",
+      "description": "Rotate an n x n 2D matrix by 90 degrees clockwise in-place.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function rotate(matrix) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[1,2,3],[4,5,6],[7,8,9]]"], "output": "[[7,4,1],[8,5,2],[9,6,3]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 81,
+      "title": "Spiral Matrix",
+      "description": "Return all elements of an m x n matrix in spiral order.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function spiralOrder(matrix) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[1,2,3],[4,5,6],[7,8,9]]"], "output": "[1,2,3,6,9,8,7,4,5]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 82,
+      "title": "Set Matrix Zeroes",
+      "description": "If an element is 0, set its entire row and column to 0 in-place.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function setZeroes(matrix) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[1,1,1],[1,0,1],[1,1,1]]"], "output": "[[1,0,1],[0,0,0],[1,0,1]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 83,
+      "title": "Game of Life",
+      "description": "Implement Conway's Game of Life for one iteration.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function gameOfLife(board) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[0,1,0],[0,0,1],[1,1,1],[0,0,0]]"], "output": "[[0,0,0],[1,0,1],[0,1,1],[0,1,0]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 84,
+      "title": "Sort Colors",
+      "description": "Sort an array with 0s, 1s, and 2s in-place without library sort.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function sortColors(nums) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[2,0,2,1,1,0]"], "output": "[0,0,1,1,2,2]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 85,
+      "title": "Subsets",
+      "description": "Return all possible subsets (the power set) of a given array.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function subsets(nums) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3]"], "output": "[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 86,
+      "title": "Subsets II",
+      "description": "Return all possible subsets without duplicate subsets when array contains duplicates.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function subsetsWithDup(nums) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,2]"], "output": "[[],[1],[2],[1,2],[2,2],[1,2,2]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 87,
+      "title": "Permutations",
+      "description": "Return all permutations of a given array of distinct integers.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function permute(nums) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3]"], "output": "[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 88,
+      "title": "Permutations II",
+      "description": "Return all unique permutations when array contains duplicates.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function permuteUnique(nums) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,1,2]"], "output": "[[1,1,2],[1,2,1],[2,1,1]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 89,
+      "title": "Combinations",
+      "description": "Return all possible combinations of k numbers out of 1..n.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function combine(n, k) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [4, 2], "output": "[[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 90,
+      "title": "Combination Sum",
+      "description": "Return all combinations that sum to target with unlimited usage of candidates.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function combinationSum(candidates, target) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[2,3,6,7]", 7], "output": "[[2,2,3],[7]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 91,
+      "title": "Combination Sum II",
+      "description": "Return all unique combinations that sum to target, each number may only be used once.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function combinationSum2(candidates, target) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[10,1,2,7,6,1,5]", 8], "output": "[[1,1,6],[1,2,5],[1,7],[2,6]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 92,
+      "title": "Combination Sum III",
+      "description": "Return all possible combinations of k numbers that sum to n, using numbers 1–9 without repetition.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function combinationSum3(k, n) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [3, 7], "output": "[[1,2,4]]" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 93,
+      "title": "Word Search",
+      "description": "Given a 2D board and a word, find if the word exists in the grid.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function exist(board, word) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]", "\"ABCCED\""], "output": "true" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 94,
+      "title": "Number of Islands",
+      "description": "Count the number of islands in a 2D grid.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function numIslands(grid) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[\"1\",\"1\",\"1\",\"1\",\"0\"],[\"1\",\"1\",\"0\",\"1\",\"0\"],[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"0\",\"0\",\"0\",\"0\",\"0\"]]"], "output": "1" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 95,
+      "title": "Clone Graph",
+      "description": "Clone an undirected graph given a reference to a node.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function cloneGraph(node) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[[2,4],[1,3],[2,4],[1,3]]"], "output": "[[2,4],[1,3],[2,4],[1,3]]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 96,
+      "title": "Course Schedule",
+      "description": "Determine if it is possible to finish all courses given prerequisites.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function canFinish(numCourses, prerequisites) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [2, "[[1,0]]"], "output": "true" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 97,
+      "title": "Course Schedule II",
+      "description": "Return the order of courses to finish all courses given prerequisites.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function findOrder(numCourses, prerequisites) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [2, "[[1,0]]"], "output": "[0,1]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 98,
+      "title": "Minimum Height Trees",
+      "description": "Find all the roots of Minimum Height Trees in a graph with n nodes.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function findMinHeightTrees(n, edges) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": [4, "[[1,0],[1,2],[1,3]]"], "output": "[1]" }
+      ],
+      "timeLimit": 3000
+    },
+    {
+      "id": 99,
+      "title": "House Robber",
+      "description": "You cannot rob two adjacent houses. Find the maximum amount you can rob.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function rob(nums) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[1,2,3,1]"], "output": "4" }
+      ],
+      "timeLimit": 2000
+    },
+    {
+      "id": 100,
+      "title": "House Robber II",
+      "description": "Houses are in a circle. You cannot rob two adjacent houses. Find the maximum amount you can rob.",
+      "difficulty": "medium",
+      "points": 30,
+      "starterCode": "function rob(nums) {\n  // Your code here\n}",
+      "testCases": [
+        { "input": ["[2,3,2]"], "output": "3" }
+      ],
+      "timeLimit": 2000
+    }
+  
+  ]
+  
+  
+  

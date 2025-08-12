@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import {  useNavigate } from 'react-router-dom';
 // import Footer from "../../components/footer";
 import { calculateFinalScore,Difficulty } from "../../utils/calculateScore";
-
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
 import { Progress } from "../..//components/ui/progress";
@@ -18,16 +17,19 @@ const [percentage,setPercentage]=useState(0)
 const [difficultyLevel,setDifficultyLevel]=useState('')
 const [questonsLenght,setQuestonsLenght]=useState('')
 
-useEffect(()=>{
-    const handlepop=()=>{
-      navigate('/categories',{replace:true})
 
-    }
-    window.addEventListener('popstate',handlepop)
-    return()=>{
-      window.removeEventListener('popstate',handlepop)
-    }
-  },[navigate])
+
+        useEffect(()=>{
+            const handlepop=()=>{
+              navigate('/categories',{replace:true})
+            }
+            window.addEventListener('popstate',handlepop)
+            return()=>{
+              window.removeEventListener('popstate',handlepop)
+            }
+          },[navigate])
+
+
 
 
 
@@ -46,6 +48,10 @@ useEffect(()=>{
     }
 
 },[])
+
+
+
+
 
 
 

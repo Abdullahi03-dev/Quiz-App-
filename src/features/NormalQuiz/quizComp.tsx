@@ -33,7 +33,7 @@ const quizComp = () => {
       if(document.visibilityState==='hidden'){
           toast.error('Disqualified')
       }else{
-        navigate('/result')
+        navigate('/result'", { replace: true })
       }
     }
     document.addEventListener('visibilitychange',handleVisibilityChange)

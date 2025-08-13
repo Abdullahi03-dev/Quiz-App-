@@ -33,7 +33,7 @@ const quizComp = () => {
       if(document.visibilityState==='hidden'){
           toast.error('Disqualified')
       }else{
-        navigate('/result'", { replace: true })
+        navigate("/result", { replace: true });
       }
     }
     document.addEventListener('visibilitychange',handleVisibilityChange)
@@ -44,7 +44,7 @@ const quizComp = () => {
   },[])
   ////NAVIGATE FUNION TO RESULT PAGE
   const navigateToResult=()=>{
-    navigate('/result')
+    navigate("/result", { replace: true });
   }
   
 

@@ -60,6 +60,16 @@ const useGoogleAuth = () => {
               easy: [],
               medium: [],
               hard: []
+            },
+            completedLiveChallenges: {
+              javascript: [],
+              golang: [],
+              python: []
+            },
+            completedLocalQuiz: {
+              easy: [],
+              medium: [],
+              hard: []
             }
           });
           localStorage.setItem('username',username)

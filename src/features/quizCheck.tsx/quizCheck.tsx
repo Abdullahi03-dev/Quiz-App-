@@ -1,23 +1,77 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent, CardHeader } from "../../components/ui/card";
 import { Badge } from "../../components/ui/badge";
 import { Separator } from "../../components/ui/separator";
 import { Home, RotateCcw, CheckCircle, XCircle, Clock } from "lucide-react";
 import { useEffect, useState } from "react";
+import { DocumentData, collection, doc, getDoc, getDocs, query, where } from "firebase/firestore";
+import toast from "react-hot-toast";
+import { db } from "../../firebase/firebase";
+import useUsername from "../../hooks/useUsername";
 interface QuestionProps{
     question:string;
     options:string[];
     correctAnswer:string[];
   }
 export default function QuizReview() {
-    const saveData= JSON.parse(localStorage.getItem('quizSettings')||'{}')
+  const {session}=useParams()
+  const {username}=useUsername()
+    // const saveData= JSON.parse(localStorage.getItem('quizSettings')||'{}')
+    const [saveData,setSaveData]=useState<DocumentData|null>(null)
     const AnswersChosed= JSON.parse(localStorage.getItem('AnswersChosed')||'{}')
     const QuestionsChosed:number[]= JSON.parse(localStorage.getItem('QuestionsChosed')||'{}')
     const [data,setData]=useState<QuestionProps[]>([])
     const [scoreArray,setScoreArray]=useState<boolean[]>([])
     const [keys,setKeys]=useState<number[]>([])
   const navigate = useNavigate();
+
+
+
+
+  useEffect(()=>{
+    if(!session||!username) return 
+
+      const loadSession=async()=>{
+      try{
+        const usersRef = collection(db, "users");
+        const q = query(usersRef, where("name", "==", username));
+        const querySanpshot=await getDocs(q)
+        if(querySanpshot.empty){
+          toast.error('Invalid Session')
+          navigate('/settings')
+          return
+        }
+
+        const userDoc=querySanpshot.docs[0]
+        const userDocRef=userDoc.ref
+        const sessionRef=doc(userDocRef,'sessions',session)
+         const sessiondoc= await getDoc(sessionRef)
+          if(sessiondoc.exists()){
+            const sessionData=sessiondoc.data()
+          console.log(sessionData)
+          setSaveData(sessionData)
+            if(sessionData.HasQuizEnd===false){
+          toast.error('Error')
+          navigate('/settings')
+          return
+         }
+          }
+         
+      }catch(e){
+        console.log(e)
+      }
+    }
+    loadSession()
+  },[session,navigate,username])
+
+
+
+
+
+
+
+
 
   const handleRetakeQuiz = () => {
     navigate('/settings');
@@ -28,13 +82,10 @@ export default function QuizReview() {
 
 
   useEffect(()=>{
-      let filename=''
-      if(saveData.languageChoosed === null||saveData.questonsLenghtSaved===null){
-        navigate(-1)
-      }else{
-        // setQuestionLenght(parseInt(saveData.questonsLenghtSaved))
-         filename=`data/${saveData.languageChoosed}/${saveData.languageChoosed}${saveData.difficultyLevel}.json`;
-      }
+    if(!saveData||saveData.languageChoosed === null||saveData.questonsLenghtSaved===null||saveData.questonsLenghtSaved==null){
+      return
+    }
+      let filename=`/data/${saveData?.languageChoosed}/${saveData?.languageChoosed}${saveData?.difficultyLevel}.json`;
       fetch(`${filename}`)
       .then((response)=>response.json() as Promise<QuestionProps[]>)
       .then((data)=>{
@@ -48,7 +99,7 @@ export default function QuizReview() {
       .catch((err)=>{
           console.log(err)
       })
-    },[])
+    },[saveData?.languageChoosed,saveData?.difficultyLevel,saveData?.questonsLenghtSaved])
 
   return (
     <div className="min-h-screen bg-slate-950 text-foreground p-4">

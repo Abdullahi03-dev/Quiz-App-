@@ -22,7 +22,7 @@ const waitingroom = () => {
 
   ///FIREBASE CHECKING IF USER TWO HAS JOINED
   useEffect(()=>{
-    if(!roomCode)return ;
+    if(!roomCode)  return ;
     console.log(roomCode)
     const usersRef = collection(db, "Codeclash");
     const q = query(usersRef, where("roomCode", "==",parseInt(roomCode) ));

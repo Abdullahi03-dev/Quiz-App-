@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent, CardHeader } from "../../components/ui/card";
 import { Badge } from "../../components/ui/badge";
@@ -14,6 +14,7 @@ interface QuestionProps{
     correctAnswer:string[];
   }
 export default function QuizReview() {
+  const {roomId}=useParams()
     const [AnswersChosed,setAnswersChosed]=useState<{[key:number]:string}>({})
     const [QuestionsChosed,setQuestionsChosed]=useState<number[]>([])
     const [languageChoosed,setlanguageChoosed]=useState<string>('')
@@ -45,15 +46,14 @@ export default function QuizReview() {
     }else{
       console.log('error')
       toast.error('Room Does Not Exist')
+      navigate('/categories')
     }
   };
 
-  useEffect(() => {
-    const saved = localStorage.getItem('resultCode');
-    if (saved) {
-      getDocuments(parseInt(saved));
-    }
-  }, []);
+  useEffect(()=>{
+    if(!roomId) return 
+      getDocuments(Number(roomId))
+  },[roomId,navigate])
   
   useEffect(() => {
     if (
@@ -62,9 +62,9 @@ export default function QuizReview() {
       !questonsLenghtSaved
     )
       return;
-  
-    const filename = `data/liveQuiz/${languageChoosed}.json`;
-  
+ 
+    const filename = `/data/liveQuiz/${languageChoosed}.json`;
+   console.log(filename)
     fetch(filename)
       .then((response) => response.json() as Promise<QuestionProps[]>)
       .then((jsonData) => {
@@ -114,7 +114,7 @@ export default function QuizReview() {
           {data.map((question:any, index:number) => {
             const matchindex=keys.indexOf(index+1)
             return(
-            <Card key={question} className="bg-slate-900/80 border-slate-800 backdrop-blur-sm">
+            <Card key={index} className="bg-slate-900/80 border-slate-800 backdrop-blur-sm">
               <CardHeader>
                 <div className="flex items-start gap-3">
                   {scoreArray[matchindex]==question.correctAnswer ? (

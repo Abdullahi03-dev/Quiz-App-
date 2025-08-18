@@ -1,18 +1,19 @@
-import { db, collection, query, where, getDocs, doc,updateDoc ,increment} from "../../firebase/firebase";
+import { db, collection, query, where, getDocs, doc,updateDoc ,increment, getDoc, auth, DocumentData} from "../../firebase/firebase";
 import { ArrowLeft,ArrowRight } from "lucide-react"
 import { useEffect,useState } from "react"
-import { useNavigate } from "react-router-dom";
+import { SessionData, useNavigate, useParams } from "react-router-dom";
 import Loader from "../../components/loader";
 import { calculateFinalScore } from "../../utils/calculateScore";
 import useUsername from "../../hooks/useUsername";
 import toast from "react-hot-toast";
-// import NotFound from "../../components/notFound";
+import { onAuthStateChanged } from "firebase/auth";
 interface QuestionProps{
   question:string;
   options:string[];
   correctAnswer:string[];
 }
 const quizComp = () => {
+  const {session}=useParams()
   const {username}=useUsername()
   const [questionIndex,setQuestionIndex]=useState<number>(0)
   const [questionNumber,setQuestionNumber]=useState<number>(1)
@@ -23,45 +24,94 @@ const quizComp = () => {
   const [selected,setSelected]=useState<{[key:number]:string}>({})
   const [selectedId,setSelectedId]=useState<string[]>([])
   const [selectedIndex,setSelectedIndex]=useState<number[]>([])
-  // const [username,setUserName]=useState<string>('')
-  const saveData= JSON.parse(localStorage.getItem('quizSettings')||'{}')
+  const [questionId,setQuestionId]=useState<number[]>([])
+  const [saveData,setSaveData]=useState<DocumentData|null>(null)
+  // const saveData= JSON.parse(localStorage.getItem('quizSettings')||'{}')
 
   const navigate=useNavigate()
 
   useEffect(()=>{
-    const handleVisibilityChange=()=>{
-      if(document.visibilityState==='hidden'){
-          toast.error('Disqualified')
-      }else{
-        navigate('/result')
+    if(!session||!username) return 
+    // alert(username)
+
+      const loadSession=async()=>{
+      try{
+        const usersRef = collection(db, "users");
+        const q = query(usersRef, where("name", "==", username));
+        const querySanpshot=await getDocs(q)
+        if(querySanpshot.empty){
+          toast.error('invalid session')
+          navigate('/settings')
+          return
+        }
+
+        const userDoc=querySanpshot.docs[0]
+        const userDocRef=userDoc.ref
+        const sessionRef=doc(userDocRef,'sessions',session)
+         const sessiondoc= await getDoc(sessionRef)
+          if(sessiondoc.exists()){
+            const sessionData=sessiondoc.data()
+          // console.log(sessionData)
+          setSaveData(sessionData)
+            if(sessionData.HasQuizEnd){
+          toast.error('Quiz Has Ended')
+          navigate('/settings')
+          return
+         }else{
+          
+          const difficulty=sessionData.difficultyLevel
+          const authUnsub = onAuthStateChanged(auth, async (user:any) => {
+            if (!user) return;
+      
+            // Fetch this user’s completed challenges for this difficulty
+            const usersRef = collection(db, "users");
+            const q = query(usersRef, where("name", "==", username));
+            const userSnap = await getDocs(q);
+            if(userSnap.empty){
+              return
+            }
+            const roomDoc = userSnap.docs[0]
+            const roomData = roomDoc.data()
+              const completedIds = roomData.completedLiveChallenges?.[difficulty] || [];
+              setQuestionId(completedIds);
+          });
+          return () => authUnsub();
+         }
+          }
+         
+      }catch(e){
+        console.log(e)
       }
     }
-    document.addEventListener('visibilitychange',handleVisibilityChange)
-    return ()=>{
-      document.removeEventListener('visibilitychange', handleVisibilityChange)
+    loadSession()
+  },[session,navigate,username])
 
-    }
-  },[])
+  const UpdateUserSession=async(updates:Partial<SessionData>)=>{
+    if(!session) return
+      try{
+        const usersRef = collection(db, "users");
+        const q = query(usersRef, where("name", "==", username));
+        const querySanpshot=await getDocs(q)
+        if(querySanpshot.empty) return 
+
+        const userDoc=querySanpshot.docs[0]
+        const userDocRef=userDoc.ref
+        const sessionRef=doc(userDocRef,'sessions',session)
+            await updateDoc(sessionRef,updates)
+      }catch(e){
+        console.log(e)
+      }
+  }
+
+
+
+  
   ////NAVIGATE FUNION TO RESULT PAGE
   const navigateToResult=()=>{
-    navigate('/result')
+    if(!session) return 
+    navigate(`/result/${session}`)
   }
-  
-
-   /// IF HE OPENS A NEW TAB((Cheating))
  
-
-  useEffect(()=>{
-    const quizStatus=localStorage.getItem('quizSettings')
-    if(quizStatus!=null){
-      return
-    }else{
-      navigate('/categories')
-    }
-  },[])
-
-  
-
   ///CHECKING IF NAME EXIST IN FIREBASE FIRST
       const checkIfNameExists = async (name: string): Promise<boolean> => {
         const usersRef = collection(db, "users");
@@ -71,27 +121,33 @@ const quizComp = () => {
       };
 
       const updateScore=async(name:string)=> {
-        if(saveData.languageChoosed!=null){
+        const finalScore=calculateFinalScore(
+            scoreToBeSave,
+            saveData?.questonsLenghtSaved,
+            saveData?.difficultyLevel
+          )
+        if(saveData?.languageChoosed!=null){
         const q=query(collection(db,'users'),where('name','==',name));
         const querySanpshot=await getDocs(q)
         if(querySanpshot.empty){
-          console.log('does ot match')
+          console.log('does not match')
         }
         querySanpshot.forEach(async(document)=>{
           const docRef=doc(db,'users',document.id);
-          const finalScore=calculateFinalScore(
-            scoreToBeSave,
-            saveData.questonsLenghtSaved,
-            saveData.difficultyLevel
-          )
+          
           await updateDoc(docRef,{
             [`scores.${saveData.languageChoosed}`]:increment((finalScore)),
+            [`completedLocalQuiz.${saveData.difficultyLevel}`]:selectedIndex
           })
 
-        })}
+        })
       }
-      
-
+        await UpdateUserSession({
+              HasQuizEnd:true,
+              score:scoreToBeSave,
+              completedAt:new Date().toISOString()
+          })
+      }
       const updateWholeScore = async (name:string) => {
         try {
           // Check if the name already exists in Firestore
@@ -100,10 +156,9 @@ const quizComp = () => {
             return;
           }else{
             updateScore(name)
-
+            
           }
           // Store the user details in Firestore
-          
         } catch (error: any) {
           console.log(error)
         }
@@ -111,16 +166,55 @@ const quizComp = () => {
 
 
 
+      useEffect(()=>{
+        const handleVisibilityChange=()=>{
+          if(document.visibilityState==='hidden'){
+            if(username!==null){
+              updateWholeScore(username)
+            }
+              toast.error('Disqualified')
+          }else{
+            
+            if(username!==null){
+              updateWholeScore(username)
+            }
+            if(!session) return 
+            navigate(`/result/${session}`)
+          }
+        }
+        document.addEventListener('visibilitychange',handleVisibilityChange)
+        return ()=>{
+          document.removeEventListener('visibilitychange', handleVisibilityChange)
+    
+        }
+      },[])
+
+      useEffect(()=>{
+        const handleVisibilityChange=()=>{
+          if(document.visibilityState==='hidden'){
+              toast.error('Disqualified')
+          }else{
+            if(!session) return 
+            navigate(`/result/${session}`)
+          }
+        }
+        document.addEventListener('visibilitychange',handleVisibilityChange)
+        return ()=>{
+          document.removeEventListener('visibilitychange', handleVisibilityChange)
+    
+        }
+      },[])
+
+
 /////UI OF SELECTED OPTIONS I.E IF I SELECT AN OPTION LET IT INDICATED IT HAS BEEN SELECTED....
       useEffect(()=>{
         if(selected!=null||selected!=undefined){
-          console.log(selected)
-          console.log(selected)
+          // console.log(selected)
+          // console.log(selected)
                 const array=Object.values(selected)
-                console.log(array)
+                // console.log(array)
                 if(array!==null){
                  setSelectedId(array)      
-                  
               }
           }
      },[selected])
@@ -142,10 +236,6 @@ const quizComp = () => {
 
 
 
-
-
-
-
 ////USEEFFEVT
   useEffect(()=>{
     ///THOSE DATA SAVED WE ARE TRYING TO GET IT NOW
@@ -160,33 +250,35 @@ const quizComp = () => {
       setSelected(parsed.selected);
       return
     }
-
-
-    
-      let filename=''
-      if(saveData.languageChoosed === null||saveData.questonsLenghtSaved===null){
-        navigate(-1)
-      }else{
-        setQuestionLenght(parseInt(saveData.questonsLenghtSaved))
-         filename=`data/${saveData.languageChoosed}/${saveData.languageChoosed}${saveData.difficultyLevel}.json`;
-      }
+    if(!saveData||saveData.languageChoosed === null||saveData.questonsLenghtSaved===null||saveData.questonsLenghtSaved==null){
+      return
+    }
+    setQuestionLenght(parseInt(saveData.questonsLenghtSaved))
+      let filename=`/data/${saveData?.languageChoosed}/${saveData?.languageChoosed}${saveData?.difficultyLevel}.json`;
+    // console.log(filename)
       fetch(`${filename}`)
       .then((response)=>response.json() as Promise<QuestionProps[]>)
       .then((data)=>{
         // setData(data)
-       let shuffled=[...data].map((q,index)=>({
+        let filteredQuestions:QuestionProps[]=[]
+        // console.log(data)
+        if(Array.isArray(questionId)&&questionId.length<0){
+           filteredQuestions=questionId.map(index=>data.splice(index,1)[0])
+        }else{
+          filteredQuestions=[...data]
+        }
+       let shuffled=[...filteredQuestions].map((q,index)=>({
         ...q,
         originalIndex:index
        }))
         for (let i = shuffled.length-1; i > 0; i--) {
-          
           const j=Math.floor(Math.random()*(i+1));
           [shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]]
         }
-        const maxStart=Math.max(0,shuffled.length-saveData.questonsLenghtSaved)
+        const maxStart=Math.max(0,shuffled.length-saveData?.questonsLenghtSaved)
         const startIndex=Math.floor(Math.random()*(maxStart+1))
-        const selectedQues=shuffled.slice(startIndex,startIndex+saveData.questonsLenghtSaved)
-        const selectedIndexes=selectedQues.map(q=>q.originalIndex).slice(0,saveData.questonsLenghtSaved)
+        const selectedQues=shuffled.slice(startIndex,startIndex+saveData?.questonsLenghtSaved)
+        const selectedIndexes=selectedQues.map(q=>q.originalIndex).slice(0,saveData?.questonsLenghtSaved)
         setSelectedIndex(selectedIndexes)
         setData(selectedQues)
         setQuestionIndex(0)
@@ -194,18 +286,15 @@ const quizComp = () => {
       .catch((err)=>{
           console.log(err)
       })
-    },[])
+    },[saveData?.languageChoosed,saveData?.difficultyLevel,saveData?.questonsLenghtSaved])
 
 
     ///ERROR CHECKING
     if(!data.length||questionIndex===null){
       return <Loader/>
-      // navigate('/404')
     }
     const currentQUes=data[questionIndex]
   
-  
-
     ////NEXT BUTTON FUNCTION
     const nextButton=()=>{
       setQuestionIndex((prev)=>{
@@ -221,7 +310,6 @@ const quizComp = () => {
       if(username!==null){
         updateWholeScore(username)
       }
-        
       localStorage.setItem('AnswersChosed',JSON.stringify(selected))
       localStorage.setItem('QuestionsChosed',JSON.stringify(selectedIndex))
       localStorage.setItem('scoreSaved',`${scoreToBeSave}`)
@@ -273,7 +361,7 @@ const quizComp = () => {
                     return updated
                   })
                   console.log(selectedId)
-             console.log( Object.values(selectedId).some(vals=>vals.trim()===val.trim()))    
+            //  console.log( Object.values(selectedId).some(vals=>vals.trim()===val.trim()))    
 }
 
 

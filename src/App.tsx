@@ -17,6 +17,7 @@ import Result from './pages/result.tsx'
 import Leaderboard from './pages/leaderboard.tsx'
 import Liveoquiz from './pages/LiveQuiz/liveoquiz.tsx'
 import Livetquiz from './pages/LiveQuiz/livetquiz.tsx'
+import Livequiz from './pages/livequiz.tsx'
 import WaitingRoom from './pages/waitingRoom.tsx'
 import LiveResult from './pages/LiveResult.tsx'
 import CheckAnswers from './pages/checkAnswers.tsx'
@@ -45,22 +46,23 @@ const AppRoutes=()=>{
         <Route element={<ProtectedLayout/>}>
           <Route element={<Categories/>} path='categories'/>
         <Route element={<Settings/>} path='settings'/>
-        <Route element={<Quiz/>} path='quiz'/>
-        <Route element={<Result/>} path='result'/>
+        <Route element={<Quiz/>} path='quiz/:session'/>
+        <Route element={<Result/>} path='result/:session'/>
         <Route element={<Leaderboard/>} path='leaderboard'/>
-        <Route element={<CheckAnswers/>} path='verifyanswers'/>
+        <Route element={<CheckAnswers/>} path='verifyanswers/:session'/>
         <Route element={<Loader/>} path='loader'/>
         {/* LIVE QUIZ ROUTES */}
         <Route element={<Livesettings/>} path='livesettings'/>
-        <Route element={<WaitingRoom/>} path='waitingroom'/>
+        <Route element={<WaitingRoom/>} path='waitingroom/'/>
         <Route element={<Liveoquiz/>} path='liveoquiz'/>
         <Route element={<Livetquiz/>} path='livetquiz'/>
-        <Route element={<LiveResult/>} path='liveresult'/>
+        <Route element={<Livequiz/>} path='pvp/:roomId'/>
+        <Route element={<LiveResult/>} path='liveresult/:roomId'/>
         <Route element={<CodeClashSttings/>} path='codeclashsettings'/>
         <Route element={<Waitingcodeclash/>} path='waitingcodeclash'/>
         <Route element={<CodeclashresultPage/>} path='codeclashresult/:roomId'/>
         <Route element={<CodeClashGame/>} path='codeClash/:roomId'/>
-        <Route element={<LiveQuizChecker/>} path='quizchecker'/>
+        <Route element={<LiveQuizChecker/>} path='quizchecker/:roomId'/>
         <Route element={<NotFound/>} path='404'/>
         </Route>
         

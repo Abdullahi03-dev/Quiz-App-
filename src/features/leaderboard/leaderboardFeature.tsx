@@ -187,7 +187,7 @@ const Leaderboards = () => {
       joinedDate: "Jan 2024"
     }
   ];
-console.log(leaderboardData)
+// console.log(leaderboardData)
   const getRankIcon = (rank: number) => {
     switch (rank) {
       case 1: return <Crown className="w-5 h-5 text-yellow-400" />;

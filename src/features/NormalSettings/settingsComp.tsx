@@ -1,96 +1,4 @@
-// // import React from 'react'
-// import { useState ,useEffect} from "react"
-// import RangeSlider from "../../components/rangeSlider"
-// import SettingsCheckboxes from "../../components/settingsCheckboxes"
-// import '../../assets/css/classes.css'
-// import toast from "react-hot-toast"
-// import { useNavigate } from "react-router-dom"
-// const settingsComp = () => {
-//   const navigate=useNavigate()
-//   const [selected,setSelected]=useState<string| null>(null)
-//   const [selectedLang,setSelectedLang]=useState<string| null>(null)
-//   const [selectedid,setSelectedid]=useState<string>("")
-//   const [selectedidLang,setSelectedidLang]=useState<string>("")
-//   const min=5;
-//   const max=20;
-//     const [value,setValue]=useState<number>(min)
-//     const handlechange=(e:any)=>{
-//         setValue(Number(e.target.value))
-//     }
-//      const percent=((value-min)/(max-min))*100 
-  
-
-//         const handlecheck=(e:React.ChangeEvent<HTMLInputElement>)=>{
-//                 setSelected(e.target.value);
-//                 setSelectedid(e.target.id);
-//         }
-//         const handlecheckLang=(e:React.ChangeEvent<HTMLInputElement>)=>{
-//           setSelectedLang(e.target.value);
-//           setSelectedidLang(e.target.id);
-//   }
-  
-//      const handleClick=()=>{
-//       if(selected&&selectedLang){
-//         localStorage.setItem('difficultyLevel',selectedid)
-//         localStorage.setItem('languageChoosed',selectedidLang)
-//         localStorage.setItem('questonsLenght',`${value}`)
-//         localStorage.setItem('HasQuizStart','true')
-//           navigate('/quiz')
-//       }
-//       else{
-//         toast.error('CHOOSE ALL SETTINgLogic')
-//       }
-//      }
-
-
-
-//      useEffect(()=>{
-  
-//       const saved=localStorage.getItem("quizSettings");
-//     const scoreSaved =localStorage.getItem('scoreSaved')
-//       if(saved!=null||scoreSaved!=null){
-//         localStorage.removeItem('quizSettings')
-//         localStorage.removeItem('scoreSaved')
-//         return
-//       }
-//      },[])
-
-
-
-//   return (
-//     <>
-//     <section className='bg-slate-950 h-[100vh]'>
-//     <div className='absolute inset-0 bg-gradient-to-br from emerald-500/5 via transparent to-purple-500/5'></div>
-//       <div className='absolute top-20 left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl'></div>
-//       <div className='absolute bottom-20 right-20  w-96 h-96 bg-purple-500/10 rounded-full blur-3xl'></div>
-// <div className="w-[340px] bg-gradient-to-br from-[#a1f2c] to-black/80 rounded-[6px] relative left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%] h-[390px]">
-// <span className='flex items-center justify-center pt-3.5'>
-//       <h1 className='inline-block text-center font-bold text-4xl text-[#00ff7f] drop-shadow-[0_0_10px_rgba(34,197,94,0.8)] pr-5 font-dmsans'>Quiz</h1><h1 className='font-bold text-4xl text-white inline-block'>Setup</h1>
-//       </span>
-      
-// <SettingsCheckboxes selected={selected} selectedLang={selectedLang} handlecheck={handlecheck} handlecheckLang={handlecheckLang} />
-
-
-// <RangeSlider value={value} handlechange={handlechange} percent={percent}/>
-
-// <div className="pt-5">
-// <button className="text-black font-bold bg-[#00ff7f] w-[300px] h-10 rounded-lg block mx-auto cursor-pointer" onClick={handleClick}>Start Quiz</button>
-  
-// </div>
-// </div>
-
-//     </section>
-    
-//     </>
-//   )
-// }
-
-// export default settingsComp
-
-
-
-
-import { useState ,useEffect} from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
@@ -99,8 +7,16 @@ import { RadioGroup, RadioGroupItem } from "../../components/ui/radio-group";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../components/ui/select";
 import { ArrowLeft, Settings, Code, Zap, Target } from "lucide-react";
 import { toast } from "react-hot-toast";
+import useUsername from "../../hooks/useUsername";
+import { addDoc, collection,getDocs, query, where } from "firebase/firestore";
+import { db } from "../../firebase/firebase";
+// import { getAuth } from "firebase/auth";
 
 const QuizSettings = () => {
+  const {username}=useUsername()
+  // const auth=getAuth()
+  // const user=auth.currentUser
+  const [Loading,setloading] =useState(false)
   const [settingLogic, setSettings] = useState({
     questionCount: "10",
     difficulty: "medium",
@@ -128,35 +44,49 @@ const QuizSettings = () => {
     { value: "web", label: "Shuffle only answers", icon: "" },
     { value: "mobile", label: "Shuffle both", icon: "" }
   ];
-  useEffect(()=>{
-  
-    const saved=localStorage.getItem("quizSettings");
-    const saved2=localStorage.getItem("quizState");
-  const scoreSaved =localStorage.getItem('scoreSaved')
-    if(saved!=null||saved2!=null||scoreSaved!=null){
-      localStorage.removeItem('quizSettings')
-      localStorage.removeItem('scoreSaved')
-      localStorage.removeItem('quizState')
-      return
-    }
-   },[])
   const navigate=useNavigate()
-  const handleStartQuiz = () => {
+
+
+
+  const handleStartQuiz = async () => {
     if (!settingLogic.language || !settingLogic.category) {
       toast.error("Please select both programming language and category!");
       return;
     }
+    setloading(true)
     toast.success("Starting your quiz adventure!");
-    localStorage.setItem('quizSettings',JSON.stringify( {
+    if(!username) return
+// alert(username)
+const usersRef = collection(db, "users");
+const sessionRef = query(usersRef, where("name", "==", username));
+      const querySanpshot=await getDocs(sessionRef)
+
+      if(!querySanpshot.empty){
+        querySanpshot.forEach(async(userdoc)=>{
+
+          const subcollection=collection(userdoc.ref,'sessions');
+
+       const sessionId=await addDoc(subcollection,{
       questonsLenghtSaved:settingLogic.questionCount,
       difficultyLevel:settingLogic.difficulty,
       languageChoosed:settingLogic.language,
-      HasQuizStart:'true'
-    }))
-    navigate('/quiz')
+      HasQuizEnd:false,
+      score:null
+    })
+    navigate(`/quiz/${sessionId.id}`)
+        })
+       
+      }else{
+        setloading(false)
+        console.log('no user found')
+      }
+     
     
-    // // Navigate to quiz page with settingLogic
-    navigate('/quiz');
+    
+    // localStorage.setItem('quizSettings',JSON.stringify( {
+    
+    // }))
+    
   };
 
 
@@ -310,10 +240,11 @@ const QuizSettings = () => {
               <div className="pt-6">
                 <Button 
                   onClick={()=>handleStartQuiz()}
+                  disabled={Loading}
                   className="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white border-0 py-6 text-lg font-semibold"
                 >
                   <Zap className="w-5 h-5 mr-2" />
-                  Start Quiz Adventure
+                  {Loading?`Start Quiz Adventure`:'Starting'}
                 </Button>
               </div>
             </CardContent>

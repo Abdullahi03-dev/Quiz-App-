@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 // import {useAutoDeleteLocalStorageOnLeave} from '../../hooks/usePageLocalStorage'
 import { Unsubscribe,DocumentData, db,collection,
   query,
@@ -9,19 +9,20 @@ import { Unsubscribe,DocumentData, db,collection,
 import { Button } from "../../components/ui/button";
 
 /* ---------- types ---------- */
+
+interface Winners{
+  name:string;
+  score:number;
+}
 interface RoomData {
   quizHasStarted: boolean;
   languageChoosed: string;
   questtionList: number;
   time: number;
-  userOneJoined: boolean;
   userOneName: string;
-  userOneOnline: boolean;
-  userOneScore: number;
-  userTwoJoined: boolean;
   userTwoName: string;
-  userTwoOnline: boolean;
-  userTwoScore: number;
+  winners:Winners[];
+  Onliners:string[];
 }
 
 
@@ -32,19 +33,16 @@ const LiveResult = () => {
   const navigate = useNavigate();
 
   /* initial state identical to your previous object  */
+  const { roomId } = useParams()
   const [data, setData] = useState<RoomData>({
     quizHasStarted: false,
     languageChoosed: "",
     questtionList: 0,
     time: 0,
-    userOneJoined: false,
     userOneName: "",
-    userOneOnline: true,
-    userOneScore: 0,
-    userTwoJoined: false,
     userTwoName: "",
-    userTwoOnline: true,
-    userTwoScore: 0,
+    winners:[],
+    Onliners:[],
   });
 
   const [first, setFirst] = useState("ALL PLAYERS NEED TO FINISH");
@@ -68,10 +66,8 @@ console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
           time            : docData.time,
           userOneName     : docData.userOneName,
           userTwoName     : docData.userTwoName,
-          userOneScore    : docData.userOneScore,
-          userTwoScore    : docData.userTwoScore,
-          userOneOnline   : docData.userOneOnline,
-          userTwoOnline   : docData.userTwoOnline,
+          winners         :docData.winners,
+          Onliners        :docData.Onliners,
         }));
       } else {
         console.error("Room not found");
@@ -88,41 +84,39 @@ console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
          return
      }
      },[])
-useEffect(()=>{
-  const handlepop=()=>{
-    navigate('/categories')
-  }
-  window.addEventListener('popstate',handlepop)
-  return()=>{
-    window.removeEventListener('popstate',handlepop)
-  }
-},[navigate])
-  /* ---------- mount: attach listener ---------- */
-  useEffect(() => {
-    const saved = localStorage.getItem("resultCode");
-    if (!saved) return;
-    const unsub = listenToRoom(parseInt(saved));
-    return () => unsub();               // cleanup
-  }, []);                                // run once
+// useEffect(()=>{
+//   const handlepop=()=>{
+//     navigate('/categories')
+//   }
+//   window.addEventListener('popstate',handlepop)
+//   return()=>{
+//     window.removeEventListener('popstate',handlepop)
+//   }
+// },[navigate])
+//   /* ---------- mount: attach listener ---------- */
+useEffect(() => {
+  if(!roomId) return
+  const unsub = listenToRoom(parseInt(roomId));
+  return () => unsub();               // cleanup
+}, []);                                           // run once
    
   /* ---------- derive winner banner ---------- */
   useEffect(() => {
-    if (!data.userOneOnline && !data.userTwoOnline) {
-      if (data.userOneScore === data.userTwoScore) {
-        setFirst(`IT'S A TIE – both scored ${data.userOneScore}`);
-      } else if (data.userOneScore > data.userTwoScore) {
-        setFirst(`WINNER IS ${data.userOneName} score is ${data.userOneScore}`);
+    if (data.Onliners.length===0&&data.winners.length>0) {
+      console.log(data.winners?.[0]?.score)
+      if (data.winners?.[0]?.score === data.winners?.[1]?.score) {
+        setFirst(`IT'S A TIE – both scored ${data.winners?.[0]?.score}`);
+      } else if (data.winners?.[0]?.score> data.winners?.[1]?.score) {
+        setFirst(`WINNER IS ${data.userOneName} score is ${data.winners?.[0]?.score}`);
       } else {
-        setFirst(`WINNER IS ${data.userTwoName} score is ${data.userTwoScore}`);
+        setFirst(`WINNER IS ${data.userTwoName} score is ${data.winners?.[1]?.score}`);
       }
     } else {
       setFirst("ALL PLAYERS NEED TO FINISH");
     }
   }, [
-    data.userOneOnline,
-    data.userTwoOnline,
-    data.userOneScore,
-    data.userTwoScore,
+    data.winners,
+    data.Onliners,
     data.userOneName,
     data.userTwoName,
   ]);
@@ -168,9 +162,9 @@ useEffect(()=>{
               </p>
               <p className="mb-1">
                 Score:{" "}
-                {data.userOneOnline
+                {data.Onliners.includes(data.userOneName)
                   ? "WAITING FOR PLAYER 1 TO FINISH...."
-                  : `${data.userOneScore}`}
+                  : `${data.winners?.[0]?.score}`}
               </p>
             </div>
 
@@ -188,13 +182,12 @@ useEffect(()=>{
               </p>
               <p className="mb-1">
                 Score:{" "}
-                {data.userTwoOnline
-                  ? "WAITING FOR PLAYER2 TO FINISH...."
-                  : `${data.userTwoScore}`}
+                {data.Onliners.includes(data.userTwoName)
+                  ? "WAITING FOR PLAYER 2 TO FINISH...."
+                  : `${data.winners?.[1]?.score}`}
               </p>
             </div>
           </div>
-
           <div className="bg-green-400/10 border border-green-400 text-green-300 font-semibold text-center py-4 px-6 rounded-xl text-lg">
             🏆{first}
           </div>
@@ -213,7 +206,7 @@ useEffect(()=>{
             </Button>
             <Button size="lg" variant="outline" className="border-slate-700 bg-slate-700 text-white hover:bg-slate-800 mt-4 ml-3"
             type="button"
-            onClick={() => navigate("/quizchecker")}
+            onClick={() => navigate(`/quizchecker/${roomId}`)}
 
           >
               Review Answers

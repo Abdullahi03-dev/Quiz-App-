@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import {  useNavigate } from 'react-router-dom';
+import {  useNavigate, useParams } from 'react-router-dom';
 // import Footer from "../../components/footer";
 import { calculateFinalScore,Difficulty } from "../../utils/calculateScore";
 import { Link } from "react-router-dom";
@@ -8,7 +8,13 @@ import { Progress } from "../..//components/ui/progress";
 import { Badge } from "../../components/ui/badge";
 import { Trophy, Target, Brain, Home, RotateCcw, TrendingUp } from "lucide-react";
 import { Button } from "../../components/ui/button";
+import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../firebase/firebase";
+import useUsername from "../../hooks/useUsername";
+import toast from "react-hot-toast";
 const localResultComp = () => {
+  const {session}=useParams()
+  const {username}=useUsername()
 const navigate=useNavigate()
 const [score,setScore]=useState<number>(0)
 const [category,setCategory]=useState<string>('')
@@ -17,6 +23,48 @@ const [percentage,setPercentage]=useState(0)
 const [difficultyLevel,setDifficultyLevel]=useState('')
 const [questonsLenght,setQuestonsLenght]=useState('')
 
+
+useEffect(()=>{
+  // if(!session||!username) {
+  //   navigate('/categorie')
+  // }
+  if(!session||!username) return 
+    const loadSession=async()=>{
+      // if(!session||!username) return 
+    try{
+      const usersRef = collection(db, "users");
+      const q = query(usersRef, where("name", "==", username));
+      const querySanpshot=await getDocs(q)
+      if(querySanpshot.empty){
+        toast.error('Invalid Session')
+        navigate('/settings')
+        return
+      }
+
+      const userDoc=querySanpshot.docs[0]
+      const userDocRef=userDoc.ref
+      const sessionRef=doc(userDocRef,'sessions',session)
+       const sessiondoc= await getDoc(sessionRef)
+        if(sessiondoc.exists()){
+          const sessionData=sessiondoc.data()
+        // console.log(sessionData)
+        setScore(sessionData.score)
+        setCategory(sessionData.languageChoosed)
+        setDifficultyLevel(sessionData.difficultyLevel)
+        setQuestonsLenght(sessionData.questonsLenghtSaved)
+          if(sessionData.HasQuizEnd==false){
+        toast.error('Error ')
+        navigate('/settings')
+        return
+       }
+        }
+       
+    }catch(e){
+      console.log(e)
+    }
+  }
+  loadSession()
+},[session,navigate,username])
 
 
         useEffect(()=>{
@@ -34,20 +82,20 @@ const [questonsLenght,setQuestonsLenght]=useState('')
 
 
 
-useEffect(()=>{
-    // localStorage.removeItem('HasQuizStart')
-    const saveData= JSON.parse(localStorage.getItem('quizSettings')||'{}')
-    const scoreSaved =localStorage.getItem('scoreSaved')
-    if(scoreSaved!==null&&saveData!==null){
-        setCategory(saveData.languageChoosed)
-        setScore(parseInt(scoreSaved))
-        setDifficultyLevel(saveData.difficultyLevel)
-        setQuestonsLenght(saveData.questonsLenghtSaved)
-    }else{
-      alert('error')
-    }
+// useEffect(()=>{
+//     // localStorage.removeItem('HasQuizStart')
+//     const saveData= JSON.parse(localStorage.getItem('quizSettings')||'{}')
+//     const scoreSaved =localStorage.getItem('scoreSaved')
+//     if(scoreSaved!==null&&saveData!==null){
+//         setCategory(saveData.languageChoosed)
+//         setScore(parseInt(scoreSaved))
+//         setDifficultyLevel(saveData.difficultyLevel)
+//         setQuestonsLenght(saveData.questonsLenghtSaved)
+//     }else{
+//       alert('error')
+//     }
 
-},[])
+// },[])
 
 
 
@@ -208,16 +256,12 @@ useEffect(()=>{
           </Button>
         
           
-          <Button 
-            asChild
-            variant="outline" 
-            className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white px-8 py-6 text-lg"
-          >
-            <Link to="/verifyanswers">
+          <button onClick={()=>{navigate(`/verifyanswers/${session}`)}}
+            className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white px-8 flex text-center items-center text-lg">
               <Home className="w-5 h-5 mr-2" />
               Check Answers
-            </Link>
-          </Button>
+              
+          </button>
 
 
           <Button 
@@ -225,7 +269,7 @@ useEffect(()=>{
             variant="outline" 
             className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white px-8 py-6 text-lg"
           >
-            <Link to="/leaderboard">
+            <Link to="/leaderboard" >
               <Home className="w-5 h-5 mr-2" />
               View Leaderboard
             </Link>

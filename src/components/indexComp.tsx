@@ -1,6 +1,6 @@
 
 import { ensureCompletedChallenges } from "../utils/ensureCompletedChallenges";
-import { useAuth } from "../context/AuthProvider";
+import useUsername from "../hooks/useUsername";
 import {  useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
@@ -8,15 +8,14 @@ import { Card, CardContent } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import { Brain, Zap, Trophy, Users, Gamepad2, Crown, ArrowRight, Sparkles, Target, Globe } from "lucide-react";
 const Index = () => {
-  const {user}=useAuth()
-  useEffect(()=>{
-    if(user?.uid){
-      ensureCompletedChallenges(user.uid)
-      .catch((err)=>
-      console.log(err)
-      )
+  const {username}=useUsername()
+  
+  useEffect(() => {
+    if (username) {
+      alert(username)
+      ensureCompletedChallenges(username);
     }
-  },[user?.uid])
+  }, [username]);
   const [hoveredFeature, setHoveredFeature] = useState<number | null>(null);
 
   const features = [

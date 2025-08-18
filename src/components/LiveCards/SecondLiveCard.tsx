@@ -1,6 +1,7 @@
 import {motion} from 'framer-motion'
-import { db, collection, query, where,doc, getDocs, updateDoc} from "../../firebase/firebase";
+import { db, collection, query, where, getDocs, updateDoc} from "../../firebase/firebase";
 import { useNavigate } from 'react-router-dom';
+import useUsername from "../../hooks/useUsername";
 import {
     Dialog,
     DialogContent,
@@ -26,8 +27,9 @@ import toast from 'react-hot-toast';
     }
 }
 const SecondLiveCard = () => {
+  const {username}=useUsername()
   const navigate=useNavigate()
-  const [username,setusername]=useState<string>('')
+  const [userName,setusername]=useState<string>('')
   const [value,setValue]=useState('')
   const [loading,setLoading]=useState(false)
   const handleChange=(e:React.ChangeEvent<HTMLInputElement>)=>{
@@ -39,66 +41,46 @@ useEffect(()=>{
   setusername(saved)
 }
 },[])
-   ///CHECKING IF NAME EXIST IN FIREBASE FIRST
- const checkIfNameExists = async (generatedRoomCode: number): Promise<boolean> => {
-  const usersRef = collection(db, "Rooms");
-  const q = query(usersRef, where("roomCode", "==", generatedRoomCode));
-  const querySnapshot = await getDocs(q);
-  return !querySnapshot.empty; // Returns true if name exists
-};
-const checkIfQuizHasStarted = async (generatedRoomCode:number): Promise<boolean> => {
-  const usersRef = collection(db, "Rooms");
-  const q = query(usersRef, where("roomCode", "==", generatedRoomCode),where('quizHasStarted','==',false));
-  const querySnapshot = await getDocs(q);
-  return !querySnapshot.empty; // Returns true if name exists
-};
-const updateQuizStatus= async (roomCode:number,data:any)=>{
-  const usersRef=collection(db,("Rooms"))
-  const q=query(usersRef,where("roomCode","==",roomCode))
-  const querySanpshot=await getDocs(q)
+   
 
-  if(!querySanpshot.empty){
-    const docRef=doc(db,"Rooms",querySanpshot.docs[0].id)
-    await updateDoc(docRef,data)
-  }else{
-    console.log('eror')
+const handleJoin = async (generatedRoomCode: number) =>{ 
+  try{
+     const usersRef = collection(db, "Codeclash");
+     const roomRef = query(usersRef, where("roomCode", "==", generatedRoomCode));
+    const roomSnap = await getDocs(roomRef) 
+    if (!roomSnap.empty) 
+    return
+    toast.error('RoomCode Not Found.... ')
+    
+    const roomDoc = roomSnap.docs[0]
+    const roomData=roomDoc.data()
+    if (roomData.participants.length >= 2) 
+    return
+ toast.error('Room is Filled Up')
+    await updateDoc(roomDoc.ref, {
+      userTwoName:username,
+      userTwoOnline:true,
+      Onliners:[...roomData.participants, !username?userName:username],
+      quizHasStarted:true,
+    }) 
+    // navigate(`/clash/room/${roomCode}`) 
+    // localStorage.setItem('Codclroomcd',`${generatedRoomCode}`)
+    //   localStorage.setItem('Codclroomcd2',`${generatedRoomCode}`)
+      toast.success('WISH YOU LUCK');
+      navigate(`/livequiz/${generatedRoomCode}`)
+  }catch(e:any){
+      console.log(e)
   }
-
-}
-const updateScore=async(generatedRoomCode:number)=> {
-  const roomCodeExist = await checkIfNameExists(generatedRoomCode);
-  const quizHasStarted = await checkIfQuizHasStarted(generatedRoomCode);
-  console.log(quizHasStarted)
-   try {
-    // Check if the ROOM CODE already exists in Firestore
-
-    if (roomCodeExist&&quizHasStarted) {
-       await updateQuizStatus(generatedRoomCode,{
-        userTwoName:username,
-        userTwoOnline:true,
-        quizHasStarted:true,
-       })
-      localStorage.setItem('Roomcode',`${generatedRoomCode}`)
-      localStorage.setItem('resultCode',`${generatedRoomCode}`)
-      toast.success('WISH YOU LUCK')
-      navigate('/livetquiz')
-    }else{
-      toast.error('SOMEONE HAS ALREADY JOIN PLAYING.... ')
-      return;
+ 
+    
     }
-    // Store the user details in Firestore
-  } catch (error: any) {
-    console.log(error)
-  }
-
-}
   const handleClick=()=>{
     console.log(value)
     if(value!=='')
     {
       console.log(value)
       setLoading(true)
-    updateScore(parseInt(value))
+    handleJoin(parseInt(value))
     }
     
   }

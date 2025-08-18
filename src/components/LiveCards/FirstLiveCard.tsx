@@ -3,6 +3,7 @@ import {motion} from 'framer-motion'
 import { UseLiveSetting } from '../../context/liveSettings'
 import { useNavigate } from 'react-router-dom';
 import { db, collection, query, where, getDocs,addDoc} from "../../firebase/firebase";
+import useUsername from "../../hooks/useUsername";
 import {
     Dialog,
     DialogContent,
@@ -91,12 +92,16 @@ import { serverTimestamp } from 'firebase/firestore';
 }
 const FirstLiveCard = () => {
   const navigate=useNavigate()
+  const {username}=useUsername()
   const [generatedRoomCode,setgeneratedRoomCode]=useState(0)
   const [selectedQuestion,setselectedQuestion]=useState<string>('')
   const [selectedLanguage,setselectedLanguage]=useState<string>('')
   const [selectedTime,setselectedTime]=useState<string>('');
-  const [username,setusername]=useState<string>('')
+  const [userName,setusername]=useState<string>('')
   const [Loading,setloading]=useState(false)
+  // if(!username) {
+  //   return
+  // }
 const saved=localStorage.getItem('username')
 useEffect(()=>{
   if(saved){
@@ -136,7 +141,7 @@ const copyToClipBoard=()=>{
   return !querySnapshot.empty; // Returns true if name exists
 };
 
-const updateScore=async(generatedRoomCode:number)=> {
+const updateScore=async(generatedRoomCode:number,username:string)=> {
   const roomCodeExist = await checkIfNameExists(generatedRoomCode);
    try {
     // Check if the ROOM CODE already exists in Firestore
@@ -146,16 +151,12 @@ const updateScore=async(generatedRoomCode:number)=> {
           roomCode:generatedRoomCode,
           userOneName:username,
           userTwoName:'',
-          userOneJoined:true,
-          userTwoJoined:false,
-          userOneScore:0,
-          userTwoScore:0,
-          userOneOnline:true,
-          userTwoOnline:false,
+          winners:[],
+          Onliners:[!username?userName:username],
           questtionList:selectedQuestion,
           languageChoosed:selectedLanguage,
           time:selectedTime,
-          quizHasStarted:false,
+          quizHasEnded:false,
           user1Messages:'',
           user2Messages:'',
           AnswersChosed:{},
@@ -164,7 +165,7 @@ const updateScore=async(generatedRoomCode:number)=> {
   })
       toast.success('Goodluck')
       localStorage.setItem('Roomcode',`${generatedRoomCode}`)
-      localStorage.setItem('resultCode',`${generatedRoomCode}`)
+      // localStorage.setItem('resultCode',`${generatedRoomCode}`)
       navigate('/waitingroom')
     }else{
       toast.error('ROOM CODE ALREADY EXIST TRY REFRESHING')
@@ -177,13 +178,13 @@ const updateScore=async(generatedRoomCode:number)=> {
 
 }
 const handleClick=()=>{
-  if(selectedQuestion==''||selectedLanguage==''||selectedTime==''){
+  if(selectedQuestion==''||selectedLanguage==''||selectedTime==''||!username){
     toast.error('SELLECT ALL SETTINGS')
     return 
   }
   setloading(true)
   setRoomCode(generatedRoomCode)
-  updateScore(generatedRoomCode)
+  updateScore(generatedRoomCode,username)
 }
   return (
     <>

@@ -45,25 +45,22 @@ useEffect(()=>{
 
 const handleJoin = async (generatedRoomCode: number) =>{ 
   try{
-     const usersRef = collection(db, "Codeclash");
+     const usersRef = collection(db, "Rooms");
      const roomRef = query(usersRef, where("roomCode", "==", generatedRoomCode));
     const roomSnap = await getDocs(roomRef) 
-    if (!roomSnap.empty) 
-    return
-    toast.error('RoomCode Not Found.... ')
+    if (roomSnap.empty) 
+    return toast.error('RoomCode Not Found.... ')
     
     const roomDoc = roomSnap.docs[0]
     const roomData=roomDoc.data()
-    if (roomData.participants.length >= 2) 
-    return
- toast.error('Room Is Filled Up')
+    if (roomData.Onliners.length >= 2) 
+    return toast.error('Room Is Filled Up')
     await updateDoc(roomDoc.ref, {
       userTwoName:username,
       userTwoOnline:true,
-      Onliners:[...roomData.participants, !username?userName:username],
+      Onliners:[...roomData.Onliners, !username?userName:username],
       quizHasStarted:true,
     }) 
-    // navigate(`/clash/room/${roomCode}`) 
     localStorage.setItem('Roomcode',`${generatedRoomCode}`)
     //   localStorage.setItem('Codclroomcd2',`${generatedRoomCode}`)
       toast.success('WISH YOU LUCK');
@@ -76,6 +73,7 @@ const handleJoin = async (generatedRoomCode: number) =>{
     }
   const handleClick=()=>{
     console.log(value)
+    console.log(username)
     if(value!=='')
     {
       console.log(value)

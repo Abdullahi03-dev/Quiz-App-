@@ -244,7 +244,7 @@ const sessionRef = query(usersRef, where("name", "==", username));
                   className="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white border-0 py-6 text-lg font-semibold"
                 >
                   <Zap className="w-5 h-5 mr-2" />
-                  {Loading?`Start Quiz Adventure`:'Starting'}
+                  {!Loading?`Start Quiz Adventure`:'Starting'}
                 </Button>
               </div>
             </CardContent>

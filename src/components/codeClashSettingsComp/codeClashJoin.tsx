@@ -48,14 +48,12 @@ const handleJoin = async (generatedRoomCode: number) =>{
   const roomRef = query(usersRef, where("roomCode", "==", generatedRoomCode));
     const roomSnap = await getDocs(roomRef) 
     if (!roomSnap.empty) 
-    return
-    toast.error('RoomCode Not Found.... ')
+    return toast.error('RoomCode Not Found.... ')
     
     const roomDoc = roomSnap.docs[0]
     const roomData=roomDoc.data()
     if (roomData.participants.length >= 2) 
-    return
- toast.error('Room is Filled Up')
+    return toast.error('Room is Filled Up')
     await updateDoc(roomDoc.ref, {
      participants: [...roomData.participants, !username?userName:username],
      Onliners:[...roomData.participants, !username?userName:username],

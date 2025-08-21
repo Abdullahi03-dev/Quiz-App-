@@ -8,7 +8,6 @@ import { Separator } from "../../components/ui/separator";
 import { Home, Send, Clock, Users } from "lucide-react";
 import useUsername from "../../hooks/useUsername";
 import Loader from "../../components/loader";
-
 import {  arrayRemove, arrayUnion, collection, doc, getDoc, getDocs, increment,query, updateDoc, where } from "firebase/firestore";
 import { auth, db } from "../../firebase/firebase";
 import toast from "react-hot-toast";
@@ -135,7 +134,7 @@ export default function codeClashGame() {
       const roomData = roomDoc.data()
     
       // // Check participant count+/
-      if (roomData.status==='waiting') {
+      if (roomData.status==='ready') {
         setPlayers(roomData.participants)
         setselectedLanguage(roomData.difficulty)
         setTime(roomData.time)
@@ -176,9 +175,9 @@ useEffect(()=>{
         {
           navigate(-1)
         }else{
-          console.log(selectedLanguage)
+          // console.log(selectedLanguage)
           filename=`/data/codeclash/${selectedLanguage}.json`
-          console.log(selectedLanguage)
+          // console.log(selectedLanguage)
           console.log(filename)
           // alert(selectedLanguage)
         }

@@ -15,6 +15,7 @@ interface QuestionProps{
   }
 export default function QuizReview() {
   const {roomId}=useParams()
+    // const saveData= JSON.parse(localStorage.getItem('quizSettings')||'{}')
     const [AnswersChosed,setAnswersChosed]=useState<{[key:number]:string}>({})
     const [QuestionsChosed,setQuestionsChosed]=useState<number[]>([])
     const [languageChoosed,setlanguageChoosed]=useState<string>('')

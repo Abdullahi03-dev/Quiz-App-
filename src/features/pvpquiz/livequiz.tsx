@@ -184,7 +184,7 @@ const livequiz = () => {
         return !querySnapshot.empty; // Returns true if name exists
       };
 
-      const updateScoreAndState=async(roomCode:number,scoreToBeSave:number,AnswersChosed:Record<number,string>,QuestionsChosed:number[])=> {
+      const updateScoreAndState=async(roomCode:number,scoreToBeSave:number)=> {
         const q=query(collection(db,'Rooms'),where('roomCode','==',roomCode));
 
         const querySanpshot=await getDocs(q)
@@ -198,18 +198,18 @@ const livequiz = () => {
             // userOneScore:increment(scoreToBeSave/2),
             Onliners: arrayRemove(username),
             winners:arrayUnion({name:username,score:(scoreToBeSave)}),
-            AnswersChosed:AnswersChosed,
-            QuestionsChosed:arrayUnion(...QuestionsChosed),
+            // AnswersChosed:AnswersChosed,
+            // QuestionsChosed:arrayUnion(...QuestionsChosed),
           })
 
         })
       }
-      const updateWholeScore = async (roomCode:number,scoreToBeSave:number,AnswersChosed:Record<number,string>,QuestionsChosed:number[]) => {
+      const updateWholeScore = async (roomCode:number,scoreToBeSave:number) => {
         try {
           // Check if the name already exists in Firestore
           const nameExists = await checkIfNameExists(roomCode);
           if (!nameExists&&username!==null) return;
-            updateScoreAndState(roomCode,scoreToBeSave,AnswersChosed,QuestionsChosed)
+            updateScoreAndState(roomCode,scoreToBeSave)
             updateScore()
           
           // Store the user details in Firestore
@@ -262,7 +262,9 @@ useEffect(() => {
 useEffect(() => {
   if (time===0) {
     if(intervalRef.current!==null&&roomId!==null){
-      updateWholeScore(Number(roomId),scoreToBeSave,selected,selectedIndex)
+      updateWholeScore(Number(roomId),scoreToBeSave)
+      localStorage.setItem('AnswersChosed',JSON.stringify(selected))
+      localStorage.setItem('QuestionsChosed',JSON.stringify(selectedIndex))
       updateScore()
       navigate(`/liveresult/${roomId}`)
       clearInterval(intervalRef.current); // cleanup
@@ -382,8 +384,10 @@ const formatTime = (secs:number) => {
         return prev+1
       }
       else if(roomId ) {
-        updateWholeScore(Number(roomId),scoreToBeSave,selected,selectedIndex)
+        updateWholeScore(Number(roomId),scoreToBeSave)
         updateScore()
+        localStorage.setItem('AnswersChosedLive',JSON.stringify(selected))
+      localStorage.setItem('QuestionsChosedLive',JSON.stringify(selectedIndex))
         navigate(`/liveresult/${roomId}`)
       }
         

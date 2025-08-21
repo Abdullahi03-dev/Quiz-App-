@@ -47,7 +47,7 @@ const handleJoin = async (generatedRoomCode: number) =>{
      const usersRef = collection(db, "Codeclash");
   const roomRef = query(usersRef, where("roomCode", "==", generatedRoomCode));
     const roomSnap = await getDocs(roomRef) 
-    if (!roomSnap.empty) 
+    if (roomSnap.empty) 
     return toast.error('RoomCode Not Found.... ')
     
     const roomDoc = roomSnap.docs[0]

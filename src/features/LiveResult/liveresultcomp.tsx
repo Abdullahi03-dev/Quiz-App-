@@ -77,13 +77,13 @@ console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
     return unsub
   };
 
-  useEffect(()=>{
-    const saved1=localStorage.getItem('Roomcode');
-     if(saved1!==null){
-         localStorage.removeItem('Roomcode')
-         return
-     }
-     },[])
+  // useEffect(()=>{
+  //   const saved1=localStorage.getItem('Roomcode');
+  //    if(saved1!==null){
+  //        localStorage.removeItem('Roomcode')
+  //        return
+  //    }
+  //    },[])
 // useEffect(()=>{
 //   const handlepop=()=>{
 //     navigate('/categories')
@@ -103,7 +103,7 @@ useEffect(() => {
   /* ---------- derive winner banner ---------- */
   useEffect(() => {
     if (data.Onliners.length===0&&data.winners.length>0) {
-      console.log(data.winners?.[0]?.score)
+      // console.log(data.winners?.[0]?.score)
       if (data.winners?.[0]?.score === data.winners?.[1]?.score) {
         setFirst(`IT'S A TIE – both scored ${data.winners?.[0]?.score}`);
       } else if (data.winners?.[0]?.score> data.winners?.[1]?.score) {

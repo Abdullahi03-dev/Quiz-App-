@@ -25,7 +25,7 @@ export default function QuizReview() {
   const navigate = useNavigate();
 
   const handleRetakeQuiz = () => {
-    navigate('/settings');
+    navigate('/livesettings');
   };
   const handleBackHome = () => {
     navigate('/categories');

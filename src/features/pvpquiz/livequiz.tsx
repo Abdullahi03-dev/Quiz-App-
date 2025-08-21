@@ -197,7 +197,7 @@ const livequiz = () => {
           await updateDoc(docRef,{
             // userOneScore:increment(scoreToBeSave/2),
             Onliners: arrayRemove(username),
-            winners:arrayUnion({name:username,score:(scoreToBeSave/2)}),
+            winners:arrayUnion({name:username,score:(scoreToBeSave)}),
             AnswersChosed:AnswersChosed,
             QuestionsChosed:arrayUnion(...QuestionsChosed),
           })

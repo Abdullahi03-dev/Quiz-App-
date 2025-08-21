@@ -1,7 +1,7 @@
 import {motion} from 'framer-motion'
 import { db, collection, query, where, getDocs, updateDoc} from "../../firebase/firebase";
 import { useNavigate } from 'react-router-dom';
-import { useState,useEffect } from 'react'
+import { useState} from 'react'
 import toast from 'react-hot-toast';
 import { Label } from '../ui/label';
 import { Input } from '../ui/input';
@@ -27,20 +27,20 @@ import { Button } from '../ui/button';
     }
 }
 const codeClashJoin = () => {
-  const username=useUsername()
+  const {username}=useUsername()
   const navigate=useNavigate()
-  const [userName,setusername]=useState<string>('')
+  // const [userName,setusername]=useState<string>('')
   const [value,setValue]=useState('')
   const [loading,setLoading]=useState(false)
-  const saved=localStorage.getItem('username')
+  // const saved=localStorage.getItem('username')
   const handleChange=(e:React.ChangeEvent<HTMLInputElement>)=>{
     setValue(e.target.value)
   }
-useEffect(()=>{
-  if(saved){
-  setusername(saved)
-}
-},[])
+// useEffect(()=>{
+//   if(saved){
+//   setusername(saved)
+// }
+// },[])
 
 const handleJoin = async (generatedRoomCode: number) =>{ 
   try{
@@ -55,8 +55,8 @@ const handleJoin = async (generatedRoomCode: number) =>{
     if (roomData.participants.length >= 2) 
     return toast.error('Room is Filled Up')
     await updateDoc(roomDoc.ref, {
-     participants: [...roomData.participants, !username?userName:username],
-     Onliners:[...roomData.participants, !username?userName:username],
+     participants: [...roomData.participants, username],
+     Onliners:[...roomData.participants, username],
      status: 'ready' 
     }) 
     // navigate(`/clash/room/${roomCode}`) 

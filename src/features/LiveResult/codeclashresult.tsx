@@ -91,7 +91,7 @@ console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
   useEffect(() => {
   console.log(data.winner)
   console.log(data.participants[0])
-  if(data.participants.length>0&&data.winner.length>0){
+  if(data.winner.length>0){
 if (data.Onliners.length==0) {
       if (data.winner.length>=2) {
         setFirst(`IT'S A TIE –`);
@@ -106,7 +106,6 @@ if (data.Onliners.length==0) {
   }else{
     setFirst("You Both Loose!");
   }
-    
   }, [
     data.winner,
     data.participants,

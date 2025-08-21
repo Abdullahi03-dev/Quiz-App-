@@ -56,7 +56,7 @@ const handleJoin = async (generatedRoomCode: number) =>{
     const roomData=roomDoc.data()
     if (roomData.participants.length >= 2) 
     return
- toast.error('Room is Filled Up')
+ toast.error('Room Is Filled Up')
     await updateDoc(roomDoc.ref, {
       userTwoName:username,
       userTwoOnline:true,
@@ -64,10 +64,10 @@ const handleJoin = async (generatedRoomCode: number) =>{
       quizHasStarted:true,
     }) 
     // navigate(`/clash/room/${roomCode}`) 
-    // localStorage.setItem('Codclroomcd',`${generatedRoomCode}`)
+    localStorage.setItem('Roomcode',`${generatedRoomCode}`)
     //   localStorage.setItem('Codclroomcd2',`${generatedRoomCode}`)
       toast.success('WISH YOU LUCK');
-      navigate(`/livequiz/${generatedRoomCode}`)
+      navigate(`/pvp/${generatedRoomCode}`)
   }catch(e:any){
       console.log(e)
   }

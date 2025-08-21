@@ -63,7 +63,7 @@ const handleJoin = async (generatedRoomCode: number) =>{
     }) 
     // navigate(`/clash/room/${roomCode}`) 
     localStorage.setItem('Codclroomcd',`${generatedRoomCode}`)
-      localStorage.setItem('Codclroomcd2',`${generatedRoomCode}`)
+      // localStorage.setItem('Codclroomcd2',`${generatedRoomCode}`)
       toast.success('WISH YOU LUCK');
       navigate(`/codeclash/${generatedRoomCode}`)
   }catch(e:any){

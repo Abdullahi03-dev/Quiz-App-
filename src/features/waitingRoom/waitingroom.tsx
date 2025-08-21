@@ -123,8 +123,8 @@ const waitingroom = () => {
  }
       querySnapshot.forEach((doc)=>{
         const data=doc.data(); 
-        // if(data.userTwoName!==''){
-          if(true){
+        if(data.userTwoName!==''){
+          // if(true){
           setSecondUser(data.userTwoName)
           setTimeout(()=>{
             navigate(`/pvp/${parseInt(roomCode)}`)

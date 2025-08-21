@@ -139,7 +139,7 @@ const PushDetails=async(generatedRoomCode:number)=> {
   })
       toast.success('Goodluck')
       localStorage.setItem('Codclroomcd',`${generatedRoomCode}`)
-      localStorage.setItem('Codclroomcd2',`${generatedRoomCode}`)
+      // localStorage.setItem('Codclroomcd2',`${generatedRoomCode}`)
       navigate('/waitingcodeclash')
     }else{
       toast.error('ROOM CODE ALREADY EXIST TRY REFRESHING')

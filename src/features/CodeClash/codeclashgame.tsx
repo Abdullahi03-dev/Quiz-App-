@@ -188,7 +188,7 @@ useEffect(()=>{
            const filteredQuestions = data.filter((q:any) => !questionId.includes(q.id));
         const randomQ = filteredQuestions[Math.floor(Math.random() * filteredQuestions.length)];
         setMockChallenge(randomQ)
-        alert(randomQ.id)
+        // alert(randomQ.id)
         
         }
       })

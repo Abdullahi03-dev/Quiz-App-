@@ -32,7 +32,7 @@ const useUsername = () => {
       const unsubscribe = onAuthStateChanged(auth, async (user) => {
         if (user) {
           try {
-            const q = query(collection(db, "users"), where("uid", "==", user.uid));
+            const q = query(collection(db, "users"), where("userId", "==", user.uid));
             const querySnapshot = await getDocs(q);
   
             if (!querySnapshot.empty) {

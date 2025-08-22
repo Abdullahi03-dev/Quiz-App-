@@ -103,6 +103,7 @@ export default function codeClashGame() {
       if (document.visibilityState === 'hidden') {
         toast.error('Disqualified');
   UpdateFirebase(false)
+  navigate(`/codeclashresult/${roomId}`)
       }
     };
   
@@ -135,6 +136,7 @@ export default function codeClashGame() {
     
       // // Check participant count+/
       if (roomData.status==='ready') {
+        // if(true){
         setPlayers(roomData.participants)
         setselectedLanguage(roomData.difficulty)
         setTime(roomData.time)
@@ -268,11 +270,14 @@ if(mockChallenge===null||players==null){
             // Create a new function from the user code
             const codeName=mockChallenge.starterCode
             const match=codeName.match(/function\s+([a-zA-Z0-9_$]+)\s*\(/);
+            const wrappedCode=`${code} return ${match[1]}`
 
             
-            const userFunction = new Function(`${code}; return ${match[1]}(...arguments);`);
+            const userFunctionConstructor = new Function(wrappedCode);
+            const userFunction=userFunctionConstructor()
     
             const result = userFunction(...args);
+            console.log(userFunction)
     
             if (String(result).trim() !== expectedOutput) {
               passedAll = false;

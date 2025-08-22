@@ -89,13 +89,15 @@ console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
 
   /* ---------- derive winner banner ---------- */
   useEffect(() => {
-  console.log(data.winner)
-  console.log(data.participants[0])
-  if(data.winner.length>0){
-if (data.Onliners.length==0) {
+  // console.log(data.winner)
+  // console.log(data.participants[0])
+  if(data.Onliners.length===0&&data.winner.length===0){
+       setFirst("You Both Loose!");
+  }else{
+    if (data.Onliners.length==0) {
       if (data.winner.length>=2) {
         setFirst(`IT'S A TIE –`);
-      } else if (data.winner.includes(data.participants[0])&&data.winner.length===1) {
+      } else if (data.winner.includes(data.participants[0])&&data.winner.length==1) {
         setFirst(`WINNER IS ${data.participants[0]}`);
       } else {
         setFirst(`WINNER IS ${data.winner[1]}`);
@@ -103,9 +105,8 @@ if (data.Onliners.length==0) {
     } else {
       setFirst("ALL PLAYERS NEED TO FINISH");
     }
-  }else{
-    setFirst("You Both Loose!");
   }
+    
   }, [
     data.winner,
     data.participants,

@@ -103,7 +103,10 @@ export default function codeClashGame() {
       if (document.visibilityState === 'hidden') {
         toast.error('Disqualified');
   UpdateFirebase(false)
-  navigate(`/codeclashresult/${roomId}`)
+  setTimeout(()=>{
+    navigate(`/codeclashresult/${roomId}`)
+  },3000)
+  
       }
     };
   

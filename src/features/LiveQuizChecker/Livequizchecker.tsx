@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate,useParams } from "react-router-dom";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent, CardHeader } from "../../components/ui/card";
 import { Badge } from "../../components/ui/badge";
@@ -15,9 +15,10 @@ interface QuestionProps{
   }
 export default function QuizReview() {
   const {roomId}=useParams()
-    // const saveData= JSON.parse(localStorage.getItem('quizSettings')||'{}')
-    const [AnswersChosed,setAnswersChosed]=useState<{[key:number]:string}>({})
-    const [QuestionsChosed,setQuestionsChosed]=useState<number[]>([])
+    const AnswersChosed=JSON.parse(localStorage.getItem('AnswersChosedLive')||'{}')
+    const QuestionsChosed=JSON.parse(localStorage.getItem('QuestionsChosedLive')||'{}')
+    // const [AnswersChosed,setAnswersChosed]=useState<{[key:number]:string}>({})
+    // const [QuestionsChosed,setQuestionsChosed]=useState<number[]>([])
     const [languageChoosed,setlanguageChoosed]=useState<string>('')
     const [questonsLenghtSaved,setquestonsLenghtSaved]=useState<string>('')
     const [data,setData]=useState<QuestionProps[]>([])
@@ -39,11 +40,8 @@ export default function QuizReview() {
     if(!querySnapshot.empty){
       const doc=querySnapshot.docs[0];
       const data= doc.data()
-      console.log(data.AnswersChosed)
       setlanguageChoosed(data.languageChoosed)
       setquestonsLenghtSaved(data.questtionList)
-      setAnswersChosed(data.AnswersChosed)
-      setQuestionsChosed(data.QuestionsChosed)
     }else{
       console.log('error')
       toast.error('Room Does Not Exist')
@@ -70,7 +68,7 @@ export default function QuizReview() {
       .then((response) => response.json() as Promise<QuestionProps[]>)
       .then((jsonData) => {
         const selectedQuestions: QuestionProps[] = QuestionsChosed.map(
-          (i) => jsonData[i]
+          (i:any) => jsonData[i]
         );
         setData(selectedQuestions);
         const numericKeys = Object.keys(AnswersChosed).map((key) =>

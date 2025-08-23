@@ -280,14 +280,21 @@ if(mockChallenge===null||players==null){
             const userFunction=userFunctionConstructor()
     
             const result = userFunction(...args);
-            console.log(userFunction)
+            // console.log(userFunction)
     
             if (String(result).trim() !== expectedOutput) {
+              console.log(passedAll)
+              setIsSubmitting(false);
+              toast.error('YOU HAVE FAIL, TRY AGAIN')
               passedAll = false;
               break;
+            }else{
+              UpdateFirebase(true)
             }
     
           } catch (err) {
+            setIsSubmitting(false);
+            toast.error('SOMETHING WENT, TRY AGAIN')
             console.error("Test case error:", err);
             passedAll = false;
             break;
@@ -295,7 +302,7 @@ if(mockChallenge===null||players==null){
         }
     
         // Update Firebase
-        UpdateFirebase(passedAll)
+        // UpdateFirebase(passedAll)
         UpdateUserQuestionId(selectedLanguage,mockChallenge.id)
       } catch (err) {
         console.error(err);

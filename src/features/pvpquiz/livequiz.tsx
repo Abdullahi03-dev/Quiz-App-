@@ -263,8 +263,9 @@ useEffect(() => {
   if (time===0) {
     if(intervalRef.current!==null&&roomId!==null){
       updateWholeScore(Number(roomId),scoreToBeSave)
-      localStorage.setItem('AnswersChosed',JSON.stringify(selected))
-      localStorage.setItem('QuestionsChosed',JSON.stringify(selectedIndex))
+      localStorage.setItem('AnswersChosedLive',JSON.stringify(selected))
+      localStorage.setItem('QuestionsChosedLive',JSON.stringify(selectedIndex))
+      localStorage.setItem('langused',`${questionlenght}`)
       updateScore()
       navigate(`/liveresult/${roomId}`)
       clearInterval(intervalRef.current); // cleanup
@@ -388,6 +389,7 @@ const formatTime = (secs:number) => {
         updateScore()
         localStorage.setItem('AnswersChosedLive',JSON.stringify(selected))
       localStorage.setItem('QuestionsChosedLive',JSON.stringify(selectedIndex))
+      localStorage.setItem('langused',`${questionlenght}`)
         navigate(`/liveresult/${roomId}`)
       }
         

@@ -153,6 +153,7 @@ const updateScore=async(generatedRoomCode:number,username:string)=> {
           userTwoName:'',
           winners:[],
           Onliners:[username],
+          finished:[],
           questtionList:selectedQuestion,
           languageChoosed:selectedLanguage,
           time:selectedTime,

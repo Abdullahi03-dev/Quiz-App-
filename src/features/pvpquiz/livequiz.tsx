@@ -58,7 +58,8 @@ const livequiz = () => {
       const roomData = roomDoc.data()
     
       // // Check participant count+/
-      if (roomData.Onliners.includes(username)) {
+      if (!username) return;
+      if (!roomData.finished.includes(username)) {
       setTime(roomData.time)
       setlanguageChoosed(roomData.languageChoosed)
       setquestonsLenghtSaved(roomData.questtionList)
@@ -82,6 +83,7 @@ const livequiz = () => {
     return () => authUnsub();
         // alert('Waiting for opponent to join...')
       }
+      toast.error('ROOM ALREADY CLOSED')
     return navigate('/categories')
      
       
@@ -200,6 +202,7 @@ const livequiz = () => {
             // userOneScore:increment(scoreToBeSave/2),
             Onliners: arrayRemove(username),
             winners:arrayUnion({name:username,score:(scoreToBeSave)}),
+            finished:arrayUnion(username)
             // AnswersChosed:AnswersChosed,
             // QuestionsChosed:arrayUnion(...QuestionsChosed),
           })

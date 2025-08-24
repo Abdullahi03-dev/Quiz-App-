@@ -42,57 +42,54 @@ const livequiz = () => {
 
   useEffect(() => { 
     const checkRoom = async () => { 
-    if (!roomId) 
-    return navigate('/livesettings')
-    
-    // Query the room by room code
-      const usersRef = collection(db, "Rooms");
-      const roomQuery = query(usersRef, where("roomCode", "==",parseInt(roomId)))
-      const snapshot = await getDocs(roomQuery)
-    
-      if (snapshot.empty){
-        toast.error('Not Found')
-       navigate('/categories')
-      }
-      const roomDoc = snapshot.docs[0]
-      const roomData = roomDoc.data()
-    
-      // // Check participant count+/
-      if (!username) return;
-      if (!roomData.finished.includes(username)) {
-      setTime(roomData.time)
-      setlanguageChoosed(roomData.languageChoosed)
-      setquestonsLenghtSaved(roomData.questtionList)
-        const lang = roomData.languageChoosed; // get level here
-    // Get current logged-in user
-    const authUnsub = onAuthStateChanged(auth, async () => {
-      if (!username) return;
-
-      // Fetch this user’s completed challenges for this lang
-      const usersRef = collection(db, "users");
-      const q = query(usersRef, where("name", "==", username));
-      const userSnap = await getDocs(q);
-      if(userSnap.empty){
-        return
-      }
-      const roomDoc = userSnap.docs[0]
-      const roomData = roomDoc.data()
-        const completedIds = roomData.completedLiveChallenges?.[lang] || [];
-        setQuestionId(completedIds);
-    });
-    return () => authUnsub();
-        // alert('Waiting for opponent to join...')
-      }
-      toast.error('ROOM ALREADY CLOSED')
-    return navigate('/categories')
-     
+      if (!roomId) return navigate('/livesettings');
       
-    }
-    
-    checkRoom()
-    
-    }, [roomId, navigate])
-
+      const usersRef = collection(db, "Rooms");
+      const roomQuery = query(usersRef, where("roomCode", "==", parseInt(roomId)));
+      const snapshot = await getDocs(roomQuery);
+      
+      if (snapshot.empty) {
+        toast.error('Room Not Found');
+        return navigate('/categories');
+      }
+  
+      const roomDoc = snapshot.docs[0];
+      const roomData = roomDoc.data();
+  
+      if (!username) return;
+  
+      // FIXED: Prevent access if user is already finished
+      if (roomData.finished?.includes(username)) {
+        toast.error('You have already completed this quiz.');
+        return navigate('/categories');
+      }
+  
+      // If user not finished, load the quiz settings
+      setTime(roomData.time);
+      setlanguageChoosed(roomData.languageChoosed);
+      setquestonsLenghtSaved(roomData.questtionList);
+  
+      // Optional: fetch previously completed questions for this user
+      const authUnsub = onAuthStateChanged(auth, async () => {
+        if (!username) return;
+  
+        const usersRef = collection(db, "users");
+        const q = query(usersRef, where("name", "==", username));
+        const userSnap = await getDocs(q);
+        if (userSnap.empty) return;
+  
+        const userDoc = userSnap.docs[0];
+        const userData = userDoc.data();
+        const completedIds = userData.completedLiveChallenges?.[roomData.languageChoosed] || [];
+        setQuestionId(completedIds);
+      });
+  
+      return () => authUnsub();
+    };
+  
+    checkRoom();
+  }, [roomId, navigate, username]);
+  
   
   // const sendMessage = async (roomCode:number) => {
   //   try {
@@ -188,40 +185,56 @@ const livequiz = () => {
         return !querySnapshot.empty; // Returns true if name exists
       };
 
-      const updateScoreAndState=async(roomCode:number,scoreToBeSave:number)=> {
-        const q=query(collection(db,'Rooms'),where('roomCode','==',roomCode));
-
-        const querySanpshot=await getDocs(q)
-        if(querySanpshot.empty){
-          console.log('does ot match')
-        }
-        querySanpshot.forEach(async(document)=>{
-          const docRef=doc(db,'Rooms',document.id);
-            console.log(document.id,document.data())
-          await updateDoc(docRef,{
-            // userOneScore:increment(scoreToBeSave/2),
-            Onliners: arrayRemove(username),
-            winners:arrayUnion({name:username,score:(scoreToBeSave)}),
-            finished:arrayUnion(username)
-            // AnswersChosed:AnswersChosed,
-            // QuestionsChosed:arrayUnion(...QuestionsChosed),
-          })
-
-        })
-      }
-      const updateWholeScore = async (roomCode:number,scoreToBeSave:number) => {
+      const updateScoreAndState = async (roomCode: number, scoreToBeSave: number, username: string) => {
         try {
-          // Check if the name already exists in Firestore
-          const nameExists = await checkIfNameExists(roomCode);
-          if (!nameExists&&username!==null) return;
-            updateScoreAndState(roomCode,scoreToBeSave)
-            // updateScore()
-          
-          // Store the user details in Firestore
-        } catch (error: any) {
-          console.log(error)
+          const q = query(collection(db, 'Rooms'), where('roomCode', '==', roomCode));
+          const querySnapshot = await getDocs(q);
+      
+          if (querySnapshot.empty) {
+            console.log('Room not found');
+            return;
+          }
+      
+          // Update the first matched room
+          const roomDoc = querySnapshot.docs[0];
+          const docRef = doc(db, 'Rooms', roomDoc.id);
+      
+          // Use a transaction to ensure atomic update
+          await updateDoc(docRef, {
+            // Remove user from Onliners
+            Onliners: arrayRemove(username),
+            // Add user to finished
+            finished: arrayUnion(username),
+            // Add to winners with score
+            winners: arrayUnion({ name: username, score: scoreToBeSave })
+          });
+      
+          console.log(`${username} removed from Onliners and added to finished`);
+        } catch (error) {
+          console.error("Error updating room state:", error);
         }
-      }
+      };
+      
+      const updateWholeScore = async (roomCode: number, scoreToBeSave: number) => {
+        try {
+          // Check if the room exists
+          const nameExists = await checkIfNameExists(roomCode);
+          if (!nameExists) return;
+      
+          // Check if username exists
+          if (!username) {
+            console.error("Username not found. Cannot update score.");
+            return;
+          }
+      
+          // Call the updated function safely
+          await updateScoreAndState(roomCode, scoreToBeSave, username);
+      
+        } catch (error: any) {
+          console.log(error);
+        }
+      };
+      
 
 
 

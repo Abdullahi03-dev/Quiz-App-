@@ -1,19 +1,248 @@
+// import { useEffect, useState } from "react";
+// import { useNavigate, useParams } from "react-router-dom";
+// // import {useAutoDeleteLocalStorageOnLeave} from '../../hooks/usePageLocalStorage'
+// import { Unsubscribe,DocumentData, db,collection,
+//   query,
+//   where,
+//   onSnapshot,
+//    } from "../../firebase/firebase";        // ← adjust path if needed
+// import { Button } from "../../components/ui/button";
+
+// /* ---------- types ---------- */
+
+// interface Winners{
+//   name:string;
+//   score:number;
+// }
+// interface RoomData {
+//   quizHasStarted: boolean;
+//   languageChoosed: string;
+//   questtionList: number;
+//   time: number;
+//   userOneName: string;
+//   userTwoName: string;
+//   winners:Winners[];
+//   Onliners:string[];
+// }
+
+
+// /* ---------- component ---------- */
+// const LiveResult = () => {
+  
+
+//   const navigate = useNavigate();
+
+//   /* initial state identical to your previous object  */
+//   const { roomId } = useParams()
+//   const [data, setData] = useState<RoomData>({
+//     quizHasStarted: false,
+//     languageChoosed: "",
+//     questtionList: 0,
+//     time: 0,
+//     userOneName: "",
+//     userTwoName: "",
+//     winners:[],
+//     Onliners:[],
+//   });
+
+//   const [first, setFirst] = useState("ALL PLAYERS NEED TO FINISH");
+
+//   /* ---------- Firestore realtime listener ---------- */
+//   const listenToRoom = (roomCode: number): Unsubscribe => {
+//     const roomsRef = collection(db, "Rooms");
+//     const q = query(roomsRef, where("roomCode", "==", roomCode));
+//     const unsub= onSnapshot(q, (snap) => {
+// console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
+
+//       if (!snap.empty) {
+//         const docData = snap.docs[0].data() as DocumentData;
+//         console.log('Room data',docData)
+
+//         setData((prev) => ({
+//           ...prev,
+//           /* bring in only the fields you store in Firestore */
+//           languageChoosed : docData.languageChoosed,
+//           questtionList   : docData.questtionList,
+//           time            : docData.time,
+//           userOneName     : docData.userOneName,
+//           userTwoName     : docData.userTwoName,
+//           winners         :docData.winners,
+//           Onliners        :docData.Onliners,
+//         }));
+//       } else {
+//         console.error("Room not found");
+//       }
+//     });
+
+//     return unsub
+//   };
+
+//   // useEffect(()=>{
+//   //   const saved1=localStorage.getItem('Roomcode');
+//   //    if(saved1!==null){
+//   //        localStorage.removeItem('Roomcode')
+//   //        return
+//   //    }
+//   //    },[])
+// // useEffect(()=>{
+// //   const handlepop=()=>{
+// //     navigate('/categories')
+// //   }
+// //   window.addEventListener('popstate',handlepop)
+// //   return()=>{
+// //     window.removeEventListener('popstate',handlepop)
+// //   }
+// // },[navigate])
+// //   /* ---------- mount: attach listener ---------- */
+// useEffect(() => {
+//   if(!roomId) return
+//   const unsub = listenToRoom(parseInt(roomId));
+//   return () => unsub();               // cleanup
+// }, []);                                           // run once
+   
+//   /* ---------- derive winner banner ---------- */
+//   useEffect(() => {
+//     if (data.Onliners.length===0&&data.winners.length>0) {
+//       // console.log(data.winners?.[0]?.score)
+//       if (data.winners?.[0]?.score === data.winners?.[1]?.score) {
+//         setFirst(`IT'S A TIE – both scored ${data.winners?.[0]?.score}`);
+//       } else if (data.winners?.[0]?.score> data.winners?.[1]?.score) {
+//         setFirst(`WINNER IS ${data.userOneName} score is ${data.winners?.[0]?.score}`);
+//       } else {
+//         setFirst(`WINNER IS ${data.userTwoName} score is ${data.winners?.[1]?.score}`);
+//       }
+//     } else {
+//       setFirst("ALL PLAYERS NEED TO FINISH");
+//     }
+//   }, [
+//     data.winners,
+//     data.Onliners,
+//     data.userOneName,
+//     data.userTwoName,
+//   ]);
+//   // useAutoDeleteLocalStorageOnLeave('Roomcode')
+
+
+//   /* ---------- block back-button to dashboard ---------- */
+//   useEffect(() => {
+//     const handlePop = () => navigate("/categories", { replace: true });
+//     window.addEventListener("popstate", handlePop);
+//     return () => window.removeEventListener("popstate", handlePop);
+//   }, [navigate]);
+
+//   /* ---------- purge localStorage on first render ---------- */
+//   useEffect(() => {
+//     ["LiveQuizState", "HasQuizStart"].forEach((key) =>
+//       localStorage.removeItem(key)
+//     );
+//   }, []);
+
+//   /* ---------- UI --------- */
+//   return (
+//     <>
+//       <div className="min-h-screen flex items-center justify-center bg-slate-950 text-gray-200 px-4 py-10 pb-10">
+//       <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-purple-500/5"></div>
+//       <div className="absolute md:top-20 md:left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
+//         <div className="w-full max-w-4xl bg-slate-900/80 border-slate-800 backdrop-blur-sm rounded-2xl p-8 mb-10 ">
+//           <h1 className="text-3xl font-bold text-green-400 text-center mb-8">
+//             Multiplayer Quiz Result
+//           </h1>
+//           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+//             {/* Player 1 */}
+//             <div className="bg-slate-900/80 border-slate-800 backdrop-blur-sm p-6 rounded-xl border  ">
+//               <h3 className="text-green-400 text-xl font-semibold mb-2">
+//                 Player 1: {data.userOneName}
+//               </h3>
+//               <p className="mb-1">Language: {data.languageChoosed}</p>
+//               <p className="mb-1">
+//                 Time:{" "}
+//                 {`${Math.floor(data.time / 60)} min : ${String(
+//                   data.time % 60
+//                 ).padStart(2, "0")}`}
+//               </p>
+//               <p className="mb-1">
+//                 Score:{" "}
+//                 {data.Onliners.includes(data.userOneName)
+//                   ? "WAITING FOR PLAYER 1 TO FINISH...."
+//                   : `${data.winners?.[0]?.score}`}
+//               </p>
+//             </div>
+
+//             {/* Player 2 */}
+//             <div className="p-6 rounded-xl border bg-slate-900/80 border-slate-800 backdrop-blur-sm">
+//               <h3 className="text-green-400 text-xl font-semibold mb-2">
+//                 Player 2: {data.userTwoName}
+//               </h3>
+//               <p className="mb-1">Language: {data.languageChoosed}</p>
+//               <p className="mb-1">
+//                 Time:{" "}
+//                 {`${Math.floor(data.time / 60)} min : ${String(
+//                   data.time % 60
+//                 ).padStart(2, "0")}`}
+//               </p>
+//               <p className="mb-1">
+//                 Score:{" "}
+//                 {data.Onliners.includes(data.userTwoName)
+//                   ? "WAITING FOR PLAYER 2 TO FINISH...."
+//                   : `${data.winners?.[1]?.score}`}
+//               </p>
+//             </div>
+//           </div>
+//           <div className="bg-green-400/10 border border-green-400 text-green-300 font-semibold text-center py-4 px-6 rounded-xl text-lg">
+//             🏆{first}
+//           </div>
+
+//           {/* <Button
+//             className="mt-4 mx-auto cursor-pointer"
+//           >
+            
+//           </Button> */}
+//           <Button size="lg" variant="outline" className="border-slate-700 bg-slate-700 text-white hover:bg-slate-800 mt-4"
+//             type="button"
+//             onClick={() => navigate("/categories")}
+
+//           >
+//               Back Dashboard
+//             </Button>
+//             <Button size="lg" variant="outline" className="border-slate-700 bg-slate-700 text-white hover:bg-slate-800 mt-4 ml-3"
+//             type="button"
+//             onClick={() => navigate(`/quizchecker/${roomId}`)}
+
+//           >
+//               Review Answers
+//             </Button>
+            
+//         </div>
+//       </div>
+
+//     </>
+//   );
+// };
+
+// export default LiveResult;
+
+
+
+
+
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-// import {useAutoDeleteLocalStorageOnLeave} from '../../hooks/usePageLocalStorage'
-import { Unsubscribe,DocumentData, db,collection,
+import {
+  Unsubscribe,
+  DocumentData,
+  db,
+  collection,
   query,
   where,
   onSnapshot,
-   } from "../../firebase/firebase";        // ← adjust path if needed
+} from "../../firebase/firebase";
 import { Button } from "../../components/ui/button";
 
-/* ---------- types ---------- */
-
-interface Winners{
-  name:string;
-  score:number;
+interface Winners {
+  name: string;
+  score: number;
 }
+
 interface RoomData {
   quizHasStarted: boolean;
   languageChoosed: string;
@@ -21,19 +250,14 @@ interface RoomData {
   time: number;
   userOneName: string;
   userTwoName: string;
-  winners:Winners[];
-  Onliners:string[];
+  winners: Winners[];
+  Onliners: string[];
 }
 
-
-/* ---------- component ---------- */
 const LiveResult = () => {
-  
-
   const navigate = useNavigate();
+  const { roomId } = useParams();
 
-  /* initial state identical to your previous object  */
-  const { roomId } = useParams()
   const [data, setData] = useState<RoomData>({
     quizHasStarted: false,
     languageChoosed: "",
@@ -41,8 +265,8 @@ const LiveResult = () => {
     time: 0,
     userOneName: "",
     userTwoName: "",
-    winners:[],
-    Onliners:[],
+    winners: [],
+    Onliners: [],
   });
 
   const [first, setFirst] = useState("ALL PLAYERS NEED TO FINISH");
@@ -51,86 +275,67 @@ const LiveResult = () => {
   const listenToRoom = (roomCode: number): Unsubscribe => {
     const roomsRef = collection(db, "Rooms");
     const q = query(roomsRef, where("roomCode", "==", roomCode));
-    const unsub= onSnapshot(q, (snap) => {
-console.log('snapshot fired:',snap.empty?'no documents':'gotten data')
+    const unsub = onSnapshot(q, (snap) => {
+      console.log("snapshot fired:", snap.empty ? "no documents" : "gotten data");
 
       if (!snap.empty) {
         const docData = snap.docs[0].data() as DocumentData;
-        console.log('Room data',docData)
+        console.log("Room data", docData);
 
         setData((prev) => ({
           ...prev,
-          /* bring in only the fields you store in Firestore */
-          languageChoosed : docData.languageChoosed,
-          questtionList   : docData.questtionList,
-          time            : docData.time,
-          userOneName     : docData.userOneName,
-          userTwoName     : docData.userTwoName,
-          winners         :docData.winners,
-          Onliners        :docData.Onliners,
+          languageChoosed: docData.languageChoosed || "",
+          questtionList: docData.questtionList || 0,
+          time: docData.time || 0,
+          userOneName: docData.userOneName || "",
+          userTwoName: docData.userTwoName || "",
+          winners: Array.isArray(docData.winners) ? docData.winners : [],
+          Onliners: Array.isArray(docData.Onliners) ? docData.Onliners : [],
         }));
       } else {
         console.error("Room not found");
       }
     });
 
-    return unsub
+    return unsub;
   };
 
-  // useEffect(()=>{
-  //   const saved1=localStorage.getItem('Roomcode');
-  //    if(saved1!==null){
-  //        localStorage.removeItem('Roomcode')
-  //        return
-  //    }
-  //    },[])
-// useEffect(()=>{
-//   const handlepop=()=>{
-//     navigate('/categories')
-//   }
-//   window.addEventListener('popstate',handlepop)
-//   return()=>{
-//     window.removeEventListener('popstate',handlepop)
-//   }
-// },[navigate])
-//   /* ---------- mount: attach listener ---------- */
-useEffect(() => {
-  if(!roomId) return
-  const unsub = listenToRoom(parseInt(roomId));
-  return () => unsub();               // cleanup
-}, []);                                           // run once
-   
-  /* ---------- derive winner banner ---------- */
   useEffect(() => {
-    if (data.Onliners.length===0&&data.winners.length>0) {
-      // console.log(data.winners?.[0]?.score)
-      if (data.winners?.[0]?.score === data.winners?.[1]?.score) {
-        setFirst(`IT'S A TIE – both scored ${data.winners?.[0]?.score}`);
-      } else if (data.winners?.[0]?.score> data.winners?.[1]?.score) {
-        setFirst(`WINNER IS ${data.userOneName} score is ${data.winners?.[0]?.score}`);
+    if (!roomId) return;
+    const unsub = listenToRoom(parseInt(roomId));
+    return () => unsub();
+  }, [roomId]);
+
+  /* ---------- derive winner banner safely ---------- */
+  useEffect(() => {
+    const bothFinished = data.Onliners.length === 0;
+    const hasTwoPlayers = data.userOneName && data.userTwoName;
+    const hasScores = data.winners.length >= 2;
+
+    if (bothFinished && hasTwoPlayers && hasScores) {
+      const score1 = data.winners[0]?.score ?? 0;
+      const score2 = data.winners[1]?.score ?? 0;
+
+      if (score1 === score2) {
+        setFirst(`IT'S A TIE – both scored ${score1}`);
+      } else if (score1 > score2) {
+        setFirst(`WINNER IS ${data.userOneName} score is ${score1}`);
       } else {
-        setFirst(`WINNER IS ${data.userTwoName} score is ${data.winners?.[1]?.score}`);
+        setFirst(`WINNER IS ${data.userTwoName} score is ${score2}`);
       }
     } else {
       setFirst("ALL PLAYERS NEED TO FINISH");
     }
-  }, [
-    data.winners,
-    data.Onliners,
-    data.userOneName,
-    data.userTwoName,
-  ]);
-  // useAutoDeleteLocalStorageOnLeave('Roomcode')
+  }, [data.winners, data.Onliners, data.userOneName, data.userTwoName]);
 
-
-  /* ---------- block back-button to dashboard ---------- */
+  /* ---------- block back-button ---------- */
   useEffect(() => {
     const handlePop = () => navigate("/categories", { replace: true });
     window.addEventListener("popstate", handlePop);
     return () => window.removeEventListener("popstate", handlePop);
   }, [navigate]);
 
-  /* ---------- purge localStorage on first render ---------- */
+  /* ---------- purge localStorage ---------- */
   useEffect(() => {
     ["LiveQuizState", "HasQuizStart"].forEach((key) =>
       localStorage.removeItem(key)
@@ -141,50 +346,54 @@ useEffect(() => {
   return (
     <>
       <div className="min-h-screen flex items-center justify-center bg-slate-950 text-gray-200 px-4 py-10 pb-10">
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-purple-500/5"></div>
-      <div className="absolute md:top-20 md:left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-purple-500/5"></div>
+        <div className="absolute md:top-20 md:left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
         <div className="w-full max-w-4xl bg-slate-900/80 border-slate-800 backdrop-blur-sm rounded-2xl p-8 mb-10 ">
           <h1 className="text-3xl font-bold text-green-400 text-center mb-8">
             Multiplayer Quiz Result
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {/* Player 1 */}
-            <div className="bg-slate-900/80 border-slate-800 backdrop-blur-sm p-6 rounded-xl border  ">
+            <div className="bg-slate-900/80 border-slate-800 backdrop-blur-sm p-6 rounded-xl border">
               <h3 className="text-green-400 text-xl font-semibold mb-2">
-                Player 1: {data.userOneName}
+                Player 1: {data.userOneName || "Waiting for player..."}
               </h3>
-              <p className="mb-1">Language: {data.languageChoosed}</p>
+              <p className="mb-1">Language: {data.languageChoosed || "N/A"}</p>
               <p className="mb-1">
                 Time:{" "}
-                {`${Math.floor(data.time / 60)} min : ${String(
-                  data.time % 60
-                ).padStart(2, "0")}`}
+                {data.time
+                  ? `${Math.floor(data.time / 60)} min : ${String(
+                      data.time % 60
+                    ).padStart(2, "0")}`
+                  : "N/A"}
               </p>
               <p className="mb-1">
                 Score:{" "}
                 {data.Onliners.includes(data.userOneName)
                   ? "WAITING FOR PLAYER 1 TO FINISH...."
-                  : `${data.winners?.[0]?.score}`}
+                  : data.winners[0]?.score ?? "N/A"}
               </p>
             </div>
 
             {/* Player 2 */}
             <div className="p-6 rounded-xl border bg-slate-900/80 border-slate-800 backdrop-blur-sm">
               <h3 className="text-green-400 text-xl font-semibold mb-2">
-                Player 2: {data.userTwoName}
+                Player 2: {data.userTwoName || "Waiting for player..."}
               </h3>
-              <p className="mb-1">Language: {data.languageChoosed}</p>
+              <p className="mb-1">Language: {data.languageChoosed || "N/A"}</p>
               <p className="mb-1">
                 Time:{" "}
-                {`${Math.floor(data.time / 60)} min : ${String(
-                  data.time % 60
-                ).padStart(2, "0")}`}
+                {data.time
+                  ? `${Math.floor(data.time / 60)} min : ${String(
+                      data.time % 60
+                    ).padStart(2, "0")}`
+                  : "N/A"}
               </p>
               <p className="mb-1">
                 Score:{" "}
                 {data.Onliners.includes(data.userTwoName)
                   ? "WAITING FOR PLAYER 2 TO FINISH...."
-                  : `${data.winners?.[1]?.score}`}
+                  : data.winners[1]?.score ?? "N/A"}
               </p>
             </div>
           </div>
@@ -192,29 +401,26 @@ useEffect(() => {
             🏆{first}
           </div>
 
-          {/* <Button
-            className="mt-4 mx-auto cursor-pointer"
-          >
-            
-          </Button> */}
-          <Button size="lg" variant="outline" className="border-slate-700 bg-slate-700 text-white hover:bg-slate-800 mt-4"
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-slate-700 bg-slate-700 text-white hover:bg-slate-800 mt-4"
             type="button"
             onClick={() => navigate("/categories")}
-
           >
-              Back Dashboard
-            </Button>
-            <Button size="lg" variant="outline" className="border-slate-700 bg-slate-700 text-white hover:bg-slate-800 mt-4 ml-3"
+            Back Dashboard
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-slate-700 bg-slate-700 text-white hover:bg-slate-800 mt-4 ml-3"
             type="button"
             onClick={() => navigate(`/quizchecker/${roomId}`)}
-
           >
-              Review Answers
-            </Button>
-            
+            Review Answers
+          </Button>
         </div>
       </div>
-
     </>
   );
 };

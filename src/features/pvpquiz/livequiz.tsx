@@ -165,13 +165,16 @@ const livequiz = () => {
     if(querySanpshot.empty){
       console.log('does not match')
     }
+    alert(languageChoosed)
     querySanpshot.forEach(async(document)=>{
       const docRef=doc(db,'users',document.id);
       await updateDoc(docRef,{
         [`scores.${languageChoosed}`]:increment((finalScore)),
-        [`completedLocalQuiz.${languageChoosed}`]:selectedIndex
+        [`completedLiveChallenges.${languageChoosed}`]:selectedIndex
       })
     })
+  }else{
+    alert('lang prob')
   }
   }
 

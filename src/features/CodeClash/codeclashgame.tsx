@@ -663,7 +663,7 @@ export default function codeClashGame() {
         if (Array.isArray(data) && Array.isArray(questionId)) {
           const filteredQuestions = data.filter((q: any) => !questionId.includes(q.id));
           const randomQ = filteredQuestions[Math.floor(Math.random() * filteredQuestions.length)];
-          UpdateUserQuestionId(selectedLanguage,randomQ)
+          UpdateUserQuestionId(selectedLanguage,randomQ.id)
           setMockChallenge(randomQ);
         }
       })

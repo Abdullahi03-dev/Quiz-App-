@@ -61,7 +61,7 @@ const quizComp = () => {
           
           const difficulty=sessionData.difficultyLevel
           const lang=sessionData.languageChoosed
-          
+          const tags=`${lang}${difficulty}`
           const authUnsub = onAuthStateChanged(auth, async (user:any) => {
             if (!user) return;
       
@@ -72,7 +72,8 @@ const quizComp = () => {
             if(userSnap.empty){
               return
             }
-            const tags=`${lang}${difficulty}`
+            
+            // alert(tags)
             const roomDoc = userSnap.docs[0]
             const roomData = roomDoc.data()
               const completedIds = roomData.completedLocalQuiz?.[tags] || [];
@@ -140,7 +141,7 @@ const quizComp = () => {
           
           await updateDoc(docRef,{
             [`scores.${saveData.languageChoosed}`]:increment((finalScore)),
-            [`completedLocalQuiz.${saveData.difficultyLevel}`]:selectedIndex
+            [`completedLocalQuiz.${saveData.languageChoosed}${saveData.difficultyLevel}`]:selectedIndex
           })
 
         })

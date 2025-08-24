@@ -140,7 +140,7 @@ const copyToClipBoard=()=>{
   const querySnapshot = await getDocs(q);
   return !querySnapshot.empty; // Returns true if name exists
 };
-
+console.log(userName)
 const updateScore=async(generatedRoomCode:number,username:string)=> {
   const roomCodeExist = await checkIfNameExists(generatedRoomCode);
    try {
@@ -152,7 +152,7 @@ const updateScore=async(generatedRoomCode:number,username:string)=> {
           userOneName:username,
           userTwoName:'',
           winners:[],
-          Onliners:[!username?userName:username],
+          Onliners:[username],
           questtionList:selectedQuestion,
           languageChoosed:selectedLanguage,
           time:selectedTime,

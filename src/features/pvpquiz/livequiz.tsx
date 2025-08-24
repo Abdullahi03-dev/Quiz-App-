@@ -58,7 +58,7 @@ const livequiz = () => {
       const roomData = roomDoc.data()
     
       // // Check participant count+/
-      if (roomData.Onliners.length===0) {
+      if (roomData.Onliners.length!==0) {
       setTime(roomData.time)
       setlanguageChoosed(roomData.languageChoosed)
       setquestonsLenghtSaved(roomData.questtionList)

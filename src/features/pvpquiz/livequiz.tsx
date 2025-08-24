@@ -58,7 +58,7 @@ const livequiz = () => {
       const roomData = roomDoc.data()
     
       // // Check participant count+/
-      if (roomData.Onliners.length>=0) {
+      if (roomData.Onliners.length===0) {
       setTime(roomData.time)
       setlanguageChoosed(roomData.languageChoosed)
       setquestonsLenghtSaved(roomData.questtionList)
@@ -113,25 +113,24 @@ const livequiz = () => {
   //   }
   // };
   
-  // useEffect(() => {
-  //   const handleVisibilityChange = () => {
-  //     if (document.visibilityState === 'hidden') {
-  //       toast.error('Disqualified');
-  // if(!roomId) return
-  //         updateWholeScore(parseInt(roomId),0,[],[]);
-  //         updateScore()
-  //         // sendMessage(parseInt(saved));
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'hidden') {
+        toast.error('Disqualified');
+          if(!roomId) return
+          updateWholeScore(parseInt(roomId),0);
+          // sendMessage(parseInt(saved));
         
-  //     } else {
-  //       navigate(`/liveresult/${roomId}`)
-  //     }
-  //   };
+      } else {
+        navigate(`/liveresult/${roomId}`)
+      }
+    };
   
-  //   document.addEventListener('visibilitychange', handleVisibilityChange);
-  //   return () => {
-  //     document.removeEventListener('visibilitychange', handleVisibilityChange);
-  //   };
-  // }, []);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
 
 
 
@@ -165,7 +164,7 @@ const livequiz = () => {
     if(querySanpshot.empty){
       console.log('does not match')
     }
-    alert(languageChoosed)
+    // alert(languageChoosed)
     querySanpshot.forEach(async(document)=>{
       const docRef=doc(db,'users',document.id);
       await updateDoc(docRef,{

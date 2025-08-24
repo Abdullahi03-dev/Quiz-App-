@@ -72,9 +72,21 @@ setTimeout(()=>{
           python: []
         },
         completedLocalQuiz: {
-          easy: [],
-          medium: [],
-          hard: []
+          javascripteasy: [],
+          javascriptmedium: [],
+          javascripthard: [],
+          javaeasy: [],
+          javamedium: [],
+          javahard: [],
+          reacteasy: [],
+          reactmedium: [],
+          reacthard: [],
+          golangeasy: [],
+          golangmedium: [],
+          golanghard: [],
+          pythoneasy: [],
+          pythonmedium: [],
+          pythonhard: []
         }
       });
       localStorage.setItem('username',Username)

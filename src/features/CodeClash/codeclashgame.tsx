@@ -663,6 +663,7 @@ export default function codeClashGame() {
         if (Array.isArray(data) && Array.isArray(questionId)) {
           const filteredQuestions = data.filter((q: any) => !questionId.includes(q.id));
           const randomQ = filteredQuestions[Math.floor(Math.random() * filteredQuestions.length)];
+          UpdateUserQuestionId(selectedLanguage,randomQ)
           setMockChallenge(randomQ);
         }
       })
@@ -783,7 +784,7 @@ export default function codeClashGame() {
       if (allTestsPassed) {
         toast.success("All test cases passed! Your answer is correct.");
         await UpdateFirebase(true); // Update Firestore score
-        UpdateUserQuestionId(selectedLanguage,mockChallenge.id)
+        
         navigate(`/codeclashresult/${roomId}`);
       } else {
         toast.error("One or more test cases failed. Try again!");

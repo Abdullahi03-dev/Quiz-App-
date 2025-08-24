@@ -155,7 +155,7 @@ const livequiz = () => {
   // };
 
 
-  const updateScore=async()=> {
+  const updateScore=async(selectedIndex:number[])=> {
     if (!username)return
     const finalScore=calculateFinalScore(
         scoreToBeSave,Number(questonsLenghtSaved),'easy')
@@ -210,7 +210,7 @@ const livequiz = () => {
           const nameExists = await checkIfNameExists(roomCode);
           if (!nameExists&&username!==null) return;
             updateScoreAndState(roomCode,scoreToBeSave)
-            updateScore()
+            // updateScore()
           
           // Store the user details in Firestore
         } catch (error: any) {
@@ -266,7 +266,7 @@ useEffect(() => {
       localStorage.setItem('AnswersChosedLive',JSON.stringify(selected))
       localStorage.setItem('QuestionsChosedLive',JSON.stringify(selectedIndex))
       localStorage.setItem('langused',`${questionlenght}`)
-      updateScore()
+      updateScore(selectedIndex)
       navigate(`/liveresult/${roomId}`)
       clearInterval(intervalRef.current); // cleanup
 
@@ -356,6 +356,7 @@ const formatTime = (secs:number) => {
         setSelectedIndex(selectedIndexes)
         setData(selectedQues)
         setQuestionIndex(0)
+        updateScore(selectedIndexes)
       })
       .catch((err)=>{
           console.log(err)
@@ -386,7 +387,7 @@ const formatTime = (secs:number) => {
       }
       else if(roomId ) {
         updateWholeScore(Number(roomId),scoreToBeSave)
-        updateScore()
+        updateScore(selectedIndex)
         localStorage.setItem('AnswersChosedLive',JSON.stringify(selected))
       localStorage.setItem('QuestionsChosedLive',JSON.stringify(selectedIndex))
       localStorage.setItem('langused',`${questionlenght}`)

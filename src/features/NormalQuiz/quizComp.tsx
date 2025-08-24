@@ -60,6 +60,8 @@ const quizComp = () => {
          }else{
           
           const difficulty=sessionData.difficultyLevel
+          const lang=sessionData.languageChoosed
+          
           const authUnsub = onAuthStateChanged(auth, async (user:any) => {
             if (!user) return;
       
@@ -70,9 +72,10 @@ const quizComp = () => {
             if(userSnap.empty){
               return
             }
+            const tags=`${lang}${difficulty}`
             const roomDoc = userSnap.docs[0]
             const roomData = roomDoc.data()
-              const completedIds = roomData.completedLiveChallenges?.[difficulty] || [];
+              const completedIds = roomData.completedLocalQuiz?.[tags] || [];
               setQuestionId(completedIds);
           });
           return () => authUnsub();

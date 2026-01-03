@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
-import { Brain, Zap, Trophy, Users, Gamepad2, Crown, ArrowRight, Sparkles, Target, Globe } from "lucide-react";
+import { Brain, Zap, Trophy, Users, Gamepad2, Crown, ArrowRight, Target, Globe } from "lucide-react";
 const Index = () => {
   const {username}=useUsername()
   
@@ -97,7 +97,7 @@ const Index = () => {
       <section className="relative px-6 pt-20 pb-32">       
         <div className="relative max-w-7xl mx-auto text-center">
           <Badge className="mb-6 bg-emerald-500/10 text-emerald-400 border-emerald-500/20 hover:bg-emerald-500/20">
-            <Sparkles className="w-4 h-4 mr-2" />
+            {/* <Sparkles className="w-4 h-4 mr-2" /> */}
             The Ultimate Quiz Experience
           </Badge>
           

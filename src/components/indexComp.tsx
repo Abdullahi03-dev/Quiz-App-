@@ -12,7 +12,7 @@ const Index = () => {
   
   useEffect(() => {
     if (username) {
-      alert(username)
+      // alert(username)
       ensureCompletedChallenges(username);
     }
   }, [username]);
@@ -71,9 +71,9 @@ const Index = () => {
       <nav className="relative z-50 px-6 py-4 backdrop-blur-sm bg-slate-950/80 border-b border-slate-800">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-emerald-400 to-green-600 rounded-lg flex items-center justify-center">
+            {/* <div className="w-8 h-8 bg-gradient-to-br from-emerald-400 to-green-600 rounded-lg flex items-center justify-center">
               <Brain className="w-5 h-5 text-white" />
-            </div>
+            </div> */}
             <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">
              AbdullThon
             </span>
@@ -206,7 +206,7 @@ const Index = () => {
           <Link to="/signup">
             <Button size="lg" className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white border-0 px-12 py-4 text-lg group">
               Join Now - It's Free
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+              {/* <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" /> */}
             </Button>
           </Link>
         </div>
@@ -216,9 +216,9 @@ const Index = () => {
       <footer className="px-6 py-12 border-t border-slate-800 bg-slate-950/80">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="w-8 h-8 bg-gradient-to-br from-emerald-400 to-green-600 rounded-lg flex items-center justify-center">
+            {/* <div className="w-8 h-8 bg-gradient-to-br from-emerald-400 to-green-600 rounded-lg flex items-center justify-center">
               <Brain className="w-5 h-5 text-white" />
-            </div>
+            </div> */}
             <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">
             AbdullThon
             </span>

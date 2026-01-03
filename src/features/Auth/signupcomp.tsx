@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../..
 import { Input } from "../../components/ui/input";
 import { Label } from "../../components/ui/label";
 import { Separator } from "../../components/ui/separator";
-import { Brain, Mail, Lock, User, ArrowLeft, Eye, EyeOff } from "lucide-react";
+import {  Mail, Lock, User, ArrowLeft, Eye, EyeOff } from "lucide-react";
 import {FcGoogle} from 'react-icons/fc'
 import { Link } from "react-router-dom"
 import { useState } from 'react'
@@ -93,7 +93,7 @@ const signupcomp = () => {
             <Card className="bg-slate-900/80 border-slate-800 backdrop-blur-sm">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-8 h-8 text-white" />
+                  {/* <Brain className="w-8 h-8 text-white" /> */}
                 </div>
                 <CardTitle className="text-2xl font-bold text-white">Join AbdullThon</CardTitle>
                 <CardDescription className="text-gray-400">

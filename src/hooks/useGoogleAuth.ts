@@ -78,7 +78,7 @@ const useGoogleAuth = () => {
           return { type: "success", message: "Sign up successful." };
         } else {
           directPath()
-          return { type: "success", message: "Welcome back, Chapter Chaser!" };
+          return { type: "success", message: "Welcome back" };
         }
       } catch (err: any) {
         console.error("Error signing in with Google:", err);

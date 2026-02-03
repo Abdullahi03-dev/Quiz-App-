@@ -1,6 +1,6 @@
 import { ensureCompletedChallenges } from "../utils/ensureCompletedChallenges";
 import useUsername from "../hooks/useUsername";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import { ArrowRight } from "lucide-react";
